@@ -1,2 +1,6 @@
 node_modules
 dist
+test/test-bundle.js
+test/test-bundle.js.map
+coverage
+selenium-debug.log
