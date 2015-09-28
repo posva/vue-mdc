@@ -1,0 +1,16 @@
+{
+  "name": "vue-mdl",
+  "version": "0.0.0",
+  "homepage": "https://github.com/posva/vue-mdl",
+  "authors": [
+    "Eduardo San Martin Morote <i@posva.net>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "material-design-lite": "~1.0.4"
+  }
+}

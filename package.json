@@ -4,9 +4,11 @@
   "description": "Reusable Vue components using Material Design Lite",
   "main": "index.js",
   "scripts": {
+    "postinstall": "bower install",
     "test": "./build/e2e.sh",
     "pretest": "test -f dist/dist.js || npm run build",
     "build": "webpack --progress --config build/webpack.config.js",
+    "build-test": "webpack --progress --config build/webpack.test.config.js",
     "dev": "webpack-dev-server --progress --config build/webpack.config.js"
   },
   "keywords": [
@@ -15,6 +17,7 @@
   "author": "posva",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.5.3",
     "chromedriver": "^2.19.0",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.10.0",

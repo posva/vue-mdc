@@ -4,6 +4,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: './dist',
+    publicPath: 'dist',
     filename: 'dist.js',
     library: 'vue-mdl',
     libraryTarget: 'umd'

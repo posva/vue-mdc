@@ -5,6 +5,7 @@ module.exports = {
   output: {
     path: './test',
     filename: 'test-bundle.js',
+    publicPath: 'test'
   },
   module: {
     loaders: [{
