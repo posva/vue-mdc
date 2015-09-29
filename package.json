@@ -6,10 +6,9 @@
   "scripts": {
     "postinstall": "bower install",
     "test": "./build/e2e.sh",
-    "pretest": "test -f dist/dist.js || npm run build",
-    "build": "webpack --progress --config build/webpack.config.js",
-    "build-test": "webpack --progress --config build/webpack.test.config.js",
-    "dev": "webpack-dev-server --progress --config build/webpack.config.js"
+    "build": "webpack -p --progress --config build/webpack.config.js",
+    "dev": "webpack-dev-server --progress --config build/webpack.config.js",
+    "dev-test": "webpack-dev-server --progress --config build/webpack.config.js --hot --port 8088"
   },
   "keywords": [
     "vue"
