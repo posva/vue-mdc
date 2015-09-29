@@ -1,4 +1,4 @@
-Vue MDL
+Vue MDL [![Circle CI](https://circleci.com/gh/posva/vue-mdl.svg?style=svg)](https://circleci.com/gh/posva/vue-mdl)
 ---
 
 ![logo](logo.png)
