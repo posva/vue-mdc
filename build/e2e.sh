@@ -3,9 +3,8 @@ PORT=8082
 
 # serve example
 ./node_modules/.bin/webpack-dev-server \
-  --hot --history-api-fallback \
+  --hot \
   --config build/webpack.test.config.js \
-  --content-base test \
   --port $PORT &
 
 # run e2e tests, make sure to kill the server no matter pass or fail
