@@ -8,7 +8,7 @@
     "test": "./build/e2e.sh",
     "build": "webpack -p --progress --config build/webpack.config.js",
     "dev": "webpack-dev-server --progress --config build/webpack.config.js",
-    "dev-test": "webpack-dev-server --progress --config build/webpack.config.js --hot --port 8088"
+    "dev-test": "webpack-dev-server --progress --config build/webpack.test.config.js --hot --port 8088"
   },
   "keywords": [
     "vue"
