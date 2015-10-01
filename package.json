@@ -8,7 +8,7 @@
     "test": "./build/e2e.sh",
     "build": "webpack -p --progress --config build/webpack.config.js",
     "dev": "webpack-dev-server --progress --config build/webpack.config.js",
-    "dev-test": "webpack-dev-server --progress --config build/webpack.test.config.js --hot --port 8088"
+    "dev-test": "webpack-dev-server --progress --config build/webpack.test.config.js --port 8088"
   },
   "keywords": [
     "vue"
@@ -25,6 +25,7 @@
     "html-loader": "^0.3.0",
     "jade": "^1.11.0",
     "jade-loader": "^0.7.1",
+    "lodash.curry": "^3.0.2",
     "nightwatch": "^0.8.3",
     "selenium-server": "^2.47.1",
     "style-loader": "^0.12.4",

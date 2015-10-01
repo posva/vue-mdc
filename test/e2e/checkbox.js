@@ -82,6 +82,42 @@ module.exports = {
     .to.have.attribute('class')
     .which.contains('is-checked')
   },
+  'checkbox can be disabled': function(browser) {
+    var selector = '#classicDisabled';
+    browser.expect.element('#check').to.be.enabled;
+    browser.expect.element(mdlCbSelector)
+    .to.have.attribute('class')
+    .which.does.not.contain('is-disabled')
+
+    browser.click(selector)
+    .expect.element('#check').to.not.be.enabled;
+
+    browser.expect.element(mdlCbSelector)
+    .to.have.attribute('class')
+    .which.contains('is-disabled')
+  },
+  'checkbox cannot be used while disabled': function(browser) {
+    var selector = '#classicDisabled';
+    browser.expect.element('#check').to.not.be.enabled;
+
+    browser.click('#check')
+    .expect.element('#check').to.be.selected;
+    browser.click('#check')
+    .expect.element('#check').to.be.selected;
+
+    browser.click(selector)
+    .expect.element('#check').to.be.enabled;
+
+    browser.expect.element(mdlCbSelector)
+    .to.have.attribute('class')
+    .which.does.not.contain('is-disabled')
+  },
+  'checkbox keep working after being disabled': function(browser) {
+    browser.click(mdlCbSelector)
+    .expect.element('#check').to.not.be.selected;
+    browser.click(mdlCbSelector)
+    .expect.element('#check').to.be.selected
+  },
   'teardown': function(browser) {
     browser.end();
   }
