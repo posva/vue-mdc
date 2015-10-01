@@ -11,6 +11,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "material-design-lite": "~1.0.4"
+    "material-design-lite": "~1.0.5"
   }
 }
