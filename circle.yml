@@ -1,0 +1,9 @@
+dependencies:
+  cache_directories:
+    - bower_components
+test:
+  override:
+    - rm -rf dist || true
+    - npm run build
+    - rm -rf dist
+    - npm test
