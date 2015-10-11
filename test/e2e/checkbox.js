@@ -83,7 +83,7 @@ module.exports = {
     .which.contains('is-checked')
   },
   'checkbox can be disabled': function(browser) {
-    var selector = '#classicDisabled';
+    var selector = '#disable';
     browser.expect.element('#check').to.be.enabled;
     browser.expect.element(mdlCbSelector)
     .to.have.attribute('class')
@@ -97,7 +97,7 @@ module.exports = {
     .which.contains('is-disabled')
   },
   'checkbox cannot be used while disabled': function(browser) {
-    var selector = '#classicDisabled';
+    var selector = '#disable';
     browser.expect.element('#check').to.not.be.enabled;
 
     browser.click('#check')
@@ -117,6 +117,48 @@ module.exports = {
     .expect.element('#check').to.not.be.selected;
     browser.click(mdlCbSelector)
     .expect.element('#check').to.be.selected
+  },
+  'dynamically added elements should be upgraded': function(browser) {
+    browser.click('#disable')
+    .expect.element('label[for=v-if]')
+    .to.be.present
+    .and.to.have.attribute('class')
+    .which.contains('is-upgraded');
+  },
+  'dynamically added elements should have the correct value': function(browser) {
+    browser.expect.element('#v-if')
+    .to.be.selected;
+
+    browser.click('#disable')
+    .expect.element('#v-if').to.not.be.present;
+  },
+  'checkboxes can use an Array instead of a Boolean': function(browser) {
+    var selector = function(n) {
+      return 'label[for=id-' + n + '] .mdl-checkbox__label';
+    };
+    browser.expect.element('#checks')
+    .text.to.equal('[]');
+
+    browser.click(selector(0))
+    .expect.element('#checks')
+    .text.to.equal('[ "id-0" ]');
+
+    browser.click(selector(1))
+    .expect.element('#checks')
+    .text.to.equal('[ "id-0", "id-1" ]');
+
+    browser.click(selector(0))
+    .expect.element('#checks')
+    .text.to.equal('[ "id-1" ]');
+
+    browser.click(selector(2))
+    .expect.element('#checks')
+    .text.to.equal('[ "id-1", "id-2" ]');
+
+    browser.click(selector(2))
+    .click(selector(1))
+    .expect.element('#checks')
+    .text.to.equal('[]');
   },
   'teardown': function(browser) {
     browser.end();

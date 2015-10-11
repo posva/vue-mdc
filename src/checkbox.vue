@@ -1,6 +1,6 @@
 <template lang="jade">
 label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='{{* id}}')
-  input.mdl-checkbox__input(type='checkbox' id='{{* id}}' v-model='checked' disabled='{{disabled}}')
+  input.mdl-checkbox__input(v-bind:value='value' type='checkbox' v-bind:id.once='id' v-model='checked' v-bind:disabled='disabled')
   span.mdl-checkbox__label
     slot
 </template>
@@ -11,12 +11,14 @@ module.exports =
   data: ->
     unwatch: []
   props:
-    id:
-      type: String
-      required: true
+    id: String
+    value:
+      required: false
     checked:
-      type: Boolean
+      validator: (value) ->
+        typeof value is 'boolean' or value instanceof Array
       required: true
+      twoWay: true
     disabled: Boolean
   ready: ->
     componentHandler.upgradeElement @$el
@@ -26,7 +28,10 @@ module.exports =
     componentHandler.upgradeElement @$el.lastChild
 
     # Only called when value changes
-    @unwatch.push @$watch 'checked', utils.classToggler 'is-checked'
+    if typeof @checked is 'boolean'
+      @unwatch.push @$watch 'checked', utils.classToggler 'is-checked'
+    else
+      @unwatch.push @$watch 'checked', utils.classTogglerWithValue 'is-checked'
     @unwatch.push @$watch 'disabled', utils.classToggler 'is-disabled'
   beforeDestroy: ->
     @unwatch.forEach (unwatch) -> unwatch()
