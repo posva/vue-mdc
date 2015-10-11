@@ -10,6 +10,7 @@ utils = require 'coffee!./utils.coffee'
 module.exports =
   props:
     id: String
+    name: String
     value:
       required: true
     checked:
