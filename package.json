@@ -6,6 +6,8 @@
   "scripts": {
     "postinstall": "bower install",
     "test": "./build/e2e.sh",
+    "test-chrome": "./build/e2e.sh chrome",
+    "test-firefox": "./build/e2e.sh firefox",
     "build": "webpack -p --progress --config build/webpack.config.js",
     "dev": "webpack-dev-server --progress --config build/webpack.config.js",
     "dev-test": "webpack-dev-server --progress --config build/webpack.test.config.js --port 8088"

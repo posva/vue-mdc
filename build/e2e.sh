@@ -7,8 +7,14 @@ PORT=8082
   --config build/webpack.test.config.js \
   --port $PORT &
 
+if [[ ! "$1" ]]; then
+  browsers='chrome,firefox'
+else
+  browsers="$1"
+fi
+
 # run e2e tests, make sure to kill the server no matter pass or fail
 PORT=$PORT ./node_modules/.bin/nightwatch \
   -c build/nightwatch.json \
-  -e chrome,firefox \
+  -e "$browsers" \
   && kill $! || (kill $! && exit 1)
