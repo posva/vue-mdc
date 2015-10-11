@@ -14,18 +14,33 @@ __Warning__: This project is still under development. Contributions are welcome
 
 #Build
 
+This will build a distributable version in the `dist` directory.
 ```bash
 npm run build
 ```
 
 #Test
 
+Run all the tests
 ```bash
 npm test
 ```
 
+It is possible to test one single file by running the dev server in one terminal
+and `nightwatch` in another:
+```bash
+npm run dev-test
+```
+
+```bash
+PORT=8088 ./node_modules/.bin/nightwatch -c build/nightwatch.json --test test/e2e/checkbox.js
+```
+
 #Development
 
+This will serve the test at `localhost:8088/test`.
+You must add `#<component_name>` to the address. For instance, if you want to
+load the checkbox example you must go to `localhost:8088/test/#checkbox`
 ```bash
 npm run dev-test
 ```
