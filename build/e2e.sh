@@ -3,7 +3,6 @@ PORT=8082
 
 # serve example
 ./node_modules/.bin/webpack-dev-server \
-  --hot \
   --config build/webpack.test.config.js \
   --port $PORT &
 
