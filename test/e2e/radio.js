@@ -90,6 +90,11 @@ module.exports = {
     browser.expect.element('#text')
     .text.to.equal('Big Banana');
   },
+  'variable updates update the radio': function(browser) {
+    browser.click('#medium-or')
+    .expect.element('#medium')
+    .to.be.selected;
+  },
   'teardown': function(browser) {
     browser.end();
   }

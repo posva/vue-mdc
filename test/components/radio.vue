@@ -11,6 +11,13 @@ div
   mdl-radio(v-bind:checked.sync='size' id='little' value='Little') Little
   input#disable(type='checkbox' v-model='disabled')
   span Disable Big
+  br
+  input(v-model='size' type="radio" id='big-or' value='Big')
+  span Big
+  input(v-model='size' type="radio" id='medium-or' value='Medium')
+  span Medium
+  input(v-model='size' type="radio" id='little-or' value='Little')
+  span Little
 </template>
 
 <script lang="coffee">
