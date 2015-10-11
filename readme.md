@@ -1,9 +1,14 @@
-Vue MDL [![Circle CI](https://circleci.com/gh/posva/vue-mdl.svg?style=svg)](https://circleci.com/gh/posva/vue-mdl)
----
+<p align="center">
+  <img src="logo.png"/>
+  <br/>
+  <a href="https://circleci.com/gh/posva/vue-mdl">
+    <img alt="Circle CI" src="https://circleci.com/gh/posva/vue-mdl.svg?style=svg" />
+  </a>
+</p>
 
-![logo](logo.png)
+#Intro
 
-Reusable Vue components using Material Design Lite
+Reusable Vue components using [Material Design Lite](https://github.com/google/material-design-lite)
 
 __Warning__: This project is still under development. Contributions are welcome
 
@@ -22,7 +27,7 @@ npm test
 #Development
 
 ```bash
-npm run dev
+npm run dev-test
 ```
 
 #License
