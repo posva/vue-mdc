@@ -1,5 +1,5 @@
 <template lang="jade">
-label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='{{* id}}')
+label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(v-bind:for.once='id' v-bind:class='{ "is-disabled": disabled, "is-checked": isChecked }')
   input.mdl-checkbox__input(v-bind:value='value' type='checkbox' v-bind:id.once='id' v-model='checked' v-bind:disabled='disabled')
   span.mdl-checkbox__label
     slot
@@ -8,8 +8,6 @@ label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='{{* id}}')
 <script lang="coffee">
 utils = require 'coffee!./utils.coffee'
 module.exports =
-  data: ->
-    unwatch: []
   props:
     id: String
     value:
@@ -20,19 +18,12 @@ module.exports =
       required: true
       twoWay: true
     disabled: Boolean
+  computed:
+    isChecked: ->
+      if typeof @checked is 'boolean'
+        @checked
+      else
+        @value in @checked
   ready: ->
-    componentHandler.upgradeElement @$el
-    # For some reason the last label (ripple effect) isn't upgraded when using
-    # the upgradeElements function.
-    # See https://github.com/google/material-design-lite/blob/3b1442627ee21040113c0a9a340e177f91cf8188/test/unit/componentHandler.js#L146
-    componentHandler.upgradeElement @$el.lastChild
-
-    # Only called when value changes
-    if typeof @checked is 'boolean'
-      @unwatch.push @$watch 'checked', utils.classToggler 'is-checked'
-    else
-      @unwatch.push @$watch 'checked', utils.classTogglerWithValue 'is-checked'
-    @unwatch.push @$watch 'disabled', utils.classToggler 'is-disabled'
-  beforeDestroy: ->
-    @unwatch.forEach (unwatch) -> unwatch()
+    componentHandler.upgradeElements @$el
 </script>
