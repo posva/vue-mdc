@@ -1,5 +1,6 @@
 <template lang="jade">
 div
+  // We can also use the jade syntax #id for literal ids
   mdl-checkbox(id='check-dyn' v-bind:checked.sync='check') Dynamic {{check}}
   mdl-checkbox(id='check' v-bind:checked.sync='check' v-bind:disabled='disabled') Check me
   input#classic(type='checkbox' v-model='check')
