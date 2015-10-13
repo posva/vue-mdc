@@ -1,3 +1,4 @@
+#! /bin/bash
 # use a different port to avoid conflicting with npm run serve
 PORT=8082
 
