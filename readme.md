@@ -4,6 +4,10 @@
   <a href="https://circleci.com/gh/posva/vue-mdl">
     <img alt="Circle CI" src="https://circleci.com/gh/posva/vue-mdl.svg?style=svg" />
   </a>
+  <a href="https://www.bithound.io/github/posva/vue-mdl"><img src="https://www.bithound.io/github/posva/vue-mdl/badges/score.svg" alt="bitHound Score"></a>
+  <br>
+  <a href="https://david-dm.org/posva/vue-mdl#info=devDependencies" title="devDependency status"><img src="https://david-dm.org/posva/vue-mdl/dev-status.svg"/></a>
+  <a href="https://david-dm.org/posva/vue-mdl" title="Dependency status"><img src="https://david-dm.org/posva/vue-mdl.svg"/></a>
 </p>
 
 #Intro
