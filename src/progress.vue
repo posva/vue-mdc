@@ -8,8 +8,10 @@ module.exports =
   data: ->
     unwatch: []
   props:
-    progress: Number
-    buffer: Number
+    progress:
+      required: false
+    buffer:
+      required: false
     indeterminate:
       type: Boolean
       default: false

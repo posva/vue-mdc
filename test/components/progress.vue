@@ -14,8 +14,8 @@ div
     mdl-progress(v-if='indeterminate' v-bind:indeterminate='indeterminate')
 
   br
-  input#progress-val(type='number' v-model='progress' number)
-  input#buffer-val(type='number' v-model='buffer' number)
+  input#progress-val(type='number' v-model='progress')
+  input#buffer-val(type='number' v-model='buffer')
   br
   input#v-if(type='checkbox' v-model='indeterminate')
   span Indeterminate
