@@ -5,3 +5,4 @@ test/test-bundle.js.map
 coverage
 selenium-debug.log
 bower_components
+.DS_Store
