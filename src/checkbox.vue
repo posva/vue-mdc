@@ -6,7 +6,6 @@ label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(v-bind:for.once='id' v-b
 </template>
 
 <script lang="coffee">
-utils = require 'coffee!./utils.coffee'
 module.exports =
   props:
     id: String

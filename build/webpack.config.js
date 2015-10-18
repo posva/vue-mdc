@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: './dist',
     publicPath: 'dist',
-    filename: 'dist.js',
+    filename: 'vue-mdl.min.js',
     library: 'vue-mdl',
     libraryTarget: 'umd'
   },

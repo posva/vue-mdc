@@ -16,6 +16,13 @@ Reusable Vue components using [Material Design Lite](https://github.com/google/m
 
 __Warning__: This project is still under development. Contributions are welcome
 
+vue-mdl tries to use the latest versions of material design lite and vue
+
+#Documentation
+
+There is yet no documentation for this project, you can look in the test
+directory for some examples
+
 #Build
 
 This will build a distributable version in the `dist` directory.

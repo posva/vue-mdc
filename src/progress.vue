@@ -3,7 +3,6 @@
 </template>
 
 <script lang="coffee">
-utils = require 'coffee!./utils.coffee'
 module.exports =
   data: ->
     unwatch: []
