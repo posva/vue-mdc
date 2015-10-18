@@ -1,5 +1,14 @@
 <template lang="jade">
 div
+  h1 Radio
+  h3 MDL
+  label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect(for='option-1')
+    input#option-1.mdl-radio__button(type='radio', name='options', value='1', checked='')
+    span.mdl-radio__label First
+  label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect(for='option-2')
+    input#option-2.mdl-radio__button(type='radio', name='options', value='2')
+    span.mdl-radio__label Second
+  h3 vue
   mdl-radio(v-bind:checked.sync='fruit' id='banana' value='Banana') Banana
   mdl-radio(v-bind:checked.sync='fruit' id='pineapple' value='Pineapple') Pineapple
   mdl-radio(v-bind:checked.sync='fruit' id='kiwi' value='Kiwi') Kiwi
