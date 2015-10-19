@@ -1,5 +1,6 @@
 module.exports = {
   mdlCheckbox: require('./checkbox.vue'),
+  mdlIconToggle: require('./icon-toggle.vue'),
   mdlRadio: require('./radio.vue'),
   mdlProgress: require('./progress.vue'),
 
