@@ -30,7 +30,7 @@ module.exports = {
     browser.click(mdlCbSelector)
       .expect.element('#it').to.not.be.selected;
     browser.click(mdlCbSelector)
-      .expect.element('#it').to.be.selected
+      .expect.element('#it').to.be.selected;
   },
   'icon-toggle have is-checked class': function(browser) {
     browser.click(mdlCbSelector)
@@ -54,28 +54,28 @@ module.exports = {
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.does.not.contain('is-checked')
+      .which.does.not.contain('is-checked');
 
     browser.click(selector)
       .expect.element('#it').to.be.selected;
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.contains('is-checked')
+      .which.contains('is-checked');
   },
   'icon-toggle can be disabled': function(browser) {
     var selector = '#disable';
     browser.expect.element('#it').to.be.enabled;
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.does.not.contain('is-disabled')
+      .which.does.not.contain('is-disabled');
 
     browser.click(selector)
       .expect.element('#it').to.not.be.enabled;
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.contains('is-disabled')
+      .which.contains('is-disabled');
   },
   'icon-toggle cannot be used while disabled': function(browser) {
     var selector = '#disable';
@@ -91,13 +91,13 @@ module.exports = {
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.does.not.contain('is-disabled')
+      .which.does.not.contain('is-disabled');
   },
   'icon-toggle keep working after being disabled': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element('#it').to.not.be.selected;
     browser.click(mdlCbSelector)
-      .expect.element('#it').to.be.selected
+      .expect.element('#it').to.be.selected;
   },
   'dynamically added elements should be upgraded': function(browser) {
     browser.click('#disable')
@@ -113,9 +113,17 @@ module.exports = {
     browser.click('#disable')
       .expect.element('#v-if').to.not.be.present;
   },
+  'icon can change': function(browser) {
+    browser.expect.element('label[for=dit] i:nth-child(2)')
+      .text.to.equal('code');
+    browser.clearValue('#dit-val')
+      .setValue('#dit-val', 'http');
+    browser.expect.element('label[for=dit] i:nth-child(2)')
+      .text.to.equal('http');
+  },
   'checkboxes can use an Array instead of a Boolean': function(browser) {
     var selector = function(n) {
-      return 'label[for=id-' + n + '] .mdl-icon-toggle__label';
+      return 'label[for=id-' + n + ']';
     };
     browser.expect.element('#its')
       .text.to.equal('[]');
