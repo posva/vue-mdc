@@ -5,6 +5,7 @@ label.mdl-icon-toggle.mdl-js-icon-toggle.mdl-js-ripple-effect(v-bind:for.once='i
 </template>
 
 <script lang="coffee">
+common = require 'coffee!../mixins/toggle.coffee'
 module.exports =
   props:
     icon:
@@ -13,18 +14,7 @@ module.exports =
     id: String
     value:
       required: false
-    checked:
-      validator: (value) ->
-        typeof value is 'boolean' or value instanceof Array
-      required: true
-      twoWay: true
-    disabled: Boolean
-  computed:
-    isChecked: ->
-      if typeof @checked is 'boolean'
-        @checked
-      else
-        @value in @checked
+  mixins: [common]
   ready: ->
     componentHandler.upgradeElements @$el
 </script>
