@@ -52,10 +52,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/posva/dominion.git"
+    "url": "git+https://github.com/posva/vue-mdl.git"
   },
   "bugs": {
-    "url": "https://github.com/posva/dominion/issues"
+    "url": "https://github.com/posva/vue-mdl/issues"
   },
-  "homepage": "https://github.com/posva/dominion#readme"
+  "homepage": "https://github.com/posva/vue-mdl#readme"
 }
