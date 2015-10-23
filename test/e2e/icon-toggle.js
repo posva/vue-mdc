@@ -113,6 +113,11 @@ module.exports = {
     browser.click('#disable')
       .expect.element('#v-if').to.not.be.present;
   },
+  'added classes exist': function(browser) {
+    browser.expect.element('label[for=it]')
+      .to.have.attribute('class')
+      .which.contains('added-class');
+  },
   'icon can change': function(browser) {
     browser.expect.element('label[for=dit] i:nth-child(2)')
       .text.to.equal('code');

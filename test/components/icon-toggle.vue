@@ -13,7 +13,7 @@ div
       i.mdl-icon-toggle__label.material-icons http
   h3 vue
   // We can also use the jade syntax #id for literal ids
-  mdl-icon-toggle(id='it' icon='face' v-bind:checked.sync='check' v-bind:disabled='disabled')
+  mdl-icon-toggle.added-class(id='it' icon='face' v-bind:checked.sync='check' v-bind:disabled='disabled')
   mdl-icon-toggle(id='dit' v-bind:icon='icon' v-bind:checked.sync='check')
   input#dit-val(type='text' v-model='icon')
   input#classic(type='checkbox' v-model='check')

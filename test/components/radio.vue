@@ -9,7 +9,7 @@ div
     input#option-2.mdl-radio__button(type='radio', name='options', value='2')
     span.mdl-radio__label Second
   h3 vue
-  mdl-radio(v-bind:checked.sync='fruit' id='banana' value='Banana') Banana
+  mdl-radio.added-class(v-bind:checked.sync='fruit' id='banana' value='Banana') Banana
   mdl-radio(v-bind:checked.sync='fruit' id='pineapple' value='Pineapple') Pineapple
   mdl-radio(v-bind:checked.sync='fruit' id='kiwi' value='Kiwi') Kiwi
   br

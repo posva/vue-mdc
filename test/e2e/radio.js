@@ -82,6 +82,11 @@ module.exports = {
     browser.expect.element('#text')
       .text.to.equal('Little Banana');
   },
+  'added classes exist': function(browser) {
+    browser.expect.element('label[for=banana]')
+      .to.have.attribute('class')
+      .which.contains('added-class');
+  },
   'radio updates variable': function(browser) {
     browser.click('label[for=big]')
       .expect.element('#big')
