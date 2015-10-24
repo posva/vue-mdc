@@ -8,6 +8,7 @@ module.exports = {
     'mdl-button': require('./button.vue'),
   },
   directives: {
+    'mdl-ripple-effect': require('coffee!./directives/ripple-effect.coffee'),
     'mdl-badge': require('coffee!./directives/badge.coffee'),
   },
 
