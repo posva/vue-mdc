@@ -4,6 +4,7 @@ module.exports = {
   mdlIconToggle: require('./toggles/icon-toggle.vue'),
   mdlRadio: require('./toggles/radio.vue'),
   mdlProgress: require('./progress.vue'),
+  mdlButton: require('./button.vue'),
 
   register: function(Vue, name) {
     // TODO
