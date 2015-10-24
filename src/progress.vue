@@ -15,7 +15,7 @@ module.exports =
       type: Boolean
       default: false
   ready: ->
-    componentHandler.upgradeElement @$el
+    componentHandler.upgradeElement @$el, 'MaterialProgress'
 
     if @progress?
       @$el.MaterialProgress.setProgress @progress
