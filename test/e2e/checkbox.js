@@ -35,22 +35,6 @@ module.exports = {
     browser.click(mdlCbSelector)
       .expect.element('#check').to.be.selected
   },
-  'checkbox can be unchecked with the label': function(browser) {
-    var selector = 'label[for=check] .mdl-checkbox__label';
-    browser.click(selector)
-      .expect.element('#check').to.not.be.selected;
-    browser.click(selector)
-      .expect.element('#check').to.be.selected
-  },
-  'checkbox can be unchecked with the box': function(browser) {
-    var selector = 'label[for=check] .mdl-checkbox__ripple-container';
-    browser.expect.element('#check').to.be.selected;
-    browser.click(selector)
-      .expect.element('#check').to.not.be.selected;
-
-    browser.click(selector)
-      .expect.element('#check').to.be.selected
-  },
   'checkbox have is-checked class': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element(mdlCbSelector).to.not.be.selected;

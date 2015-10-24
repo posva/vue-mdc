@@ -35,22 +35,6 @@ module.exports = {
     browser.click(mdlCbSelector)
       .expect.element('#check').to.be.selected;
   },
-  'switch can be unchecked with the label': function(browser) {
-    var selector = 'label[for=check] .mdl-switch__label';
-    browser.click(selector)
-      .expect.element('#check').to.not.be.selected;
-    browser.click(selector)
-      .expect.element('#check').to.be.selected;
-  },
-  'switch can be unchecked with the box': function(browser) {
-    var selector = 'label[for=check] .mdl-switch__ripple-container';
-    browser.expect.element('#check').to.be.selected;
-    browser.click(selector)
-      .expect.element('#check').to.not.be.selected;
-
-    browser.click(selector)
-      .expect.element('#check').to.be.selected;
-  },
   'switch have is-checked class': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element(mdlCbSelector).to.not.be.selected;
