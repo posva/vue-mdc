@@ -31,6 +31,5 @@ module.exports =
     disabled: false
   methods:
     indexId: (num) -> 'id-' + num.toString()
-  components:
-    'mdl-checkbox': vmdl.mdlCheckbox
+  components: vmdl.components
 </script>

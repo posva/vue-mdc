@@ -36,6 +36,5 @@ module.exports =
     icon: 'code'
   methods:
     indexId: (num) -> 'id-' + num.toString()
-  components:
-    'mdl-icon-toggle': vmdl.mdlIconToggle
+  components: vmdl.components
 </script>

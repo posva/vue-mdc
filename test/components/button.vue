@@ -72,6 +72,5 @@ module.exports =
     fab: false
     raised: false
     colored: false
-  components:
-    'mdl-button': vmdl.mdlButton
+  components: vmdl.components
 </script>

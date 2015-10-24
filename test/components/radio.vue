@@ -37,6 +37,5 @@ module.exports =
     fruit: 'Banana'
     size: 'Little'
     disabled: false
-  components:
-    'mdl-radio': vmdl.mdlRadio
+  components: vmdl.components
 </script>

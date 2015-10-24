@@ -29,6 +29,5 @@ module.exports =
     progress: 44
     buffer: 80
     indeterminate: false
-  components:
-    'mdl-progress': vmdl.mdlProgress
+  components: vmdl.components
 </script>

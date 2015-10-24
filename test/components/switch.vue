@@ -32,6 +32,5 @@ module.exports =
     disabled: false
   methods:
     indexId: (num) -> 'id-' + num.toString()
-  components:
-    'mdl-switch': vmdl.mdlSwitch
+  components: vmdl.components
 </script>

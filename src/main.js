@@ -1,10 +1,15 @@
 module.exports = {
-  mdlCheckbox: require('./toggles/checkbox.vue'),
-  mdlSwitch: require('./toggles/switch.vue'),
-  mdlIconToggle: require('./toggles/icon-toggle.vue'),
-  mdlRadio: require('./toggles/radio.vue'),
-  mdlProgress: require('./progress.vue'),
-  mdlButton: require('./button.vue'),
+  components: {
+    'mdl-checkbox': require('./toggles/checkbox.vue'),
+    'mdl-switch': require('./toggles/switch.vue'),
+    'mdl-icon-toggle': require('./toggles/icon-toggle.vue'),
+    'mdl-radio': require('./toggles/radio.vue'),
+    'mdl-progress': require('./progress.vue'),
+    'mdl-button': require('./button.vue'),
+  },
+  directives: {
+    'mdl-badge': require('coffee!./directives/badge.coffee'),
+  },
 
   register: function(Vue, name) {
     // TODO
