@@ -9,8 +9,8 @@
     "test:chrome": "./build/e2e.sh chrome",
     "test:firefox": "./build/e2e.sh firefox",
     "build": "webpack -p --progress --config build/webpack.config.js",
-    "dev": "webpack-dev-server --progress --config build/webpack.config.js",
-    "dev-test": "webpack-dev-server --progress --config build/webpack.test.config.js --port 8088"
+    "dev": "webpack-dev-server --config build/webpack.config.js",
+    "dev-test": "webpack-dev-server --config build/webpack.test.config.js --port 8088"
   },
   "keywords": [
     "vue",
@@ -43,7 +43,9 @@
     "selenium-server": "^2.48.2",
     "style-loader": "^0.13.0",
     "template-html-loader": "0.0.3",
-    "vue-loader": "^4.0.9",
+    "vue-hot-reload-api": "^1.2.1",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^5.0.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },
