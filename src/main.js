@@ -6,6 +6,7 @@ module.exports = {
     'mdl-radio': require('./toggles/radio.vue'),
     'mdl-progress': require('./progress.vue'),
     'mdl-button': require('./button.vue'),
+    'mdl-spinner': require('./spinner.vue'),
   },
   directives: {
     'mdl-ripple-effect': require('coffee!./directives/ripple-effect.coffee'),
