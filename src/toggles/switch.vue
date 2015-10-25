@@ -8,10 +8,6 @@ label.mdl-switch.mdl-js-switch(v-bind:for.once='id' v-bind:class='{ "is-disabled
 <script lang="coffee">
 common = require 'coffee!../mixins/toggle.coffee'
 module.exports =
-  props:
-    id: String
-    value:
-      required: false
   mixins: [common]
   ready: ->
     componentHandler.upgradeElements @$el

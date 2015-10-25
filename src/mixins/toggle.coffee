@@ -6,6 +6,9 @@ module.exports =
       required: true
       twoWay: true
     disabled: Boolean
+    id: String
+    value:
+      required: false
   computed:
     isChecked: ->
       if typeof @checked is 'boolean'

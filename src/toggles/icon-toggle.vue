@@ -11,9 +11,6 @@ module.exports =
     icon:
       required: true
       type: String
-    id: String
-    value:
-      required: false
   mixins: [common]
   ready: ->
     componentHandler.upgradeElements @$el
