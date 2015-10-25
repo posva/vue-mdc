@@ -1,5 +1,5 @@
 <style>
-  .mdl-badge__blue[data-badge]:after {
+  .mdl-badge--blue[data-badge]:after {
     background: aquamarine;
   }
 </style>
@@ -13,7 +13,7 @@ div
   span.material-icons.mdl-badge.mdl-badge--no-background(data-badge='♥') account_box
   span.material-icons.mdl-badge.mdl-overlap.mdl-badge--no-background(data-badge='♥') account_box
   h3 vue
-  i.material-icons.mdl-badge__blue(v-mdl-badge.literal='3') account_box
+  i.material-icons.mdl-badge--blue(v-mdl-badge.literal='3') account_box
   i.material-icons(v-mdl-badge.literal='3') account_box
   i.material-icons#badge(v-mdl-badge='badgeText') account_box
   i.material-icons#badge-nb(v-mdl-badge.no-background='badgeText') account_box
