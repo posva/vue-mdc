@@ -33,7 +33,7 @@ module.exports = {
     browser.click(mdlCbSelector)
       .expect.element('#check').to.not.be.selected;
     browser.click(mdlCbSelector)
-      .expect.element('#check').to.be.selected
+      .expect.element('#check').to.be.selected;
   },
   'checkbox have is-checked class': function(browser) {
     browser.click(mdlCbSelector)
@@ -57,28 +57,28 @@ module.exports = {
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.does.not.contain('is-checked')
+      .which.does.not.contain('is-checked');
 
     browser.click(selector)
       .expect.element('#check').to.be.selected;
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.contains('is-checked')
+      .which.contains('is-checked');
   },
   'checkbox can be disabled': function(browser) {
     var selector = '#disable';
     browser.expect.element('#check').to.be.enabled;
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.does.not.contain('is-disabled')
+      .which.does.not.contain('is-disabled');
 
     browser.click(selector)
       .expect.element('#check').to.not.be.enabled;
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.contains('is-disabled')
+      .which.contains('is-disabled');
   },
   'checkbox cannot be used while disabled': function(browser) {
     var selector = '#disable';
@@ -94,13 +94,13 @@ module.exports = {
 
     browser.expect.element(mdlCbSelector)
       .to.have.attribute('class')
-      .which.does.not.contain('is-disabled')
+      .which.does.not.contain('is-disabled');
   },
   'checkbox keep working after being disabled': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element('#check').to.not.be.selected;
     browser.click(mdlCbSelector)
-      .expect.element('#check').to.be.selected
+      .expect.element('#check').to.be.selected;
   },
   'dynamically added elements should be upgraded': function(browser) {
     browser.click('#disable')

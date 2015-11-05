@@ -14,7 +14,7 @@ var propChecker = function(browser, prop) {
     .expect.element('#button')
     .to.have.attribute('class')
     .which.does.not.contain('mdl-button--' + prop);
-}
+};
 
 module.exports = {
   'button exists': function(browser) {

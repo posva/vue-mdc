@@ -1,3 +1,4 @@
+'use strict';
 module.exports = {
   components: {
     'mdl-checkbox': require('./toggles/checkbox.vue'),
