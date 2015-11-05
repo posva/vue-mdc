@@ -8,6 +8,7 @@ module.exports = {
     'mdl-progress': require('./progress.vue'),
     'mdl-button': require('./button.vue'),
     'mdl-spinner': require('./spinner.vue'),
+    'mdl-slider': require('./slider.vue'),
   },
   directives: {
     'mdl-ripple-effect': require('coffee!./directives/ripple-effect.coffee'),
@@ -20,5 +21,6 @@ module.exports = {
   },
   registerAll: function(Vue) {
     // TODO
+    Vue.component('foo', {});
   }
 };
