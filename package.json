@@ -30,7 +30,7 @@
   "author": "posva",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^1.0.4"
+    "vue": "^1.0.6"
   },
   "devDependencies": {
     "bower": "^1.6.5",
@@ -48,7 +48,7 @@
     "vue-hot-reload-api": "^1.2.1",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^6.0.4",
-    "webpack": "^1.12.2",
+    "webpack": "^1.12.3",
     "webpack-dev-server": "^1.12.1"
   },
   "repository": {
