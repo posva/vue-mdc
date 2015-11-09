@@ -10,7 +10,8 @@
     "test:firefox": "./build/e2e.sh firefox",
     "build": "webpack -p --progress --config build/webpack.config.js",
     "dev": "webpack-dev-server --config build/webpack.config.js",
-    "dev-test": "webpack-dev-server --config build/webpack.test.config.js --port 8088"
+    "dev-test": "webpack-dev-server --config build/webpack.test.config.js --port 8088",
+    "dev-unit": "webpack-dev-server --config build/webpack.unit.config.js --port 8088"
   },
   "keywords": [
     "vue",
@@ -34,6 +35,8 @@
   },
   "devDependencies": {
     "bower": "^1.6.5",
+    "chai": "^3.4.0",
+    "chai-jquery": "^2.0.0",
     "chromedriver": "^2.19.0",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.10.0",
@@ -41,6 +44,8 @@
     "html-loader": "^0.3.0",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
+    "jquery": "^2.1.4",
+    "mocha": "^2.3.3",
     "nightwatch": "^0.8.6",
     "selenium-server": "^2.48.2",
     "style-loader": "^0.13.0",
