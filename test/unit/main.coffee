@@ -16,6 +16,7 @@ app = new Vue
       'radio'
       'slider'
       'switch'
+      'textfield'
     ]
     current: 0
   computed:
@@ -49,6 +50,7 @@ app = new Vue
     testRadio: require '../components/radio.vue'
     testSlider: require '../components/slider.vue'
     testSwitch: require '../components/switch.vue'
+    testTextfield: require '../components/textfield.vue'
 
 window.app = app
 describe 'Vue MDL', ->
@@ -62,3 +64,4 @@ describe 'Vue MDL', ->
   require './specs/radio.coffee'
   require './specs/slider.coffee'
   require './specs/switch.coffee'
+  require './specs/textfield.coffee'
