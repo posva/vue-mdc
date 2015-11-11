@@ -14,7 +14,7 @@ module.exports = {
       include: [
         path.resolve(__dirname, '../unit')
       ],
-      loader: "coffee-loader"
+      loader: 'coffee-loader'
     }, {
       test: /\.vue$/,
       loader: 'vue'

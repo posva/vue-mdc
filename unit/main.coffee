@@ -1,6 +1,7 @@
-Vue = require('vue')
+Vue = require 'vue'
+
 Vue.config.debug = true
-test = new Vue(
+app = new Vue
   el: '#test'
   data:
     tests: [
@@ -10,33 +11,29 @@ test = new Vue(
     ]
     current: 0
   computed:
-    currentTest: ->
-      @tests[@current]
+    currentTest: -> @tests[@current]
     currentComponent:
       set: (val) ->
-        i = @tests.indexOf(val)
+        i = @tests.indexOf val
         if i < 0
-          throw new Error('Ivalid component: ' + val)
+          throw new Error 'Ivalid component: ' + val
         @current = i
-        return
-      get: ->
-        @current
-        @tests
-        'test-' + @currentTest
+      get: -> 'test-' + @currentTest
   methods:
     previous: ->
       if --@current < 0
         @current = @tests.length - 1
-      return
     next: ->
       if ++@current >= @tests.length
         @current = 0
-      return
+  directives:
+    attach:
+      bind: -> window.vm = @vm.$children[0]
   components:
     testNone: template: '<p>Choose a valid component</p>'
-    testCheckbox: require('../test/components/checkbox.vue')
-    testButton: require('../test/components/button.vue'))
-window.Vue = Vue
-document.tester = test
-require './tests/checkbox.js'
-require './tests/lol.coffee'
+    testCheckbox: require '../test/components/checkbox.vue'
+    testButton: require '../test/components/button.vue'
+
+window.app = app
+describe 'Vue MDL', ->
+  require './tests/checkbox.coffee'

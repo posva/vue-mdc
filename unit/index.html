@@ -15,8 +15,11 @@
   <script src="../node_modules/chai/chai.js"></script>
   <script src="../node_modules/chai-jquery/chai-jquery.js"></script>
   <script>
-    mocha.setup('bdd');
-    mocha.reporter('html');
+    if (window.initMochaPhantomJS)
+      window.initMochaPhantomJS()
+     mocha.setup({
+      ui: 'bdd',
+    });
     var expect = chai.expect;
     var should = chai.should();
     window.onload = function() {
@@ -26,6 +29,7 @@
 </head>
 
 <body>
+  <div id="mocha"></div>
   <div id="test">
     <div>
       <span>Test {{currentTest}}</span>
@@ -33,9 +37,8 @@
       <button @click='previous'>Previous</button>
       <button @click='next'>Next</button>
     </div>
-    <component :is='currentComponent'></component>
+    <component v-attach :is='currentComponent'></component>
   </div>
-  <div id="mocha"></div>
   <script src="test-bundle.js"></script>
 </body>
 
