@@ -48,4 +48,7 @@ var test = new Vue({
   }
 });
 
+window.Vue = Vue;
 document.tester = test;
+
+require('./tests/checkbox.js');
