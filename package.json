@@ -5,7 +5,9 @@
   "main": "dist/vue-mdl.min.js",
   "scripts": {
     "postinstall": "bower install",
-    "test": "./build/e2e.sh",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:e2e": "./build/e2e.sh",
+    "test:unit": "./build/unit.sh",
     "test:chrome": "./build/e2e.sh chrome",
     "test:firefox": "./build/e2e.sh firefox",
     "build": "webpack -p --progress --config build/webpack.config.js",
@@ -34,6 +36,7 @@
     "vue": "^1.0.7"
   },
   "devDependencies": {
+    "bluebird": "^3.0.5",
     "bower": "^1.6.5",
     "chai": "^3.4.0",
     "chai-jquery": "^2.0.0",
