@@ -2,17 +2,17 @@ var vue = require('vue-loader');
 var path = require('path');
 
 module.exports = {
-  entry: './unit/main.coffee',
+  entry: './test/unit/main.coffee',
   output: {
-    path: './unit',
-    filename: 'test-bundle.js',
-    publicPath: 'unit'
+    path: './test/unit',
+    filename: 'unit-bundle.js',
+    publicPath: 'test/unit'
   },
   module: {
     loaders: [{
       test: /\.coffee$/,
       include: [
-        path.resolve(__dirname, '../unit')
+        path.resolve(__dirname, '../test/unit')
       ],
       loader: 'coffee-loader'
     }, {

@@ -31,9 +31,9 @@ app = new Vue
       bind: -> window.vm = @vm.$children[0]
   components:
     testNone: template: '<p>Choose a valid component</p>'
-    testCheckbox: require '../test/components/checkbox.vue'
-    testButton: require '../test/components/button.vue'
+    testCheckbox: require '../components/checkbox.vue'
+    testButton: require '../components/button.vue'
 
 window.app = app
 describe 'Vue MDL', ->
-  require './tests/checkbox.coffee'
+  require './specs/checkbox.coffee'
