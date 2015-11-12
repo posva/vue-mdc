@@ -34,4 +34,30 @@ describe 'Checkbox', ->
     .then ->
       check.should.be.checked
       checkLabel.should.have.class 'is-checked'
+      done()
+  it 'can be disabled', (done) ->
+    check.should.be.enabled
+    check.should.have.a.prop 'disabled', false
+    checkLabel.should.not.have.class 'is-disabled'
+    vm.disabled = true
+    utils.nextTick()
+    .then ->
+      check.should.not.be.enabled
+      check.should.have.a.prop 'disabled', true
+      checkLabel.should.have.class 'is-disabled'
+      done()
+  it 'updates when disabled', (done) ->
+    check.should.be.checked
+    vm.check = false
+    utils.nextTick()
+    .then ->
+      check.should.not.be.checked
+      vm.check = true
+      vm.disabled = false
+    utils.nextTick()
     .then -> done()
+  it 'keeps user added classes', ->
+    $ 'label[for=check-dyn]'
+    .should.have.class 'added-class'
+  it 'can use an array', ->
+    debugger
