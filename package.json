@@ -31,7 +31,7 @@
   "author": "posva",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^1.0.6"
+    "vue": "^1.0.7"
   },
   "devDependencies": {
     "bower": "^1.6.5",

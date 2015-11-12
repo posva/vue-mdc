@@ -1,12 +1,16 @@
-Vue = require('vue')
+Vue = require 'vue'
+utils = require '../utils.coffee'
 
 describe 'Checkbox', ->
   mdlCbSelector = 'label[for=check]'
   check = null
+  checkLabel = null
   before (done) ->
     app.currentComponent = 'checkbox'
     Vue.nextTick ->
+      document.utils = utils
       check = $('#check')
+      checkLabel = $('label[for=check]')
       done()
   it 'exists', ->
     check.should.exists
@@ -18,8 +22,16 @@ describe 'Checkbox', ->
     .and.have.text 'Check me'
   it 'is checked', ->
     check.should.be.checked
+    #check.should.have.class 'is-checked'
   it 'can be unchecked', (done) ->
     vm.check = false
-    Vue.nextTick ->
+    utils.nextTick()
+    .then ->
       check.should.not.be.checked
-      done()
+      checkLabel.should.not.have.class 'is-checked'
+      vm.check = true
+      utils.nextTick()
+    .then ->
+      check.should.be.checked
+      checkLabel.should.have.class 'is-checked'
+    .then -> done()
