@@ -12,6 +12,7 @@ app = new Vue
       'progress'
       'spinner'
       'ripple-effect'
+      'icon-toggle'
     ]
     current: 0
   computed:
@@ -41,6 +42,7 @@ app = new Vue
     testProgress: require '../components/progress.vue'
     testSpinner: require '../components/spinner.vue'
     testRippleEffect: require '../components/ripple-effect.vue'
+    testIconToggle: require '../components/icon-toggle.vue'
 
 window.app = app
 describe 'Vue MDL', ->
@@ -50,3 +52,4 @@ describe 'Vue MDL', ->
   require './specs/progress.coffee'
   require './specs/spinner.coffee'
   require './specs/ripple-effect.coffee'
+  require './specs/icon-toggle.coffee'
