@@ -38,11 +38,13 @@ describe 'Progress', ->
     .then ->
       bbar.should.have.attr 'style'
       .match /width: 90%/
-      done()
+      utils.nextTick()
+    .then done, done
   it 'can change to indeterminate', (done) ->
     indeterminate.should.not.have.class 'mdl-progress__indeterminate'
     vm.indeterminate = true
     utils.nextTick()
     .then ->
       indeterminate.should.have.class 'mdl-progress__indeterminate'
-      done()
+      utils.nextTick()
+    .then done, done

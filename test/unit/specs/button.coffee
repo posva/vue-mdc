@@ -14,6 +14,7 @@ propChecker = (prop) ->
     utils.nextTick()
   .then ->
     but.should.not.have.class 'mdl-button--' + prop
+    utils.nextTick()
 
 describe 'Button', ->
   button = null
@@ -32,22 +33,22 @@ describe 'Button', ->
     .match /MaterialButton/
   it 'can be colored', (done) ->
     propChecker 'colored'
-    .then -> done()
+    .then done, done
   it 'can be raised', (done) ->
     propChecker 'raised'
-    .then -> done()
+    .then done, done
   it 'can be fab', (done) ->
     propChecker 'fab'
-    .then -> done()
+    .then done, done
   it 'can be mini-fab', (done) ->
     propChecker 'mini-fab'
-    .then -> done()
+    .then done, done
   it 'can be primary', (done) ->
     propChecker 'primary'
-    .then -> done()
+    .then done, done
   it 'can be accent', (done) ->
     propChecker 'accent'
-    .then -> done()
+    .then done, done
   it 'can be icon', (done) ->
     propChecker 'icon'
-    .then -> done()
+    .then done, done

@@ -35,7 +35,8 @@ describe 'Checkbox', ->
     .then ->
       check.should.be.checked
       checkLabel.should.have.class 'is-checked'
-      done()
+      utils.nextTick()
+    .then done, done
   it 'can be disabled', (done) ->
     check.should.be.enabled
     check.should.have.a.prop 'disabled', false
@@ -46,7 +47,8 @@ describe 'Checkbox', ->
       check.should.not.be.enabled
       check.should.have.a.prop 'disabled', true
       checkLabel.should.have.class 'is-disabled'
-      done()
+      utils.nextTick()
+    .then done, done
   it 'updates when disabled', (done) ->
     check.should.be.checked
     vm.check = false
@@ -55,12 +57,12 @@ describe 'Checkbox', ->
       check.should.not.be.checked
       vm.check = true
       vm.disabled = false
-    utils.nextTick()
-    .then -> done()
+      utils.nextTick()
+    .then done, done
   it 'keeps user added classes', ->
     $ 'label[for=check-dyn]'
     .should.have.class 'added-class'
-  it 'can use an array', ->
+  it 'can use an array', (done) ->
     $ '#id-0'
     .should.not.be.checked
     $ '#id-1'
@@ -103,4 +105,6 @@ describe 'Checkbox', ->
       .should.be.checked
       $ '#id-2'
       .should.not.be.checked
+      utils.nextTick()
+    .then done, done
 

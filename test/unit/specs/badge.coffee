@@ -32,4 +32,6 @@ describe 'Badge', ->
     utils.nextTick()
     .then ->
       badge.should.have.attr 'data-badge', '8'
-      done()
+      utils.nextTick()
+    .then done, done
+
