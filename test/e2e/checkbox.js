@@ -22,7 +22,8 @@ module.exports = {
   },
   'checkbox cannot be used while disabled': function(browser) {
     var selector = '#disable';
-    browser.expect.element('#check').to.not.be.enabled;
+    browser.click(selector)
+      .expect.element('#check').to.not.be.enabled;
 
     browser.click('#check')
       .expect.element('#check').to.be.selected;

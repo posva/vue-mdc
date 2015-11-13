@@ -13,6 +13,8 @@ else
   browsers="$1"
 fi
 
+sleep 2
+
 # run e2e tests, make sure to kill the server no matter pass or fail
 PORT=$PORT ./node_modules/.bin/nightwatch \
   -c build/nightwatch.json \
