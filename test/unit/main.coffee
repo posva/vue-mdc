@@ -7,6 +7,7 @@ app = new Vue
     tests: [
       'none'
       'checkbox'
+      'badge'
       'button'
     ]
     current: 0
@@ -32,8 +33,10 @@ app = new Vue
   components:
     testNone: template: '<p>Choose a valid component</p>'
     testCheckbox: require '../components/checkbox.vue'
+    testBadge: require '../components/badge.vue'
     testButton: require '../components/button.vue'
 
 window.app = app
 describe 'Vue MDL', ->
   require './specs/checkbox.coffee'
+  require './specs/badge.coffee'
