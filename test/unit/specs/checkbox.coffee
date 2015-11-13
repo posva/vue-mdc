@@ -17,6 +17,8 @@ describe 'Checkbox', ->
   it 'is updraded', ->
     span = $ 'label[for=check] span:nth-child(2)'
     check.should.have.class 'mdl-checkbox__input'
+    checkLabel.should.have.attr 'data-upgraded'
+    .match /MaterialCheckbox/
     span.should.have.class 'mdl-checkbox__label'
     .and.have.text 'Check me'
   it 'is checked', ->
