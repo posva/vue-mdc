@@ -10,6 +10,7 @@ app = new Vue
       'badge'
       'button'
       'progress'
+      'spinner'
     ]
     current: 0
   computed:
@@ -37,6 +38,7 @@ app = new Vue
     testBadge: require '../components/badge.vue'
     testButton: require '../components/button.vue'
     testProgress: require '../components/progress.vue'
+    testSpinner: require '../components/spinner.vue'
 
 window.app = app
 describe 'Vue MDL', ->
@@ -44,3 +46,4 @@ describe 'Vue MDL', ->
   require './specs/badge.coffee'
   require './specs/button.coffee'
   require './specs/progress.coffee'
+  require './specs/spinner.coffee'
