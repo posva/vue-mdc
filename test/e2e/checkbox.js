@@ -16,9 +16,9 @@ module.exports = {
   },
   'checkbox can be unchecked': function(browser) {
     browser.click(mdlCbSelector)
-      .expect.element('#check').to.not.be.selected;
+      .expect.element('#classic').to.not.be.selected;
     browser.click(mdlCbSelector)
-      .expect.element('#check').to.be.selected;
+      .expect.element('#classic').to.be.selected;
   },
   'checkbox cannot be used while disabled': function(browser) {
     var selector = '#disable';
