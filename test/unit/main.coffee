@@ -9,6 +9,7 @@ app = new Vue
       'checkbox'
       'badge'
       'button'
+      'progress'
     ]
     current: 0
   computed:
@@ -35,9 +36,11 @@ app = new Vue
     testCheckbox: require '../components/checkbox.vue'
     testBadge: require '../components/badge.vue'
     testButton: require '../components/button.vue'
+    testProgress: require '../components/progress.vue'
 
 window.app = app
 describe 'Vue MDL', ->
   require './specs/checkbox.coffee'
   require './specs/badge.coffee'
   require './specs/button.coffee'
+  require './specs/progress.coffee'

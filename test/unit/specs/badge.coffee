@@ -17,7 +17,7 @@ describe 'Badge', ->
   it 'exists', ->
     badge.should.exist
     badge.should.be.visible
-  it 'is updraded', ->
+  it 'is upgraded', ->
     badge.should.have.class 'mdl-badge'
     badge2.should.have.class 'mdl-badge'
   it 'can have no background', ->

@@ -26,7 +26,7 @@ describe 'Button', ->
   it 'exists', ->
     button.should.exist
     button.should.be.visible
-  it 'is updraded', ->
+  it 'is upgraded', ->
     button.should.have.class 'mdl-button'
     button.should.have.attr 'data-upgraded'
     .match /MaterialButton/

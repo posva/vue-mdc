@@ -14,7 +14,7 @@ describe 'Checkbox', ->
   it 'exists', ->
     check.should.exist
     check.should.have.prop 'type', 'checkbox'
-  it 'is updraded', ->
+  it 'is upgraded', ->
     span = $ 'label[for=check] span:nth-child(2)'
     check.should.have.class 'mdl-checkbox__input'
     checkLabel.should.have.attr 'data-upgraded'
