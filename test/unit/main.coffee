@@ -40,3 +40,4 @@ window.app = app
 describe 'Vue MDL', ->
   require './specs/checkbox.coffee'
   require './specs/badge.coffee'
+  require './specs/button.coffee'

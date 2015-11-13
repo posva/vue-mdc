@@ -1,7 +1,6 @@
 utils = require '../utils.coffee'
 
 describe 'Badge', ->
-  mdlCbSelector = 'label[for=check]'
   badge = null
   badge2 = null
   badgeNoBg = null
