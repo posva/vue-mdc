@@ -32,9 +32,19 @@ npm run build
 
 #Test
 
-Run all the tests
+You can run all the tests
 ```bash
 npm test
+```
+
+##Unit tests
+```bash
+npm run test:unit
+```
+
+##End to End tests
+```bash
+npm run test:e2e
 ```
 
 It is possible to test one single file by running the dev server in one terminal
@@ -49,12 +59,20 @@ PORT=8088 ./node_modules/.bin/nightwatch -c build/nightwatch.json --test test/e2
 
 #Development
 
-This will serve the test at `localhost:8088/test`.
+Prefer unit tests over end to end tests.
+
+Run `npm run dev-unit` to run a `webpack-dev-server` that will watch the project
+for modifications and create the bundles. You can then visit
+[http://localhost:8088/webpack-dev-server/test/unit](http://localhost:8088/webpack-dev-server/test/unit).
+
+Create tests pages inside `test/components`. Add unit tests to `test/unit/specs`
+and modify `test/unit/main.coffee` to load the test.
+
+You can also serve the tests pages without running the unit tests by running
+`npm run dev-test`.
+This will serve the tests at `localhost:8088/test/`.
 You must add `#<component_name>` to the address. For instance, if you want to
 load the checkbox example you must go to `localhost:8088/test/#checkbox`
-```bash
-npm run dev-test
-```
 
 #License
 [MIT](http://opensource.org/licenses/MIT)
