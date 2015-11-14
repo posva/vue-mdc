@@ -14,6 +14,7 @@ app = new Vue
       'ripple-effect'
       'icon-toggle'
       'radio'
+      'slider'
     ]
     current: 0
   computed:
@@ -45,6 +46,7 @@ app = new Vue
     testRippleEffect: require '../components/ripple-effect.vue'
     testIconToggle: require '../components/icon-toggle.vue'
     testRadio: require '../components/radio.vue'
+    testSlider: require '../components/slider.vue'
 
 window.app = app
 describe 'Vue MDL', ->
@@ -56,3 +58,4 @@ describe 'Vue MDL', ->
   require './specs/ripple-effect.coffee'
   require './specs/icon-toggle.coffee'
   require './specs/radio.coffee'
+  require './specs/slider.coffee'
