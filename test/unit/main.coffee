@@ -15,6 +15,7 @@ app = new Vue
       'icon-toggle'
       'radio'
       'slider'
+      'switch'
     ]
     current: 0
   computed:
@@ -47,6 +48,7 @@ app = new Vue
     testIconToggle: require '../components/icon-toggle.vue'
     testRadio: require '../components/radio.vue'
     testSlider: require '../components/slider.vue'
+    testSwitch: require '../components/switch.vue'
 
 window.app = app
 describe 'Vue MDL', ->
@@ -59,3 +61,4 @@ describe 'Vue MDL', ->
   require './specs/icon-toggle.coffee'
   require './specs/radio.coffee'
   require './specs/slider.coffee'
+  require './specs/switch.coffee'

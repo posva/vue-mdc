@@ -10,7 +10,7 @@ div
       span.mdl-switch__label No ripple
   h3 vue
   p
-    mdl-switch(id='check-dyn' v-bind:checked.sync='check') Dynamic {{check}}
+    mdl-switch.added-class(id='check-dyn' v-bind:checked.sync='check') Dynamic {{check}}
     mdl-switch(id='check' v-bind:checked.sync='check' v-bind:disabled='disabled') Check me
   p
     input#classic(type='checkbox' v-model='check')
