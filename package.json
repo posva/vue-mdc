@@ -1,6 +1,6 @@
 {
   "name": "vue-mdl",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Reusable Vue components using Material Design Lite",
   "main": "dist/vue-mdl.min.js",
   "scripts": {
@@ -33,7 +33,7 @@
   "author": "posva",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^1.0.7"
+    "vue": "^1.0.8"
   },
   "devDependencies": {
     "bluebird": "^3.0.5",
