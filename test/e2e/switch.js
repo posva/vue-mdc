@@ -4,8 +4,9 @@ base += '/#switch';
 var mdlCbSelector = 'label[for=check]';
 
 module.exports = {
-  'switch exists': function(browser) {
+  'exists': function(browser) {
     browser.url(base)
+      .refresh()
       .waitForElementVisible('#test', 1000)
       .expect.element('#check')
       .to.be.present
@@ -14,7 +15,7 @@ module.exports = {
       .equals('checkbox');
 
   },
-  'switch has mdl classes': function(browser) {
+  'has mdl classes': function(browser) {
     browser.expect.element('#check')
       .to.have.attribute('class')
       .equals('mdl-switch__input');
@@ -25,17 +26,17 @@ module.exports = {
       .and.to.have.attribute('class')
       .equals('mdl-switch__label');
   },
-  'switch is checked': function(browser) {
+  'is checked': function(browser) {
     browser.expect.element('#check')
       .to.be.selected;
   },
-  'switch can be unchecked': function(browser) {
+  'can be unchecked': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element('#check').to.not.be.selected;
     browser.click(mdlCbSelector)
       .expect.element('#check').to.be.selected;
   },
-  'switch have is-checked class': function(browser) {
+  'have is-checked class': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element(mdlCbSelector).to.not.be.selected;
 
@@ -48,7 +49,7 @@ module.exports = {
       .to.have.attribute('class')
       .which.contains('is-checked');
   },
-  'switch can be unchecked from somewhere else': function(browser) {
+  'can be unchecked from somewhere else': function(browser) {
     var selector = '#classic';
     browser.expect.element('#check').to.be.selected;
     browser.expect.element(selector).to.be.selected;
@@ -66,7 +67,7 @@ module.exports = {
       .to.have.attribute('class')
       .which.contains('is-checked');
   },
-  'switch can be disabled': function(browser) {
+  'can be disabled': function(browser) {
     var selector = '#disable';
     browser.expect.element('#check').to.be.enabled;
     browser.expect.element(mdlCbSelector)
@@ -80,7 +81,7 @@ module.exports = {
       .to.have.attribute('class')
       .which.contains('is-disabled');
   },
-  'switch cannot be used while disabled': function(browser) {
+  'cannot be used while disabled': function(browser) {
     var selector = '#disable';
     browser.expect.element('#check').to.not.be.enabled;
 
@@ -96,7 +97,7 @@ module.exports = {
       .to.have.attribute('class')
       .which.does.not.contain('is-disabled');
   },
-  'switch keep working after being disabled': function(browser) {
+  'keep working after being disabled': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element('#check').to.not.be.selected;
     browser.click(mdlCbSelector)
@@ -116,7 +117,7 @@ module.exports = {
     browser.click('#disable')
       .expect.element('#v-if').to.not.be.present;
   },
-  'checkboxes can use an Array instead of a Boolean': function(browser) {
+  'can use an Array instead of a Boolean': function(browser) {
     var selector = function(n) {
       return 'label[for=id-' + n + '] .mdl-switch__label';
     };

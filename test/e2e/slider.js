@@ -3,14 +3,15 @@ var base = 'http://localhost:' + (process.env.PORT || 8080) + '/test';
 base += '/#slider';
 
 module.exports = {
-  'slider exists': function(browser) {
+  'exists': function(browser) {
     browser.url(base)
+      .refresh()
       .waitForElementVisible('#test', 1000)
       .expect.element('#slider')
       .to.be.present
       .and.to.be.an('input');
   },
-  'slider is upgraded': function(browser) {
+  'is upgraded': function(browser) {
     browser.expect.element('#slider')
       .to.have.attribute('class')
       .which.contains('is-upgraded');
@@ -18,17 +19,17 @@ module.exports = {
       .to.have.attribute('data-upgraded')
       .which.contains('MaterialSlider');
   },
-  'slider value can be changed': function(browser) {
+  'value can be changed': function(browser) {
     browser.clearValue('#value');
     browser.setValue('#value', '15');
     browser.expect.element('#slider')
       .to.have.value.that.equals('15');
   },
-  'slider with step have a different value': function(browser) {
+  'with step have a different value': function(browser) {
     browser.expect.element('#disable')
       .to.have.value.that.equals('25');
   },
-  'slider with step will take the round value': function(browser) {
+  'with step will take the round value': function(browser) {
     browser.clearValue('#value');
     browser.setValue('#value', '13');
     browser.expect.element('#disable')
@@ -38,21 +39,21 @@ module.exports = {
     browser.expect.element('#disable')
       .to.have.value.that.equals('0');
   },
-  'slider step can be changed': function(browser) {
+  'step can be changed': function(browser) {
     browser.clearValue('#step');
     browser.setValue('#step', '10');
     browser.expect.element('#disable')
       .to.have.attribute('step')
       .which.equals('10');
   },
-  'slider min value can be changed': function(browser) {
+  'min value can be changed': function(browser) {
     browser.clearValue('#min');
     browser.setValue('#min', '10');
     browser.expect.element('#slider')
       .to.have.attribute('min')
       .which.equals('10');
   },
-  'slider max value can be changed': function(browser) {
+  'max value can be changed': function(browser) {
     browser.clearValue('#max');
     browser.setValue('#max', '10');
     browser.expect.element('#slider')

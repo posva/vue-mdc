@@ -45,6 +45,7 @@
     "coffee-script": "^1.10.0",
     "css-loader": "^0.21.0",
     "html-loader": "^0.3.0",
+    "http-server": "^0.8.5",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "jquery": "^2.1.4",

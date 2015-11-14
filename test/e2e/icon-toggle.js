@@ -4,8 +4,9 @@ base += '/#icon-toggle';
 var mdlCbSelector = 'label[for=it]';
 
 module.exports = {
-  'icon-toggle exists': function(browser) {
+  'exists': function(browser) {
     browser.url(base)
+      .refresh()
       .waitForElementVisible('#test', 1000)
       .expect.element('#it')
       .to.be.present
@@ -13,13 +14,13 @@ module.exports = {
       .and.to.have.attribute('type')
       .equals('checkbox');
   },
-  'icon-toggle can be unchecked': function(browser) {
+  'can be unchecked': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element('#classic').to.not.be.selected;
     browser.click(mdlCbSelector)
       .expect.element('#classic').to.be.selected;
   },
-  'icon-toggle cannot be used while disabled': function(browser) {
+  'cannot be used while disabled': function(browser) {
     var selector = '#disable';
     browser.click(selector)
       .expect.element('#it').to.not.be.enabled;
@@ -36,7 +37,7 @@ module.exports = {
       .to.have.attribute('class')
       .which.does.not.contain('is-disabled');
   },
-  'checkboxes can use an Array instead of a Boolean': function(browser) {
+  'can use an Array instead of a Boolean': function(browser) {
     var selector = function(n) {
       return 'label[for=id-' + n + ']';
     };

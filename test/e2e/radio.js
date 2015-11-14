@@ -4,8 +4,9 @@ base += '/#radio';
 var radioSel = 'label[for=check]';
 
 module.exports = {
-  'radio exists': function(browser) {
+  'exists': function(browser) {
     browser.url(base)
+      .refresh()
       .waitForElementVisible('#test', 1000)
       .expect.element('#banana')
       .to.be.present
@@ -13,7 +14,7 @@ module.exports = {
       .and.to.have.attribute('type')
       .equals('radio');
   },
-  'radio is upgraded': function(browser) {
+  'is upgraded': function(browser) {
     browser.expect.element('label[for=banana]')
       .to.have.attribute('class')
       .which.contains('is-upgraded');
@@ -55,7 +56,7 @@ module.exports = {
       .expect.element('#little')
       .to.be.selected;
   },
-  'radio can be disabled': function(browser) {
+  'can be disabled': function(browser) {
     browser.click('#disable')
       .expect.element('#big')
       .to.not.be.enabled;
@@ -64,7 +65,7 @@ module.exports = {
       .expect.element('#big')
       .to.be.enabled;
   },
-  'radio starts with the rigth values': function(browser) {
+  'starts with the rigth values': function(browser) {
     browser.expect.element('#big')
       .to.not.be.selected;
     browser.expect.element('#medium')
@@ -87,7 +88,7 @@ module.exports = {
       .to.have.attribute('class')
       .which.contains('added-class');
   },
-  'radio updates variable': function(browser) {
+  'updates variable': function(browser) {
     browser.click('label[for=big]')
       .expect.element('#big')
       .to.be.selected;

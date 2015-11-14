@@ -4,23 +4,23 @@ base += '/#checkbox';
 var mdlCbSelector = 'label[for=check]';
 
 module.exports = {
-  'checkbox exists': function(browser) {
+  'exists': function(browser) {
     browser.url(base)
+      .refresh()
       .waitForElementVisible('#test', 1000)
       .expect.element('#check')
       .to.be.present
       .and.to.be.an('input')
       .and.to.have.attribute('type')
       .equals('checkbox');
-
   },
-  'checkbox can be unchecked': function(browser) {
+  'can be unchecked': function(browser) {
     browser.click(mdlCbSelector)
       .expect.element('#classic').to.not.be.selected;
     browser.click(mdlCbSelector)
       .expect.element('#classic').to.be.selected;
   },
-  'checkbox cannot be used while disabled': function(browser) {
+  'cannot be used while disabled': function(browser) {
     var selector = '#disable';
     browser.click(selector)
       .expect.element('#check').to.not.be.enabled;
@@ -37,7 +37,7 @@ module.exports = {
       .to.have.attribute('class')
       .which.does.not.contain('is-disabled');
   },
-  'checkboxes can use an Array instead of a Boolean': function(browser) {
+  'can use an Array instead of a Boolean': function(browser) {
     var selector = function(n) {
       return 'label[for=id-' + n + '] .mdl-checkbox__label';
     };
