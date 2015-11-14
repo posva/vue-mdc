@@ -1,18 +1,12 @@
 <template lang="jade">
 div
   h1 Progress bar
-  #progress
-    mdl-progress(v-bind:progress='progress')
+  mdl-progress#progress(v-bind:progress='progress')
   br
-  #buffer
-    mdl-progress(v-bind:progress='progress' v-bind:buffer='buffer')
+  mdl-progress#buffer(v-bind:progress='progress' v-bind:buffer='buffer')
   br
-  #indeterminate
-    mdl-progress(v-bind:indeterminate='indeterminate')
+  mdl-progress#indeterminate(v-bind:indeterminate='indeterminate')
   br
-  #dynamic
-    mdl-progress(v-if='indeterminate' v-bind:indeterminate='indeterminate')
-
   br
   input#progress-val(type='number' v-model='progress')
   input#buffer-val(type='number' v-model='buffer')
