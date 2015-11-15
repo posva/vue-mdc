@@ -13,9 +13,9 @@ module.exports = {
     'mdl-tooltip': require('./tooltip.vue'),
   },
   directives: {
-    'mdl-ripple-effect': require('coffee!./directives/ripple-effect.coffee'),
-    'mdl-badge': require('coffee!./directives/badge.coffee'),
-    'mdl': require('coffee!./directives/mdl.coffee'),
+    'mdl-ripple-effect': require('./directives/ripple-effect.coffee'),
+    'mdl-badge': require('./directives/badge.coffee'),
+    'mdl': require('./directives/mdl.coffee'),
   },
 
   register: function(Vue, name) {

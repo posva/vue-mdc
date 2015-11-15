@@ -6,7 +6,7 @@ label.mdl-switch.mdl-js-switch(v-bind:for.once='id' v-bind:class='{ "is-disabled
 </template>
 
 <script lang="coffee">
-common = require 'coffee!../mixins/toggle.coffee'
+common = require '../mixins/toggle.coffee'
 module.exports =
   mixins: [common]
   ready: ->

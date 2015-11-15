@@ -5,7 +5,7 @@ label.mdl-icon-toggle.mdl-js-icon-toggle(v-bind:for.once='id' v-bind:class='{ "i
 </template>
 
 <script lang="coffee">
-common = require 'coffee!../mixins/toggle.coffee'
+common = require '../mixins/toggle.coffee'
 module.exports =
   props:
     icon:

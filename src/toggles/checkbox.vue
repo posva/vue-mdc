@@ -6,7 +6,7 @@ label.mdl-checkbox.mdl-js-checkbox(v-bind:for.once='id' v-bind:class='{ "is-disa
 </template>
 
 <script lang="coffee">
-common = require 'coffee!../mixins/toggle.coffee'
+common = require '../mixins/toggle.coffee'
 module.exports =
   mixins: [common]
   ready: ->
