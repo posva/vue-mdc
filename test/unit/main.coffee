@@ -55,6 +55,7 @@ app = new Vue
     testTooltip: require '../components/tooltip.vue'
 
 window.app = app
+window.Vue = Vue
 describe 'Vue MDL', ->
   require './specs/checkbox.coffee'
   require './specs/badge.coffee'
@@ -68,3 +69,5 @@ describe 'Vue MDL', ->
   require './specs/switch.coffee'
   require './specs/textfield.coffee'
   require './specs/tooltip.coffee'
+  # This must be the last
+  require './specs/vue-mdl.coffee'

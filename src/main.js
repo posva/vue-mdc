@@ -19,11 +19,33 @@ module.exports = {
   },
 
   register: function(Vue, name) {
-    // TODO
-    Vue.component(name, {});
+    var comp, func, that;
+    that = this;
+    var setComp = function(name) {
+      if (name in that.components) {
+        comp = that.components[name];
+        func = 'component';
+      } else if (name in that.directives) {
+        comp = that.directives[name];
+        func = 'directive';
+      }
+    };
+    setComp(name);
+    if (!comp) {
+      name = 'mdl-' + name;
+      setComp(name);
+      if (!comp) {
+        throw new Error('Cannot register component ' + name + " because it doesn't exist");
+      }
+    }
+    return Vue[func](name, comp);
   },
   registerAll: function(Vue) {
-    // TODO
-    Vue.component('foo', {});
+    for (var comp in this.components) {
+      Vue.component(comp, this.components[comp]);
+    }
+    for (var dir in this.directives) {
+      var a = Vue.directive(dir, this.directives[dir]);
+    }
   }
 };
