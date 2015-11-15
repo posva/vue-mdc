@@ -10,6 +10,7 @@ module.exports = {
     'mdl-spinner': require('./spinner.vue'),
     'mdl-slider': require('./slider.vue'),
     'mdl-textfield': require('./textfield.vue'),
+    'mdl-tooltip': require('./tooltip.vue'),
   },
   directives: {
     'mdl-ripple-effect': require('coffee!./directives/ripple-effect.coffee'),

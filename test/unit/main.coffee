@@ -17,6 +17,7 @@ app = new Vue
       'slider'
       'switch'
       'textfield'
+      'tooltip'
     ]
     current: 0
   computed:
@@ -51,6 +52,7 @@ app = new Vue
     testSlider: require '../components/slider.vue'
     testSwitch: require '../components/switch.vue'
     testTextfield: require '../components/textfield.vue'
+    testTooltip: require '../components/tooltip.vue'
 
 window.app = app
 describe 'Vue MDL', ->
@@ -65,3 +67,4 @@ describe 'Vue MDL', ->
   require './specs/slider.coffee'
   require './specs/switch.coffee'
   require './specs/textfield.coffee'
+  require './specs/tooltip.coffee'
