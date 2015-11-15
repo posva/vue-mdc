@@ -18,6 +18,38 @@ __Warning__: This project is still under development. Contributions are welcome
 
 vue-mdl tries to use the latest versions of material design lite and vue
 
+#Usage
+
+```js
+// browserify/webpack require
+// Use vmdl if you're including vue-mdl directly into the browser
+var vmdl = require('vue-mdl');
+var Vue = require('vue');
+
+// Globally register the checkbox
+vmdl.register(Vue, 'mdl-checkbox');
+// Shorthand
+vmdl.register(Vue, 'checkbox');
+// Globally register all components and directives
+vmdl.registerAll(Vue);
+
+// Access any component or directive
+var checkbox = vmdl.components['mdl-checkbox'];
+var badge = vmdl.directives['mdl-badge'];
+var app = new Vue({
+  components: {
+    mdlCheckbox: checkbox
+  },
+  directives: {
+    mdlBadge: badge
+  }
+});
+```
+
+```html
+<mdl-checkbox :checked='check'>Checkbox</mdl-checkbox>
+```
+
 #Documentation
 
 There is yet no documentation for this project, you can look in the test
