@@ -1,4 +1,5 @@
 var vue = require('vue-loader');
+var path = require('path');
 
 module.exports = {
   entry: {
@@ -13,6 +14,12 @@ module.exports = {
   },
   module: {
     loaders: [{
+      test: /\.coffee$/,
+      include: [
+        path.resolve(__dirname, '../src')
+      ],
+      loader: 'coffee-loader'
+    }, {
       test: /\.vue$/,
       loader: 'vue'
     }]
