@@ -5,3 +5,5 @@ test/test-bundle.js.map
 coverage
 selenium-debug.log
 .DS_Store
+doc/doc-bundle.js
+doc/doc-bundle.js.map
