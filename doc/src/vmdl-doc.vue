@@ -5,6 +5,8 @@
 </style>
 <template lang="jade">
 div
+  h1 Vue MDL
+  h6 Reusable material design components for vue
 </template>
 
 <script lang="coffee">
