@@ -2,7 +2,7 @@
   "name": "vue-mdl",
   "version": "0.2.0",
   "description": "Reusable Vue components using Material Design Lite",
-  "main": "dist/vue-mdl.min.js",
+  "main": "src/vue-mdl.js",
   "scripts": {
     "prepublish": "bower install",
     "test": "npm run test:unit && npm run test:e2e",

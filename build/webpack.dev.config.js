@@ -1,8 +1,7 @@
-var vue = require('vue-loader');
 var path = require('path');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/vue-mdl.js',
   output: {
     path: './dist',
     publicPath: 'dist',

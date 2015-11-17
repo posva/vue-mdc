@@ -1,4 +1,3 @@
-var vue = require('vue-loader');
 var path = require('path');
 
 module.exports = {
@@ -19,6 +18,9 @@ module.exports = {
     }, {
       test: /\.vue$/,
       loader: 'vue'
+    }, {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
     }]
   },
   devtool: 'source-map'

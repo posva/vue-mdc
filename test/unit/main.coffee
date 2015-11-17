@@ -1,4 +1,6 @@
 Vue = require 'vue'
+require '../../bower_components/material-design-lite/material.min.css'
+require '../../bower_components/material-design-lite/material.min.js'
 
 Vue.config.debug = true
 app = new Vue

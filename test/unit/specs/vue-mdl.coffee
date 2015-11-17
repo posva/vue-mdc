@@ -1,5 +1,5 @@
 utils = require '../utils.coffee'
-mdl = require '../../../src/main.js'
+mdl = require '../../../src/vue-mdl.js'
 
 describe 'Register', ->
   before (done) ->

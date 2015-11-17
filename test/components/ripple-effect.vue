@@ -12,7 +12,7 @@ div
 </template>
 
 <script lang="coffee">
-vmdl = require '../../src/main.js'
+vmdl = require '../../src/vue-mdl.js'
 
 module.exports =
   data: ->
