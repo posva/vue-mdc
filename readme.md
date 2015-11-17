@@ -93,7 +93,7 @@ PORT=8088 ./node_modules/.bin/nightwatch -c build/nightwatch.json --test test/e2
 
 Prefer unit tests over end to end tests.
 
-Run `npm run dev-unit` to run a `webpack-dev-server` that will watch the project
+Run `npm run dev` to run a `webpack-dev-server` that will watch the project
 for modifications and create the bundles. You can then visit
 [http://localhost:8088/webpack-dev-server/test/unit](http://localhost:8088/webpack-dev-server/test/unit).
 

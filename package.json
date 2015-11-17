@@ -11,11 +11,10 @@
     "test:chrome": "./build/e2e.sh chrome",
     "test:firefox": "./build/e2e.sh firefox",
     "build": "npm run build:dev && npm run build:prod",
-    "build:dev": "webpack --progress --config build/webpack.dev.config.js",
-    "build:prod": "webpack -p --progress --config build/webpack.prod.config.js",
-    "dev": "webpack-dev-server --config build/webpack.config.js",
+    "build:dev": "webpack --progress --bail --config build/webpack.dev.config.js",
+    "build:prod": "webpack -p --progress --bail --config build/webpack.prod.config.js",
     "dev-test": "webpack-dev-server --config build/webpack.test.config.js --port 8088",
-    "dev-unit": "webpack-dev-server --config build/webpack.unit.config.js --port 8088"
+    "dev": "webpack-dev-server --config build/webpack.unit.config.js --port 8088"
   },
   "keywords": [
     "vue",
