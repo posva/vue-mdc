@@ -18,6 +18,9 @@ module.exports = {
     }, {
       test: /\.vue$/,
       loader: 'vue'
+    }, {
+      test: /\.css$/,
+      loader: "style-loader!css-loader"
     }]
   },
   devtool: 'source-map'
