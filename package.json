@@ -4,7 +4,6 @@
   "description": "Reusable Vue components using Material Design Lite",
   "main": "src/vue-mdl.js",
   "scripts": {
-    "prepublish": "bower install",
     "test": "npm run test:unit && npm run test:e2e",
     "test:e2e": "./build/e2e.sh",
     "test:unit": "./build/unit.sh",
@@ -38,7 +37,6 @@
   },
   "devDependencies": {
     "bluebird": "^3.0.5",
-    "bower": "^1.6.5",
     "chai": "^3.4.0",
     "chai-jquery": "^2.0.0",
     "chromedriver": "^2.19.0",

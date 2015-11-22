@@ -3,9 +3,6 @@ machine:
     version: 4.2.2
   post:
     - npm i -g npm@3.x.x
-dependencies:
-  cache_directories:
-    - bower_components
 test:
   override:
     - rm -rf dist || true

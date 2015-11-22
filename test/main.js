@@ -1,5 +1,5 @@
-require('../bower_components/material-design-lite/material.min.css');
-require('../bower_components/material-design-lite/material.min.js');
+require('material-design-lite/material.css');
+require('material-design-lite/material.js');
 var Vue = require('vue');
 
 Vue.config.debug = true;
