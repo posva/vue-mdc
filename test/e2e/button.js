@@ -6,7 +6,7 @@ module.exports = {
   'exists': function(browser) {
     browser.url(base)
       .refresh()
-      .waitForElementVisible('#test', 1000)
+      .waitForElementVisible('#test', 2000)
       .expect.element('#button')
       .to.be.present
       .and.to.be.a('button');
