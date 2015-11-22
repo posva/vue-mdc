@@ -2,7 +2,7 @@
   "name": "vue-mdl",
   "version": "0.2.1",
   "description": "Reusable Vue components using Material Design Lite",
-  "main": "src/vue-mdl.js",
+  "main": "dist/vue-mdl.js",
   "scripts": {
     "test": "npm run test:unit && npm run test:e2e",
     "test:e2e": "./build/e2e.sh",
