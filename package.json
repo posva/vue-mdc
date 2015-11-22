@@ -48,6 +48,7 @@
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "jquery": "^2.1.4",
+    "material-design-lite": "^1.0.6",
     "mocha": "^2.3.3",
     "mocha-phantomjs": "^4.0.1",
     "nightwatch": "^0.8.6",
