@@ -31,6 +31,7 @@
       a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl') NPM
   main.mdl-layout__content
     .page-content
+      getting-started
       div
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar vitae velit et varius. Integer euismod nisl id nisi rutrum condimentum. Aenean ligula est, blandit id massa vitae, efficitur placerat nulla. Maecenas quis leo neque. Proin porttitor dui quis ex cursus scelerisque. Cras pharetra bibendum orci a convallis. Ut nec aliquam quam. Integer porta et lorem luctus molestie. Donec efficitur egestas erat nec sagittis. Quisque varius, tellus sit amet tincidunt posuere, mauris est sollicitudin purus, nec tristique magna libero accumsan augue.
 
@@ -40,14 +41,13 @@
 </template>
 
 <script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
-
 module.exports =
   data: ->
     filter: ''
   methods:
     closeMenu: ->
-      @$el.MaterialLayout.drawerToggleHandler_()
-  components: vmdl.components
-  directives: vmdl.directives
+      if @$el.classList.contains 'is-visible'
+        @$el.MaterialLayout.drawerToggleHandler_()
+  components:
+    gettingStarted: require './partials/getting-started.vue'
 </script>
