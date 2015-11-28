@@ -55,6 +55,8 @@
     "mocha": "^2.3.4",
     "mocha-phantomjs": "^4.0.1",
     "nightwatch": "^0.8.6",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
     "selenium-server": "^2.48.2",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.2",

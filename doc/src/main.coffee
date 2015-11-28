@@ -1,6 +1,6 @@
 Vue = require 'vue'
 vmdl = require '../../src/vue-mdl'
-require 'material-design-lite/material.min.css'
+require './style/mdl.scss'
 require 'material-design-lite/material.min.js'
 
 vmdl.registerAll Vue

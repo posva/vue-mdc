@@ -1,4 +1,5 @@
 <style lang="stylus">
+  @import './style/variables'
   .header-title
     font-size: 1.5em
   .mdl-badge--blue[data-badge]:after
@@ -8,6 +9,8 @@
       vertical-align: middle
     i.material-icons
       margin-right: 1em
+  a
+    color: accent-color
 </style>
 
 <template lang="jade">
