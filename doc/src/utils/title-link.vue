@@ -2,12 +2,13 @@
   @import '../style/variables'
   a
     text-decoration: none
-    h3
+    color: main-color
+    h3, h2
       margin: .7em 1em .9em
       position: relative
       &:before
         content: "#";
-        color: main-color
+        color: accent-color
         position: absolute;
         left: -0.7em;
         top: -2px;
@@ -17,13 +18,16 @@
 
 <template lang="jade">
   a(:href.once='link', :id.once='id')
-    h3
+    h2(v-if='big')
+      slot
+    h3(v-else)
       slot
 </template>
 
 <script lang="coffee">
 _ = require 'lodash'
 module.exports =
+  props: ['big']
   data: ->
     id: 'invalid'
   computed:

@@ -11,6 +11,9 @@
       margin-right: 1em
   a
     color: accent-color
+    text-decoration: none
+  .mdl-layout__drawer a
+    color: main-color
 </style>
 
 <template lang="jade">
@@ -21,6 +24,11 @@
       .mdl-layout-spacer
       mdl-textfield.mdl-textfield--align-right(id='search' expandable='search' v-bind:value.sync='filter')
   .mdl-layout__drawer
+    a.mdl-layout-title.mdl-layout-title--icon(href='#getting-started')
+      i.material-icons home
+      span Getting Started
+    nav.mdl-navigation
+      a.mdl-navigation__link(href='#installation', @click='closeMenu()') Installation
     span.mdl-layout-title.mdl-layout-title--icon
       i.material-icons extension
       span Components
@@ -35,10 +43,6 @@
   main.mdl-layout__content
     .page-content
       getting-started
-      div
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar vitae velit et varius. Integer euismod nisl id nisi rutrum condimentum. Aenean ligula est, blandit id massa vitae, efficitur placerat nulla. Maecenas quis leo neque. Proin porttitor dui quis ex cursus scelerisque. Cras pharetra bibendum orci a convallis. Ut nec aliquam quam. Integer porta et lorem luctus molestie. Donec efficitur egestas erat nec sagittis. Quisque varius, tellus sit amet tincidunt posuere, mauris est sollicitudin purus, nec tristique magna libero accumsan augue.
-
-        p Sed eu augue vehicula, consectetur felis a, dapibus dolor. Aenean orci tortor, maximus eu consectetur ac, luctus et nisi. Vestibulum condimentum quis risus at bibendum. Fusce ac quam dictum, mattis lacus vitae, sodales ipsum. Sed ultrices vehicula quam ut vehicula. Sed efficitur tempor tortor nec sagittis. Maecenas scelerisque erat et ligula convallis iaculis.
       #buttons
         mdl-button Hey
 </template>

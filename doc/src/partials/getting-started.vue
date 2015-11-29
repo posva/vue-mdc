@@ -2,7 +2,7 @@
 </style>
 
 <template lang="jade">
-  title-link Getting Started
+  title-link(big) Getting Started
 </template>
 
 <script lang="coffee">
