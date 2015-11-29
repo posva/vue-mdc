@@ -14,7 +14,7 @@
     "build:prod": "webpack -p --progress --bail --config build/webpack.prod.config.js",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.config.js",
     "dev-test": "webpack-dev-server --config build/webpack.test.config.js --port 8088",
-    "dev-doc": "webpack-dev-server --config build/webpack.doc.config.js --port 8088",
+    "dev:doc": "webpack-dev-server --config build/webpack.doc.config.js --port 8088",
     "dev": "webpack-dev-server --config build/webpack.unit.config.js --port 8088"
   },
   "keywords": [
