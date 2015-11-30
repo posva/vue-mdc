@@ -55,8 +55,9 @@ var app = new Vue({
 There is yet no full documentation for this project, you can look in the
 `test/components` directory for some examples.
 
-The documentation is available [here](http://posva.net/vue-mdl). Pull Requests
-and issues are welcome.
+The documentation is available [here](http://posva.net/vue-mdl) but it is yet
+empty and broken. I am currently working on it (Mon Nov 30 11:40:39 CET 2015).
+Pull Requests and issues are welcome.
 
 #Build
 
