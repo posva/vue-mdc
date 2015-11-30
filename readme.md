@@ -52,8 +52,11 @@ var app = new Vue({
 
 #Documentation
 
-There is yet no documentation for this project, you can look in the test
-directory for some examples
+There is yet no full documentation for this project, you can look in the
+`test/components` directory for some examples.
+
+The documentation is available [here](http://posva.net/vue-mdl). Pull Requests
+and issues are welcome.
 
 #Build
 
