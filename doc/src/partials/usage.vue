@@ -3,9 +3,9 @@
 
 <template lang="jade">
 .section
-  title-link(big) Getting Started
+  title-link Usage
   .section__content
-    p blah bla
+    p how to use
 </template>
 
 <script lang="coffee">

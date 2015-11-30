@@ -3,9 +3,9 @@
 
 <template lang="jade">
 .section
-  title-link(big) Getting Started
+  title-link Buttons
   .section__content
-    p blah bla
+    p Some buttons
 </template>
 
 <script lang="coffee">
