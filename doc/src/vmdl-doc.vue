@@ -1,0 +1,72 @@
+<style lang="stylus">
+@import './style/variables'
+.header-title
+  font-size: 1.5em
+.mdl-badge--blue[data-badge]:after
+  background: aquamarine
+.mdl-navigation__link--icon, .mdl-layout-title--icon
+  span, i.material-icons
+    vertical-align: middle
+  i.material-icons
+    margin-right: 1em
+a
+  color: accent-color
+  text-decoration: none
+.mdl-layout--fixed-drawer > .mdl-layout__header .mdl-layout__header-row
+  padding: 1em
+.mdl-layout__drawer a
+  color: main-color
+.mdl-layout__header-logo
+  max-height: 100%
+  margin-right: .35em
+</style>
+
+<template lang="jade">
+.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header(v-el='menu')
+  header.mdl-layout__header
+    .mdl-layout__header-row
+      span.header-title
+        img.mdl-layout__header-logo(src='http://vuejs.org/images/logo.png')
+        | Vue MDL
+      .mdl-layout-spacer
+      mdl-textfield.mdl-textfield--align-right(id='search' expandable='search' v-bind:value.sync='filter')
+  .mdl-layout__drawer
+    menu-entry(v-for='menu in items', :menu='menu')
+    span.mdl-layout-title.mdl-layout-title--icon
+      i.material-icons link
+      | Links
+    nav.mdl-navigation
+      a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl') Github
+      a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl') NPM
+  main.mdl-layout__content
+    .page-content
+      content-entry(v-for='menu in items', :menu='menu')
+</template>
+
+<script lang="coffee">
+module.exports =
+  data: ->
+    filter: ''
+    items: [
+      name: 'Getting started'
+      icon: 'home'
+      items: [
+        'Installation'
+      ,
+        'Usage'
+      ]
+    ,
+      name: 'Components'
+      icon: 'extension'
+      items: [
+        'Buttons'
+      ]
+    ]
+  methods:
+    closeMenu: ->
+      if @$el.classList.contains 'is-visible'
+        @$el.MaterialLayout.drawerToggleHandler_()
+  components:
+    menuEntry: require './utils/menu-entry.vue'
+    contentEntry: require './utils/content-entry.vue'
+</script>

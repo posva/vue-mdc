@@ -1,0 +1,9 @@
+@import "../../../node_modules/material-design-lite/src/color-definitions";
+
+$color-primary: #2c3e50;
+$color-primary-dark: #399f71;
+$color-accent: rgb(0, 150, 136);
+$color-primary-contrast: $color-accent;
+$color-accent-contrast: $color-primary;
+
+@import "../../../node_modules/material-design-lite/src/material-design-lite";
