@@ -9,7 +9,10 @@ machine:
     - npm i -g npm@3.x.x
 test:
   override:
-    - rm -rf dist || true
     - npm run build
-    - rm -rf dist
     - npm test
+deployment:
+  doc:
+    branch: dev
+    commands:
+      - ./build/gh-pages.sh
