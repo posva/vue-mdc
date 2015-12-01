@@ -1,5 +1,5 @@
 Vue = require 'vue'
-hljs = require 'highlight.js'
+hljs = require 'highlight.js/lib/highlight'
 path = require 'path'
 vmdl = require '../../src/vue-mdl'
 require './style/mdl.scss'
@@ -20,4 +20,7 @@ app = new Vue
   components:
     vmdlDoc: require './vmdl-doc.vue'
 
+hljs.registerLanguage 'css', require 'highlight.js/lib/languages/css'
+hljs.registerLanguage 'xml', require 'highlight.js/lib/languages/xml'
+hljs.registerLanguage 'javascript', require 'highlight.js/lib/languages/javascript'
 app.$nextTick -> hljs.initHighlightingOnLoad()
