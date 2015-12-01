@@ -6,7 +6,8 @@
 <script lang="coffee">
 module.exports =
   props:
-    disabled: Boolean
+    disabled:
+      required: false
     icon:
       required: false
     accent:
