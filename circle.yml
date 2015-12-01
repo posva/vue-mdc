@@ -10,6 +10,7 @@ machine:
 test:
   override:
     - npm run build
+    - git checkout dist
     - npm test
 deployment:
   doc:
