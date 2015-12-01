@@ -18,4 +18,7 @@ module.exports =
       required: true
   methods:
     makeLink: (text) -> '#' + _.kebabCase text
+    closeMenu: ->
+      if @$parent.$els.drawer.classList.contains 'is-visible'
+        @$parent.$el.MaterialLayout.drawerToggleHandler_()
 </script>

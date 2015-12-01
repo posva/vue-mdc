@@ -1,6 +1,7 @@
 <style lang="stylus">
 @import './style/variables'
 .header-title
+  height: 100%
   font-size: 1.5em
 .mdl-badge--blue[data-badge]:after
   background: aquamarine
@@ -14,11 +15,30 @@ a
   text-decoration: none
 .mdl-layout--fixed-drawer > .mdl-layout__header .mdl-layout__header-row
   padding: 1em
+.mdl-layout--fixed-drawer.is-small-screen .mdl-layout__header-row
+  margin-left: 48px
 .mdl-layout__drawer a
   color: main-color
+.mdl-layout__header
+  background-color: white
+.mdl-layout__header
+  color: inherit
 .mdl-layout__header-logo
   max-height: 100%
   margin-right: .35em
+
+.flex
+  display: flex
+.wrap
+  flex-wrap: wrap
+.center
+  justify-content: center
+.start
+  justify-content: flex-start
+.space
+  margin: 1em
+.column
+  flex-direction: column
 </style>
 
 <template lang="jade">
@@ -30,7 +50,7 @@ a
         | Vue MDL
       .mdl-layout-spacer
       mdl-textfield.mdl-textfield--align-right(id='search' expandable='search' v-bind:value.sync='filter')
-  .mdl-layout__drawer
+  .mdl-layout__drawer(v-el:drawer)
     menu-entry(v-for='menu in items', :menu='menu')
     span.mdl-layout-title.mdl-layout-title--icon
       i.material-icons link
@@ -62,10 +82,6 @@ module.exports =
         'Buttons'
       ]
     ]
-  methods:
-    closeMenu: ->
-      if @$el.classList.contains 'is-visible'
-        @$el.MaterialLayout.drawerToggleHandler_()
   components:
     menuEntry: require './utils/menu-entry.vue'
     contentEntry: require './utils/content-entry.vue'

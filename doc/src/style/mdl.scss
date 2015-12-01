@@ -1,8 +1,12 @@
 @import "../../../node_modules/material-design-lite/src/color-definitions";
+$custom-green: "44, 62, 80";
+$custom-green-dark: "57, 159, 113";
+$custom-navy: "0, 150, 136";
+$custom-navy-dark: "0, 80, 69";
 
-$color-primary: #2c3e50;
-$color-primary-dark: #399f71;
-$color-accent: rgb(0, 150, 136);
+$color-primary: $custom-navy;
+$color-primary-dark: $custom-navy-dark;
+$color-accent: $custom-green;
 $color-primary-contrast: $color-accent;
 $color-accent-contrast: $color-primary;
 
