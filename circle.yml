@@ -13,6 +13,6 @@ test:
     - npm test
 deployment:
   doc:
-    branch: dev
+    branch: master
     commands:
       - ./build/gh-pages.sh
