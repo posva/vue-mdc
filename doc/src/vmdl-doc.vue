@@ -10,6 +10,15 @@
     vertical-align: middle
   i.material-icons
     margin-right: 1em
+code
+  margin: 0 .8em
+code.hljs
+  margin: initial
+  background-color: #f3f3f3
+  margin: 0 -32px
+  padding: 0 48px
+  p
+    margin: 0
 a
   color: accent-color
   text-decoration: none
@@ -36,7 +45,7 @@ a
 .start
   justify-content: flex-start
 .space
-  margin: 1em
+  margin: 14px
 .column
   flex-direction: column
 </style>

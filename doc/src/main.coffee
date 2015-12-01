@@ -1,7 +1,9 @@
 Vue = require 'vue'
+hljs = require 'highlight.js'
 path = require 'path'
 vmdl = require '../../src/vue-mdl'
 require './style/mdl.scss'
+require 'highlight.js/styles/tomorrow.css'
 require 'material-design-lite/material.min.js'
 context = require.context './partials', false, /.vue$/
 
@@ -18,3 +20,4 @@ app = new Vue
   components:
     vmdlDoc: require './vmdl-doc.vue'
 
+app.$nextTick -> hljs.initHighlightingOnLoad()

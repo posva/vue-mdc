@@ -16,9 +16,9 @@ a.title-link
       font-weight: bold;
 .page-content
   .title-link.title-link--big + div
-    padding-left: 48px
+    padding: 0 48px
   .title-link + div
-    padding-left: 32px
+    padding: 0 32px
 </style>
 
 <template lang="jade">

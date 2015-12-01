@@ -1,6 +1,3 @@
-<style lang="stylus">
-</style>
-
 <template lang="jade">
 a.mdl-layout-title.mdl-layout-title--icon(:href.once='makeLink(menu.name)')
   i.material-icons {{menu.icon}}

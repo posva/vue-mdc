@@ -14,8 +14,25 @@
       mdl-button.space(colored) Colored
       mdl-button.space(primary) Primary
       mdl-button.space(accent) Accent
-    .flex.start.wrap
+    div
       p Create a simple button with the element
+        code mdl-button
+      pre
+        code.html
+          p= '<mdl-button>Button</mdl-button>'
+
+      p You can make it round with the prop
+        code icon
+      .flex.center
+        mdl-button.space(icon)
+          i.material-icons send
+        mdl-button.space(v-mdl-ripple-effect icon)
+          i.material-icons send
+      pre
+        code.html
+          p= '<mdl-button icon>'
+          p= '  <i class="material-icons">add</i>'
+          p= '</mdl-button>'
 
     .flex.start.wrap
       mdl-button.space(raised) Raised
