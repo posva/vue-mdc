@@ -20,13 +20,18 @@ module.exports = {
       loader: 'vue'
     }, {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader: 'style-loader!css-loader'
     }, {
       test: /\.scss$/,
-      loaders: ["style", "css", "sass"]
+      loaders: ['style', 'css', 'sass']
     }]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
