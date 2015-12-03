@@ -12,7 +12,8 @@ git pull --rebase && \
 git merge -X theirs --no-edit $br && \
 npm run doc && \
 cp doc/index.html . && \
-git add index.html doc-bundle.js && \
+cp -rf node_modules/material-design-lite/dist/images . && \
+git add index.html doc-bundle.js images && \
 git commit -a --amend --no-edit && \
 git push origin gh-pages && \
 git checkout $br || exit 1

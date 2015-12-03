@@ -10,6 +10,8 @@
     vertical-align: middle
   i.material-icons
     margin-right: 1em
+pre
+  width: 100%
 code
   margin: 0 .8em
 code.hljs

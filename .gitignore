@@ -1,5 +1,5 @@
 node_modules
-dist
+dist/
 test/test-bundle.js
 test/test-bundle.js.map
 coverage
@@ -7,3 +7,4 @@ selenium-debug.log
 .DS_Store
 doc/doc-bundle.js
 doc/doc-bundle.js.map
+images/
