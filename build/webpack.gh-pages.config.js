@@ -24,6 +24,9 @@ module.exports = {
     }, {
       test: /\.scss$/,
       loaders: ['style', 'css', 'sass']
+    }, {
+      test: /\.(png|jpg|svg)(\?embed)?$/,
+      loader: 'url-loader?limit=25000'
     }]
   },
   plugins: [

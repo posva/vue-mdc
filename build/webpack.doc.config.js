@@ -20,10 +20,13 @@ module.exports = {
       loader: 'vue'
     }, {
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      loader: 'style-loader!css-loader'
     }, {
       test: /\.scss$/,
-      loaders: ["style", "css", "sass"]
+      loaders: ['style', 'css', 'sass']
+    }, {
+      test: /\.(png|jpg|svg)(\?embed)?$/,
+      loader: 'url-loader?limit=25000'
     }]
   },
   devtool: 'source-map'
