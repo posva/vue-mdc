@@ -151,7 +151,6 @@ module.exports =
       (if @fab then ' fab' else '') +
       (if @raised then ' raised' else '') +
       '>' +
-      (if @iconText then "<i class=\"material-icons\">#{@iconText}</i>" else
-      @text) +
+      (if @iconText then "<i class=\"material-icons\">#{@iconText}</i>" else @text) +
       '</mdl-button>'
 </script>
