@@ -46,6 +46,8 @@ a
   justify-content: center
 .start
   justify-content: flex-start
+.reset-width
+  width: initial
 .space
   margin: 14px
 .column
