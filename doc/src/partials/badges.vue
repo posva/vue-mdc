@@ -36,7 +36,8 @@ i.material-icons.mdl-badge
 
     p You'll need to add this css to make the
       code  overlap
-      |  modifier work in mdl <= 1.0.6
+      |  modifier work in mdl lower than 1.0.7
+
     pre
       code.css.
         .mdl-badge.mdl-badge--overlap {

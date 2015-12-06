@@ -101,7 +101,6 @@ module.exports =
       icon: 'home'
       items: [
         'Installation'
-      ,
         'Usage'
       ]
     ,
@@ -115,6 +114,7 @@ module.exports =
       icon: 'settings_ethernet'
       items: [
         'Badges'
+        'Ripple Effect'
       ]
     ]
   components:
