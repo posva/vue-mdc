@@ -7,7 +7,7 @@
   .section__content
     p The button component allows to easily toggle classes. It supports the
       a(href='#ripple-effect')
-        code v-mdl-ripple-effect
+        code  v-mdl-ripple-effect
     .flex.start.wrap
       mdl-button.space Button
       mdl-button.space(v-mdl-ripple-effect) Ripple Effect
@@ -55,73 +55,73 @@
       tbody
         tr
           td.mdl-data-table__cell--non-numeric
-            code disabled
+            code  disabled
           td.mdl-data-table__cell--non-numeric Disables the button. Adds the
-            code is-disabled
-            | class to the button
+            code  is-disabled
+            |  class to the button
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code raised
+            code  raised
           td.mdl-data-table__cell--non-numeric Applies
             i  raised
             |  display effect with
-            code mdl-button--raised
-            | class
+            code  mdl-button--raised
+            |  class
           td.mdl-data-table__cell--non-numeric Mutually exclusive with fab, mini-fab, and icon
         tr
           td.mdl-data-table__cell--non-numeric
-            code fab
+            code  fab
           td.mdl-data-table__cell--non-numeric Applies
             i  fab
             |  (circular) display effect with
-            code mdl-button--fab
-            | class
+            code  mdl-button--fab
+            |  class
           td.mdl-data-table__cell--non-numeric Mutually exclusive with raised, mini-fab, and icon
         tr
           td.mdl-data-table__cell--non-numeric
-            code mini-fab
+            code  mini-fab
           td.mdl-data-table__cell--non-numeric Applies
             i  mini-fab
             |  (small fab circular) display effect with
-            code mdl-button--mini-fab
-            | class
+            code  mdl-button--mini-fab
+            |  class
           td.mdl-data-table__cell--non-numeric Mutually exclusive with raised, fab, and icon
         tr
           td.mdl-data-table__cell--non-numeric
-            code icon
+            code  icon
           td.mdl-data-table__cell--non-numeric Applies
             i  icon
             |  (small plain circular) display effect with
-            code mdl-button--icon
-            | class
+            code  mdl-button--icon
+            |  class
           td.mdl-data-table__cell--non-numeric Mutually exclusive with raised, fab and mini-fab
         tr
           td.mdl-data-table__cell--non-numeric
-            code colored
+            code  colored
           td.mdl-data-table__cell--non-numeric Applies
             i  colored
             |  display effect with
-            code mdl-button--colored
-            | class
+            code  mdl-button--colored
+            |  class
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code primary
+            code  primary
           td.mdl-data-table__cell--non-numeric Applies
             i  primary
             |  color display effect with
-            code mdl-button--primary
-            | class
+            code  mdl-button--primary
+            |  class
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code accent
+            code  accent
           td.mdl-data-table__cell--non-numeric Applies
             i  accent
             |  color display effect with
-            code mdl-button--accent
-            | class
+            code  mdl-button--accent
+            |  class
           td.mdl-data-table__cell--non-numeric
     br
 </template>

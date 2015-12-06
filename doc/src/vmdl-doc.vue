@@ -12,15 +12,31 @@
     margin-right: 1em
 pre
   width: 100%
-code
-  margin: 0 .8em
 code.hljs
-  margin: initial
   background-color: #f3f3f3
   margin: 0 -32px
-  padding: 0 48px
+  padding: 1em 48px
   p
     margin: 0
+
+  langs = {
+    css: 'css',
+    javascript: 'js',
+    html: 'html'
+  }
+
+  for lang, text in langs
+    &.{lang}::before
+      content: text
+      float: right
+      text-transform: uppercase
+      font-family: 'Roboto', 'Helvetica', 'Source Sans Pro', 'Arial'
+      font-size: 12px
+      font-weight: 800
+      color: silver
+
+.mdl-data-table
+  white-space: pre-line
 a
   color: accent-color
   text-decoration: none
@@ -93,6 +109,12 @@ module.exports =
       icon: 'extension'
       items: [
         'Buttons'
+      ]
+    ,
+      name: 'Directives'
+      icon: 'settings_ethernet'
+      items: [
+        'Badges'
       ]
     ]
   components:

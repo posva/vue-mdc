@@ -23,7 +23,7 @@
         code.html
           p='<script src="//rawgit.com/posva/vue-mdl/master/dist/vue-mdl.js"></script>'
       | Add
-      code .min
+      code  .min
       | to get the minified version:
       pre
         code.html
