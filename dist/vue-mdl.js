@@ -458,7 +458,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = {
 	  props: {
-	    disabled: Boolean,
+	    disabled: {
+	      required: false
+	    },
 	    icon: {
 	      required: false
 	    },
