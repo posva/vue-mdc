@@ -11,8 +11,8 @@ module.exports = {
     libraryTarget: 'umd'
   },
   vue: {
-    loaders: {
-      coffee: 'coffee!coffeelint'
+    preLoaders: {
+      coffee: 'coffeelint'
     }
   },
   coffeelint: {

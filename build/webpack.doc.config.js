@@ -8,8 +8,8 @@ module.exports = {
     filename: 'doc-bundle.js',
   },
   vue: {
-    loaders: {
-      coffee: 'coffee!coffeelint'
+    preLoaders: {
+      coffee: 'coffeelint'
     }
   },
   module: {

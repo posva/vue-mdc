@@ -8,8 +8,8 @@ module.exports = {
     publicPath: 'test/unit'
   },
   vue: {
-    loaders: {
-      coffee: 'coffee!coffeelint'
+    preLoaders: {
+      coffee: 'coffeelint'
     }
   },
   module: {
