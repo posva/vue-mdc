@@ -7,6 +7,11 @@ module.exports = {
     filename: 'unit-bundle.js',
     publicPath: 'test/unit'
   },
+  vue: {
+    loaders: {
+      coffee: 'coffee!coffeelint'
+    }
+  },
   module: {
     loaders: [{
       test: /\.coffee$/,
@@ -14,13 +19,13 @@ module.exports = {
         path.resolve(__dirname, '../test/unit'),
         path.resolve(__dirname, '../src')
       ],
-      loader: 'coffee-loader'
+      loader: 'coffee!coffeelint'
     }, {
       test: /\.vue$/,
       loader: 'vue'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: 'style!css'
     }]
   },
   devtool: 'source-map'

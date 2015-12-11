@@ -1,4 +1,5 @@
 var path = require('path');
+var failPlugin = require('webpack-fail-plugin');
 
 module.exports = {
   entry: './src/vue-mdl.js',
@@ -9,17 +10,29 @@ module.exports = {
     library: 'vmdl',
     libraryTarget: 'umd'
   },
+  vue: {
+    loaders: {
+      coffee: 'coffee!coffeelint'
+    }
+  },
+  coffeelint: {
+    emitErrors: true,
+    failOnErrors: true
+  },
   module: {
     loaders: [{
       test: /\.coffee$/,
       include: [
         path.resolve(__dirname, '../src')
       ],
-      loader: 'coffee-loader'
+      loader: 'coffee!coffeelint'
     }, {
       test: /\.vue$/,
       loader: 'vue'
     }]
   },
+  plugins: [
+    failPlugin
+  ],
   devtool: 'source-map'
 };

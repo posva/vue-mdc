@@ -1,0 +1,45 @@
+{
+  "max_line_length": {
+    "value": 100,
+    "level": "error"
+  },
+  "braces_spacing":{
+    "spaces": 1,
+    "empty_object_spaces": 0,
+    "level": "error"
+  },
+  "arrow_spacing":{
+    "level": "error"
+  },
+  "colon_assignment_spacing":{
+    "spacing": {
+      "left": 0,
+      "right": 1
+    },
+    "level": "error"
+  },
+  "no_trailing_whitespace":{
+    "level": "error"
+  },
+  "no_trailing_semicolons":{
+    "level": "error"
+  },
+  "no_this":{
+    "level": "error"
+  },
+  "line_endings":{
+    "level": "error"
+  },
+  "no_empty_param_list":{
+    "level": "error"
+  },
+  "no_unnecessary_double_quotes":{
+    "level": "error"
+  },
+  "prefer_english_operator":{
+    "level": "error"
+  },
+  "space_operators":{
+    "level": "error"
+  }
+}

@@ -11,19 +11,24 @@ module.exports = {
     publicPath: 'test/dist',
     libraryTarget: 'umd'
   },
+  vue: {
+    loaders: {
+      coffee: 'coffee!coffeelint'
+    }
+  },
   module: {
     loaders: [{
       test: /\.coffee$/,
       include: [
         path.resolve(__dirname, '../src')
       ],
-      loader: 'coffee-loader'
+      loader: 'coffee!coffeelint'
     }, {
       test: /\.vue$/,
       loader: 'vue'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: 'style!css'
     }]
   },
   devtool: 'source-map'
