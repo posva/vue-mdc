@@ -108,6 +108,7 @@ module.exports =
       icon: 'extension'
       items: [
         'Buttons'
+        'Checkboxes'
       ]
     ,
       name: 'Directives'
