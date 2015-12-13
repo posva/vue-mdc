@@ -5,7 +5,8 @@ module.exports =
         typeof value is 'boolean' or value instanceof Array
       required: true
       twoWay: true
-    disabled: Boolean
+    disabled:
+      required: false
     id: String
     value:
       required: false
