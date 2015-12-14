@@ -6,7 +6,7 @@
   title-link Checkboxes
   .section__content
     p The checkbox supports the
-      a(href='#ripple-effect') ripple effect
+      a(href='#ripple-effect')  ripple effect
     .flex.start.wrap
       mdl-checkbox(:checked.sync='checked') Checkbox
       mdl-checkbox.mdl-js-ripple-effect(:checked.sync='checked') Ripple Effect

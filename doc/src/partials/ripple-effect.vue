@@ -11,9 +11,11 @@
       ul
         li Buttons
         li Checkboxes
+        li Icon Toggles
     .flex.start.wrap
       mdl-button.mdl-js-ripple-effect(raised colored) Button
       mdl-checkbox.mdl-js-ripple-effect(:checked.sync='check') Checkbox
+      mdl-icon-toggle.mdl-js-ripple-effect(:checked.sync='check', icon='format_bold')
 
     p At the moment, the
       code  v-mdl-ripple-effect
