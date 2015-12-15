@@ -115,6 +115,7 @@ module.exports =
         'Sliders'
         'Spinners'
         'Switches'
+        'Textfields'
         'Tooltips'
       ]
     ,
