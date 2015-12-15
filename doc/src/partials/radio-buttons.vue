@@ -27,7 +27,7 @@
       code  id
       |  and a
       code  name
-      |  to the component to access through the form element.
+      |  to the component to access through the form element
     pre
       code.html
         p= '<mdl-radio name="subscription-pro" id="subscription-pro" :checked.sync="subscription" value="pro">Pro Subscription</mdl-radio>'

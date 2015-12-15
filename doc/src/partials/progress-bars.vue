@@ -24,10 +24,10 @@
 
     p You can make it bufferize by using the
      code  buffer
-     |  prop.
+     |  prop
     p
       em Note:
-      |  The effect is broken in firefox because I'm manually overriding the colors.
+      |  The effect is broken in firefox because I'm manually overriding the colors
 
     .flex.start.wrap
       mdl-textfield(:value.sync='progress', floating-label, label='Progress')

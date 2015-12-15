@@ -19,7 +19,7 @@
 
     p At the moment, the
       code  v-mdl-ripple-effect
-      |  just adds the class for you, so there is not much benefit from using it.
+      |  just adds the class for you, so there is not much benefit from using it
 </template>
 
 <script lang="coffee">

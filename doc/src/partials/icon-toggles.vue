@@ -21,14 +21,14 @@
 
     p You can pass an
       code  id
-      |  to the component to access through the form element.
+      |  to the component to access through the form element
     pre
       code.html
         p= '<mdl-icon-toggle id="Subscribe" :checked.sync="subscribe">Subscribe</mdl-icon-toggle>'
 
     p Instead of using multiple booleans for a group of checkboxes, you can directly pass the same array to multiple checkboxes. If you do this you also need to specify the
      code  value
-     |  prop.
+     |  prop
 
     .flex.start.wrap
       mdl-icon-toggle(:checked.sync='styles', icon='format_bold', value='bold')
@@ -67,7 +67,7 @@
           td.mdl-data-table__cell--non-numeric
             code  checked
           td.mdl-data-table__cell--non-numeric Control whether the icon toggle is checked or not
-          td.mdl-data-table__cell--non-numeric You must use a two way binding. You can either use a boolean or an array.
+          td.mdl-data-table__cell--non-numeric You must use a two way binding. You can either use a boolean or an array
         tr
           td.mdl-data-table__cell--non-numeric
             code  id
@@ -78,7 +78,7 @@
             code  value
           td.mdl-data-table__cell--non-numeric Defines the value of the toggle. Useful when passing an array to the
             code  checked
-            |  prop.
+            |  prop
           td.mdl-data-table__cell--non-numeric
     br
 </template>

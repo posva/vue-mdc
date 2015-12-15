@@ -18,7 +18,7 @@ i.material-icons.mdl-badge
       code  span
       |  and
       code  a
-      |  elements.
+      |  elements
     .flex.start.wrap
       span(v-mdl-badge='value') Inbox
       span(v-mdl-badge.no-background='value') Inbox
@@ -59,7 +59,7 @@ i.material-icons.mdl-badge
             code  no-background
           td.mdl-data-table__cell--non-numeric Applies open-circle effect to badge by adding the
             code  mdl-badge--no-background
-            |  class.
+            |  class
           td.mdl-data-table__cell--non-numeric It actually switches primary and accent colorls. So you will have to add some css to make the desired open-circle effect
         tr
           td.mdl-data-table__cell--non-numeric
