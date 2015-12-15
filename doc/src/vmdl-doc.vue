@@ -112,6 +112,7 @@ module.exports =
         'Icon Toggles'
         'Progress bars'
         'Radio Buttons'
+        'Sliders'
       ]
     ,
       name: 'Directives'
