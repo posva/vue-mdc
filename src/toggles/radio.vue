@@ -15,7 +15,8 @@ module.exports =
     checked:
       required: true
       twoWay: true
-    disabled: Boolean
+    disabled:
+      required: false
   computed:
     isChecked: -> @checked is @value
   ready: ->
