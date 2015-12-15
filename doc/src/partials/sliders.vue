@@ -5,7 +5,8 @@
 .section
   title-link Sliders
   .section__content
-    p Sliders
+    p Sliders allows you to display a fancier
+      code= ' <input type="range">'
     .flex.start.wrap
       mdl-textfield(:value.sync='amount', floating-label, label='Amount')
     .flex.center.wrap
