@@ -12,3 +12,10 @@ $color-primary-contrast: $color-accent;
 $color-accent-contrast: $color-primary;
 
 @import "../../../node_modules/material-design-lite/src/material-design-lite";
+
+// I somehow broke this when changing colors.
+// It doesn't work on firefox at the moment...
+.mdl-progress:not(.mdl-progress__indeterminate):not(.mdl-progress__indeterminate) > .auxbar {
+  -webkit-mask-image: url("../../../node_modules/material-design-lite/src/images/buffer.svg");
+  mask: url("../../../node_modules/material-design-lite/src/images/buffer.svg");
+}

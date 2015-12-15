@@ -110,6 +110,7 @@ module.exports =
         'Buttons'
         'Checkboxes'
         'Icon Toggles'
+        'Progress bars'
       ]
     ,
       name: 'Directives'
