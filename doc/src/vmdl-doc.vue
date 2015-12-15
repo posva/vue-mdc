@@ -111,6 +111,7 @@ module.exports =
         'Checkboxes'
         'Icon Toggles'
         'Progress bars'
+        'Radio Buttons'
       ]
     ,
       name: 'Directives'
