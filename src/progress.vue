@@ -12,8 +12,7 @@ module.exports =
     buffer:
       required: false
     indeterminate:
-      type: Boolean
-      default: false
+      required: false
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialProgress'
 
