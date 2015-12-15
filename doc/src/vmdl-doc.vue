@@ -114,6 +114,7 @@ module.exports =
         'Radio Buttons'
         'Sliders'
         'Spinners'
+        'Switches'
       ]
     ,
       name: 'Directives'
