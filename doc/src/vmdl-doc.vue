@@ -113,6 +113,7 @@ module.exports =
         'Progress bars'
         'Radio Buttons'
         'Sliders'
+        'Spinners'
       ]
     ,
       name: 'Directives'
