@@ -16,14 +16,14 @@ module.exports =
   props:
     value:
       required: true
+      twoWay: true
     step:
       required: false
     min:
-      required: false
+      required: true
     max:
-      required: false
+      required: true
     disabled:
-      type: Boolean
       required: false
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialSlider'
