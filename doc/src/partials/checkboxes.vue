@@ -14,7 +14,7 @@
     pre
       code.html
         p= '<mdl-checkbox :checked.sync="checked">Checkbox</mdl-checkbox>'
-        p= '<mdl-checkbox :checked.sync="checked" class="mdl-js-ripple-effect">Checkbox</mdl-checkbox>'
+        p= '<mdl-checkbox :checked.sync="checked" class="mdl-js-ripple-effect">Ripple Effect</mdl-checkbox>'
         p= '<mdl-checkbox :checked.sync="checked" disabled>Disabled</mdl-checkbox>'
 
     p You can pass an

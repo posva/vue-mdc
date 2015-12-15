@@ -12,18 +12,27 @@
         li Buttons
         li Checkboxes
         li Icon Toggles
+        li Radio Buttons
+        li Switches
     .flex.start.wrap
       mdl-button.mdl-js-ripple-effect(raised colored) Button
+    .flex.start.wrap
       mdl-checkbox.mdl-js-ripple-effect(:checked.sync='check') Checkbox
+    .flex.start.wrap
       mdl-icon-toggle.mdl-js-ripple-effect(:checked.sync='check', icon='format_bold')
+    .flex.start.wrap
+      mdl-radio.mdl-js-ripple-effect(:checked.sync='radio', value='radio') Radio
+    .flex.start.wrap
+      mdl-switch.mdl-js-ripple-effect(:checked.sync='check') Switch
 
     p At the moment, the
       code  v-mdl-ripple-effect
-      |  just adds the class for you, so there is not much benefit from using it
+      |  just adds the class for you, so there is not much benefit from using it. This directive may disappear in v1
 </template>
 
 <script lang="coffee">
 module.exports =
   data: ->
     check: true
+    radio: null
 </script>
