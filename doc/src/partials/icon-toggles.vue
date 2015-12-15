@@ -89,6 +89,5 @@ module.exports =
     bold: true
     italic: false
     underline: false
-    checks: ['one', 'four']
     styles: []
 </script>

@@ -33,7 +33,7 @@ module.exports =
       @unwatch.push @$watch 'value', (val) ->
         @$el.MaterialSlider.change val
 
-    # The original value is not changed, only design is chaged
+    # The original value is not changed, only design is changed
     if @min?
       @unwatch.push @$watch 'min', (val) ->
         if val > @value

@@ -70,5 +70,4 @@ module.exports =
   data: ->
     progress: 30
     buffer: 60
-    checks: ['one', 'four']
 </script>
