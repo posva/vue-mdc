@@ -1,11 +1,14 @@
 <style lang="stylus">
+.wide
+  width: 80%
+  max-width: 500px
 </style>
 
 <template lang="jade">
 .section
   title-link Textfields
   .section__content
-    p The textfield component is highly customizable and allows you to use text input
+    p The textfield component is highly customizable and allows you to use text inputs and textareas
     .flex.center.wrap
       p Hello {{name}}
     .flex.start.wrap
@@ -138,6 +141,7 @@ module.exports =
     float: true
     textarea: false
     rows: 3
+  computed:
     playgroundHtml: ->
       '<mdl-textfield' +
       (if @float then " floating-label=\"#{@label}\"" else " label=\"#{@label}\"") +

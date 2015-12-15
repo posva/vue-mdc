@@ -10,8 +10,8 @@
     .flex.start.wrap
       mdl-textfield(:value.sync='amount', floating-label, label='Amount')
     .flex.center.wrap
-      mdl-slider.space(:value.sync='amount', min='0', max='100')
-      mdl-slider.space(:value.sync='amount', min='0', max='100', disabled)
+      mdl-slider(:value.sync='amount', min='0', max='100')
+      mdl-slider(:value.sync='amount', min='0', max='100', disabled)
     pre
       code.html
         p= '<mdl-slider :value.sync="amount" min="0" max="100"></mdl-slider>'
@@ -22,7 +22,7 @@
       mdl-textfield(:value.sync='amountStep', floating-label, label='Amount')
       mdl-textfield(:value.sync='step', floating-label, label='Step')
     .flex.center.wrap
-      mdl-slider.space(:value.sync='amountStep', :step='step' min='0', max='100')
+      mdl-slider(:value.sync='amountStep', :step='step' min='0', max='100')
     pre
       code.html
         p= '<mdl-slider :value.sync="amount" min="0" max="100"></mdl-slider>'
