@@ -9,7 +9,7 @@ module.exports =
       default: true
       type: Boolean
     singleColor:
-      type: Boolean
+      required: false
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialSpinner'
 </script>
