@@ -115,6 +115,7 @@ module.exports =
         'Sliders'
         'Spinners'
         'Switches'
+        'Tooltips'
       ]
     ,
       name: 'Directives'
