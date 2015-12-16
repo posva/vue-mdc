@@ -68,6 +68,14 @@ a
   margin: 14px
 .column
   flex-direction: column
+
+// navigation overrides
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link
+  padding: .5em 2em
+.mdl-layout__drawer>.mdl-layout-title, .mdl-layout__drawer>.mdl-layout__title
+  padding-left: .5em
+.mdl-layout__drawer .mdl-navigation
+  padding-top: .5em
 </style>
 
 <template lang="jade">
