@@ -25,6 +25,8 @@ div
       label.mdl-textfield__label(for='sample6') Expandable Input
   h3 vue
   mdl-textfield#fly(label='I fly' floating-label)
+  mdl-textfield#fly2(floating-label='I fly')
+  mdl-textfield#fly-label-dyn(:floating-label='dynFloat')
   mdl-textfield.added-class#classic(label='Classic', :type='type', :value.sync='text')
   mdl-textfield#fly-dyn(label='Dynamic fly' v-bind:floating-label='float' v-bind:label='label')
   mdl-textfield#textarea(label='textarea', textarea, :rows='rows')
@@ -52,6 +54,7 @@ module.exports =
     rows: 2
     float: false
     type: 'text'
+    dynFloat: 'Dynamic floating label'
     text: 'Hello textfield'
     pattern: '[0-9]*'
     error: 'Nope'

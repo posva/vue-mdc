@@ -42,6 +42,21 @@ describe 'Textfield', ->
     .should.have.class 'mdl-textfield--floating-label'
     classic.parent().parent()
     .should.not.have.class 'mdl-textfield--floating-label'
+  it 'can have a floating label using only folating-label', ->
+    fly = $ '#fly2'
+    fly.parent().parent()
+    .should.have.class 'mdl-textfield--floating-label'
+    $ '[for=fly2]'
+    .should.have.text 'I fly'
+  it 'can have a dynamic floating label using only folating-label', (done) ->
+    dynLabel = $ '[for=fly-label-dyn]'
+    dynLabel.should.have.text 'Dynamic floating label'
+    vm.dynFloat = 'New label'
+    utils.nextTick()
+    .then ->
+      dynLabel.should.have.text 'New label'
+      utils.nextTick()
+    .then done, done
   it 'links the label to the input', ->
     label.should.have.prop 'for', 'classic'
     classic.should.have.prop 'id', 'classic'

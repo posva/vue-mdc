@@ -16,6 +16,8 @@
 
 <script lang="coffee">
 module.exports =
+  data: ->
+    unwatch: []
   props:
     expandable: String
     type:
@@ -35,4 +37,9 @@ module.exports =
       required: false
   ready: ->
     componentHandler.upgradeElement @$el
+    if @floatingLabel and not @label?
+      @label = @floatingLabel
+      @unwatch.push @$watch 'floatingLabel', (val) => @label = val
+  beforeDestroy: ->
+    @unwatch.forEach (unwatch) -> unwatch()
 </script>
