@@ -52,11 +52,9 @@ var app = new Vue({
 
 #Documentation
 
-There is yet no full documentation for this project, you can look in the
-`test/components` directory for some examples.
+The `test/components` directory has a lot of examples used for tests.
 
-The documentation is available [here](http://posva.net/vue-mdl) but it is yet
-empty and broken. I am currently working on it (Mon Nov 30 11:40:39 CET 2015).
+The documentation is available [here](http://posva.net/vue-mdl)
 Pull Requests and issues are welcome.
 
 #Build
@@ -109,6 +107,11 @@ You can also serve the tests pages without running the unit tests by running
 This will serve the tests at `localhost:8088/test/`.
 You must add `#<component_name>` to the address. For instance, if you want to
 load the checkbox example you must go to `localhost:8088/test/#checkbox`
+
+#Contributing
+
+When contributing, make sure all tests pass.
+If you wrote a new feature or fixed a bug make sure to add the corresponding test.
 
 #License
 [MIT](http://opensource.org/licenses/MIT)
