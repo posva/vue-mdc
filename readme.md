@@ -113,6 +113,14 @@ load the checkbox example you must go to `localhost:8088/test/#checkbox`
 When contributing, make sure all tests pass.
 If you wrote a new feature or fixed a bug make sure to add the corresponding test.
 
+#Releasing
+
+- Release a new version using `npm version`
+- Then amend the commit adding the changelog
+- Modify the tag `git tag -f "v$(grep version package.json | sed 's/.*: "//g;s/".*//g')"`
+- Push it to git: `git push`, `git push --tags`
+- Publish it to npm: `npm publish`
+
 #License
 [MIT](http://opensource.org/licenses/MIT)
 
