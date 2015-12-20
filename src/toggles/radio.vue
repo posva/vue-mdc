@@ -6,6 +6,8 @@ label.mdl-radio.mdl-js-radio(v-bind:for.once='id' v-bind:class='{ "is-disabled":
 </template>
 
 <script lang="coffee">
+propFill = require '../mixins/prop-fill.coffee'
+
 module.exports =
   props:
     id: String
@@ -16,9 +18,10 @@ module.exports =
       required: true
       twoWay: true
     disabled:
-      required: false
+      fill: true
   computed:
     isChecked: -> @checked is @value
   ready: ->
     componentHandler.upgradeElements @$el
+  mixins: [propFill]
 </script>

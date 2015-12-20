@@ -30,6 +30,7 @@ div
   mdl-textfield.added-class#classic(label='Classic', :type='type', :value.sync='text')
   mdl-textfield#fly-dyn(label='Dynamic fly' v-bind:floating-label='float' v-bind:label='label')
   mdl-textfield#textarea(label='textarea', textarea, :rows='rows')
+  <mdl-textfield id='html-text' label='textarea' textarea></mdl-textfield>
   mdl-textfield#number(label='Number', :pattern='pattern', floating-label, :error='error')
   mdl-textfield#custom(:pattern='pattern', floating-label)
     input#custom(slot='input', v-model='rows', type='number')

@@ -17,6 +17,9 @@ describe 'Spinner', ->
     spinner.should.have.class 'mdl-spinner'
     spinner.should.have.attr 'data-upgraded'
     .match /MaterialSpinner/
+  it 'applies classes even with empty strings in props', ->
+    spin = $ '#html-spin'
+    spin.should.have.class 'mdl-spinner--single-color'
   it 'is multi color by default', ->
     spinner.should.not.have.class 'mdl-spinner--single-color'
   it 'is active by default', ->

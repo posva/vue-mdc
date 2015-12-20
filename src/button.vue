@@ -4,24 +4,27 @@
 </template>
 
 <script lang="coffee">
+propFill = require './mixins/prop-fill.coffee'
+
 module.exports =
   props:
     disabled:
-      required: false
+      fill: true
     icon:
       required: false
     accent:
-      required: false
+      fill: true
     primary:
-      required: false
+      fill: true
     miniFab:
-      required: false
+      fill: true
     fab:
-      required: false
+      fill: true
     raised:
-      required: false
+      fill: true
     colored:
-      required: false
+      fill: true
+  mixins: [propFill]
   ready: ->
     componentHandler.upgradeElement @$el
 </script>

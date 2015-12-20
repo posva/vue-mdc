@@ -25,6 +25,7 @@ div
     i.material-icons mood
   h3 vue
   mdl-button {{someText}}
+  <mdl-button id='html-button' raised colored>Should be raised</mdl-button>
   mdl-button#disable-btn(v-bind:disabled='disable' @click='disable=true') Disable
   br
   mdl-button#if(v-if='disable', :colored='colored', :raised='raised', :fab='fab', :mini-fab='miniFab', :primary='primary', :accent='accent', :icon='icon') Multiple

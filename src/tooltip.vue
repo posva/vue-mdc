@@ -4,13 +4,16 @@
 </template>
 
 <script lang="coffee">
+propFill = require './mixins/prop-fill.coffee'
+
 module.exports =
   props:
     for:
       required: true
       type: String
     large:
-      required: false
+      fill: true
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialTooltip'
+  mixins: [propFill]
 </script>

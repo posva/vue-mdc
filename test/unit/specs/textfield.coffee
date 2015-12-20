@@ -24,6 +24,9 @@ describe 'Textfield', ->
     parent.should.exist
     .and.have.attr 'data-upgraded'
     .match /MaterialTextfield/
+  it 'applies classes even with empty strings in props', ->
+    text = $ '#html-text'
+    text.should.exist.and.be.a.textarea
   it 'starts with the right value', ->
     classic.should.have.value 'Hello textfield'
   it 'starts with the right value', (done) ->

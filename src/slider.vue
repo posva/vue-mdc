@@ -10,6 +10,8 @@ input.mdl-slider.mdl-js-slider(
 </template>
 
 <script lang="coffee">
+propFill = require './mixins/prop-fill.coffee'
+
 module.exports =
   data: ->
     unwatch: []
@@ -24,7 +26,7 @@ module.exports =
     max:
       required: true
     disabled:
-      required: false
+      fill: true
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialSlider'
 
@@ -50,4 +52,5 @@ module.exports =
 
   beforeDestroy: ->
     @unwatch.forEach (unwatch) -> unwatch()
+  mixins: [propFill]
 </script>

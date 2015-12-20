@@ -17,6 +17,9 @@ describe 'Slider', ->
     slider.should.have.class 'mdl-slider'
     slider.should.have.attr 'data-upgraded'
     .match /MaterialSlider/
+  it 'applies classes even with empty strings in props', ->
+    slid = $ '#html-slider'
+    slid.should.have.attr 'disabled', 'disabled'
   it 'starts with the right value', ->
     slider.should.have.value '25'
   it 'updates the value', (done) ->

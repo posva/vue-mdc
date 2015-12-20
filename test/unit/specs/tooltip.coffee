@@ -16,6 +16,9 @@ describe 'Tooltip', ->
     tooltip.should.have.class 'mdl-tooltip'
     tooltip.should.have.attr 'data-upgraded'
     .match /MaterialTooltip/
+  it 'applies classes even with empty strings in props', ->
+    tool = $ '[for=html]'
+    tool.should.have.class 'mdl-tooltip--large'
   it 'can be large', ->
     large.should.have.class 'mdl-tooltip--large'
   it 'can have user added classes', ->

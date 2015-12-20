@@ -3,13 +3,16 @@
 </template>
 
 <script lang="coffee">
+propFill = require './mixins/prop-fill.coffee'
+
 module.exports =
   props:
     active:
       default: true
       type: Boolean
     singleColor:
-      required: false
+      fill: true
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialSpinner'
+  mixins: [propFill]
 </script>

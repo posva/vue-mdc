@@ -3,6 +3,8 @@
 </template>
 
 <script lang="coffee">
+propFill = require './mixins/prop-fill.coffee'
+
 module.exports =
   data: ->
     unwatch: []
@@ -12,7 +14,7 @@ module.exports =
     buffer:
       required: false
     indeterminate:
-      required: false
+      fill: true
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialProgress'
 
@@ -27,4 +29,5 @@ module.exports =
         @$el.MaterialProgress.setBuffer val
   beforeDestroy: ->
     @unwatch.forEach (unwatch) -> unwatch()
+  mixins: [propFill]
 </script>

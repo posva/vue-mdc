@@ -21,6 +21,9 @@ describe 'Progress', ->
     progress.should.have.class 'mdl-progress'
     progress.should.have.attr 'data-upgraded'
     .match /MaterialProgress/
+  it 'applies classes even with empty strings in props', ->
+    prog = $ '#html-progress'
+    prog.should.have.class 'mdl-progress__indeterminate'
   it 'starts with the right value', ->
     pbar.should.have.attr 'style'
     .match /width: 44%/

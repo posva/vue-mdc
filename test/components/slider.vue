@@ -13,6 +13,7 @@ div
   mdl-slider#disable(:value.sync='value', :min='min', :max='max', :disabled='disabled', :step='step')
   mdl-slider#vif(v-if='disabled', :value.sync='value', :min='min', :max='max')
   br
+  <mdl-slider id='html-slider' :value.sync='value' :min='min' :max='max' disabled />
   span Min:
   input#min(v-model='min' type='text')
   br

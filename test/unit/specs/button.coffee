@@ -52,3 +52,8 @@ describe 'Button', ->
   it 'can be icon', (done) ->
     propChecker 'icon'
     .then done, done
+  it 'applies classes even with empty strings in props', ->
+    but = $ '#html-button'
+    but.should.have.class 'mdl-button--raised'
+    but.should.have.class 'mdl-button--colored'
+    but.should.not.have.class 'mdl-button--accent'

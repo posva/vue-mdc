@@ -14,6 +14,7 @@ div
   mdl-tooltip(v-bind:class='{hoho: active}' for='tooltip') Add something
   i.material-icons#large print
   mdl-tooltip.added-class(for='large' large) Print
+  <mdl-tooltip for='html' large>Print</mdl-tooltip>
   mdl-spinner#spin
   mdl-tooltip(for='spin')
     p

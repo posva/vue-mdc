@@ -25,6 +25,9 @@ describe 'Radio', ->
     .match /MaterialRadio/
     span.should.have.class 'mdl-radio__label'
     .and.have.text 'Banana'
+  it 'applies classes even with empty strings in props', ->
+    radio = $ '[for=html-radio]'
+    radio.should.have.class 'is-disabled'
   it 'is checked', ->
     check.should.be.checked
     checkLabel.should.have.class 'is-checked'

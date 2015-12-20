@@ -8,6 +8,9 @@ div
   mdl-progress#indeterminate(v-bind:indeterminate='indeterminate')
   br
   br
+  <mdl-progress id='html-progress' indeterminate />
+  br
+  br
   input#progress-val(type='number' v-model='progress')
   input#buffer-val(type='number' v-model='buffer')
   br

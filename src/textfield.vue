@@ -15,6 +15,8 @@
 </template>
 
 <script lang="coffee">
+propFill = require './mixins/prop-fill.coffee'
+
 module.exports =
   data: ->
     unwatch: []
@@ -32,7 +34,7 @@ module.exports =
     pattern: String
     error: String
     textarea:
-      required: false
+      fill: true
     floatingLabel:
       required: false
   ready: ->
@@ -42,4 +44,5 @@ module.exports =
       @unwatch.push @$watch 'floatingLabel', (val) => @label = val
   beforeDestroy: ->
     @unwatch.forEach (unwatch) -> unwatch()
+  mixins: [propFill]
 </script>
