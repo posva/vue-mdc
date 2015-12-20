@@ -20,6 +20,7 @@ app = new Vue
       'switch'
       'textfield'
       'tooltip'
+      'menu'
     ]
     current: 0
   computed:
@@ -55,6 +56,7 @@ app = new Vue
     testSwitch: require '../components/switch.vue'
     testTextfield: require '../components/textfield.vue'
     testTooltip: require '../components/tooltip.vue'
+    testMenu: require '../components/menu.vue'
 
 window.app = app
 window.Vue = Vue
