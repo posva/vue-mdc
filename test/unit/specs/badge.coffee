@@ -2,6 +2,7 @@ utils = require '../utils.coffee'
 
 describe 'Badge', ->
   badge = null
+  hider = null
   badge2 = null
   badgeNoBg = null
   badgeOverlap = null
@@ -10,6 +11,7 @@ describe 'Badge', ->
     utils.nextTick()
     .then ->
       badge = $ '#badge'
+      hider = $ '#hider'
       badge2 = $ '#badge-2'
       badgeOverlap = $ '#badge-overlap'
       badgeNoBg = $ '#badge-overlap'
@@ -32,6 +34,49 @@ describe 'Badge', ->
     utils.nextTick()
     .then ->
       badge.should.have.attr 'data-badge', '8'
+      utils.nextTick()
+    .then done, done
+  it 'can hide badge with function', (done) ->
+    vm.badgeText = '0'
+    utils.nextTick()
+    .then ->
+      hider.should.not.have.attr 'data-badge'
+      vm.badgeText = '2'
+      utils.nextTick()
+    .then ->
+      hider.should.have.attr 'data-badge', '2'
+      utils.nextTick()
+    .then done, done
+  it 'can hide badge with number attribute', (done) ->
+    number = $ '#number'
+    vm.badgeText = '0'
+    utils.nextTick()
+    .then ->
+      number.should.not.have.attr 'data-badge'
+      vm.badgeText = '2'
+      utils.nextTick()
+    .then ->
+      number.should.have.attr 'data-badge', '2'
+      utils.nextTick()
+    .then done, done
+  it 'can have hide-badge and .number at the same time', (done) ->
+    hider = $ '#hider-multi'
+    vm.badgeText = '0'
+    utils.nextTick()
+    .then ->
+      hider.should.not.have.attr 'data-badge'
+      vm.badgeText = '2'
+      utils.nextTick()
+    .then ->
+      hider.should.have.attr 'data-badge', '2'
+      vm.hide = true
+      utils.nextTick()
+    .then ->
+      hider.should.not.have.attr 'data-badge'
+      vm.hide = false
+      utils.nextTick()
+    .then ->
+      hider.should.have.attr 'data-badge', '2'
       utils.nextTick()
     .then done, done
 
