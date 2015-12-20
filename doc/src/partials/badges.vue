@@ -65,10 +65,13 @@ i.material-icons.mdl-badge
         p= '<span v-mdl-badge.number="num" :hide-badge="hide">Inbox</span>'
       code.javascript.
         new Vue({
-          data: {num: 3, hide: true},
+          data: {
+            num: 3,
+            hide: true
+          },
           computed: {
             zero: function() {
-              return parseInt(this.num, 10) <= 0
+              return parseInt(this.num, 10) &lt;= 0
             }
           }
         })
