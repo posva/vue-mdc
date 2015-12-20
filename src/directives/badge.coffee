@@ -6,4 +6,7 @@ module.exports =
     if 'no-background' of @modifiers
       @el.classList.add 'mdl-badge--no-background'
   update: (value) ->
-    @el.setAttribute 'data-badge', value
+    if typeof value == 'number' and !value
+      @el.removeAttribute 'data-badge'
+    else
+      @el.setAttribute 'data-badge', value
