@@ -12,12 +12,12 @@ i.material-icons.mdl-badge
 .section
   title-link Badges
   .section__content
-    p Badges let you add onscreen notifications. They are made to be used on
-      code  i
-      | ,
-      code  span
-      |  and
-      code  a
+    p Badges let you add onscreen notifications. They are made to be used on 
+      code i
+      | , 
+      code span
+      |  and 
+      code a
       |  elements
     .flex.start.wrap
       span(v-mdl-badge='value') Inbox
@@ -34,8 +34,8 @@ i.material-icons.mdl-badge
         p= '<span v-mdl-badge.no-bcakground="value">Inbox</span>'
         p= '<i class="material-icons" v-mdl-badge.overlap="text">account_box</i>'
 
-    p You'll need to add this css to make the
-      code  overlap
+    p You'll need to add this css to make the 
+      code overlap
       |  modifier work in mdl lower than 1.0.7
 
     pre
@@ -56,16 +56,16 @@ i.material-icons.mdl-badge
       tbody
         tr
           td.mdl-data-table__cell--non-numeric
-            code  no-background
+            code no-background
           td.mdl-data-table__cell--non-numeric Applies open-circle effect to badge by adding the
-            code  mdl-badge--no-background
+            code mdl-badge--no-background
             |  class
           td.mdl-data-table__cell--non-numeric It actually switches primary and accent colorls. So you will have to add some css to make the desired open-circle effect
         tr
           td.mdl-data-table__cell--non-numeric
-            code  overlap
+            code overlap
           td.mdl-data-table__cell--non-numeric Make the badge overlap with its container by adding the
-            code  mdl-badge--overlap
+            code mdl-badge--overlap
             |  class
           td.mdl-data-table__cell--non-numeric mdl >= 1.0.6
 </template>

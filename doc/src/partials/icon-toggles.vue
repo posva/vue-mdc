@@ -15,19 +15,19 @@
       mdl-icon-toggle(:checked.sync='underline', icon='format_underlined', disabled)
     pre
       code.html
-        p= '<mdl-icon-toggle :checked.sync="checked"  icon="format_bold">Checkbox</mdl-icon-toggle>'
+        p= '<mdl-icon-toggle :checked.sync="checked"  icon="format_bold"></mdl-icon-toggle>'
         p= '<mdl-icon-toggle :checked.sync="checked" icon="format_italic" class="mdl-js-ripple-effect"></mdl-icon-toggle>'
         p= '<mdl-icon-toggle :checked.sync="checked" icon="format_underlined" disabled></mdl-icon-toggle>'
 
-    p You can pass an
-      code  id
+    p You can pass an 
+      code id
       |  to the component to access through the form element
     pre
       code.html
         p= '<mdl-icon-toggle id="Subscribe" :checked.sync="subscribe">Subscribe</mdl-icon-toggle>'
 
-    p Instead of using multiple booleans for a group of checkboxes, you can directly pass the same array to multiple checkboxes. If you do this you also need to specify the
-     code  value
+    p Instead of using multiple booleans for a group of checkboxes, you can directly pass the same array to multiple checkboxes. If you do this you also need to specify the 
+     code value
      |  prop
 
     .flex.start.wrap
@@ -53,31 +53,31 @@
       tbody
         tr
           td.mdl-data-table__cell--non-numeric
-            code  icon
+            code icon
           td.mdl-data-table__cell--non-numeric Set the toggle icon
           td.mdl-data-table__cell--non-numeric Required
         tr
           td.mdl-data-table__cell--non-numeric
-            code  disabled
-          td.mdl-data-table__cell--non-numeric Disables the checkbox. Adds the
-            code  is-disabled
+            code disabled
+          td.mdl-data-table__cell--non-numeric Disables the checkbox. Adds the 
+            code is-disabled
             |  class to the button
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code  checked
+            code checked
           td.mdl-data-table__cell--non-numeric Control whether the icon toggle is checked or not
           td.mdl-data-table__cell--non-numeric You must use a two way binding. You can either use a boolean or an array
         tr
           td.mdl-data-table__cell--non-numeric
-            code  id
+            code id
           td.mdl-data-table__cell--non-numeric Defines the id used to link the label and the input
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code  value
-          td.mdl-data-table__cell--non-numeric Defines the value of the toggle. Useful when passing an array to the
-            code  checked
+            code value
+          td.mdl-data-table__cell--non-numeric Defines the value of the toggle. Useful when passing an array to the 
+            code checked
             |  prop
           td.mdl-data-table__cell--non-numeric
     br

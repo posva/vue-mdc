@@ -40,27 +40,27 @@
       tbody
         tr
           td.mdl-data-table__cell--non-numeric
-            code  disabled
+            code disabled
           td.mdl-data-table__cell--non-numeric Disables the slider
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code  value
+            code value
           td.mdl-data-table__cell--non-numeric Variable affected to the slider
           td.mdl-data-table__cell--non-numeric This is required
         tr
           td.mdl-data-table__cell--non-numeric
-            code  min
+            code min
           td.mdl-data-table__cell--non-numeric Minimum value for the slider
           td.mdl-data-table__cell--non-numeric This is required
         tr
           td.mdl-data-table__cell--non-numeric
-            code  max
+            code max
           td.mdl-data-table__cell--non-numeric Maximum value for the slider
           td.mdl-data-table__cell--non-numeric This is required
         tr
           td.mdl-data-table__cell--non-numeric
-            code  step
+            code step
           td.mdl-data-table__cell--non-numeric Step used to increase or decrease the value
           td.mdl-data-table__cell--non-numeric
     br

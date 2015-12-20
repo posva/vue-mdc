@@ -23,10 +23,10 @@
         p= '<mdl-radio :checked.sync="check" value="option 3">Option 3</mdl-radio>'
         p= '<mdl-radio :checked.sync="check" value="option 4" disabled>Option 4</mdl-radio>'
 
-    p You can pass an
-      code  id
-      |  and a
-      code  name
+    p You can pass an 
+      code id
+      |  and a 
+      code name
       |  to the component to access through the form element
     pre
       code.html
@@ -42,29 +42,29 @@
       tbody
         tr
           td.mdl-data-table__cell--non-numeric
-            code  disabled
-          td.mdl-data-table__cell--non-numeric Disables the radio button. Adds the
-            code  is-disabled
+            code disabled
+          td.mdl-data-table__cell--non-numeric Disables the radio button. Adds the 
+            code is-disabled
             |  class to the button
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code  checked
+            code checked
           td.mdl-data-table__cell--non-numeric Variable to assign when the radio button is checked
           td.mdl-data-table__cell--non-numeric You must use a two way binding
         tr
           td.mdl-data-table__cell--non-numeric
-            code  name
+            code name
           td.mdl-data-table__cell--non-numeric Defines the name used on the input element
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code  id
+            code id
           td.mdl-data-table__cell--non-numeric Defines the id used to link the label and the input
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code  value
+            code value
           td.mdl-data-table__cell--non-numeric Defines the value of the radio button
           td.mdl-data-table__cell--non-numeric This prop is required
     br

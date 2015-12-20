@@ -5,8 +5,8 @@
 .section
   title-link Ripple Effect
   .section__content
-    p Add the ripple effect by adding the
-      code  mdl-js-ripple-effect
+    p Add the ripple effect by adding the 
+      code mdl-js-ripple-effect
       |  class to any component that supports it:
       ul
         li Buttons
@@ -25,8 +25,8 @@
     .flex.start.wrap
       mdl-switch.mdl-js-ripple-effect(:checked.sync='check') Switch
 
-    p At the moment, the
-      code  v-mdl-ripple-effect
+    p At the moment, the 
+      code v-mdl-ripple-effect
       |  just adds the class for you, so there is not much benefit from using it. This directive may disappear in v1
 </template>
 

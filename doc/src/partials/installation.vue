@@ -5,8 +5,8 @@
 .section
   title-link Installation
   .section__content
-    p Vue MDL is only available through
-      code  npm
+    p Vue MDL is only available through 
+      code npm
       | . Install it:
       pre
         code npm install --save vue-mdl
@@ -22,12 +22,16 @@
       pre
         code.html
           p='<script src="//rawgit.com/posva/vue-mdl/master/dist/vue-mdl.js"></script>'
-      | Add
-      code  .min
-      | to get the minified version:
+      | Add 
+      code .min
+      |  to get the minified version:
       pre
         code.html
           p='<script src="//rawgit.com/posva/vue-mdl/master/dist/vue-mdl.min.js"></script>'
+
+    p You'll also need to include 
+      a(href='http://www.getmdl.io/started/index.html' target='_blank') Material Design Lite
+      | . As it's not bundled with vue-mdl itself.
 </template>
 
 <script lang="coffee">

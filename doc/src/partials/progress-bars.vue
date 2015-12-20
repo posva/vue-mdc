@@ -22,8 +22,8 @@
         p= '<mdl-progress :progress="progress"></mdl-progress>'
         p= '<mdl-progress indeterminate></mdl-progress>'
 
-    p You can make it bufferize by using the
-     code  buffer
+    p You can make it bufferize by using the 
+     code buffer
      |  prop
     p
       em Note:
@@ -49,17 +49,17 @@
       tbody
         tr
           td.mdl-data-table__cell--non-numeric
-            code  progress
+            code progress
           td.mdl-data-table__cell--non-numeric Control the progress amount
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code  buffer
+            code buffer
           td.mdl-data-table__cell--non-numeric Control the buffer amount
           td.mdl-data-table__cell--non-numeric The effect applies to the rest of the progressbar. A buffer value of 80 creates an effect on the remaining 20% of the progressbar
         tr
           td.mdl-data-table__cell--non-numeric
-            code  indeterminate
+            code indeterminate
           td.mdl-data-table__cell--non-numeric Applies an indeterminate effect on the progressbar
           td.mdl-data-table__cell--non-numeric This overrides buffer and progress effect
     br

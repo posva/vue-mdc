@@ -16,8 +16,8 @@
         p= '<mdl-textfield label="Name" :value.sync="name"></mdl-textfield>'
         p= '<mdl-textfield floating-label="Name" :value.sync="name"></mdl-textfield>'
 
-    p Use the
-      code  textarea
+    p Use the 
+      code textarea
       |  prop to use a textarea instead of an input
     .flex.start.wrap
       mdl-textfield(floating-label='Textarea', textarea, rows='4')
