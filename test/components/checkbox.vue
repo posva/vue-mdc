@@ -1,13 +1,13 @@
 <template lang="jade">
 div
   h1 Checkboxes
-    h3 MDL
-    label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='ori-checkbox-1')
-      input#ori-checkbox-1.mdl-checkbox__input(type='checkbox', checked='')
-      span.mdl-checkbox__label Checkbox
-    label.mdl-checkbox.mdl-js-checkbox(for='ori-checkbox-2')
-      input#ori-checkbox-2.mdl-checkbox__input(type='checkbox', checked='')
-      span.mdl-checkbox__label No ripple
+  h3 MDL
+  label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect(for='ori-checkbox-1')
+    input#ori-checkbox-1.mdl-checkbox__input(type='checkbox', checked='')
+    span.mdl-checkbox__label Checkbox
+  label.mdl-checkbox.mdl-js-checkbox(for='ori-checkbox-2')
+    input#ori-checkbox-2.mdl-checkbox__input(type='checkbox', checked='')
+    span.mdl-checkbox__label No ripple
   h3 vue
   // We can also use the jade syntax #id for literal ids
   mdl-checkbox.added-class(id='check-dyn' v-bind:checked.sync='check') Dynamic {{check}}

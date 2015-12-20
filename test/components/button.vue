@@ -6,23 +6,6 @@ div
   button.mdl-button.mdl-js-button Normal
   button.mdl-button.mdl-js-button.mdl-js-ripple-effect Normal
   button.mdl-button.mdl-js-button(disabled) Normal
-  button.mdl-button.mdl-js-button.mdl-button--colored Colored
-  button.mdl-button.mdl-js-button.mdl-button--primary Primary
-  button.mdl-button.mdl-js-button.mdl-button--accent Accent
-  button.mdl-button.mdl-js-button.mdl-button--raised Raised
-  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect Accent
-  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--primary.mdl-js-ripple-effect Primary
-  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.mdl-js-ripple-effect Colored
-  h4 Fabs
-  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--fab
-    i.material-icons star
-  button.mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab(disabled)
-    i.material-icons add
-  h4 Icons
-  button.mdl-button.mdl-js-button.mdl-button--icon
-    i.material-icons add
-  button.mdl-button.mdl-js-button.mdl-button--icon.mdl-button--colored
-    i.material-icons mood
   h3 vue
   mdl-button {{someText}}
   <mdl-button id='html-button' raised colored>Should be raised</mdl-button>

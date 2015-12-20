@@ -1,13 +1,13 @@
 <template lang="jade">
 div
   h1 Switches
-    h3 MDL
-    label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect(for='ori-switch-1')
-      input#ori-switch-1.mdl-switch__input(type='checkbox' checked)
-      span.mdl-switch__label Checkbox
-    label.mdl-switch.mdl-js-switch(for='ori-switch-2')
-      input#ori-switch-2.mdl-switch__input(type='checkbox')
-      span.mdl-switch__label No ripple
+  h3 MDL
+  label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect(for='ori-switch-1')
+    input#ori-switch-1.mdl-switch__input(type='checkbox' checked)
+    span.mdl-switch__label Checkbox
+  label.mdl-switch.mdl-js-switch(for='ori-switch-2')
+    input#ori-switch-2.mdl-switch__input(type='checkbox')
+    span.mdl-switch__label No ripple
   h3 vue
   p
     mdl-switch.added-class(id='check-dyn' v-bind:checked.sync='check') Dynamic {{check}}
