@@ -89,12 +89,16 @@ a
       a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl') NPM
   main.mdl-layout__content
     .page-content
+      //object.icon(data='iconset.svg' type='image/svg+xml' v-el:icon v-icon-morph='icon')
+      icon-morph(:icon='icon')
+      mdl-textfield(floating-label='Icon', :value.sync='icon')
       content-entry(v-for='menu in items', :menu='menu')
 </template>
 
 <script lang="coffee">
 module.exports =
   data: ->
+    icon: 'add'
     filter: ''
     items: [
       name: 'Getting started'
@@ -129,4 +133,10 @@ module.exports =
   components:
     menuEntry: require './utils/menu-entry.vue'
     contentEntry: require './utils/content-entry.vue'
+    iconMorph: require './icon-morph.vue'
+  directives:
+    iconMorph:
+      bind: ->
+        @el.onload = => @morph = new SVGMorpheus @el
+      update: (icon) -> @morph?.to icon
 </script>
