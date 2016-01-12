@@ -1,24 +1,10 @@
 <style lang="stylus">
-object.icon
-  display: block
-  box-sizing: border-box
-  width: 100%
-  height: 50px
-  background: #FFF
-  margin: auto
-  padding: 1em
-  &:not([fill=none])
-    fill: red
-
-props = fill width ease
 svg.icon-morph
-  for prop in props
-    transition: .3s prop ease
+  transition: .3s fill ease
 </style>
 
 <template lang="jade">
 svg.icon-morph(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 24 24', :width='size', :height='size')
-  g(v-for='shape in shapes', :id.once='$key' style='display: none') {{{shape}}}
 </template>
 
 <script lang="coffee">
@@ -39,6 +25,13 @@ module.exports =
   beforeCompile: ->
     if @icon not of icons
       @icon = 'help'
+    for name, icon of icons
+      g = document.createElement 'G'
+      g.id = name
+      g.style.display = 'none'
+      g.innerHTML = icon
+      g.setAttribute 'v-pre', ''
+      @$el.appendChild g
   ready: ->
     @unwatch = []
     @morph = new SVGMorpheus @$el,

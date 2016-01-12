@@ -90,8 +90,16 @@ a
   main.mdl-layout__content
     .page-content
       //object.icon(data='iconset.svg' type='image/svg+xml' v-el:icon v-icon-morph='icon')
-      icon-morph(:icon='icon')
+      //icon-morph(v-for='n in 50', :icon='icon', :size='iconSize')
+      icon-morph-less(:icon='icon', :fill='color', rotation='none', icons='', :size='iconSize')
+      mdl-button(raised)
+        icon-morph-less(:icon='icon', :fill='color', rotation='none', icons='', :size='iconSize')
+      //-icon-morph-static(:icon='icon', :size='iconSize')
+      //icon-morph-less(:icon='icon', icons='add cake person', :size='iconSize')
+      br
       mdl-textfield(floating-label='Icon', :value.sync='icon')
+      mdl-textfield(floating-label='Color', :value.sync='color')
+      mdl-slider(min='8', max='500', :value.sync='iconSize')
       content-entry(v-for='menu in items', :menu='menu')
 </template>
 
@@ -99,6 +107,8 @@ a
 module.exports =
   data: ->
     icon: 'add'
+    iconSize: 256
+    color: 'pink'
     filter: ''
     items: [
       name: 'Getting started'
@@ -134,6 +144,8 @@ module.exports =
     menuEntry: require './utils/menu-entry.vue'
     contentEntry: require './utils/content-entry.vue'
     iconMorph: require './icon-morph.vue'
+    iconMorphStatic: require './icon-morph-static.vue'
+    iconMorphLess: require './icon-morph-less.vue'
   directives:
     iconMorph:
       bind: ->

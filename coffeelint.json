@@ -1,6 +1,6 @@
 {
   "max_line_length": {
-    "value": 100,
+    "value": 10000,
     "level": "error"
   },
   "braces_spacing":{
