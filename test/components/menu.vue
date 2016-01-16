@@ -31,7 +31,7 @@
       .bar
         button#mdl-menu.mdl-button.mdl-js-button.mdl-button--icon
           i.material-icons more_vert
-        ul.mdl-menu.mdl-menu--top-left.mdl-js-menu.mdl-js-ripple-effect(for='mdl-menu' v-el:menu)
+        ul.mdl-menu.mdl-menu--top-left.mdl-js-menu.mdl-js-ripple-effect(for='mdl-menu')
           li.mdl-menu__item Some Action
           li.mdl-menu__item Another Action
           li.mdl-menu__item(disabled) Disabled Action
@@ -40,16 +40,21 @@
   br
   .container.mdl-shadow--2dp
     .background
-    .bar
-      button#v-menu.mdl-button.mdl-js-button.mdl-button--icon
+    .bar(v-if='group')
+      button#v-menu.mdl-button.mdl-js-button.mdl-button--icon(v-if='showButton')
         i.material-icons more_vert
-      mdl-menu(v-if='show' for='v-menu')
-  .bar
-    button#test-simple.mdl-button.mdl-js-button.mdl-button--icon
-      i.material-icons more_vert
-    mdl-menu(v-if='show' for='test-simple')
+      mdl-menu(v-if='show' for='v-menu' v-el:menu)
+        mdl-menu-item Hello
+        mdl-menu-item(v-for='option in options' track-by='$index' v-bind:disabled='$index === 2') {{option}}
+        li.mdl-menu__item
+          i.material-icons mood
+          | Send Feedback
   mdl-button.mdl-js-ripple-effect(raised colored @click='open') Open the menu
-  mdl-checkbox(:checked.sync='show') Show
+  mdl-checkbox(:checked.sync='group') Show Group
+  mdl-checkbox(:checked.sync='show') Show Menu
+  mdl-checkbox(:checked.sync='showButton') Show Button
+  mdl-textfield(:value='newOption', floating-label='New Option')
+  mdl-button.mdl-js-ripple-effect(raised colored @click='addOption') Add Option
 </template>
 
 <script lang="coffee">
@@ -57,11 +62,20 @@ vmdl = require '../../src/vue-mdl.js'
 
 module.exports =
   data: ->
-    show: false
+    group: true
+    showButton: true
+    show: true
+    newOption: 'Dynamic options'
+    options: [
+      'Some Action'
+      'Another Action'
+      'Disabled Action'
+      'Yet Another Action'
+    ]
   directives: vmdl.directives
   components: vmdl.components
   methods:
-    open: -> @$emit 'open'
-  events:
-    open: -> @$els.menu.MaterialMenu.handleForClick_()
+    open: ->
+      @$els.menu.MaterialMenu.handleForClick_()
+    addOption: -> @options.push @newOption
 </script>

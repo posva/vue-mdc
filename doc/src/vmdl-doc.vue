@@ -118,6 +118,7 @@ module.exports =
         'Buttons'
         'Checkboxes'
         'Icon Toggles'
+        'Menus'
         'Progress bars'
         'Radio Buttons'
         'Sliders'

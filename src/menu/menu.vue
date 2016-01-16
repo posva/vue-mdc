@@ -1,9 +1,6 @@
 <template lang="jade">
-ul.mdl-menu.mdl-menu--top-left.mdl-js-menu(v-bind:for.once='for')
-  li.mdl-menu__item Some Action
-  li.mdl-menu__item Another Action
-  li.mdl-menu__item(disabled) Disabled Action
-  li.mdl-menu__item Yet Another Action
+ul.mdl-menu.mdl-js-menu(v-bind:for.once='for')
+  slot
 </template>
 
 <script lang="coffee">

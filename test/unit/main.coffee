@@ -73,5 +73,6 @@ describe 'Vue MDL', ->
   require './specs/switch.coffee'
   require './specs/textfield.coffee'
   require './specs/tooltip.coffee'
+  require './specs/menu.coffee'
   # This must be the last
   require './specs/vue-mdl.coffee'

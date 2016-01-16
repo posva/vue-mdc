@@ -12,6 +12,7 @@ module.exports = {
     'mdl-textfield': require('./textfield.vue'),
     'mdl-tooltip': require('./tooltip.vue'),
     'mdl-menu': require('./menu/menu.vue'),
+    'mdl-menu-item': require('./menu/menu-item.vue'),
   },
   directives: {
     'mdl-ripple-effect': require('./directives/ripple-effect.coffee'),
