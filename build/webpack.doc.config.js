@@ -25,10 +25,10 @@ module.exports = {
       loader: 'vue'
     }, {
       test: /\.css$/,
-      loader: 'style!css'
+      loader: 'vue-style!css'
     }, {
       test: /\.scss$/,
-      loaders: ['style', 'css', 'sass']
+      loaders: ['vue-style', 'css', 'sass']
     }, {
       test: /\.(png|jpg|svg)(\?embed)?$/,
       loader: 'url?limit=25000'

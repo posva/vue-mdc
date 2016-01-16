@@ -25,7 +25,7 @@ module.exports = {
       loader: 'vue'
     }, {
       test: /\.css$/,
-      loader: 'style!css'
+      loader: 'vue-style!css'
     }]
   },
   devtool: 'source-map'
