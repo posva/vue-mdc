@@ -18,8 +18,6 @@
 propFill = require './mixins/prop-fill.coffee'
 
 module.exports =
-  data: ->
-    unwatch: []
   props:
     expandable: String
     type:
@@ -41,8 +39,6 @@ module.exports =
     componentHandler.upgradeElement @$el
     if @floatingLabel and not @label?
       @label = @floatingLabel
-      @unwatch.push @$watch 'floatingLabel', (val) => @label = val
-  beforeDestroy: ->
-    @unwatch.forEach (unwatch) -> unwatch()
+      @$watch 'floatingLabel', (val) => @label = val
   mixins: [propFill]
 </script>

@@ -7,7 +7,6 @@ propFill = require './mixins/prop-fill.coffee'
 
 module.exports =
   data: ->
-    unwatch: []
   props:
     progress:
       required: false
@@ -20,14 +19,12 @@ module.exports =
 
     if @progress?
       @$el.MaterialProgress.setProgress @progress
-      @unwatch.push @$watch 'progress', (val) ->
+      @$watch 'progress', (val) ->
         @$el.MaterialProgress.setProgress val
 
     if @buffer?
       @$el.MaterialProgress.setBuffer @buffer
-      @unwatch.push @$watch 'buffer', (val) ->
+      @$watch 'buffer', (val) ->
         @$el.MaterialProgress.setBuffer val
-  beforeDestroy: ->
-    @unwatch.forEach (unwatch) -> unwatch()
   mixins: [propFill]
 </script>

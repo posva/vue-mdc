@@ -13,8 +13,6 @@ input.mdl-slider.mdl-js-slider(
 propFill = require './mixins/prop-fill.coffee'
 
 module.exports =
-  data: ->
-    unwatch: []
   props:
     value:
       required: true
@@ -32,25 +30,23 @@ module.exports =
 
     if @value?
       @$el.MaterialSlider.change @value
-      @unwatch.push @$watch 'value', (val) ->
+      @$watch 'value', (val) ->
         @$el.MaterialSlider.change val
 
     # The original value is not changed, only design is changed
     if @min?
-      @unwatch.push @$watch 'min', (val) ->
+      @$watch 'min', (val) ->
         if val > @value
           @$el.MaterialSlider.change val
 
     if @max?
-      @unwatch.push @$watch 'max', (val) ->
+      @$watch 'max', (val) ->
         if val < @value
           @$el.MaterialSlider.change val
 
     if @step?
-      @unwatch.push @$watch 'step', (val) ->
+      @$watch 'step', (val) ->
         @$el.MaterialSlider.change val * Math.round(@value / val)
 
-  beforeDestroy: ->
-    @unwatch.forEach (unwatch) -> unwatch()
   mixins: [propFill]
 </script>
