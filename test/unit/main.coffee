@@ -21,6 +21,7 @@ app = new Vue
       'textfield'
       'tooltip'
       'menu'
+      'card'
     ]
     current: 0
   computed:
@@ -57,6 +58,7 @@ app = new Vue
     testTextfield: require '../components/textfield.vue'
     testTooltip: require '../components/tooltip.vue'
     testMenu: require '../components/menu.vue'
+    testCard: require '../components/card.vue'
 
 window.app = app
 window.Vue = Vue
@@ -74,5 +76,6 @@ describe 'Vue MDL', ->
   require './specs/textfield.coffee'
   require './specs/tooltip.coffee'
   require './specs/menu.coffee'
+  require './specs/card.coffee'
   # This must be the last
   require './specs/vue-mdl.coffee'
