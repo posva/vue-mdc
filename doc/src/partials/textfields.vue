@@ -23,9 +23,10 @@
       code textarea
       |  prop to use a textarea instead of an input
     .flex.start.wrap
-      mdl-textfield(floating-label='Textarea', textarea, rows='4')
+      mdl-textfield(floating-label='Textarea', textarea, rows='4', :value.sync='text')
+      p {{text}}
     pre
-      code.html= '<mdl-textfield floating-label="Name" textearea rows="4"></mdl-textfield>'
+      code.html= '<mdl-textfield floating-label="Name" textarea rows="4"></mdl-textfield>'
 
     p You can dynamically bind the 
       code floating-label
@@ -34,7 +35,7 @@
       | prop for the real label if you need to control whether the label can floats or not
 
     pre
-      code.html= '<mdl-textfield :floating-label="float" label="Name" textearea></mdl-textfield>'
+      code.html= '<mdl-textfield :floating-label="float" label="Name" textarea></mdl-textfield>'
       code.javascript.
         new Vue({
           el: '#app',
@@ -99,7 +100,7 @@
         tr
           td.mdl-data-table__cell--non-numeric
             code textarea
-          td.mdl-data-table__cell--non-numeric Makes the textfield a textearea instead of an input
+          td.mdl-data-table__cell--non-numeric Makes the textfield a textarea instead of an input
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
@@ -140,6 +141,7 @@ module.exports =
     label: 'I am a label'
     float: true
     textarea: false
+    text: 'You can have\nmultiline'
     rows: 3
   computed:
     playgroundHtml: ->
