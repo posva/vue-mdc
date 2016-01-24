@@ -5,6 +5,7 @@ describe 'Textfield', ->
   expandable = null
   custom = null
   label = null
+  textarea = null
   before (done) ->
     app.currentComponent = 'textfield'
     utils.nextTick()
@@ -12,6 +13,7 @@ describe 'Textfield', ->
       classic = $ '#classic'
       expandable = $ '#expandable'
       custom = $ '#custom'
+      textarea = $ '#textarea'
       label = $ 'label[for=classic]'
       utils.nextTick()
     .then done, done
@@ -85,6 +87,16 @@ describe 'Textfield', ->
     utils.nextTick()
     .then ->
       textarea.should.have.prop 'rows', 3
+      utils.nextTick()
+    .then done, done
+  it 'syncs the value with a textarea', (done) ->
+    textarea.should.not.have.value 'Multiline'
+    oldText = vm.multiText
+    vm.multiText = 'Multiline'
+    utils.nextTick()
+    .then ->
+      textarea.should.have.value 'Multiline'
+      vm.multiText = oldText
       utils.nextTick()
     .then done, done
   it 'can have a pattern for validation', (done) ->

@@ -29,7 +29,8 @@ div
   mdl-textfield#fly-label-dyn(:floating-label='dynFloat')
   mdl-textfield.added-class#classic(label='Classic', :type='type', :value.sync='text')
   mdl-textfield#fly-dyn(label='Dynamic fly' v-bind:floating-label='float' v-bind:label='label')
-  mdl-textfield#textarea(label='textarea', textarea, :rows='rows')
+  mdl-textfield#textarea(label='textarea', textarea, :rows='rows', :value.sync='multiText')
+  pre#multi-text {{multiText}}
   <mdl-textfield id='html-text' label='textarea' textarea></mdl-textfield>
   mdl-textfield#number(label='Number', :pattern='pattern', floating-label, :error='error')
   mdl-textfield#custom(:pattern='pattern', floating-label)
@@ -59,6 +60,7 @@ module.exports =
     text: 'Hello textfield'
     pattern: '[0-9]*'
     error: 'Nope'
+    multiText: 'Hello\nmultiline'
   computed:
     label: ->
       'Can I fly? ' + if @float then 'Yes' else 'No'
