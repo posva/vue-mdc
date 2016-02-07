@@ -115,13 +115,19 @@ If you wrote a new feature or fixed a bug make sure to add the corresponding tes
 
 #Releasing
 
-- Release a new version using `npm version`
-- Then amend the commit adding the changelog
-- Modify the tag `git tag -f "v$(grep version package.json | sed 's/.*: "//g;s/".*//g')"`
-- Push it to git: `git push`, `git push --tags`
+Releasing is done using the git flow model
+
+- Start a new release `git flow release start x.x.x`
+- Bump package.json version
+- Run `npm run build`
+- Commit the version. No more info needed
+- Run `git flow release finish`
+- Write the changelog in the tag notes
+- Push master and develop branches `git push --all`
+- Push tags `git push --tags`
 - Publish it to npm: `npm publish`
 
 #License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2015 Eduardo San Martin Morote
+Copyright (c) 2016 Eduardo San Martin Morote
