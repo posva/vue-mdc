@@ -45,6 +45,22 @@
     p Result:
     pre
       code.html(v-hljs='playgroundHtml')
+
+    h5 Link buttons
+    p Sometimes you might want to display a link as a button. In order to do this,
+    |  you can use the 
+    code mdl-anchor-button
+    |  element. It works exactly as the button does but uses an  
+    code a
+    |  html link instead of a 
+    code button
+    | .
+    .flex.start.wrap
+      mdl-anchor-button(href='http://vuejs.org/api' target='_blank') Open Vuejs doc
+    pre
+      code.html
+        p= '<mdl-anchor-button href="http://vuejs.org/api" target="_blank">Open Vuejs doc</mdl-anchor-button>'
+
     h5 Prop List
     table.mdl-data-table.mdl-js-data-table
       thead
