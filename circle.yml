@@ -4,9 +4,7 @@ general:
       - gh-pages
 machine:
   node:
-    version: 4.2.2
-  post:
-    - npm i -g npm@3.x.x
+    version: 5
 test:
   override:
     - npm run build
