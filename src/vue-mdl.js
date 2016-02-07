@@ -7,6 +7,7 @@ module.exports = {
     'mdl-radio': require('./toggles/radio.vue'),
     'mdl-progress': require('./progress.vue'),
     'mdl-button': require('./button.vue'),
+    'mdl-anchor-button': require('./anchor-button.vue'),
     'mdl-spinner': require('./spinner.vue'),
     'mdl-slider': require('./slider.vue'),
     'mdl-textfield': require('./textfield.vue'),
