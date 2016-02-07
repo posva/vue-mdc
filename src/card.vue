@@ -7,14 +7,18 @@
     .mdl-card__subtitle-text {{subtitle}}
   slot(name='supporting-text' v-if='supportingText')
     .mdl-card__supporting-text {{supportingText}}
-  .mdl-card__media(v-if='media')
-    slot(name='media')
-  .mdl-card__actions.mdl-card--border
-    a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
-      | Get Started
-  .mdl-card__menu
-    button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
-      i.material-icons share
+  slot(name='media' v-if='media')
+    .mdl-card__media
+      img(:src='media')
+  // TODO this was an anchor
+  slot(name='actions' v-if='actions')
+    .mdl-card__actions.mdl-card--border
+      mdl-button.mdl-js-ripple-effect(colored) Get Started
+  // TODO some way of creating a menu or action
+  slot(name='menu' v-if='menu')
+    .mdl-card__menu
+      mdl-button.mdl-js-ripple-effect(icon)
+        i.material-icons share
 
 </template>
 
@@ -25,17 +29,25 @@ slots = [
   'title'
   'subtitle'
   'supportingText'
+  'media'
   'actions'
   'menu'
   ]
 
 module.exports =
-  data: ->
-    media: false
   props:
     title:
       type: String
       default: true
+    # TODO specify a real menu
+    menu:
+      default: true
+    # TODO specify a real action
+    actions:
+      default: true
+    media:
+      default: true
+      type: String
     subtitle:
       default: true
       type: String
@@ -48,4 +60,6 @@ module.exports =
         el = @$el.children[pos]
         @[slot] = '' if not el.attributes.getNamedItem 'slot'
     #el = @$el.children[pos]?.attributes.getNamedItem 'slot'
+  components:
+    mdlButton: require './button.vue'
 </script>

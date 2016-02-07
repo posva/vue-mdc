@@ -27,19 +27,27 @@
   h3 vue
   br
   p Normal card
-  mdl-card#card(:title='title', :subtitle='subtitle', :media='media', :supporting-text='supportingText')
+  mdl-card#card(:title='title', :subtitle='subtitle', :media='media',
+    :supporting-text='supportingText',
+    actions,
+    menu
+    )
   br
   mdl-textfield(:value.sync='title', floating-label='Card Title')
   mdl-textfield(:value.sync='subtitle', floating-label='Card subtitle')
+  mdl-textfield(:value.sync='media', floating-label='Card Media')
   mdl-textfield(textarea, :value.sync='supportingText', floating-label='Card supporting text')
   p Empty card
   mdl-card#empty-card
+  br
   mdl-card(title='Title from prop')
     .mdl-card__title(slot='title')
       h2.mdl-card__title-text Title from slot
+  br
   mdl-card
     .mdl-card__title(slot='title')
       h2.mdl-card__title-text Title from slot
+  br
   mdl-card(supporting-text='This card has no title \n Ha ha')
 </template>
 
