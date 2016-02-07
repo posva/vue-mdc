@@ -16,6 +16,8 @@ div
   br
   mdl-button#button.added-class(:colored='colored', :raised='raised', :fab='fab', :mini-fab='miniFab', :primary='primary', :accent='accent', :icon='icon') Multiple
   br
+  mdl-anchor-button#anchor-button(:href='href', target='_blank') {{href | urlName}}
+  br
   input#disable(type='checkbox' v-model='disable')
   label(for='disable') Disable
   br
@@ -56,5 +58,11 @@ module.exports =
     fab: false
     raised: false
     colored: false
+    href: 'http://vuejs.org'
   components: vmdl.components
+  filters:
+    urlName: (url) ->
+      url.replace /^(https?:)?\/\//i, ''
+      .replace /\/+$/, ''
+      .replace '/' , ' '
 </script>

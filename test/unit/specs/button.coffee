@@ -31,6 +31,9 @@ describe 'Button', ->
     button.should.have.class 'mdl-button'
     button.should.have.attr 'data-upgraded'
     .match /MaterialButton/
+  it 'can be an anchor link', ->
+    $ 'a#anchor-button'
+      .should.exist
   it 'can be colored', (done) ->
     propChecker 'colored'
     .then done, done
