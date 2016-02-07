@@ -10,6 +10,8 @@ module.exports =
   props: ['for']
   ready: ->
     componentHandler.upgradeElement @$el, 'MaterialMenu'
-  beforeDestroy: ->
-    @$el.MaterialMenu.mdlDowngrade()
+  # beforeDestroy: ->
+    # TODO Remove mdl event listeners added. This was previously
+    # @$el.MaterialMenu.mdlDowngrade()
+    # But has been removed on 1.1
 </script>
