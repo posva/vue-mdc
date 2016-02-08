@@ -70,7 +70,7 @@ module.exports =
     actionsText: 'Vuejs.org'
     actionsTarget: '_blank'
     subtitle: 'Card subtitle'
-    media: 'https://avatars0.githubusercontent.com/u/664177'
+    media: '//www.getmdl.io/assets/demos/image_card.jpg'
     supportingText: 'Here is some supporting text'
   directives: vmdl.directives
   components: vmdl.components
