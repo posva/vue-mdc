@@ -4,10 +4,10 @@ general:
       - gh-pages
 machine:
   node:
-    version: 4.2.2
-  post:
-    - npm i -g npm@3.x.x
+    version: 5
 test:
+  pre:
+    - sudo apt-get update && sudo apt-get install --only-upgrade google-chrome-stable
   override:
     - npm run build
     - git checkout dist

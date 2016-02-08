@@ -2,6 +2,8 @@ Vue = require 'vue'
 require 'material-design-lite/material.js'
 require 'material-design-lite/material.css'
 
+utils = require './utils.coffee'
+
 Vue.config.debug = true
 app = new Vue
   el: '#test'
@@ -21,6 +23,7 @@ app = new Vue
       'textfield'
       'tooltip'
       'menu'
+      'card'
     ]
     current: 0
   computed:
@@ -40,8 +43,7 @@ app = new Vue
       if ++@current >= @tests.length
         @current = 0
   directives:
-    attach:
-      bind: -> window.vm = @vm.$children[0]
+    attach: utils.attachDirective
   components:
     testNone: template: '<p>Choose a valid component</p>'
     testCheckbox: require '../components/checkbox.vue'
@@ -57,6 +59,7 @@ app = new Vue
     testTextfield: require '../components/textfield.vue'
     testTooltip: require '../components/tooltip.vue'
     testMenu: require '../components/menu.vue'
+    testCard: require '../components/card.vue'
 
 window.app = app
 window.Vue = Vue
@@ -74,5 +77,6 @@ describe 'Vue MDL', ->
   require './specs/textfield.coffee'
   require './specs/tooltip.coffee'
   require './specs/menu.coffee'
+  require './specs/card.coffee'
   # This must be the last
   require './specs/vue-mdl.coffee'

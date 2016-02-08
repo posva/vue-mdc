@@ -28,7 +28,8 @@ code.hljs
   for lang, text in langs
     &.{lang}::before
       content: text
-      float: right
+      position: absolute
+      right: 1rem
       text-transform: uppercase
       font-family: 'Roboto', 'Helvetica', 'Source Sans Pro', 'Arial'
       font-size: 12px
@@ -116,6 +117,7 @@ module.exports =
       icon: 'extension'
       items: [
         'Buttons'
+        'Cards'
         'Checkboxes'
         'Icon Toggles'
         'Menus'
