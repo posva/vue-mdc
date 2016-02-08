@@ -27,16 +27,24 @@
   h3 vue
   br
   p Normal card
-  mdl-card#card(:title='title', :subtitle='subtitle', :media='media',
+  mdl-card#card(:title='title',
+    v-attach:card,
+    v-el:card,
+    :subtitle='subtitle',
+    :media='media',
     :supporting-text='supportingText',
-    actions,
-    menu
+    :actions-text='actionsText',
+    :actions-target='actionsTarget',
+    :actions='actions',
+    menu='cardMenu'
     )
   br
   mdl-textfield(:value.sync='title', floating-label='Card Title')
   mdl-textfield(:value.sync='subtitle', floating-label='Card subtitle')
   mdl-textfield(:value.sync='media', floating-label='Card Media')
   mdl-textfield(textarea, :value.sync='supportingText', floating-label='Card supporting text')
+  mdl-textfield(:value.sync='actions', floating-label='URL or event name')
+  mdl-textfield(:value.sync='actionsText', floating-label='Button text')
   p Empty card
   mdl-card#empty-card
   br
@@ -53,13 +61,23 @@
 
 <script lang="coffee">
 vmdl = require '../../src/vue-mdl.js'
+utils = require '../unit/utils.coffee'
 
 module.exports =
   data: ->
     title: 'Card Title'
+    actions: 'someEventName'
+    actionsText: 'Vuejs.org'
+    actionsTarget: '_blank'
     subtitle: 'Card subtitle'
     media: 'https://avatars0.githubusercontent.com/u/664177'
     supportingText: 'Here is some supporting text'
   directives: vmdl.directives
   components: vmdl.components
+  directives:
+    attach: utils.attachDirective
+  events:
+    cardMenu: ->
+      console.log 'hey'
+      true # stop propagation
 </script>

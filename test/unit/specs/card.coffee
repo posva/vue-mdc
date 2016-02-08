@@ -91,3 +91,67 @@ describe 'Card', ->
       .should.have.attr 'src', 'http://www.getmdl.io/assets/demos/dog.png'
       utils.nextTick()
     .then done, done
+
+  it 'has custom actions text', (done) ->
+    vm.actionsText = 'another text'
+    card.find '.mdl-card__actions .mdl-button'
+    .should.not.have.text 'another text'
+    utils.nextTick()
+    .then ->
+      card.find '.mdl-card__actions .mdl-button'
+      .should.have.text 'another text'
+      utils.nextTick()
+    .then done, done
+
+  it 'dispatchs events for actions button', (done) ->
+    called = false
+    vm.$once 'someEventName', -> called = true
+    vms.card.triggerActionsEvent()
+    utils.nextTick()
+    .then ->
+      called.should.be.true
+      utils.nextTick()
+    .then done, done
+
+  it 'dispatchs events for menu button', (done) ->
+    called = false
+    vm.$once 'cardMenu', -> called = true
+    vms.card.triggerMenuEvent()
+    utils.nextTick()
+    .then ->
+      called.should.be.true
+      utils.nextTick()
+    .then done, done
+
+  it 'has an anchor if actions is an URL', (done) ->
+    vm.actions = '//google.com'
+    card.find '.mdl-card__actions button.mdl-button'
+    .should.exist
+    utils.nextTick()
+    .then ->
+      card.find '.mdl-card__actions button.mdl-button'
+      .should.not.exist
+      card.find '.mdl-card__actions a.mdl-button'
+      .should.exist
+      vm.actions = 'http://google.com'
+      utils.nextTick()
+    .then ->
+      card.find '.mdl-card__actions button.mdl-button'
+      .should.not.exist
+      card.find '.mdl-card__actions a.mdl-button'
+      .should.exist
+      vm.actions = 'https://google.com'
+      utils.nextTick()
+    .then done, done
+
+  it 'has custom target for anchor button', (done) ->
+    vm.actions = '//google.com'
+    vm.actionsTarget = '_self'
+    card.find '.mdl-card__actions a.mdl-button'
+    .should.not.have.attr 'target', '_self'
+    utils.nextTick()
+    .then ->
+      card.find '.mdl-card__actions a.mdl-button'
+      .should.have.attr 'target', '_self'
+      utils.nextTick()
+    .then done, done

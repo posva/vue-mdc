@@ -2,6 +2,8 @@ Vue = require 'vue'
 require 'material-design-lite/material.js'
 require 'material-design-lite/material.css'
 
+utils = require './utils.coffee'
+
 Vue.config.debug = true
 app = new Vue
   el: '#test'
@@ -41,8 +43,7 @@ app = new Vue
       if ++@current >= @tests.length
         @current = 0
   directives:
-    attach:
-      bind: -> window.vm = @vm.$children[0]
+    attach: utils.attachDirective
   components:
     testNone: template: '<p>Choose a valid component</p>'
     testCheckbox: require '../components/checkbox.vue'
