@@ -117,6 +117,7 @@ module.exports =
       icon: 'extension'
       items: [
         'Buttons'
+        'Cards'
         'Checkboxes'
         'Icon Toggles'
         'Menus'
