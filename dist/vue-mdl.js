@@ -70,11 +70,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    'mdl-tooltip': __webpack_require__(34),
 	    'mdl-menu': __webpack_require__(37),
 	    'mdl-menu-item': __webpack_require__(40),
+	    'mdl-card': __webpack_require__(43),
 	  },
 	  directives: {
-	    'mdl-ripple-effect': __webpack_require__(43),
-	    'mdl-badge': __webpack_require__(44),
-	    'mdl': __webpack_require__(45),
+	    'mdl-ripple-effect': __webpack_require__(46),
+	    'mdl-badge': __webpack_require__(47),
+	    'mdl': __webpack_require__(48),
 	  },
 	
 	  register: function(Vue, name) {
@@ -1000,6 +1001,118 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(44)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/card.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(45)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/posva/vue-mdl/src/card.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var propFill, slots;
+	
+	propFill = __webpack_require__(13);
+	
+	slots = ['title', 'subtitle', 'supportingText', 'media', 'actions', 'menu'];
+	
+	module.exports = {
+	  computed: {
+	    isActionsURL: function() {
+	      if (typeof this.actions === 'string') {
+	        return this.actions.match(/^(https?:)?\/\//) != null;
+	      } else {
+	        return false;
+	      }
+	    }
+	  },
+	  props: {
+	    title: {
+	      type: String,
+	      "default": true
+	    },
+	    menu: {
+	      "default": true
+	    },
+	    actions: {
+	      type: String,
+	      "default": true
+	    },
+	    actionsTarget: {
+	      "default": '_self',
+	      type: String
+	    },
+	    actionsText: String,
+	    media: {
+	      "default": true,
+	      type: String
+	    },
+	    subtitle: {
+	      "default": true,
+	      type: String
+	    },
+	    supportingText: {
+	      "default": true,
+	      type: String
+	    }
+	  },
+	  compiled: function() {
+	    return slots.forEach((function(_this) {
+	      return function(slot, pos) {
+	        var el;
+	        if (_this[slot] === true) {
+	          el = _this.$el.children[pos];
+	          if (!el.attributes.getNamedItem('slot')) {
+	            return _this[slot] = '';
+	          }
+	        }
+	      };
+	    })(this));
+	  },
+	  methods: {
+	    triggerMenuEvent: function() {
+	      return this.$dispatch(this.menu);
+	    },
+	    triggerActionsEvent: function() {
+	      return this.$dispatch(this.actions);
+	    }
+	  },
+	  components: {
+	    mdlButton: __webpack_require__(18),
+	    mdlAnchorButton: __webpack_require__(22)
+	  }
+	};
+
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"mdl-card mdl-shadow--2dp\"><slot name=\"title\" v-if=\"title\"><div class=\"mdl-card__title\"><h2 class=\"mdl-card__title-text\">{{title}}</h2></div></slot><slot name=\"subtitle\" v-if=\"subtitle\"><div class=\"mdl-card__subtitle-text\">{{subtitle}}</div></slot><slot name=\"supporting-text\" v-if=\"supportingText\"><div class=\"mdl-card__supporting-text\">{{supportingText}}</div></slot><slot name=\"media\" v-if=\"media\"><div class=\"mdl-card__media\"><img :src=\"media\"/></div></slot><!-- TODO this was an anchor--><slot name=\"actions\" v-if=\"actions\"><div class=\"mdl-card__actions mdl-card--border\"><mdl-anchor-button colored=\"colored\" v-if=\"isActionsURL\" v-bind:href=\"actions\" v-bind:target=\"actionsTarget\" class=\"mdl-js-ripple-effect\">{{actionsText}}</mdl-anchor-button><mdl-button colored=\"colored\" v-else=\"v-else\" class=\"mdl-js-ripple-effect\">{{actionsText}}</mdl-button></div></slot><!-- TODO some way of creating a menu or action--><slot name=\"menu\" v-if=\"menu\"><div class=\"mdl-card__menu\"><mdl-button icon=\"icon\" @click=\"triggerMenuEvent\" class=\"mdl-js-ripple-effect\"><i class=\"material-icons\">share</i></mdl-button></div></slot></div>";
+
+/***/ },
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1010,7 +1123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 44 */
+/* 47 */
 /***/ function(module, exports) {
 
 	var checkNumber, dataBadgeSetter;
@@ -1055,7 +1168,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 45 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = {
