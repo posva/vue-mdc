@@ -137,6 +137,11 @@ module.exports =
         'Ripple Effect'
       ]
     ]
+  ready: ->
+    docsearch
+      apiKey: 'b3174bbc58c9406adac95c2cfef57702'
+      indexName: 'vue-mdl'
+      inputSelector: '#search'
   components:
     menuEntry: require './utils/menu-entry.vue'
     contentEntry: require './utils/content-entry.vue'
