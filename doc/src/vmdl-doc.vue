@@ -77,6 +77,11 @@ a
   padding-left: .5em
 .mdl-layout__drawer .mdl-navigation
   padding-top: .5em
+
+.algolia-autocomplete
+  direction: rtl !important
+  .aa-dropdown-menu.aa-with-0
+    right: 0 !important
 </style>
 
 <template lang="jade">
