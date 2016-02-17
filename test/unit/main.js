@@ -9,7 +9,9 @@ require('mocha/mocha.css')
 
 import chai from 'chai'
 require('chai-jquery/chai-jquery')
-// var utils = require('./utils.coffee')
+
+import utils from './utils'
+
 if (window.initMochaPhantomJS) {
   window.initMochaPhantomJS()
 }
@@ -75,7 +77,7 @@ var app = new Vue({
     }
   },
   directives: {
-    // attach: utils.attachDirective
+    attach: utils.attachDirective
   },
   components: {
     testNone: {
