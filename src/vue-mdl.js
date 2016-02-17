@@ -1,4 +1,6 @@
-module.exports = {
+import mdlBadge from './directives/badge'
+
+const vmdl = {
   components: {
     // 'mdl-checkbox': require('./toggles/checkbox.vue'),
     // 'mdl-switch': require('./toggles/switch.vue'),
@@ -16,15 +18,15 @@ module.exports = {
     // 'mdl-card': require('./card.vue'),
   },
   directives: {
+    mdlBadge
     // 'mdl-ripple-effect': require('./directives/ripple-effect.coffee'),
-    // 'mdl-badge': require('./directives/badge.coffee'),
     // 'mdl': require('./directives/mdl.coffee'),
   },
 
   register: function (Vue, name) {
-    var comp, func, that
+    let comp, func, that
     that = this
-    var setComp = function (name) {
+    const setComp = function (name) {
       if (name in that.components) {
         comp = that.components[name]
         func = 'component'
@@ -44,11 +46,15 @@ module.exports = {
     return Vue[func](name, comp)
   },
   registerAll: function (Vue) {
-    for (var comp in this.components) {
+    for (let comp in this.components) {
       Vue.component(comp, this.components[comp])
     }
-    for (var dir in this.directives) {
+    for (let dir in this.directives) {
       Vue.directive(dir, this.directives[dir])
     }
   }
 }
+
+export default vmdl
+export const MdlBadge = mdlBadge
+

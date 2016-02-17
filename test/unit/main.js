@@ -3,12 +3,17 @@ import Vue from 'vue'
 require('material-design-lite/material.js')
 require('material-design-lite/material.css')
 
-require('jquery/dist/jquery.min')
 require('mocha/mocha')
 require('mocha/mocha.css')
 
+import jQuery from 'jquery'
+
 import chai from 'chai'
-require('chai-jquery/chai-jquery')
+import chaiJquery from 'chai-jquery'
+
+chai.use(function (chai, utils) {
+  return chaiJquery(chai, utils, jQuery)
+})
 
 import utils from './utils'
 
@@ -19,19 +24,19 @@ window.mocha.setup({
   ui: 'bdd'
 })
 window.expect = chai.expect
-window.should = chai.should()
+chai.should()
 window.onload = function () {
   (window.mochaPhantomJS || window.mocha).run()
 }
 
 Vue.config.debug = true
-var app = new Vue({
+const app = new Vue({
   el: '#test',
   data: {
     tests: [
-      'none'
+      'none',
       // 'checkbox',
-      // 'badge',
+      'badge'
       // 'button',
       // 'progress',
       // 'spinner',
@@ -53,7 +58,7 @@ var app = new Vue({
     },
     currentComponent: {
       set (val) {
-        var i = this.tests.indexOf(val)
+        let i = this.tests.indexOf(val)
         if (i < 0) {
           throw new Error('Ivalid component: ' + val)
         }
@@ -82,9 +87,9 @@ var app = new Vue({
   components: {
     testNone: {
       template: '<p>Choose a valid component</p>'
-    }
+    },
     // testCheckbox: require('../components/checkbox.vue'),
-    // testBadge: require('../components/badge.vue'),
+    testBadge: require('../components/badge.vue')
     // testButton: require('../components/button.vue'),
     // testProgress: require('../components/progress.vue'),
     // testSpinner: require('../components/spinner.vue'),
@@ -103,9 +108,8 @@ var app = new Vue({
 window.app = app
 window.Vue = Vue
 describe('Vue MDL', function () {
-  require('./specs/dummy')
   // require('./specs/checkbox.coffee')
-  // require('./specs/badge.coffee')
+  require('./specs/badge')
   // require('./specs/button.coffee')
   // require('./specs/progress.coffee')
   // require('./specs/spinner.coffee')
