@@ -38,8 +38,8 @@ const app = new Vue({
       'checkbox',
       'badge',
       'button',
-      'progress'
-      // 'spinner',
+      'progress',
+      'spinner'
       // 'ripple-effect',
       // 'icon-toggle',
       // 'radio',
@@ -91,8 +91,8 @@ const app = new Vue({
     testCheckbox: require('../components/checkbox.vue'),
     testBadge: require('../components/badge.vue'),
     testButton: require('../components/button.vue'),
-    testProgress: require('../components/progress.vue')
-    // testSpinner: require('../components/spinner.vue'),
+    testProgress: require('../components/progress.vue'),
+    testSpinner: require('../components/spinner.vue')
     // testRippleEffect: require('../components/ripple-effect.vue'),
     // testIconToggle: require('../components/icon-toggle.vue'),
     // testRadio: require('../components/radio.vue'),
@@ -112,7 +112,7 @@ describe('Vue MDL', function () {
   require('./specs/badge')
   require('./specs/button')
   require('./specs/progress')
-  // require('./specs/spinner.coffee')
+  require('./specs/spinner')
   // require('./specs/ripple-effect.coffee')
   // require('./specs/icon-toggle.coffee')
   // require('./specs/radio.coffee')

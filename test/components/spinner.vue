@@ -16,12 +16,16 @@ div
   label(for='#color') Single Color
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    active: true
-    color: false
+export default {
+  data () {
+    return {
+      active: true,
+      color: false
+    }
+  },
   components: vmdl.components
+}
 </script>

@@ -3,6 +3,7 @@ import mdlCheckbox from './toggles/checkbox.vue'
 import mdlButton from './button.vue'
 import mdlAnchorButton from './anchor-button.vue'
 import mdlProgress from './progress.vue'
+import mdlSpinner from './spinner.vue'
 
 const vmdl = {
   components: {
@@ -12,7 +13,8 @@ const vmdl = {
     // 'mdl-radio': require('./toggles/radio.vue'),
     mdlProgress,
     mdlButton,
-    mdlAnchorButton
+    mdlAnchorButton,
+    mdlSpinner
     // 'mdl-spinner': require('./spinner.vue'),
     // 'mdl-slider': require('./slider.vue'),
     // 'mdl-textfield': require('./textfield.vue'),
@@ -65,4 +67,4 @@ export const MdlCheckbox = mdlCheckbox
 export const MdlButton = mdlButton
 export const MdlAnchorButton = mdlAnchorButton
 export const MdlProgress = mdlProgress
-
+export const MdlSpinner = mdlSpinner
