@@ -1,15 +1,15 @@
 /* global describe it before vm $ app*/
 import utils from '../utils'
 
-describe('Checkbox', function () {
+describe('Icon toggle', function () {
   let check = null
   let checkLabel = null
   before(function (done) {
-    app.currentComponent = 'checkbox'
+    app.currentComponent = 'icon-toggle'
     utils.nextTick()
     .then(function () {
-      check = $('#check')
-      checkLabel = $('label[for=check]')
+      check = $('#it')
+      checkLabel = $('label[for=it]')
       done()
     })
   })
@@ -20,17 +20,27 @@ describe('Checkbox', function () {
   })
 
   it('is upgraded', function () {
-    let span = $('label[for=check] span:nth-child(2)')
-    check.should.have.class('mdl-checkbox__input')
+    let span = $('label[for=it] i:nth-child(2)')
+    check.should.have.class('mdl-icon-toggle__input')
     checkLabel.should.have.attr('data-upgraded')
-    .match(/MaterialCheckbox/)
-    span.should.have.class('mdl-checkbox__label')
-    .and.have.text('Check me')
+    .match(/MaterialIconToggle/)
+    span.should.have.class('mdl-icon-toggle__label')
   })
 
   it('is checked', function () {
     check.should.be.checked
     checkLabel.should.have.class('is-checked')
+  })
+
+  it('can change the icon', function (done) {
+    let label = $('label[for=dit] i:nth-child(2)')
+    label.should.have.text('code')
+    vm.icon = 'http'
+    utils.nextTick()
+    .then(function () {
+      label.should.have.text('http')
+      return utils.nextTick()
+    }).then(done, done)
   })
 
   it('can be unchecked', function (done) {
@@ -75,8 +85,7 @@ describe('Checkbox', function () {
   })
 
   it('keeps user added classes', function () {
-    $('label[for=check-dyn]')
-    .should.have.class('added-class')
+    checkLabel.should.have.class('added-class')
   })
 
   it('can use an array', function (done) {

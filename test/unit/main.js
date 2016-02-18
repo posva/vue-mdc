@@ -39,9 +39,9 @@ const app = new Vue({
       'badge',
       'button',
       'progress',
-      'spinner'
+      'spinner',
       // 'ripple-effect',
-      // 'icon-toggle',
+      'icon-toggle'
       // 'radio',
       // 'slider',
       // 'switch',
@@ -92,9 +92,9 @@ const app = new Vue({
     testBadge: require('../components/badge.vue'),
     testButton: require('../components/button.vue'),
     testProgress: require('../components/progress.vue'),
-    testSpinner: require('../components/spinner.vue')
+    testSpinner: require('../components/spinner.vue'),
     // testRippleEffect: require('../components/ripple-effect.vue'),
-    // testIconToggle: require('../components/icon-toggle.vue'),
+    testIconToggle: require('../components/icon-toggle.vue')
     // testRadio: require('../components/radio.vue'),
     // testSlider: require('../components/slider.vue'),
     // testSwitch: require('../components/switch.vue'),
@@ -114,7 +114,7 @@ describe('Vue MDL', function () {
   require('./specs/progress')
   require('./specs/spinner')
   // require('./specs/ripple-effect.coffee')
-  // require('./specs/icon-toggle.coffee')
+  require('./specs/icon-toggle')
   // require('./specs/radio.coffee')
   // require('./specs/slider.coffee')
   // require('./specs/switch.coffee')

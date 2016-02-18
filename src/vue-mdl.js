@@ -4,12 +4,13 @@ import mdlButton from './button.vue'
 import mdlAnchorButton from './anchor-button.vue'
 import mdlProgress from './progress.vue'
 import mdlSpinner from './spinner.vue'
+import mdlIconToggle from './toggles/icon-toggle.vue'
 
 const vmdl = {
   components: {
     mdlCheckbox,
     // 'mdl-switch': require('./toggles/switch.vue'),
-    // 'mdl-icon-toggle': require('./toggles/icon-toggle.vue'),
+    mdlIconToggle,
     // 'mdl-radio': require('./toggles/radio.vue'),
     mdlProgress,
     mdlButton,
@@ -64,6 +65,7 @@ const vmdl = {
 export default vmdl
 export const MdlBadge = mdlBadge
 export const MdlCheckbox = mdlCheckbox
+export const MdlIconToggle = mdlIconToggle
 export const MdlButton = mdlButton
 export const MdlAnchorButton = mdlAnchorButton
 export const MdlProgress = mdlProgress
