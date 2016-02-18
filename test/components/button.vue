@@ -44,25 +44,31 @@ div
   br
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl.js'
 
-module.exports =
-  data: ->
-    someText: 'Dynamic text'
-    disable: false
-    icon: false
-    accent: false
-    primary: false
-    miniFab: false
-    fab: false
-    raised: false
-    colored: false
-    href: 'http://vuejs.org'
-  components: vmdl.components
-  filters:
-    urlName: (url) ->
-      url.replace /^(https?:)?\/\//i, ''
-      .replace /\/+$/, ''
-      .replace '/' , ' '
+export default {
+  data () {
+    return {
+      someText: 'Dynamic text',
+      disable: false,
+      icon: false,
+      accent: false,
+      primary: false,
+      miniFab: false,
+      fab: false,
+      raised: false,
+      colored: false,
+      href: 'http://vuejs.org'
+    }
+  },
+  components: vmdl.components,
+  filters: {
+    urlName (url) {
+      return url.replace(/^(https?:)?\/\//i, '')
+      .replace(/\/+$/, '')
+      .replace('/', ' ')
+    }
+  }
+}
 </script>

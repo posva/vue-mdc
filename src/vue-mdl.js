@@ -1,15 +1,17 @@
 import mdlBadge from './directives/badge'
 import mdlCheckbox from './toggles/checkbox.vue'
+import mdlButton from './button.vue'
+import mdlAnchorButton from './anchor-button.vue'
 
 const vmdl = {
   components: {
-    'mdl-checkbox': require('./toggles/checkbox.vue')
+    mdlCheckbox,
     // 'mdl-switch': require('./toggles/switch.vue'),
     // 'mdl-icon-toggle': require('./toggles/icon-toggle.vue'),
     // 'mdl-radio': require('./toggles/radio.vue'),
     // 'mdl-progress': require('./progress.vue'),
-    // 'mdl-button': require('./button.vue'),
-    // 'mdl-anchor-button': require('./anchor-button.vue'),
+    mdlButton,
+    mdlAnchorButton
     // 'mdl-spinner': require('./spinner.vue'),
     // 'mdl-slider': require('./slider.vue'),
     // 'mdl-textfield': require('./textfield.vue'),
@@ -59,4 +61,6 @@ const vmdl = {
 export default vmdl
 export const MdlBadge = mdlBadge
 export const MdlCheckbox = mdlCheckbox
+export const MdlButton = mdlButton
+export const MdlAnchorButton = mdlAnchorButton
 

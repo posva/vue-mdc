@@ -36,8 +36,8 @@ const app = new Vue({
     tests: [
       'none',
       'checkbox',
-      'badge'
-      // 'button',
+      'badge',
+      'button'
       // 'progress',
       // 'spinner',
       // 'ripple-effect',
@@ -89,8 +89,8 @@ const app = new Vue({
       template: '<p>Choose a valid component</p>'
     },
     testCheckbox: require('../components/checkbox.vue'),
-    testBadge: require('../components/badge.vue')
-    // testButton: require('../components/button.vue'),
+    testBadge: require('../components/badge.vue'),
+    testButton: require('../components/button.vue')
     // testProgress: require('../components/progress.vue'),
     // testSpinner: require('../components/spinner.vue'),
     // testRippleEffect: require('../components/ripple-effect.vue'),
@@ -110,7 +110,7 @@ window.Vue = Vue
 describe('Vue MDL', function () {
   require('./specs/checkbox')
   require('./specs/badge')
-  // require('./specs/button.coffee')
+  require('./specs/button')
   // require('./specs/progress.coffee')
   // require('./specs/spinner.coffee')
   // require('./specs/ripple-effect.coffee')
