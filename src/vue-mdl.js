@@ -1,5 +1,6 @@
 import mdlBadge from './directives/badge'
 import mdlCheckbox from './toggles/checkbox.vue'
+import mdlRadio from './toggles/radio.vue'
 import mdlButton from './button.vue'
 import mdlAnchorButton from './anchor-button.vue'
 import mdlProgress from './progress.vue'
@@ -11,7 +12,7 @@ const vmdl = {
     mdlCheckbox,
     // 'mdl-switch': require('./toggles/switch.vue'),
     mdlIconToggle,
-    // 'mdl-radio': require('./toggles/radio.vue'),
+    mdlRadio,
     mdlProgress,
     mdlButton,
     mdlAnchorButton,
@@ -65,6 +66,7 @@ const vmdl = {
 export default vmdl
 export const MdlBadge = mdlBadge
 export const MdlCheckbox = mdlCheckbox
+export const MdlRadio = mdlRadio
 export const MdlIconToggle = mdlIconToggle
 export const MdlButton = mdlButton
 export const MdlAnchorButton = mdlAnchorButton
