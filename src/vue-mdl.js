@@ -1,8 +1,9 @@
 import mdlBadge from './directives/badge'
+import mdlCheckbox from './toggles/checkbox.vue'
 
 const vmdl = {
   components: {
-    // 'mdl-checkbox': require('./toggles/checkbox.vue'),
+    'mdl-checkbox': require('./toggles/checkbox.vue')
     // 'mdl-switch': require('./toggles/switch.vue'),
     // 'mdl-icon-toggle': require('./toggles/icon-toggle.vue'),
     // 'mdl-radio': require('./toggles/radio.vue'),
@@ -57,4 +58,5 @@ const vmdl = {
 
 export default vmdl
 export const MdlBadge = mdlBadge
+export const MdlCheckbox = mdlCheckbox
 

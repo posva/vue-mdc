@@ -35,7 +35,7 @@ const app = new Vue({
   data: {
     tests: [
       'none',
-      // 'checkbox',
+      'checkbox',
       'badge'
       // 'button',
       // 'progress',
@@ -88,7 +88,7 @@ const app = new Vue({
     testNone: {
       template: '<p>Choose a valid component</p>'
     },
-    // testCheckbox: require('../components/checkbox.vue'),
+    testCheckbox: require('../components/checkbox.vue'),
     testBadge: require('../components/badge.vue')
     // testButton: require('../components/button.vue'),
     // testProgress: require('../components/progress.vue'),
@@ -108,7 +108,7 @@ const app = new Vue({
 window.app = app
 window.Vue = Vue
 describe('Vue MDL', function () {
-  // require('./specs/checkbox.coffee')
+  require('./specs/checkbox')
   require('./specs/badge')
   // require('./specs/button.coffee')
   // require('./specs/progress.coffee')
