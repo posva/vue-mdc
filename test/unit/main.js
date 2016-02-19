@@ -42,8 +42,8 @@ const app = new Vue({
       'spinner',
       // 'ripple-effect',
       'icon-toggle',
-      'radio'
-      // 'slider',
+      'radio',
+      'slider'
       // 'switch',
       // 'textfield',
       // 'tooltip',
@@ -95,8 +95,8 @@ const app = new Vue({
     testSpinner: require('../components/spinner.vue'),
     // testRippleEffect: require('../components/ripple-effect.vue'),
     testIconToggle: require('../components/icon-toggle.vue'),
-    testRadio: require('../components/radio.vue')
-    // testSlider: require('../components/slider.vue'),
+    testRadio: require('../components/radio.vue'),
+    testSlider: require('../components/slider.vue')
     // testSwitch: require('../components/switch.vue'),
     // testTextfield: require('../components/textfield.vue'),
     // testTooltip: require('../components/tooltip.vue'),
@@ -116,7 +116,7 @@ describe('Vue MDL', function () {
   // require('./specs/ripple-effect.coffee')
   require('./specs/icon-toggle')
   require('./specs/radio')
-  // require('./specs/slider.coffee')
+  require('./specs/slider')
   // require('./specs/switch.coffee')
   // require('./specs/textfield.coffee')
   // require('./specs/tooltip.coffee')

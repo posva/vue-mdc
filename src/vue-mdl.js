@@ -6,6 +6,7 @@ import mdlAnchorButton from './anchor-button.vue'
 import mdlProgress from './progress.vue'
 import mdlSpinner from './spinner.vue'
 import mdlIconToggle from './toggles/icon-toggle.vue'
+import mdlSlider from './slider.vue'
 
 const vmdl = {
   components: {
@@ -16,8 +17,8 @@ const vmdl = {
     mdlProgress,
     mdlButton,
     mdlAnchorButton,
-    mdlSpinner
-    // 'mdl-spinner': require('./spinner.vue'),
+    mdlSpinner,
+    mdlSlider
     // 'mdl-slider': require('./slider.vue'),
     // 'mdl-textfield': require('./textfield.vue'),
     // 'mdl-tooltip': require('./tooltip.vue'),
@@ -72,3 +73,4 @@ export const MdlButton = mdlButton
 export const MdlAnchorButton = mdlAnchorButton
 export const MdlProgress = mdlProgress
 export const MdlSpinner = mdlSpinner
+export const MdlSlider = mdlSlider
