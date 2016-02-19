@@ -5,10 +5,14 @@ label.mdl-switch.mdl-js-switch(v-bind:for.once='id' v-bind:class='{ "is-disabled
     slot
 </template>
 
-<script lang="coffee">
-common = require '../mixins/toggle.coffee'
-module.exports =
-  mixins: [common]
-  ready: ->
-    componentHandler.upgradeElements @$el
+<script>
+/* global componentHandler*/
+import common from '../mixins/toggle'
+
+export default {
+  mixins: [common],
+  ready () {
+    componentHandler.upgradeElements(this.$el)
+  }
+}
 </script>

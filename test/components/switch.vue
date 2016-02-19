@@ -22,15 +22,22 @@ div
   p#checks {{checks | json}}
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    check: true
-    checks: []
-    disabled: false
-  methods:
-    indexId: (num) -> 'id-' + num.toString()
+export default {
+  data () {
+    return {
+      check: true,
+      checks: [],
+      disabled: false
+    }
+  },
+  methods: {
+    indexId (num) {
+      return 'id-' + num.toString()
+    }
+  },
   components: vmdl.components
+}
 </script>
