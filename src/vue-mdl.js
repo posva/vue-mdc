@@ -1,5 +1,7 @@
 import mdlBadge from './directives/badge'
 import mdl from './directives/mdl'
+import mdlRippleEffect from './directives/ripple-effect'
+
 import mdlCheckbox from './toggles/checkbox.vue'
 import mdlRadio from './toggles/radio.vue'
 import mdlButton from './button.vue'
@@ -33,9 +35,9 @@ const vmdl = {
     mdlCard
   },
   directives: {
+    mdl,
     mdlBadge,
-    mdl
-    // 'mdl-ripple-effect': require('./directives/ripple-effect.coffee'),
+    mdlRippleEffect
   },
 
   register: function (Vue, name) {
@@ -71,8 +73,9 @@ const vmdl = {
 }
 
 export default vmdl
-export const MdlBadge = mdlBadge
 export const Mdl = mdl
+export const MdlBadge = mdlBadge
+export const MdlRippleEffect = mdlRippleEffect
 export const MdlCheckbox = mdlCheckbox
 export const MdlSwitch = mdlSwitch
 export const MdlRadio = mdlRadio

@@ -9,12 +9,16 @@ div
   mdl-icon-toggle#icon-toggle-ripple(v-mdl-ripple-effect v-bind:checked.sync='check' icon='add')
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    check: true
-  components: vmdl.components
+export default {
+  data () {
+    return {
+      check: true
+    }
+  },
+  components: vmdl.components,
   directives: vmdl.directives
+}
 </script>
