@@ -1,4 +1,5 @@
 import mdlBadge from './directives/badge'
+import mdl from './directives/mdl'
 import mdlCheckbox from './toggles/checkbox.vue'
 import mdlRadio from './toggles/radio.vue'
 import mdlButton from './button.vue'
@@ -8,6 +9,7 @@ import mdlSpinner from './spinner.vue'
 import mdlIconToggle from './toggles/icon-toggle.vue'
 import mdlSlider from './slider.vue'
 import mdlSwitch from './toggles/switch.vue'
+import mdlTextfield from './textfield.vue'
 
 const vmdl = {
   components: {
@@ -19,17 +21,17 @@ const vmdl = {
     mdlButton,
     mdlAnchorButton,
     mdlSpinner,
-    mdlSlider
-    // 'mdl-textfield': require('./textfield.vue'),
+    mdlSlider,
+    mdlTextfield
     // 'mdl-tooltip': require('./tooltip.vue'),
     // 'mdl-menu': require('./menu/menu.vue'),
     // 'mdl-menu-item': require('./menu/menu-item.vue'),
     // 'mdl-card': require('./card.vue'),
   },
   directives: {
-    mdlBadge
+    mdlBadge,
+    mdl
     // 'mdl-ripple-effect': require('./directives/ripple-effect.coffee'),
-    // 'mdl': require('./directives/mdl.coffee'),
   },
 
   register: function (Vue, name) {
@@ -66,6 +68,7 @@ const vmdl = {
 
 export default vmdl
 export const MdlBadge = mdlBadge
+export const Mdl = mdl
 export const MdlCheckbox = mdlCheckbox
 export const MdlSwitch = mdlSwitch
 export const MdlRadio = mdlRadio
@@ -75,3 +78,4 @@ export const MdlAnchorButton = mdlAnchorButton
 export const MdlProgress = mdlProgress
 export const MdlSpinner = mdlSpinner
 export const MdlSlider = mdlSlider
+export const MdlTextfield = mdlTextfield

@@ -44,8 +44,8 @@ const app = new Vue({
       'icon-toggle',
       'radio',
       'slider',
-      'switch'
-      // 'textfield',
+      'switch',
+      'textfield'
       // 'tooltip',
       // 'menu',
       // 'card'
@@ -97,8 +97,8 @@ const app = new Vue({
     testIconToggle: require('../components/icon-toggle.vue'),
     testRadio: require('../components/radio.vue'),
     testSlider: require('../components/slider.vue'),
-    testSwitch: require('../components/switch.vue')
-    // testTextfield: require('../components/textfield.vue'),
+    testSwitch: require('../components/switch.vue'),
+    testTextfield: require('../components/textfield.vue')
     // testTooltip: require('../components/tooltip.vue'),
     // testMenu: require('../components/menu.vue'),
     // testCard: require('../components/card.vue')
@@ -118,7 +118,7 @@ describe('Vue MDL', function () {
   require('./specs/radio')
   require('./specs/slider')
   require('./specs/switch')
-  // require('./specs/textfield.coffee')
+  require('./specs/textfield')
   // require('./specs/tooltip.coffee')
   // require('./specs/menu.coffee')
   // require('./specs/card.coffee')
