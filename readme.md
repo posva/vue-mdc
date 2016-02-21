@@ -4,10 +4,14 @@
   <a href="https://circleci.com/gh/posva/vue-mdl">
     <img alt="Circle CI" src="https://circleci.com/gh/posva/vue-mdl.svg?style=svg" />
   </a>
+  <a href="https://www.npmjs.com/package/vue-mdl"><img src="https://img.shields.io/npm/dm/vue-mdl.svg" alt="Downloads per month"></a>
   <a href="http://waffle.io/posva/vue-mdl"><img src="https://badge.waffle.io/posva/vue-mdl.svg?label=ready&title=Ready" alt="Stories in Ready"></a>
   <br>
   <a href="https://david-dm.org/posva/vue-mdl#info=devDependencies" title="devDependency status"><img src="https://david-dm.org/posva/vue-mdl/dev-status.svg"/></a>
   <a href="https://david-dm.org/posva/vue-mdl#info=peerDependencies" title="peerDependency status"><img src="https://david-dm.org/posva/vue-mdl/peer-status.svg"/></a>
+  <br>
+  <a href="https://www.npmjs.com/package/vue-mdl"><img src="https://img.shields.io/npm/v/vue-mdl.svg" alt="Latest npm release"></a>
+  <a href="https://github.com/posva/vue-mdl/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="MIT License"></a>
 </p>
 
 #Intro
