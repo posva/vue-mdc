@@ -54,7 +54,7 @@ const vmdl = {
     }
     setComp(name)
     if (!comp) {
-      name = 'mdl-' + name
+      name = 'mdl' + name[0].toUpperCase() + name.substr(1)
       setComp(name)
       if (!comp) {
         throw new Error('Cannot register component ' + name + " because it doesn't exist")

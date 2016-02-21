@@ -123,5 +123,5 @@ describe('Vue MDL', function () {
   require('./specs/menu')
   require('./specs/card')
   // This must be the last
-  // require('./specs/vue-mdl.coffee')
+  require('./specs/vue-mdl')
 })
