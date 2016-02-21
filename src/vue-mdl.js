@@ -10,6 +10,7 @@ import mdlIconToggle from './toggles/icon-toggle.vue'
 import mdlSlider from './slider.vue'
 import mdlSwitch from './toggles/switch.vue'
 import mdlTextfield from './textfield.vue'
+import mdlTooltip from './tooltip.vue'
 
 const vmdl = {
   components: {
@@ -22,8 +23,8 @@ const vmdl = {
     mdlAnchorButton,
     mdlSpinner,
     mdlSlider,
-    mdlTextfield
-    // 'mdl-tooltip': require('./tooltip.vue'),
+    mdlTextfield,
+    mdlTooltip
     // 'mdl-menu': require('./menu/menu.vue'),
     // 'mdl-menu-item': require('./menu/menu-item.vue'),
     // 'mdl-card': require('./card.vue'),
@@ -79,3 +80,4 @@ export const MdlProgress = mdlProgress
 export const MdlSpinner = mdlSpinner
 export const MdlSlider = mdlSlider
 export const MdlTextfield = mdlTextfield
+export const MdlTooltip = mdlTooltip

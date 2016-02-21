@@ -45,8 +45,8 @@ const app = new Vue({
       'radio',
       'slider',
       'switch',
-      'textfield'
-      // 'tooltip',
+      'textfield',
+      'tooltip'
       // 'menu',
       // 'card'
     ],
@@ -98,8 +98,8 @@ const app = new Vue({
     testRadio: require('../components/radio.vue'),
     testSlider: require('../components/slider.vue'),
     testSwitch: require('../components/switch.vue'),
-    testTextfield: require('../components/textfield.vue')
-    // testTooltip: require('../components/tooltip.vue'),
+    testTextfield: require('../components/textfield.vue'),
+    testTooltip: require('../components/tooltip.vue')
     // testMenu: require('../components/menu.vue'),
     // testCard: require('../components/card.vue')
   }
@@ -119,7 +119,7 @@ describe('Vue MDL', function () {
   require('./specs/slider')
   require('./specs/switch')
   require('./specs/textfield')
-  // require('./specs/tooltip.coffee')
+  require('./specs/tooltip')
   // require('./specs/menu.coffee')
   // require('./specs/card.coffee')
   // This must be the last
