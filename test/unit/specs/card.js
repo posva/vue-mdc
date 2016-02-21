@@ -2,8 +2,8 @@
 import utils from '../utils'
 
 describe('Card', function () {
-  var card = null
-  var emptyCard = null
+  let card = null
+  let emptyCard = null
   before(function (done) {
     app.currentComponent = 'card'
     utils.nextTick()
@@ -19,52 +19,52 @@ describe('Card', function () {
     card.should.be.visible
   })
   it('has one title', function () {
-    var title = card.find('.mdl-card__title')
+    let title = card.find('.mdl-card__title')
     title.should.have.lengthOf(1)
   })
   it('has one subtitle-text', function () {
-    var title = card.find('.mdl-card__subtitle-text')
+    let title = card.find('.mdl-card__subtitle-text')
     title.should.have.lengthOf(1)
   })
   it('has one supporting-text', function () {
-    var title = card.find('.mdl-card__supporting-text')
+    let title = card.find('.mdl-card__supporting-text')
     title.should.have.lengthOf(1)
   })
   it('has one media', function () {
-    var title = card.find('.mdl-card__media')
+    let title = card.find('.mdl-card__media')
     title.should.have.lengthOf(1)
   })
   it('has one actions', function () {
-    var title = card.find('.mdl-card__actions')
+    let title = card.find('.mdl-card__actions')
     title.should.have.lengthOf(1)
   })
   it('has one menu', function () {
-    var title = card.find('.mdl-card__menu')
+    let title = card.find('.mdl-card__menu')
     title.should.have.lengthOf(1)
   })
 
   it('can have no title', function () {
-    var title = emptyCard.find('.mdl-card__title')
+    let title = emptyCard.find('.mdl-card__title')
     title.should.have.lengthOf(0)
   })
   it('can have no subtitle-text', function () {
-    var title = emptyCard.find('.mdl-card__subtitle-text')
+    let title = emptyCard.find('.mdl-card__subtitle-text')
     title.should.have.lengthOf(0)
   })
   it('can have no supporting-text', function () {
-    var title = emptyCard.find('.mdl-card__supporting-text')
+    let title = emptyCard.find('.mdl-card__supporting-text')
     title.should.have.lengthOf(0)
   })
   it('can have no media', function () {
-    var title = emptyCard.find('.mdl-card__media')
+    let title = emptyCard.find('.mdl-card__media')
     title.should.have.lengthOf(0)
   })
   it('can have no actions', function () {
-    var title = emptyCard.find('.mdl-card__actions')
+    let title = emptyCard.find('.mdl-card__actions')
     title.should.have.lengthOf(0)
   })
   it('can have no menu', function () {
-    var title = emptyCard.find('.mdl-card__menu')
+    let title = emptyCard.find('.mdl-card__menu')
     title.should.have.lengthOf(0)
   })
 
@@ -129,7 +129,7 @@ describe('Card', function () {
   })
 
   it('dispatchs events for actions button', function (done) {
-    var called = false
+    let called = false
     vm.$once('someEventName', () => called = true)
     vms.card.triggerActionsEvent()
     utils.nextTick()
@@ -140,7 +140,7 @@ describe('Card', function () {
   })
 
   it('dispatchs events for menu button', function (done) {
-    var called = false
+    let called = false
     vm.$once('cardMenu', () => called = true)
     vms.card.triggerMenuEvent()
     utils.nextTick()

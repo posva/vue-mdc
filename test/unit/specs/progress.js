@@ -2,10 +2,10 @@
 import utils from '../utils'
 
 describe('Progress', function () {
-  var progress = null
-  var indeterminate = null
-  var pbar = null
-  var bbar = null
+  let progress = null
+  let indeterminate = null
+  let pbar = null
+  let bbar = null
   before(function (done) {
     app.currentComponent = 'progress'
     utils.nextTick()

@@ -2,11 +2,11 @@
 import utils from '../utils'
 
 describe('Textfield', function () {
-  var classic = null
-  var expandable = null
-  var custom = null
-  var label = null
-  var textarea = null
+  let classic = null
+  let expandable = null
+  let custom = null
+  let label = null
+  let textarea = null
   before(function (done) {
     app.currentComponent = 'textfield'
     utils.nextTick()
@@ -26,7 +26,7 @@ describe('Textfield', function () {
   })
 
   it('is upgraded', function () {
-    var parent = classic.parent().parent()
+    let parent = classic.parent().parent()
     classic.should.have.class('mdl-textfield__input')
     parent.should.exist
     .and.have.attr('data-upgraded')
@@ -34,7 +34,7 @@ describe('Textfield', function () {
   })
 
   it('applies classes even with empty strings in props', function () {
-    var text = $('#html-text')
+    let text = $('#html-text')
     text.should.exist.and.be.a.textarea
   })
 
@@ -52,12 +52,12 @@ describe('Textfield', function () {
   })
 
   it('can have user added classes', function () {
-    var parent = classic.parent().parent()
+    let parent = classic.parent().parent()
     parent.should.have.class('added-class')
   })
 
   it('can have a floating label', function () {
-    var fly = $('#fly')
+    let fly = $('#fly')
     fly.parent().parent()
     .should.have.class('mdl-textfield--floating-label')
     classic.parent().parent()
@@ -65,7 +65,7 @@ describe('Textfield', function () {
   })
 
   it('can have a floating label using only folating-label', function () {
-    var fly = $('#fly2')
+    let fly = $('#fly2')
     fly.parent().parent()
     .should.have.class('mdl-textfield--floating-label')
     $('[for=fly2]')
@@ -73,7 +73,7 @@ describe('Textfield', function () {
   })
 
   it('can have a dynamic floating label using only folating-label', function (done) {
-    var dynLabel = $('[for=fly-label-dyn]')
+    let dynLabel = $('[for=fly-label-dyn]')
     dynLabel.should.have.text('Dynamic floating label')
     vm.dynFloat = 'New label'
     utils.nextTick()
@@ -89,7 +89,7 @@ describe('Textfield', function () {
   })
 
   it('has a dynamic label', function (done) {
-    var fly = $('label[for=fly-dyn]')
+    let fly = $('label[for=fly-dyn]')
     fly.should.have.text('Can I fly? No')
     vm.float = true
     utils.nextTick()
@@ -120,7 +120,7 @@ describe('Textfield', function () {
 
   it('syncs the value with a textarea', function (done) {
     textarea.should.not.have.value('Multiline')
-    var oldText = vm.multiText
+    let oldText = vm.multiText
     vm.multiText = 'Multiline'
     utils.nextTick()
     .then(function () {
@@ -131,7 +131,7 @@ describe('Textfield', function () {
   })
 
   it('can have a pattern for validation', function (done) {
-    var number = $('#number')
+    let number = $('#number')
     number.should.have.prop('pattern', '[0-9]*')
     vm.pattern = '[1-9][0-9]*'
     utils.nextTick()
@@ -142,8 +142,8 @@ describe('Textfield', function () {
   })
 
   it('can have an error message', function (done) {
-    var number = $('#number')
-    var error = number.parent().find('.mdl-textfield__error')
+    let number = $('#number')
+    let error = number.parent().find('.mdl-textfield__error')
     error.should.exist
     classic.parent().find('.mdl-textfield__error')
     .should.not.exist
@@ -175,7 +175,7 @@ describe('Textfield', function () {
   })
 
   it('can have custom textarea', function () {
-    var area = $('#custom-area')
+    let area = $('#custom-area')
     area.should.exist
     area.parent().find('.mdl-textfield__input')
     .should.not.exist
@@ -189,7 +189,7 @@ describe('Textfield', function () {
   })
 
   it('can have custom error', function () {
-    var error = custom.parent().find('.mdl-textfield__error')
+    let error = custom.parent().find('.mdl-textfield__error')
     error.should.exist
     error.find('i.material-icons')
     .should.exist.and.have.text('mood_bad')
@@ -202,7 +202,7 @@ describe('Textfield', function () {
   })
 
   it('has a variable icon as an expandable', function () {
-    var icon = expandable.parent().parent().find('i.material-icons')
+    let icon = expandable.parent().parent().find('i.material-icons')
     icon.should.exist.and.be.visible.and.have.text('search')
     expandable.should.exist
   })

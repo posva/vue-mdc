@@ -13,7 +13,7 @@ const dataBadgeSetter = function (hide, value) {
   }
 }
 
-module.exports = {
+export default {
   bind () {
     this.el.classList.add('mdl-badge')
     if ('overlap' in this.modifiers) {

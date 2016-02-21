@@ -83,7 +83,7 @@ describe('Button', function () {
   })
 
   it('applies classes even with empty strings in props', function () {
-    var but = $('#html-button')
+    let but = $('#html-button')
     but.should.have.class('mdl-button--raised')
     but.should.have.class('mdl-button--colored')
     but.should.not.have.class('mdl-button--accent')

@@ -28,7 +28,7 @@
 import mdlButton from './button.vue'
 import mdlAnchorButton from './anchor-button.vue'
 
-var slots = [
+const slots = [
   'title',
   'subtitle',
   'supportingText',
@@ -37,7 +37,7 @@ var slots = [
   'menu'
 ]
 
-module.exports = {
+export default {
   computed: {
     isActionsURL () {
       if (typeof this.actions === 'string') {

@@ -2,8 +2,8 @@
 import utils from '../utils'
 
 describe('Switch', function () {
-  var check = null
-  var checkLabel = null
+  let check = null
+  let checkLabel = null
   before(function (done) {
     app.currentComponent = 'switch'
     utils.nextTick()
@@ -20,7 +20,7 @@ describe('Switch', function () {
   })
 
   it('is upgraded', function () {
-    var span = $('label[for=check] span:nth-child(2)')
+    let span = $('label[for=check] span:nth-child(2)')
     check.should.have.class('mdl-switch__input')
     checkLabel.should.have.attr('data-upgraded')
     .match(/MaterialSwitch/)

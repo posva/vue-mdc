@@ -25,7 +25,7 @@ describe('Tooltip', function () {
   })
 
   it('applies classes even with empty strings in props', function () {
-    var tool = $('[for=html]')
+    let tool = $('[for=html]')
     tool.should.have.class('mdl-tooltip--large')
   })
 

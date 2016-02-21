@@ -148,7 +148,7 @@ module.exports = {
     'no-unused-expressions': 0,
     'no-unused-vars': [2, { 'vars': 'all', 'args': 'none' }],
     'no-use-before-define': 0,
-    'no-var': 0,
+    'no-var': 2,
     'no-void': 0,
     'no-warning-comments': 0,
     'no-with': 2,

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Promise from 'bluebird'
 
-module.exports = {
+export default {
   nextTick () {
     return new Promise(function (resolve) {
       Vue.nextTick(resolve)

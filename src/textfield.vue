@@ -18,7 +18,7 @@
 /* global componentHandler*/
 import propFill from './mixins/prop-fill'
 
-module.exports = {
+export default {
   props: {
     expandable: String,
     type: {
