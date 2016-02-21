@@ -1,13 +1,9 @@
 #! /bin/bash
 # use a different port to avoid conflicting with npm run serve
-PORT=8080
+export PORT=8082
 
-# build static files. Nightwatch need the bundled test file
-./node_modules/.bin/webpack \
-  --config build/webpack.test.config.js
-
-# serve example
-./node_modules/.bin/http-server --p $PORT >/dev/null 2>/dev/null &
+# build and serve
+node build/e2e-server.js &
 
 if [[ ! "$1" ]]; then
   browsers='chrome,firefox'

@@ -1,10 +1,10 @@
-var base = 'http://localhost:' + (process.env.PORT || 8080) + '/test';
+'use strict'
+let base = 'http://localhost:' + (process.env.PORT || 8080)
 
-base += '/#radio';
-var radioSel = 'label[for=check]';
+base += '/#radio'
 
 module.exports = {
-  'exists': function(browser) {
+  'exists': function (browser) {
     browser.url(base)
       .refresh()
       .waitForElementVisible('#test', 1000)
@@ -12,40 +12,40 @@ module.exports = {
       .to.be.present
       .and.to.be.an('input')
       .and.to.have.attribute('type')
-      .equals('radio');
+      .equals('radio')
   },
-  'can change the values': function(browser) {
+  'can change the values': function (browser) {
     browser.click('#disable')
       .expect.element('label[for=extra]')
-      .to.be.present;
+      .to.be.present
 
     browser.click('label[for=extra]')
       .expect.element('#extra')
-      .to.be.selected;
+      .to.be.selected
 
     browser.expect.element('#text')
-      .text.to.equal('Extra Banana');
+      .text.to.equal('Extra Banana')
 
     browser.click('#disable')
       .expect.element('label[for=extra]')
-      .to.not.be.present;
+      .to.not.be.present
 
     browser.expect.element('#text')
-      .text.to.equal('Extra Banana');
+      .text.to.equal('Extra Banana')
 
     browser.click('label[for=little]')
       .expect.element('#little')
-      .to.be.selected;
+      .to.be.selected
   },
-  'updates the variable': function(browser) {
+  'updates the variable': function (browser) {
     browser.click('label[for=big]')
       .expect.element('#big')
-      .to.be.selected;
+      .to.be.selected
 
     browser.expect.element('#text')
-      .text.to.equal('Big Banana');
+      .text.to.equal('Big Banana')
   },
-  'teardown': function(browser) {
-    browser.end();
+  'teardown': function (browser) {
+    browser.end()
   }
-};
+}

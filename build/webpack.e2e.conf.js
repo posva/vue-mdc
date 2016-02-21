@@ -1,4 +1,5 @@
 var webpack = require('webpack')
+var path = require('path')
 var config = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -16,7 +17,12 @@ Object.keys(config.entry).forEach(function (name, i) {
 // necessary for the html plugin to work properly
 // when serving the html from in-memory
 config.output.publicPath = '/'
-config.entry.app = './test/unit/main.js'
+config.entry = {
+  main: './test/main.js'
+}
+config.output.path = path.resolve('./test/dist')
+config.output.filename = '[name]/bundle.js'
+config.output.libraryTarget = 'umd'
 
 config.plugins = (config.plugins || []).concat([
   // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
@@ -26,7 +32,7 @@ config.plugins = (config.plugins || []).concat([
   // https://github.com/ampedandwired/html-webpack-plugin
   new HtmlWebpackPlugin({
     filename: 'index.html',
-    template: 'test/unit/index.html',
+    template: 'test/index.html',
     inject: true
   })
 ])
