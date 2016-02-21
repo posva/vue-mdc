@@ -13,6 +13,7 @@ import mdlTextfield from './textfield.vue'
 import mdlTooltip from './tooltip.vue'
 import mdlMenu from './menu/menu.vue'
 import mdlMenuItem from './menu/menu-item.vue'
+import mdlCard from './card.vue'
 
 const vmdl = {
   components: {
@@ -28,10 +29,8 @@ const vmdl = {
     mdlTextfield,
     mdlTooltip,
     mdlMenu,
-    mdlMenuItem
-    // 'mdl-menu': require('./menu/menu.vue'),
-    // 'mdl-menu-item': require('./menu/menu-item.vue'),
-    // 'mdl-card': require('./card.vue'),
+    mdlMenuItem,
+    mdlCard
   },
   directives: {
     mdlBadge,
@@ -87,3 +86,4 @@ export const MdlTextfield = mdlTextfield
 export const MdlTooltip = mdlTooltip
 export const MdlMenu = mdlMenu
 export const MdlMenuItem = mdlMenuItem
+export const MdlCard = mdlCard

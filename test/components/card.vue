@@ -59,25 +59,31 @@
   mdl-card(supporting-text='This card has no title \n Ha ha')
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
-utils = require '../unit/utils.coffee'
+<script>
+import vmdl from '../../src/vue-mdl'
+import utils from '../unit/utils'
 
-module.exports =
-  data: ->
-    title: 'Card Title'
-    actions: 'someEventName'
-    actionsText: 'Vuejs.org'
-    actionsTarget: '_blank'
-    subtitle: 'Card subtitle'
-    media: '//www.getmdl.io/assets/demos/image_card.jpg'
-    supportingText: 'Here is some supporting text'
-  directives: vmdl.directives
-  components: vmdl.components
-  directives:
+export default {
+  data () {
+    return {
+      title: 'Card Title',
+      actions: 'someEventName',
+      actionsText: 'Vuejs.org',
+      actionsTarget: '_blank',
+      subtitle: 'Card subtitle',
+      media: '//www.getmdl.io/assets/demos/image_card.jpg',
+      supportingText: 'Here is some supporting text'
+    }
+  },
+  components: vmdl.components,
+  directives: {
     attach: utils.attachDirective
-  events:
-    cardMenu: ->
-      console.log 'hey'
-      true # stop propagation
+  },
+  events: {
+    cardMenu () {
+      console.log('hey')
+      return true // stop propagation
+    }
+  }
+}
 </script>
