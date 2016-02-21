@@ -11,6 +11,8 @@ import mdlSlider from './slider.vue'
 import mdlSwitch from './toggles/switch.vue'
 import mdlTextfield from './textfield.vue'
 import mdlTooltip from './tooltip.vue'
+import mdlMenu from './menu/menu.vue'
+import mdlMenuItem from './menu/menu-item.vue'
 
 const vmdl = {
   components: {
@@ -24,7 +26,9 @@ const vmdl = {
     mdlSpinner,
     mdlSlider,
     mdlTextfield,
-    mdlTooltip
+    mdlTooltip,
+    mdlMenu,
+    mdlMenuItem
     // 'mdl-menu': require('./menu/menu.vue'),
     // 'mdl-menu-item': require('./menu/menu-item.vue'),
     // 'mdl-card': require('./card.vue'),
@@ -81,3 +85,5 @@ export const MdlSpinner = mdlSpinner
 export const MdlSlider = mdlSlider
 export const MdlTextfield = mdlTextfield
 export const MdlTooltip = mdlTooltip
+export const MdlMenu = mdlMenu
+export const MdlMenuItem = mdlMenuItem
