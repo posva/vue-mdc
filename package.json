@@ -13,7 +13,7 @@
     "build:prod": "webpack --bail --progress --hide-modules --config build/webpack.dist.prod.conf.js",
     "build:dev": "webpack --bail --progress --hide-modules --config build/webpack.dist.dev.conf.js",
     "dev": "node build/dev-server.js",
-    "dev:test": "webpack-dev-server --config build/webpack.test.config.js --port 8088",
+    "dev:e2e": "node build/e2e-server.js",
     "dev:doc": "webpack-dev-server --config build/webpack.doc.config.js --port 8088",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.config.js"
   },
@@ -75,6 +75,7 @@
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
     "selenium-server": "^2.51.0",
+    "sizzle": "^2.3.0",
     "stylus-loader": "^1.5.1",
     "template-html-loader": "0.0.3",
     "url-loader": "^0.5.7",
