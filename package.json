@@ -14,7 +14,7 @@
     "build:dev": "webpack --bail --progress --hide-modules --config build/webpack.dist.dev.conf.js",
     "dev": "node build/dev-server.js",
     "dev:e2e": "node build/e2e-server.js",
-    "dev:doc": "webpack-dev-server --config build/webpack.doc.config.js --port 8088",
+    "dev:doc": "node build/doc-server.js",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.config.js"
   },
   "keywords": [
