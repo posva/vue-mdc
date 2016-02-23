@@ -1,3 +1,4 @@
+/* global location*/
 require('material-design-lite/material.css')
 require('material-design-lite/material.js')
 import Vue from 'vue'
