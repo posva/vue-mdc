@@ -4,6 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // naming output files with hashes for better caching.
 // dist/index.html will be auto-generated with correct URLs.
+config.output.publicPath = undefined
 config.output.filename = 'doc-bundle.js'
 config.entry = './doc/src/main.js'
 
