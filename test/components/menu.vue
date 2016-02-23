@@ -57,25 +57,33 @@
   mdl-button.mdl-js-ripple-effect(raised colored @click='addOption') Add Option
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    group: true
-    showButton: true
-    show: true
-    newOption: 'Dynamic options'
-    options: [
-      'Some Action'
-      'Another Action'
-      'Disabled Action'
-      'Yet Another Action'
-    ]
-  directives: vmdl.directives
-  components: vmdl.components
-  methods:
-    open: ->
-      @$els.menu.MaterialMenu.handleForClick_()
-    addOption: -> @options.push @newOption
+export default {
+  data () {
+    return {
+      group: true,
+      showButton: true,
+      show: true,
+      newOption: 'Dynamic options',
+      options: [
+        'Some Action',
+        'Another Action',
+        'Disabled Action',
+        'Yet Another Action'
+      ]
+    }
+  },
+  directives: vmdl.directives,
+  components: vmdl.components,
+  methods: {
+    open () {
+      this.$els.menu.MaterialMenu.handleForClick_()
+    },
+    addOption () {
+      this.options.push(this.newOption)
+    }
+  }
+}
 </script>

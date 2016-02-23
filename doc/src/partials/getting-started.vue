@@ -10,7 +10,6 @@
       | (mdl) components. Its purpose is to make it easy for everyone to use mdl by doing all the data binding and giving you the control over classes with props
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
+<script>
+export default {}
 </script>

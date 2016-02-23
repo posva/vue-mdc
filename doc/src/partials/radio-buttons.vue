@@ -70,8 +70,12 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    checked: 'option 2'
+<script>
+export default {
+  data () {
+    return {
+      checked: 'option 2'
+    }
+  }
+}
 </script>

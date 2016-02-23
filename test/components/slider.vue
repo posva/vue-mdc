@@ -30,15 +30,19 @@ div
   span Disable
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    min: 0
-    max: 100
-    value: 25
-    step: 25
-    disabled: false
+export default {
+  data () {
+    return {
+      min: 0,
+      max: 100,
+      value: 25,
+      step: 25,
+      disabled: false
+    }
+  },
   components: vmdl.components
+}
 </script>

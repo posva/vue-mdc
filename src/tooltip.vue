@@ -3,17 +3,23 @@
   slot
 </template>
 
-<script lang="coffee">
-propFill = require './mixins/prop-fill.coffee'
+<script>
+/* global componentHandler*/
+import propFill from './mixins/prop-fill'
 
-module.exports =
-  props:
-    for:
-      required: true
+export default {
+  props: {
+    for: {
+      required: true,
       type: String
-    large:
+    },
+    large: {
       fill: true
-  ready: ->
-    componentHandler.upgradeElement @$el, 'MaterialTooltip'
+    }
+  },
+  ready () {
+    componentHandler.upgradeElement(this.$el, 'MaterialTooltip')
+  },
   mixins: [propFill]
+}
 </script>

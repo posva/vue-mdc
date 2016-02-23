@@ -2,29 +2,35 @@
 .mdl-progress.mdl-js-progress(v-bind:class='{ "mdl-progress__indeterminate": indeterminate }')
 </template>
 
-<script lang="coffee">
-propFill = require './mixins/prop-fill.coffee'
+<script>
+/* global componentHandler*/
+import propFill from './mixins/prop-fill'
 
-module.exports =
-  data: ->
-  props:
-    progress:
+export default {
+  props: {
+    progress: {
       required: false
-    buffer:
+    },
+    buffer: {
       required: false
-    indeterminate:
+    },
+    indeterminate: {
       fill: true
-  ready: ->
-    componentHandler.upgradeElement @$el, 'MaterialProgress'
+    }
+  },
+  ready () {
+    componentHandler.upgradeElement(this.$el, 'MaterialProgress')
 
-    if @progress?
-      @$el.MaterialProgress.setProgress @progress
-      @$watch 'progress', (val) ->
-        @$el.MaterialProgress.setProgress val
+    if (this.progress != null) {
+      this.$el.MaterialProgress.setProgress(this.progress)
+      this.$watch('progress', val => this.$el.MaterialProgress.setProgress(val))
+    }
 
-    if @buffer?
-      @$el.MaterialProgress.setBuffer @buffer
-      @$watch 'buffer', (val) ->
-        @$el.MaterialProgress.setBuffer val
+    if (this.buffer != null) {
+      this.$el.MaterialProgress.setBuffer(this.buffer)
+      this.$watch('buffer', val => this.$el.MaterialProgress.setBuffer(val))
+    }
+  },
   mixins: [propFill]
+}
 </script>

@@ -30,9 +30,13 @@
       |  just adds the class for you, so there is not much benefit from using it. This directive may disappear in v1
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    check: true
-    radio: 'option'
+<script>
+export default {
+  data () {
+    return {
+      check: true,
+      radio: 'option'
+    }
+  }
+}
 </script>

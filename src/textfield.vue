@@ -14,31 +14,41 @@
       label.mdl-textfield__error(v-if='error') {{error}}
 </template>
 
-<script lang="coffee">
-propFill = require './mixins/prop-fill.coffee'
+<script>
+/* global componentHandler*/
+import propFill from './mixins/prop-fill'
 
-module.exports =
-  props:
-    expandable: String
-    type:
-      type: String
+export default {
+  props: {
+    expandable: String,
+    type: {
+      type: String,
       default: 'text'
-    rows:
+    },
+    rows: {
       required: false
-    id: String
-    value:
+    },
+    id: String,
+    value: {
       required: false
-    label: String
-    pattern: String
-    error: String
-    textarea:
+    },
+    label: String,
+    pattern: String,
+    error: String,
+    textarea: {
       fill: true
-    floatingLabel:
+    },
+    floatingLabel: {
       required: false
-  ready: ->
-    componentHandler.upgradeElement @$el
-    if @floatingLabel and not @label?
-      @label = @floatingLabel
-      @$watch 'floatingLabel', (val) => @label = val
+    }
+  },
+  ready () {
+    componentHandler.upgradeElement(this.$el)
+    if (this.floatingLabel && this.label == null) {
+      this.label = this.floatingLabel
+      this.$watch('floatingLabel', (val) => this.label = val)
+    }
+  },
   mixins: [propFill]
+}
 </script>

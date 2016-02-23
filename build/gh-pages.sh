@@ -11,7 +11,7 @@ fi
 git pull --rebase && \
 git merge -X theirs --no-edit $br && \
 npm run doc && \
-cp doc/index.html doc/favicon.ico . && \
+cp dist/index.html dist/doc-bundle.js doc/favicon.ico . && \
 git add -f index.html doc-bundle.js favicon.ico && \
 git commit -a --amend --no-edit && \
 git push origin gh-pages && \

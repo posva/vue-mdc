@@ -9,44 +9,50 @@ input.mdl-slider.mdl-js-slider(
   )
 </template>
 
-<script lang="coffee">
-propFill = require './mixins/prop-fill.coffee'
+<script>
+/* global componentHandler*/
+import propFill from './mixins/prop-fill'
 
-module.exports =
-  props:
-    value:
-      required: true
+export default {
+  props: {
+    value: {
+      required: true,
       twoWay: true
-    step:
+    },
+    step: {
       required: false
-    min:
+    },
+    min: {
       required: true
-    max:
+    },
+    max: {
       required: true
-    disabled:
+    },
+    disabled: {
       fill: true
-  ready: ->
-    componentHandler.upgradeElement @$el, 'MaterialSlider'
+    }
+  },
+  ready () {
+    componentHandler.upgradeElement(this.$el, 'MaterialSlider')
 
-    if @value?
-      @$el.MaterialSlider.change @value
-      @$watch 'value', (val) ->
-        @$el.MaterialSlider.change val
+    this.$el.MaterialSlider.change(this.value)
+    this.$watch('value', val => this.$el.MaterialSlider.change(val))
 
-    # The original value is not changed, only design is changed
-    if @min?
-      @$watch 'min', (val) ->
-        if val > @value
-          @$el.MaterialSlider.change val
+    // The original value is not changed, only design is changed
+    this.$watch('min', val => {
+      if (val > this.value) {
+        this.$el.MaterialSlider.change(val)
+      }
+    })
 
-    if @max?
-      @$watch 'max', (val) ->
-        if val < @value
-          @$el.MaterialSlider.change val
+    this.$watch('max', val => {
+      if (val < this.value) {
+        this.$el.MaterialSlider.change(val)
+      }
+    })
 
-    if @step?
-      @$watch 'step', (val) ->
-        @$el.MaterialSlider.change val * Math.round(@value / val)
-
+    this.$watch('step', val => this.$el.MaterialSlider.change(val * Math.round(this.value / val)))
+  },
   mixins: [propFill]
+}
 </script>

@@ -4,14 +4,20 @@ label.mdl-icon-toggle.mdl-js-icon-toggle(v-bind:for.once='id' v-bind:class='{ "i
   i.mdl-icon-toggle__label.material-icons {{icon}}
 </template>
 
-<script lang="coffee">
-common = require '../mixins/toggle.coffee'
-module.exports =
-  props:
-    icon:
-      required: true
+<script>
+/* global componentHandler*/
+import common from '../mixins/toggle'
+
+export default {
+  props: {
+    icon: {
+      required: true,
       type: String
-  mixins: [common]
-  ready: ->
-    componentHandler.upgradeElements @$el
+    }
+  },
+  mixins: [common],
+  ready () {
+    componentHandler.upgradeElements(this.$el)
+  }
+}
 </script>
