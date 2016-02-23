@@ -24,6 +24,11 @@ config.plugins = (config.plugins || []).concat([
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoErrorsPlugin(),
   // https://github.com/ampedandwired/html-webpack-plugin
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery",
+    "window.jQuery": "jquery"
+  }),
   new HtmlWebpackPlugin({
     filename: 'index.html',
     template: 'test/unit/index.html',
