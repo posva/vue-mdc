@@ -106,13 +106,20 @@ i.material-icons.mdl-badge
             |  param, this modifier has lower priority
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    value: 2
-    num: 3
-    text: '★'
-    hide: false
-  computed:
-    zero: -> parseInt(@num, 10) <= 0
+<script>
+export default {
+  data () {
+    return {
+      value: 2,
+      num: 3,
+      text: '★',
+      hide: false
+    }
+  },
+  computed: {
+    zero () {
+      return parseInt(this.num, 10) <= 0
+    }
+  }
+}
 </script>

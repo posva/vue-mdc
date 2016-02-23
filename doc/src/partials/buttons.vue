@@ -142,31 +142,37 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    iconText: ''
-    text: 'Play with me!'
-    disabled: false
-    icon: false
-    accent: false
-    primary: false
-    miniFab: false
-    fab: false
-    raised: false
-    colored: false
-  computed:
-    playgroundHtml: ->
-      '<mdl-button' +
-      (if @colored then ' colored' else '') +
-      (if @icon then ' icon' else '') +
-      (if @disabled then ' disabled' else '') +
-      (if @accent then ' accent' else '') +
-      (if @primary then ' primary' else '') +
-      (if @miniFab then ' min-fab' else '') +
-      (if @fab then ' fab' else '') +
-      (if @raised then ' raised' else '') +
+<script>
+export default {
+  data () {
+    return {
+      iconText: '',
+      text: 'Play with me!',
+      disabled: false,
+      icon: false,
+      accent: false,
+      primary: false,
+      miniFab: false,
+      fab: false,
+      raised: false,
+      colored: false
+    }
+  },
+  computed: {
+    playgroundHtml () {
+      return '<mdl-button' +
+      (this.colored ? ' colored' : '') +
+      (this.icon ? ' icon' : '') +
+      (this.disabled ? ' disabled' : '') +
+      (this.accent ? ' accent' : '') +
+      (this.primary ? ' primary' : '') +
+      (this.miniFab ? ' min-fab' : '') +
+      (this.fab ? ' fab' : '') +
+      (this.raised ? ' raised' : '') +
       '>' +
-      (if @iconText then "<i class=\"material-icons\">#{@iconText}</i>" else @text) +
+      (this.iconText ? `<i class="material-icons">${this.iconText}</i>` : this.text) +
       '</mdl-button>'
+    }
+  }
+}
 </script>

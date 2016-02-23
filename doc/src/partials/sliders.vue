@@ -66,10 +66,14 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    amount: 30
-    amountStep: 20
-    step: 5
+<script>
+export default {
+  data () {
+    return {
+      amount: 30,
+      amountStep: 20,
+      step: 5
+    }
+  }
+}
 </script>

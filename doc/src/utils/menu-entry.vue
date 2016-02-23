@@ -6,16 +6,24 @@ nav.mdl-navigation(v-for='sub in menu.items')
   a.mdl-navigation__link(:href.once='makeLink(sub)', @click='closeMenu()') {{sub}}
 </template>
 
-<script lang="coffee">
-_ = require 'lodash'
+<script>
+import _ from 'lodash'
 
-module.exports =
-  props:
-    menu:
+export default {
+  props: {
+    menu: {
       required: true
-  methods:
-    makeLink: (text) -> '#' + _.kebabCase text
-    closeMenu: ->
-      if @$parent.$els.drawer.classList.contains 'is-visible'
-        @$parent.$el.MaterialLayout.drawerToggleHandler_()
+    }
+  },
+  methods: {
+    makeLink (text) {
+      return '#' + _.kebabCase(text)
+    },
+    closeMenu () {
+      if (this.$parent.$els.drawer.classList.contains('is-visible')) {
+        this.$parent.$el.MaterialLayout.drawerToggleHandler_()
+      }
+    }
+  }
+}
 </script>

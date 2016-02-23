@@ -15,7 +15,7 @@
     "dev": "node build/dev-server.js",
     "dev:e2e": "node build/e2e-server.js",
     "dev:doc": "node build/doc-server.js",
-    "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.config.js"
+    "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.conf.js"
   },
   "keywords": [
     "vue",
@@ -54,16 +54,18 @@
     "coffeelint-loader": "^0.1.1",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.23.1",
-    "eslint": "^1.10.3",
+    "eslint": "^2.0.0",
+    "eslint-config-standard": "^5.1.0",
     "eslint-friendly-formatter": "^1.2.2",
-    "eslint-loader": "^1.2.1",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-html": "^1.3.0",
+    "eslint-plugin-promise": "^1.0.8",
+    "eslint-plugin-standard": "^1.3.2",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
     "highlight.js": "^9.1.0",
-    "html-loader": "^0.4.0",
     "html-webpack-plugin": "^2.8.1",
-    "http-server": "^0.8.5",
     "inject-loader": "^2.0.1",
     "jade": "^1.11.0",
     "jquery": "^2.2.0",
@@ -79,7 +81,6 @@
     "stylus-loader": "^1.5.1",
     "template-html-loader": "0.0.3",
     "url-loader": "^0.5.7",
-    "vue": "^1.0.16",
     "vue-hot-reload-api": "^1.3.2",
     "vue-html-loader": "^1.1.0",
     "vue-loader": "^8.1.1",
@@ -87,7 +88,8 @@
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1",
     "webpack-fail-plugin": "^1.0.4",
-    "webpack-hot-middleware": "^2.7.1"
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.1"
   },
   "repository": {
     "type": "git",

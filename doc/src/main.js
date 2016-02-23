@@ -13,7 +13,7 @@ let context = require.context('./partials', false, /.vue$/)
 vmdl.registerAll(Vue)
 
 Vue.component('title-link', require('./utils/title-link.vue'))
-Vue.directive('hljs', require('./utils/hljs.coffee'))
+Vue.directive('hljs', require('./utils/hljs'))
 
 context.keys().forEach(function (comp) {
   Vue.component(path.basename(comp, '.vue'), context(comp))

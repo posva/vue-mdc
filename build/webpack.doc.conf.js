@@ -8,9 +8,9 @@ config.devtool = 'eval-source-map'
 
 // add hot-reload related code to entry chunks
 var polyfill = 'eventsource-polyfill'
-var hotClient = 'webpack-hot-middleware/client?noInfo=true&reload=true'
+var devClient = './build/dev-client'
 Object.keys(config.entry).forEach(function (name, i) {
-  var extras = i === 0 ? [polyfill, hotClient] : [hotClient]
+  var extras = i === 0 ? [polyfill, devClient] : [devClient]
   config.entry[name] = extras.concat(config.entry[name])
 })
 
@@ -18,14 +18,6 @@ Object.keys(config.entry).forEach(function (name, i) {
 // when serving the html from in-memory
 config.output.publicPath = '/'
 config.entry.app = './doc/src/main.js'
-config.module.loaders.push({
-  test: /\.coffee$/,
-  include: [
-    path.resolve(__dirname, '../doc/src'),
-    path.resolve(__dirname, '../src')
-  ],
-  loader: 'coffee!coffeelint'
-})
 
 config.plugins = (config.plugins || []).concat([
   // https://github.com/glenjamin/webpack-hot-middleware#installation--usage

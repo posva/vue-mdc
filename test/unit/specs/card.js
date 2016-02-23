@@ -130,7 +130,9 @@ describe('Card', function () {
 
   it('dispatchs events for actions button', function (done) {
     let called = false
-    vm.$once('someEventName', () => called = true)
+    vm.$once('someEventName', function () {
+      called = true
+    })
     vms.card.triggerActionsEvent()
     utils.nextTick()
     .then(function () {
@@ -141,7 +143,9 @@ describe('Card', function () {
 
   it('dispatchs events for menu button', function (done) {
     let called = false
-    vm.$once('cardMenu', () => called = true)
+    vm.$once('cardMenu', function () {
+      called = true
+    })
     vms.card.triggerMenuEvent()
     utils.nextTick()
     .then(function () {

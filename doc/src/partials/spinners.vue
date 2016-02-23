@@ -47,8 +47,12 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    active: true
+<script>
+export default {
+  data () {
+    return {
+      active: true
+    }
+  }
+}
 </script>

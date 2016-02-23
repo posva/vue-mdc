@@ -119,9 +119,13 @@
           td.mdl-data-table__cell--non-numeric
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    cardTitle: 'Update'
-    supportingText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
+<script>
+export default {
+  data () {
+    return {
+      cardTitle: 'Update',
+      supportingText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.'
+    }
+  }
+}
 </script>
