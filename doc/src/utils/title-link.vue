@@ -29,14 +29,22 @@ a.title-link(:href.once='link', :id.once='id', :class='{"title-link--big": big}'
     slot
 </template>
 
-<script lang="coffee">
-_ = require 'lodash'
-module.exports =
-  props: ['big']
-  data: ->
-    id: 'invalid'
-  computed:
-    link: -> '#' + @id
-  ready: ->
-    @id = _.kebabCase @$el.text
+<script>
+import _ from 'lodash'
+export default {
+  props: ['big'],
+  data () {
+    return {
+      id: 'invalid'
+    }
+  },
+  computed: {
+    link () {
+      return '#' + this.id
+    }
+  },
+  ready () {
+    this.id = _.kebabCase(this.$el.text)
+  }
+}
 </script>

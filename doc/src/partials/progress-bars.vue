@@ -65,9 +65,13 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    progress: 30
-    buffer: 60
+<script>
+export default {
+  data () {
+    return {
+      progress: 30,
+      buffer: 60
+    }
+  }
+}
 </script>

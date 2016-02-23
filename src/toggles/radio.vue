@@ -5,23 +5,33 @@ label.mdl-radio.mdl-js-radio(v-bind:for.once='id' v-bind:class='{ "is-disabled":
     slot
 </template>
 
-<script lang="coffee">
-propFill = require '../mixins/prop-fill.coffee'
+<script>
+/* global componentHandler*/
+import propFill from '../mixins/prop-fill'
 
-module.exports =
-  props:
-    id: String
-    name: String
-    value:
+export default {
+  props: {
+    id: String,
+    name: String,
+    value: {
       required: true
-    checked:
-      required: true
+    },
+    checked: {
+      required: true,
       twoWay: true
-    disabled:
+    },
+    disabled: {
       fill: true
-  computed:
-    isChecked: -> @checked is @value
-  ready: ->
-    componentHandler.upgradeElements @$el
+    }
+  },
+  computed: {
+    isChecked () {
+      return this.checked === this.value
+    }
+  },
+  ready () {
+    componentHandler.upgradeElements(this.$el)
+  },
   mixins: [propFill]
+}
 </script>

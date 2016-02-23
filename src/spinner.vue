@@ -2,17 +2,23 @@
 .mdl-spinner.mdl-js-spinner(v-bind:class='{ "mdl-spinner--single-color": singleColor, "is-active": active }')
 </template>
 
-<script lang="coffee">
-propFill = require './mixins/prop-fill.coffee'
+<script>
+/* global componentHandler*/
+import propFill from './mixins/prop-fill'
 
-module.exports =
-  props:
-    active:
-      default: true
+export default {
+  props: {
+    active: {
+      default: true,
       type: Boolean
-    singleColor:
+    },
+    singleColor: {
       fill: true
-  ready: ->
-    componentHandler.upgradeElement @$el, 'MaterialSpinner'
+    }
+  },
+  ready () {
+    componentHandler.upgradeElement(this.$el, 'MaterialSpinner')
+  },
   mixins: [propFill]
+}
 </script>

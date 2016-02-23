@@ -24,57 +24,81 @@
 
 </template>
 
-<script lang="coffee">
-propFill = require './mixins/prop-fill.coffee'
+<script>
+import mdlButton from './button.vue'
+import mdlAnchorButton from './anchor-button.vue'
 
-slots = [
-  'title'
-  'subtitle'
-  'supportingText'
-  'media'
-  'actions'
+const slots = [
+  'title',
+  'subtitle',
+  'supportingText',
+  'media',
+  'actions',
   'menu'
-  ]
+]
 
-module.exports =
-  computed:
-    isActionsURL: ->
-      if typeof @actions is 'string'
-        @actions.match(/^(https?:)?\/\//)?
-      else
-        false
-  props:
-    title:
-      type: String
+export default {
+  computed: {
+    isActionsURL () {
+      if (typeof this.actions === 'string') {
+        return this.actions.match(/^(https?:)?\/\//) != null
+      } else {
+        return false
+      }
+    }
+  },
+  props: {
+    title: {
+      type: String,
       default: true
-    menu:
+    },
+    menu: {
       default: true
-    actions:
-      type: String
+    },
+    actions: {
+      type: String,
       default: true
-    actionsTarget:
-      default: '_self'
+    },
+    actionsTarget: {
+      default: '_self',
       type: String
-    actionsText: String
-    media:
-      default: true
+    },
+    actionsText: String,
+    media: {
+      default: true,
       type: String
-    subtitle:
-      default: true
+    },
+    subtitle: {
+      default: true,
       type: String
-    supportingText:
-      default: true
+    },
+    supportingText: {
+      default: true,
       type: String
-  compiled: ->
-    slots.forEach (slot, pos) =>
-      if @[slot] is true
-        el = @$el.children[pos]
-        @[slot] = '' if not el.attributes.getNamedItem 'slot'
-    #el = @$el.children[pos]?.attributes.getNamedItem 'slot'
-  methods:
-    triggerMenuEvent: -> @$dispatch @menu
-    triggerActionsEvent: -> @$dispatch @actions
-  components:
-    mdlButton: require './button.vue'
-    mdlAnchorButton: require './anchor-button.vue'
+    }
+  },
+  compiled () {
+    slots.forEach((slot, pos) => {
+      if (this[slot] === true) {
+        let el = this.$el.children[pos]
+        if (!el.attributes.getNamedItem('slot')) {
+          this[slot] = ''
+        }
+      }
+    })
+    // el = @$el.children[pos]?.attributes.getNamedItem 'slot'
+  },
+  methods: {
+    triggerMenuEvent () {
+      this.$dispatch(this.menu)
+    },
+    triggerActionsEvent () {
+      this.$dispatch(this.actions)
+    }
+  },
+  components: {
+    mdlButton,
+    mdlAnchorButton
+  }
+}
 </script>

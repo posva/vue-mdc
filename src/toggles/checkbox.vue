@@ -5,10 +5,13 @@ label.mdl-checkbox.mdl-js-checkbox(v-bind:for.once='id' v-bind:class='{ "is-disa
     slot
 </template>
 
-<script lang="coffee">
-common = require '../mixins/toggle.coffee'
-module.exports =
+<script>
+/* global componentHandler*/
+import common from '../mixins/toggle'
+export default {
+  ready () {
+    componentHandler.upgradeElements(this.$el)
+  },
   mixins: [common]
-  ready: ->
-    componentHandler.upgradeElements @$el
+}
 </script>

@@ -48,22 +48,28 @@ div
   mdl-checkbox(:checked.sync='float') Float
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    rows: 2
-    float: false
-    type: 'text'
-    dynFloat: 'Dynamic floating label'
-    text: 'Hello textfield'
-    pattern: '[0-9]*'
-    error: 'Nope'
-    multiText: 'Hello\nmultiline'
-  computed:
-    label: ->
-      'Can I fly? ' + if @float then 'Yes' else 'No'
-  components: vmdl.components
+export default {
+  data () {
+    return {
+      rows: 2,
+      float: false,
+      type: 'text',
+      dynFloat: 'Dynamic floating label',
+      text: 'Hello textfield',
+      pattern: '[0-9]*',
+      error: 'Nope',
+      multiText: 'Hello\nmultiline'
+    }
+  },
+  computed: {
+    label () {
+      return 'Can I fly? ' + (this.float ? 'Yes' : 'No')
+    }
+  },
+  components: vmdl.components,
   directives: vmdl.directives
+}
 </script>

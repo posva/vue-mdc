@@ -83,11 +83,15 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    bold: true
-    italic: false
-    underline: false
-    styles: []
+<script>
+export default {
+  data () {
+    return {
+      bold: true,
+      italic: false,
+      underline: false,
+      styles: []
+    }
+  }
+}
 </script>

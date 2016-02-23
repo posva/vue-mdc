@@ -4,9 +4,10 @@ button.mdl-button.mdl-js-button(v-bind:disabled='disabled' v-bind:class='cssClas
     i.material-icon(v-if='icon') {{icon}}
 </template>
 
-<script lang="coffee">
-button = require './mixins/button.coffee'
+<script>
+import button from './mixins/button'
 
-module.exports =
+export default {
   mixins: [button]
+}
 </script>

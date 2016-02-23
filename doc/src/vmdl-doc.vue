@@ -106,48 +106,59 @@ a
       content-entry(v-for='menu in items', :menu='menu')
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    filter: ''
-    items: [
-      name: 'Getting started'
-      icon: 'home'
-      items: [
-        'Installation'
-        'Usage'
-      ]
-    ,
-      name: 'Components'
-      icon: 'extension'
-      items: [
-        'Buttons'
-        'Cards'
-        'Checkboxes'
-        'Icon Toggles'
-        'Menus'
-        'Progress bars'
-        'Radio Buttons'
-        'Sliders'
-        'Spinners'
-        'Switches'
-        'Textfields'
-        'Tooltips'
-      ]
-    ,
-      name: 'Directives'
-      icon: 'settings_ethernet'
-      items: [
-        'Badges'
-        'Ripple Effect'
-      ]
-    ]
-  ready: ->
-    docsearch
-      apiKey: 'b3174bbc58c9406adac95c2cfef57702'
-      indexName: 'vue-mdl'
+<script>
+/* global docsearch*/
+import menuEntry from './utils/menu-entry.vue'
+import contentEntry from './utils/content-entry.vue'
+
+export default {
+  data () {
+    return {
+      filter: '',
+      items: [{
+        name: 'Getting started',
+        icon: 'home',
+        items: [
+          'Installation',
+          'Usage'
+        ]
+      }, {
+        name: 'Components',
+        icon: 'extension',
+        items: [
+          'Buttons',
+          'Cards',
+          'Checkboxes',
+          'Icon Toggles',
+          'Menus',
+          'Progress bars',
+          'Radio Buttons',
+          'Sliders',
+          'Spinners',
+          'Switches',
+          'Textfields',
+          'Tooltips'
+        ]
+      }, {
+        name: 'Directives',
+        icon: 'settings_ethernet',
+        items: [
+          'Badges',
+          'Ripple Effect'
+        ]
+      }]
+    }
+  },
+  ready () {
+    docsearch({
+      apiKey: 'b3174bbc58c9406adac95c2cfef57702',
+      indexName: 'vue-mdl',
       inputSelector: '#search'
-  components:
-    menuEntry: require './utils/menu-entry.vue'
-    contentEntry: require './utils/content-entry.vue'
+    })
+  },
+  components: {
+    menuEntry,
+    contentEntry
+  }
+}
 </script>

@@ -134,18 +134,24 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    name: 'Ed'
-    label: 'I am a label'
-    float: true
-    textarea: false
-    text: 'You can have\nmultiline'
-    rows: 3
-  computed:
-    playgroundHtml: ->
-      '<mdl-textfield' +
-      (if @float then " floating-label=\"#{@label}\"" else " label=\"#{@label}\"") +
+<script>
+export default {
+  data () {
+    return {
+      name: 'Ed',
+      label: 'I am a label',
+      float: true,
+      textarea: false,
+      text: 'You can have\nmultiline',
+      rows: 3
+    }
+  },
+  computed: {
+    playgroundHtml () {
+      return '<mdl-textfield' +
+      (this.float ? ` floating-label="${this.label}"` : ` label="${this.label}"`) +
       '</mdl-textfield>'
+    }
+  }
+}
 </script>

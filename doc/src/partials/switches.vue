@@ -79,9 +79,13 @@
     br
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
-    checked: true
-    checks: ['one', 'four']
+<script>
+export default {
+  data () {
+    return {
+      checked: true,
+      checks: ['one', 'four']
+    }
+  }
+}
 </script>

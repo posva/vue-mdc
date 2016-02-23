@@ -8,7 +8,6 @@
     p Here are the components
 </template>
 
-<script lang="coffee">
-module.exports =
-  data: ->
+<script>
+export default {}
 </script>

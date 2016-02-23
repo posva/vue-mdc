@@ -18,13 +18,17 @@ div
   span Indeterminate
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    progress: 44
-    buffer: 80
-    indeterminate: false
+export default {
+  data () {
+    return {
+      progress: 44,
+      buffer: 80,
+      indeterminate: false
+    }
+  },
   components: vmdl.components
+}
 </script>

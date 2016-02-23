@@ -28,16 +28,22 @@ div
   label(for='badge-hide') Hide
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    badgeText: '♥'
-    hide: false
-  computed:
-    zero: ->
-      n = parseInt @badgeText, 10
-      n isnt n or n <= 0
+export default {
+  data () {
+    return {
+      badgeText: '♥',
+      hide: false
+    }
+  },
+  computed: {
+    zero () {
+      let n = parseInt(this.badgeText, 10)
+      return isNaN(n) || n <= 0
+    }
+  },
   directives: vmdl.directives
+}
 </script>

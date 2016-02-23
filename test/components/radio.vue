@@ -31,13 +31,17 @@ div
   span Little
 </template>
 
-<script lang="coffee">
-vmdl = require '../../src/vue-mdl.js'
+<script>
+import vmdl from '../../src/vue-mdl'
 
-module.exports =
-  data: ->
-    fruit: 'Banana'
-    size: 'Little'
-    disabled: false
+export default {
+  data () {
+    return {
+      fruit: 'Banana',
+      size: 'Little',
+      disabled: false
+    }
+  },
   components: vmdl.components
+}
 </script>
