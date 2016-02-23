@@ -100,7 +100,7 @@ for modifications and create the bundles. You can then visit
 [http://localhost:8080](http://localhost:8080).
 
 Create tests pages inside `test/components`. Add unit tests to `test/unit/specs`
-and modify `test/unit/main.coffee` to load the test.
+and modify `test/unit/main.js` to load the test.
 
 You can also serve the tests pages without running the unit tests by running
 `npm run dev:test`.
