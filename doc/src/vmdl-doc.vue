@@ -134,6 +134,7 @@ export default {
           'Progress bars',
           'Radio Buttons',
           'Sliders',
+          'Snackbars',
           'Spinners',
           'Switches',
           'Textfields',
