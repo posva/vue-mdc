@@ -2,7 +2,7 @@
   <img src="logo.png"/>
   <br/>
   <a href="https://circleci.com/gh/posva/vue-mdl">
-    <img alt="Circle CI" src="https://circleci.com/gh/posva/vue-mdl.svg?style=svg" />
+    <img alt="Circle CI" src="https://img.shields.io/circleci/project/posva/vue-mdl/develop.svg" />
   </a>
   <a href="https://www.npmjs.com/package/vue-mdl"><img src="https://img.shields.io/npm/dm/vue-mdl.svg" alt="Downloads per month"></a>
   <a href="http://waffle.io/posva/vue-mdl"><img src="https://badge.waffle.io/posva/vue-mdl.svg?label=ready&title=Ready" alt="Stories in Ready"></a>
