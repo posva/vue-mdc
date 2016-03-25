@@ -18,24 +18,37 @@
 </style>
 
 <template lang="jade">
-.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.getmdl-select
-  input.mdl-textfield__input(v-bind:id.once='id', v-el:input, v-model='value', type='text', readonly='', tabindex='-1')
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.getmdl-select(v-el:textfield)
+  input.mdl-textfield__input(v-bind:id.once='id', v-el:input, v-model='name', type='text', readonly='', tabindex='-1')
   label(v-bind:for.once='id')
     i.mdl-icon-toggle__label.material-icons keyboard_arrow_down
-  label.mdl-textfield__label(v-bind:for.once='id') Country
+  label.mdl-textfield__label(v-bind:for.once='id') {{label}}
   ul.mdl-menu.mdl-menu--bottom-left.mdl-js-menu(v-bind:for.once='id')
-    li.mdl-menu__item(v-for='option in optionsObject', v-on:click='selectValue(option.value)') {{option.name}}
+    li.mdl-menu__item(v-for='option in optionsObject', v-on:click='selectValue(option)') {{option.name}}
 </template>
 
 <script>
 /* global componentHandler*/
 
 export default {
+  data () {
+    return {
+      name: ''
+    }
+  },
   methods: {
-    selectValue (val) {
-      this.value = val
+    selectValue (option) {
+      this.value = option.value
+      this.$els.textfield.MaterialTextfield.change(option.name)
+      this.name = option.name
       let event = new Event('change')
       this.$el.dispatchEvent(event)
+    },
+    setName () {
+      for (let i = 0; i < this.optionsObject.length; ++i) {
+        let option = this.optionsObject[i]
+        if (this.value === option.value) this.name = option.name
+      }
     }
   },
   computed: {
@@ -57,6 +70,7 @@ export default {
     }
   },
   props: {
+    label: String,
     id: {
       required: true
     },
@@ -68,7 +82,13 @@ export default {
     }
   },
   ready () {
+    this.setName()
     componentHandler.upgradeElements(this.$el)
+  },
+  watch: {
+    value (val, oldVal) {
+      this.setName()
+    }
   }
 }
 </script>

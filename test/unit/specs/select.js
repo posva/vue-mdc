@@ -5,11 +5,13 @@ describe('Select', function () {
   let select = null
   let menu = null
   let menuUl = null
+  let selectVal = null
   before(function (done) {
     app.currentComponent = 'select'
     utils.nextTick()
     .then(function () {
       select = $('#select')
+      selectVal = $('#select-val')
       menu = $('.mdl-textfield .mdl-menu__container')
       menuUl = $('.mdl-textfield .mdl-menu__container ul')
       done()
@@ -28,9 +30,9 @@ describe('Select', function () {
 
   it('binds the value', function (done) {
     select.should.have.value('Russia')
-    vm.country = 'Belarus'
+    vm.country = 'Spain'
     utils.nextTick().then(function () {
-      select.should.have.value('Belarus')
+      select.should.have.value('Spain')
       return utils.nextTick()
     }).then(done, done)
   })
@@ -48,6 +50,15 @@ describe('Select', function () {
     }).then(function () {
       vm.country.should.equal('Russia')
       vm.changes.should.eql(changes + 1)
+      return utils.nextTick()
+    }).then(done, done)
+  })
+
+  it('uses an array of objects as options', function (done) {
+    vm.countryVal = 'fr'
+    selectVal.should.not.have.value('France')
+    utils.nextTick().then(function () {
+      selectVal.should.have.value('France')
       return utils.nextTick()
     }).then(done, done)
   })
