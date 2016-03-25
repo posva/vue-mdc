@@ -39,7 +39,6 @@ export default {
   methods: {
     selectValue (option) {
       this.value = option.value
-      this.$els.textfield.MaterialTextfield.change(option.name)
       this.name = option.name
       let event = new Event('change')
       this.$el.dispatchEvent(event)
@@ -49,6 +48,7 @@ export default {
         let option = this.optionsObject[i]
         if (this.value === option.value) this.name = option.name
       }
+      this.$els.textfield.MaterialTextfield.change(this.name)
     }
   },
   computed: {
@@ -82,8 +82,8 @@ export default {
     }
   },
   ready () {
-    this.setName()
     componentHandler.upgradeElements(this.$el)
+    this.setName()
   },
   watch: {
     value (val, oldVal) {

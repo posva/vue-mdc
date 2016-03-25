@@ -34,7 +34,7 @@
       |  properties.
 
     .flex.center.wrap
-      mdl-select#country-select-2(:label='Country', value.sync='countryVal', :options='countries')
+      mdl-select#country-select-2(label='Country', :value.sync='countryVal', :options='countries')
     .flex.center.wrap
       p Selected country is {{countryVal}}
     pre
