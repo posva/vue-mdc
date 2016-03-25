@@ -141,6 +141,13 @@ export default {
           'Tooltips'
         ]
       }, {
+        name: 'Custom Components',
+        icon: 'extension',
+        items: [
+          'Selects'
+        ]
+      },
+      {
         name: 'Directives',
         icon: 'settings_ethernet',
         items: [
