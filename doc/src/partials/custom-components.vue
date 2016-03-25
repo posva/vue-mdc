@@ -1,8 +1,8 @@
 <template lang="jade">
 .section
-  title-link(big) Components
+  title-link(big) Custom Components
   .section__content
-    p Here are the components
+    p Those components aren't built in MDL.
 </template>
 
 <script>
