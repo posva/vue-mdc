@@ -134,12 +134,20 @@ export default {
           'Progress bars',
           'Radio Buttons',
           'Sliders',
+          'Snackbars',
           'Spinners',
           'Switches',
           'Textfields',
           'Tooltips'
         ]
       }, {
+        name: 'Custom Components',
+        icon: 'extension',
+        items: [
+          'Selects'
+        ]
+      },
+      {
         name: 'Directives',
         icon: 'settings_ethernet',
         items: [
