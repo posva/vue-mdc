@@ -1,6 +1,6 @@
 {
   "name": "vue-mdl",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Reusable Vue components using Material Design Lite",
   "main": "dist/vue-mdl.js",
   "scripts": {
@@ -81,6 +81,7 @@
     "vue-html-loader": "^1.1.0",
     "vue-loader": "^8.1.1",
     "vue-style-loader": "^1.0.0",
+    "vue-transfer-dom": "^1.1.0",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.1",

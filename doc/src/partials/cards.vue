@@ -93,7 +93,7 @@
     table.mdl-data-table.mdl-js-data-table
       thead
         tr
-          th.mdl-data-table__cell--non-numeric Modifiers
+          th.mdl-data-table__cell--non-numeric Prop
           th.mdl-data-table__cell--non-numeric Description
           th.mdl-data-table__cell--non-numeric Remarks
       tbody

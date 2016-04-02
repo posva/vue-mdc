@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlCheckbox = exports.MdlRippleEffect = exports.MdlBadge = exports.Mdl = undefined;
+	exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlCheckbox = exports.MdlRippleEffect = exports.MdlBadge = exports.Mdl = undefined;
 	
 	var _badge = __webpack_require__(1);
 	
@@ -137,6 +137,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _select2 = _interopRequireDefault(_select);
 	
+	var _dialog = __webpack_require__(102);
+	
+	var _dialog2 = _interopRequireDefault(_dialog);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var vmdl = {
@@ -156,7 +160,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    mdlMenuItem: _menuItem2.default,
 	    mdlCard: _card2.default,
 	    mdlSnackbar: _snackbar2.default,
-	    mdlSelect: _select2.default
+	    mdlSelect: _select2.default,
+	    mdlDialog: _dialog2.default
 	  },
 	  directives: {
 	    mdl: _mdl2.default,
@@ -218,6 +223,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var MdlCard = exports.MdlCard = _card2.default;
 	var MdlSnackbar = exports.MdlSnackbar = _snackbar2.default;
 	var MdlSelect = exports.MdlSelect = _select2.default;
+	var MdlDialog = exports.MdlDialog = _dialog2.default;
 
 /***/ },
 /* 1 */
@@ -2530,6 +2536,191 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = "<div v-el:textfield=\"v-el:textfield\" class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select\"><input v-bind:id.once=\"id\" v-el:input=\"v-el:input\" v-model=\"name\" type=\"text\" readonly=\"\" tabindex=\"-1\" class=\"mdl-textfield__input\"/><label v-bind:for.once=\"id\"><i class=\"mdl-icon-toggle__label material-icons\">keyboard_arrow_down</i></label><label v-bind:for.once=\"id\" class=\"mdl-textfield__label\">{{label}}</label><ul v-bind:for.once=\"id\" class=\"mdl-menu mdl-menu--bottom-left mdl-js-menu\"><li v-for=\"option in optionsObject\" v-on:click=\"selectValue(option)\" class=\"mdl-menu__item\">{{option.name}}</li></ul></div>";
+
+/***/ },
+/* 102 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(103)
+	__vue_script__ = __webpack_require__(105)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/dialog.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(106)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/posva/vue-mdl/src/dialog.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 103 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(104);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(99)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js?sourceMap!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dialog.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js?sourceMap!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dialog.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 104 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(98)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\n.mdl-dialog-container {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-wrap: wrap;\n      -ms-flex-wrap: wrap;\n          flex-wrap: wrap;\n  -webkit-box-pack:center;\n  -webkit-justify-content:center;\n      -ms-flex-pack:center;\n          justify-content:center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  top:0;\n  left: 0;\n  z-index: 10000;\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\n  background-color:white;\n  padding: 1em;\n  color: black;\n  width: initial;\n  min-width: 280px;\n}\n", "", {"version":3,"sources":["/./src/dialog.vue?38ff4ebc"],"names":[],"mappings":";AAkGA;EACA,gBAAA;EACA,YAAA;EACA,aAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,qBAAA;EAAA,cAAA;EACA,wBAAA;MAAA,oBAAA;UAAA,gBAAA;EACA,wBAAA;EAAA,+BAAA;MAAA,qBAAA;UAAA,uBAAA;EACA,0BAAA;EAAA,4BAAA;MAAA,uBAAA;UAAA,oBAAA;EACA,MAAA;EACA,QAAA;EACA,eAAA;EACA,4BAAA;CACA;AACA;EACA,uBAAA;EACA,aAAA;EACA,aAAA;EACA,eAAA;EACA,iBAAA;CACA","file":"dialog.vue","sourcesContent":["<template lang=\"jade\">\n.mdl-dialog-container(v-show='show' v-on:click.stop='cancel')\n  .mdl-dialog(v-on:click.stop='noAction')\n    .mdl-dialog__title {{title}}\n    .mdl-dialog__content\n      slot\n    .mdl-dialog__actions(v-el:actions, v-bind:class='{ \"mdl-dialog__actions--full-width\": fullWidth }')\n      slot(name='actions')\n        mdl-button.mdl-js-ripple-effect Close\n</template>\n\n<script>\n/* global componentHandler*/\nimport propFill from './mixins/prop-fill'\nimport mdlButton from './button.vue'\n\nexport default {\n  components: {\n    mdlButton\n  },\n  data () {\n    return {\n      show: false\n    }\n  },\n  props: {\n    title:{\n      type: String\n    },\n    displayOn: {\n      required: true,\n      type: String\n    },\n    fullWidth: {\n      fill: true,\n      default: false\n    },\n    cancellable: {\n      fill: true,\n      default: false\n    }\n  },\n  ready () {\n    this.eventsAdded = []\n    this.$on(this.displayOn, (...callbacks) => {\n      this.show = !this.show\n      const actions = this.$els.actions.querySelectorAll('button, [data-action]')\n      this.cancelAction = null\n      if (this.cancellable) {\n        this.cancelAction = callbacks[actions.length] || callbacks[actions.length - 1]\n      }\n      Array.prototype.forEach.call(actions, (action, i) => {\n        let callback\n        if (callbacks[i]) {\n          callback = (event) => {\n            event.stopPropagation()\n            const ret = callbacks[i]()\n            if (ret !== false) this.close()\n          }\n        } else {\n          callback = () => this.close()\n        }\n        action.addEventListener('click', callback)\n        this.eventsAdded.push({\n          el: action,\n          type: 'click',\n          fn: callback\n        })\n      })\n    })\n  },\n  destroyed () {\n    this.removeEventsListeners()\n  },\n  methods: {\n    noAction () {\n    },\n    cancel () {\n      if (this.cancellable) {\n        if (this.cancelAction) this.cancelAction()\n        this.close()\n      }\n    },\n    close () {\n      this.removeEventsListeners()\n      this.show = false\n    },\n    removeEventsListeners () {\n      this.eventsAdded.forEach((event) => {\n        event.el.removeEventListener(event.type, event.fn)\n      })\n      this.eventsAdded.length = 0\n    }\n  },\n  mixins: [propFill]\n}\n</script>\n<style>\n.mdl-dialog-container {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content:center;\n  align-items: center;\n  top:0;\n  left: 0;\n  z-index: 10000;\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\n  background-color:white;\n  padding: 1em;\n  color: black;\n  width: initial;\n  min-width: 280px;\n}\n</style>\n"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+/* 105 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _propFill = __webpack_require__(10);
+	
+	var _propFill2 = _interopRequireDefault(_propFill);
+	
+	var _button = __webpack_require__(55);
+	
+	var _button2 = _interopRequireDefault(_button);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  components: {
+	    mdlButton: _button2.default
+	  },
+	  data: function data() {
+	    return {
+	      show: false
+	    };
+	  },
+	
+	  props: {
+	    title: {
+	      type: String
+	    },
+	    displayOn: {
+	      required: true,
+	      type: String
+	    },
+	    fullWidth: {
+	      fill: true,
+	      default: false
+	    },
+	    cancellable: {
+	      fill: true,
+	      default: false
+	    }
+	  },
+	  ready: function ready() {
+	    var _this = this;
+	
+	    this.eventsAdded = [];
+	    this.$on(this.displayOn, function () {
+	      for (var _len = arguments.length, callbacks = Array(_len), _key = 0; _key < _len; _key++) {
+	        callbacks[_key] = arguments[_key];
+	      }
+	
+	      _this.show = !_this.show;
+	      var actions = _this.$els.actions.querySelectorAll('button, [data-action]');
+	      _this.cancelAction = null;
+	      if (_this.cancellable) {
+	        _this.cancelAction = callbacks[actions.length] || callbacks[actions.length - 1];
+	      }
+	      Array.prototype.forEach.call(actions, function (action, i) {
+	        var callback = void 0;
+	        if (callbacks[i]) {
+	          callback = function callback(event) {
+	            event.stopPropagation();
+	            var ret = callbacks[i]();
+	            if (ret !== false) _this.close();
+	          };
+	        } else {
+	          callback = function callback() {
+	            return _this.close();
+	          };
+	        }
+	        action.addEventListener('click', callback);
+	        _this.eventsAdded.push({
+	          el: action,
+	          type: 'click',
+	          fn: callback
+	        });
+	      });
+	    });
+	  },
+	  destroyed: function destroyed() {
+	    this.removeEventsListeners();
+	  },
+	
+	  methods: {
+	    noAction: function noAction() {},
+	    cancel: function cancel() {
+	      if (this.cancellable) {
+	        if (this.cancelAction) this.cancelAction();
+	        this.close();
+	      }
+	    },
+	    close: function close() {
+	      this.removeEventsListeners();
+	      this.show = false;
+	    },
+	    removeEventsListeners: function removeEventsListeners() {
+	      this.eventsAdded.forEach(function (event) {
+	        event.el.removeEventListener(event.type, event.fn);
+	      });
+	      this.eventsAdded.length = 0;
+	    }
+	  },
+	  mixins: [_propFill2.default]
+	};
+
+/***/ },
+/* 106 */
+/***/ function(module, exports) {
+
+	module.exports = "<div v-show=\"show\" v-on:click.stop=\"cancel\" class=\"mdl-dialog-container\"><div v-on:click.stop=\"noAction\" class=\"mdl-dialog\"><div class=\"mdl-dialog__title\">{{title}}</div><div class=\"mdl-dialog__content\"><slot></slot></div><div v-el:actions=\"v-el:actions\" v-bind:class=\"{ &quot;mdl-dialog__actions--full-width&quot;: fullWidth }\" class=\"mdl-dialog__actions\"><slot name=\"actions\"><mdl-button class=\"mdl-js-ripple-effect\">Close</mdl-button></slot></div></div></div>";
 
 /***/ }
 /******/ ])
