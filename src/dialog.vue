@@ -28,6 +28,7 @@ export default {
       type: String
     },
     displayOn: {
+      required: true,
       type: String
     },
     fullWidth: {
