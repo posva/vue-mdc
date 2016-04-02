@@ -144,7 +144,8 @@ export default {
         name: 'Custom Components',
         icon: 'extension',
         items: [
-          'Selects'
+          'Selects',
+          'Dialogs'
         ]
       },
       {

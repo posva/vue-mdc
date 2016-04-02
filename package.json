@@ -81,6 +81,7 @@
     "vue-html-loader": "^1.1.0",
     "vue-loader": "^8.1.1",
     "vue-style-loader": "^1.0.0",
+    "vue-transfer-dom": "^1.1.0",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.1",

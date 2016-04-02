@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueTransferDom from 'vue-transfer-dom'
 import hljs from 'highlight.js/lib/highlight'
 import path from 'path'
 import vmdl from '../../src/vue-mdl'
@@ -10,6 +11,7 @@ require('material-design-lite/material.min.js')
 
 let context = require.context('./partials', false, /.vue$/)
 
+Vue.use(VueTransferDom)
 vmdl.registerAll(Vue)
 
 Vue.component('title-link', require('./utils/title-link.vue'))
