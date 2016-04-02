@@ -18,7 +18,7 @@ import mdlMenuItem from './menu/menu-item.vue'
 import mdlCard from './card.vue'
 import mdlSnackbar from './snackbar.vue'
 import mdlSelect from './select.vue'
-import mdlDialogs from './dialogs.vue'
+import mdlDialog from './dialog.vue'
 
 const vmdl = {
   components: {
@@ -38,7 +38,7 @@ const vmdl = {
     mdlCard,
     mdlSnackbar,
     mdlSelect,
-    mdlDialogs
+    mdlDialog
   },
   directives: {
     mdl,
@@ -98,4 +98,4 @@ export const MdlMenuItem = mdlMenuItem
 export const MdlCard = mdlCard
 export const MdlSnackbar = mdlSnackbar
 export const MdlSelect = mdlSelect
-export const MdlDialogs = mdlDialogs
+export const MdlDialog = mdlDialog
