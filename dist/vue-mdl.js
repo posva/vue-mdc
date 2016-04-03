@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define([], factory);
+		define("VueMdl", [], factory);
 	else if(typeof exports === 'object')
-		exports["vmdl"] = factory();
+		exports["VueMdl"] = factory();
 	else
-		root["vmdl"] = factory();
+		root["VueMdl"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -59,25 +59,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlCheckbox = exports.MdlRippleEffect = exports.MdlBadge = exports.Mdl = undefined;
+	exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlCheckbox = exports.MdlRippleEffect = exports.MdlBadge = exports.Mdl = exports.directives = exports.components = undefined;
 	
-	var _badge = __webpack_require__(1);
+	var _keys = __webpack_require__(1);
+	
+	var _keys2 = _interopRequireDefault(_keys);
+	
+	var _badge = __webpack_require__(13);
 	
 	var _badge2 = _interopRequireDefault(_badge);
 	
-	var _mdl = __webpack_require__(2);
+	var _mdl = __webpack_require__(14);
 	
 	var _mdl2 = _interopRequireDefault(_mdl);
 	
-	var _rippleEffect = __webpack_require__(3);
+	var _rippleEffect = __webpack_require__(15);
 	
 	var _rippleEffect2 = _interopRequireDefault(_rippleEffect);
 	
-	var _checkbox = __webpack_require__(4);
+	var _checkbox = __webpack_require__(16);
 	
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 	
-	var _radio = __webpack_require__(8);
+	var _radio = __webpack_require__(20);
 	
 	var _radio2 = _interopRequireDefault(_radio);
 	
@@ -143,90 +147,239 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var vmdl = {
-	  components: {
-	    mdlCheckbox: _checkbox2.default,
-	    mdlSwitch: _switch2.default,
-	    mdlIconToggle: _iconToggle2.default,
-	    mdlRadio: _radio2.default,
-	    mdlProgress: _progress2.default,
-	    mdlButton: _button2.default,
-	    mdlAnchorButton: _anchorButton2.default,
-	    mdlSpinner: _spinner2.default,
-	    mdlSlider: _slider2.default,
-	    mdlTextfield: _textfield2.default,
-	    mdlTooltip: _tooltip2.default,
-	    mdlMenu: _menu2.default,
-	    mdlMenuItem: _menuItem2.default,
-	    mdlCard: _card2.default,
-	    mdlSnackbar: _snackbar2.default,
-	    mdlSelect: _select2.default,
-	    mdlDialog: _dialog2.default
-	  },
-	  directives: {
-	    mdl: _mdl2.default,
-	    mdlBadge: _badge2.default,
-	    mdlRippleEffect: _rippleEffect2.default
-	  },
-	
-	  register: function register(Vue, name) {
-	    var comp = void 0,
-	        func = void 0,
-	        that = void 0;
-	    that = this;
-	    var setComp = function setComp(name) {
-	      if (name in that.components) {
-	        comp = that.components[name];
-	        func = 'component';
-	      } else if (name in that.directives) {
-	        comp = that.directives[name];
-	        func = 'directive';
-	      }
-	    };
-	    setComp(name);
-	    if (!comp) {
-	      name = 'mdl' + name[0].toUpperCase() + name.substr(1);
-	      setComp(name);
-	      if (!comp) {
-	        throw new Error('Cannot register component ' + name + " because it doesn't exist");
-	      }
-	    }
-	    return Vue[func](name, comp);
-	  },
-	  registerAll: function registerAll(Vue) {
-	    for (var comp in this.components) {
-	      Vue.component(comp, this.components[comp]);
-	    }
-	    for (var dir in this.directives) {
-	      Vue.directive(dir, this.directives[dir]);
-	    }
-	  }
+	var components = exports.components = {
+	  MdlCheckbox: _checkbox2.default,
+	  MdlSwitch: _switch2.default,
+	  MdlIconToggle: _iconToggle2.default,
+	  MdlRadio: _radio2.default,
+	  MdlProgress: _progress2.default,
+	  MdlButton: _button2.default,
+	  MdlAnchorButton: _anchorButton2.default,
+	  MdlSpinner: _spinner2.default,
+	  MdlSlider: _slider2.default,
+	  MdlTextfield: _textfield2.default,
+	  MdlTooltip: _tooltip2.default,
+	  MdlMenu: _menu2.default,
+	  MdlMenuItem: _menuItem2.default,
+	  MdlCard: _card2.default,
+	  MdlSnackbar: _snackbar2.default,
+	  MdlSelect: _select2.default,
+	  MdlDialog: _dialog2.default
 	};
 	
-	exports.default = vmdl;
-	var Mdl = exports.Mdl = _mdl2.default;
-	var MdlBadge = exports.MdlBadge = _badge2.default;
-	var MdlRippleEffect = exports.MdlRippleEffect = _rippleEffect2.default;
-	var MdlCheckbox = exports.MdlCheckbox = _checkbox2.default;
-	var MdlSwitch = exports.MdlSwitch = _switch2.default;
-	var MdlRadio = exports.MdlRadio = _radio2.default;
-	var MdlIconToggle = exports.MdlIconToggle = _iconToggle2.default;
-	var MdlButton = exports.MdlButton = _button2.default;
-	var MdlAnchorButton = exports.MdlAnchorButton = _anchorButton2.default;
-	var MdlProgress = exports.MdlProgress = _progress2.default;
-	var MdlSpinner = exports.MdlSpinner = _spinner2.default;
-	var MdlSlider = exports.MdlSlider = _slider2.default;
-	var MdlTextfield = exports.MdlTextfield = _textfield2.default;
-	var MdlTooltip = exports.MdlTooltip = _tooltip2.default;
-	var MdlMenu = exports.MdlMenu = _menu2.default;
-	var MdlMenuItem = exports.MdlMenuItem = _menuItem2.default;
-	var MdlCard = exports.MdlCard = _card2.default;
-	var MdlSnackbar = exports.MdlSnackbar = _snackbar2.default;
-	var MdlSelect = exports.MdlSelect = _select2.default;
-	var MdlDialog = exports.MdlDialog = _dialog2.default;
+	var directives = exports.directives = {
+	  Mdl: _mdl2.default,
+	  MdlBadge: _badge2.default,
+	  MdlRippleEffect: _rippleEffect2.default
+	};
+	
+	exports.default = {
+	  install: function install(Vue) {
+	    (0, _keys2.default)(components).forEach(function (name) {
+	      Vue.component(name, components[name]);
+	    });
+	    (0, _keys2.default)(directives).forEach(function (name) {
+	      Vue.directive(name, directives[name]);
+	    });
+	  }
+	};
+	exports.Mdl = _mdl2.default;
+	exports.MdlBadge = _badge2.default;
+	exports.MdlRippleEffect = _rippleEffect2.default;
+	exports.MdlCheckbox = _checkbox2.default;
+	exports.MdlSwitch = _switch2.default;
+	exports.MdlRadio = _radio2.default;
+	exports.MdlIconToggle = _iconToggle2.default;
+	exports.MdlButton = _button2.default;
+	exports.MdlAnchorButton = _anchorButton2.default;
+	exports.MdlProgress = _progress2.default;
+	exports.MdlSpinner = _spinner2.default;
+	exports.MdlSlider = _slider2.default;
+	exports.MdlTextfield = _textfield2.default;
+	exports.MdlTooltip = _tooltip2.default;
+	exports.MdlMenu = _menu2.default;
+	exports.MdlMenuItem = _menuItem2.default;
+	exports.MdlCard = _card2.default;
+	exports.MdlSnackbar = _snackbar2.default;
+	exports.MdlSelect = _select2.default;
+	exports.MdlDialog = _dialog2.default;
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(2), __esModule: true };
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(3);
+	module.exports = __webpack_require__(9).Object.keys;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.2.14 Object.keys(O)
+	var toObject = __webpack_require__(4);
+	
+	__webpack_require__(6)('keys', function($keys){
+	  return function keys(it){
+	    return $keys(toObject(it));
+	  };
+	});
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.13 ToObject(argument)
+	var defined = __webpack_require__(5);
+	module.exports = function(it){
+	  return Object(defined(it));
+	};
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	// 7.2.1 RequireObjectCoercible(argument)
+	module.exports = function(it){
+	  if(it == undefined)throw TypeError("Can't call method on  " + it);
+	  return it;
+	};
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// most Object methods by ES6 should accept primitives
+	var $export = __webpack_require__(7)
+	  , core    = __webpack_require__(9)
+	  , fails   = __webpack_require__(12);
+	module.exports = function(KEY, exec){
+	  var fn  = (core.Object || {})[KEY] || Object[KEY]
+	    , exp = {};
+	  exp[KEY] = exec(fn);
+	  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
+	};
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global    = __webpack_require__(8)
+	  , core      = __webpack_require__(9)
+	  , ctx       = __webpack_require__(10)
+	  , PROTOTYPE = 'prototype';
+	
+	var $export = function(type, name, source){
+	  var IS_FORCED = type & $export.F
+	    , IS_GLOBAL = type & $export.G
+	    , IS_STATIC = type & $export.S
+	    , IS_PROTO  = type & $export.P
+	    , IS_BIND   = type & $export.B
+	    , IS_WRAP   = type & $export.W
+	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
+	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
+	    , key, own, out;
+	  if(IS_GLOBAL)source = name;
+	  for(key in source){
+	    // contains in native
+	    own = !IS_FORCED && target && key in target;
+	    if(own && key in exports)continue;
+	    // export native or passed
+	    out = own ? target[key] : source[key];
+	    // prevent global pollution for namespaces
+	    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+	    // bind timers to global for call from export context
+	    : IS_BIND && own ? ctx(out, global)
+	    // wrap global constructors for prevent change them in library
+	    : IS_WRAP && target[key] == out ? (function(C){
+	      var F = function(param){
+	        return this instanceof C ? new C(param) : C(param);
+	      };
+	      F[PROTOTYPE] = C[PROTOTYPE];
+	      return F;
+	    // make static versions for prototype methods
+	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+	    if(IS_PROTO)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
+	  }
+	};
+	// type bitmap
+	$export.F = 1;  // forced
+	$export.G = 2;  // global
+	$export.S = 4;  // static
+	$export.P = 8;  // proto
+	$export.B = 16; // bind
+	$export.W = 32; // wrap
+	module.exports = $export;
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+	var global = module.exports = typeof window != 'undefined' && window.Math == Math
+	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	var core = module.exports = {version: '1.2.6'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// optional / simple context binding
+	var aFunction = __webpack_require__(11);
+	module.exports = function(fn, that, length){
+	  aFunction(fn);
+	  if(that === undefined)return fn;
+	  switch(length){
+	    case 1: return function(a){
+	      return fn.call(that, a);
+	    };
+	    case 2: return function(a, b){
+	      return fn.call(that, a, b);
+	    };
+	    case 3: return function(a, b, c){
+	      return fn.call(that, a, b, c);
+	    };
+	  }
+	  return function(/* ...args */){
+	    return fn.apply(that, arguments);
+	  };
+	};
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	module.exports = function(it){
+	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
+	  return it;
+	};
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	module.exports = function(exec){
+	  try {
+	    return !!exec();
+	  } catch(e){
+	    return true;
+	  }
+	};
+
+/***/ },
+/* 13 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -274,7 +427,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 2 */
+/* 14 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -289,7 +442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 3 */
+/* 15 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -304,16 +457,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 4 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(5)
+	__vue_script__ = __webpack_require__(17)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/toggles/checkbox.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(7)
+	__vue_template__ = __webpack_require__(19)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -332,7 +485,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 5 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -341,7 +494,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _toggle = __webpack_require__(6);
+	var _toggle = __webpack_require__(18);
 	
 	var _toggle2 = _interopRequireDefault(_toggle);
 	
@@ -356,7 +509,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 6 */
+/* 18 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -394,17 +547,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 7 */
+/* 19 */
 /***/ function(module, exports) {
 
 	module.exports = "<label v-bind:for.once=\"id\" v-bind:class=\"{ &quot;is-disabled&quot;: disabled, &quot;is-checked&quot;: isChecked }\" class=\"mdl-checkbox mdl-js-checkbox\"><input v-bind:value=\"value\" type=\"checkbox\" v-bind:id.once=\"id\" v-model=\"checked\" v-bind:disabled=\"disabled\" class=\"mdl-checkbox__input\"/><span class=\"mdl-checkbox__label\"><slot></slot></span></label>";
 
 /***/ },
-/* 8 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(9)
+	__vue_script__ = __webpack_require__(21)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
@@ -428,7 +581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 9 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -437,7 +590,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
@@ -471,7 +624,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 10 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -480,7 +633,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _keys = __webpack_require__(11);
+	var _keys = __webpack_require__(1);
 	
 	var _keys2 = _interopRequireDefault(_keys);
 	
@@ -519,180 +672,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }
 	    }
-	  }
-	};
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(12), __esModule: true };
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(13);
-	module.exports = __webpack_require__(19).Object.keys;
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(14);
-	
-	__webpack_require__(16)('keys', function($keys){
-	  return function keys(it){
-	    return $keys(toObject(it));
-	  };
-	});
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(15);
-	module.exports = function(it){
-	  return Object(defined(it));
-	};
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	// 7.2.1 RequireObjectCoercible(argument)
-	module.exports = function(it){
-	  if(it == undefined)throw TypeError("Can't call method on  " + it);
-	  return it;
-	};
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// most Object methods by ES6 should accept primitives
-	var $export = __webpack_require__(17)
-	  , core    = __webpack_require__(19)
-	  , fails   = __webpack_require__(22);
-	module.exports = function(KEY, exec){
-	  var fn  = (core.Object || {})[KEY] || Object[KEY]
-	    , exp = {};
-	  exp[KEY] = exec(fn);
-	  $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
-	};
-
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global    = __webpack_require__(18)
-	  , core      = __webpack_require__(19)
-	  , ctx       = __webpack_require__(20)
-	  , PROTOTYPE = 'prototype';
-	
-	var $export = function(type, name, source){
-	  var IS_FORCED = type & $export.F
-	    , IS_GLOBAL = type & $export.G
-	    , IS_STATIC = type & $export.S
-	    , IS_PROTO  = type & $export.P
-	    , IS_BIND   = type & $export.B
-	    , IS_WRAP   = type & $export.W
-	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
-	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
-	    , key, own, out;
-	  if(IS_GLOBAL)source = name;
-	  for(key in source){
-	    // contains in native
-	    own = !IS_FORCED && target && key in target;
-	    if(own && key in exports)continue;
-	    // export native or passed
-	    out = own ? target[key] : source[key];
-	    // prevent global pollution for namespaces
-	    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
-	    // bind timers to global for call from export context
-	    : IS_BIND && own ? ctx(out, global)
-	    // wrap global constructors for prevent change them in library
-	    : IS_WRAP && target[key] == out ? (function(C){
-	      var F = function(param){
-	        return this instanceof C ? new C(param) : C(param);
-	      };
-	      F[PROTOTYPE] = C[PROTOTYPE];
-	      return F;
-	    // make static versions for prototype methods
-	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-	    if(IS_PROTO)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
-	  }
-	};
-	// type bitmap
-	$export.F = 1;  // forced
-	$export.G = 2;  // global
-	$export.S = 4;  // static
-	$export.P = 8;  // proto
-	$export.B = 16; // bind
-	$export.W = 32; // wrap
-	module.exports = $export;
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-	var global = module.exports = typeof window != 'undefined' && window.Math == Math
-	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
-	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	var core = module.exports = {version: '1.2.6'};
-	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// optional / simple context binding
-	var aFunction = __webpack_require__(21);
-	module.exports = function(fn, that, length){
-	  aFunction(fn);
-	  if(that === undefined)return fn;
-	  switch(length){
-	    case 1: return function(a){
-	      return fn.call(that, a);
-	    };
-	    case 2: return function(a, b){
-	      return fn.call(that, a, b);
-	    };
-	    case 3: return function(a, b, c){
-	      return fn.call(that, a, b, c);
-	    };
-	  }
-	  return function(/* ...args */){
-	    return fn.apply(that, arguments);
-	  };
-	};
-
-/***/ },
-/* 21 */
-/***/ function(module, exports) {
-
-	module.exports = function(it){
-	  if(typeof it != 'function')throw TypeError(it + ' is not a function!');
-	  return it;
-	};
-
-/***/ },
-/* 22 */
-/***/ function(module, exports) {
-
-	module.exports = function(exec){
-	  try {
-	    return !!exec();
-	  } catch(e){
-	    return true;
 	  }
 	};
 
@@ -783,7 +762,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
 	var IObject = __webpack_require__(31)
-	  , defined = __webpack_require__(15);
+	  , defined = __webpack_require__(5);
 	module.exports = function(it){
 	  return IObject(defined(it));
 	};
@@ -814,7 +793,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	var LIBRARY        = __webpack_require__(34)
-	  , $export        = __webpack_require__(17)
+	  , $export        = __webpack_require__(7)
 	  , redefine       = __webpack_require__(35)
 	  , hide           = __webpack_require__(36)
 	  , has            = __webpack_require__(40)
@@ -940,7 +919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(22)(function(){
+	module.exports = !__webpack_require__(12)(function(){
 	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
@@ -989,7 +968,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var store  = __webpack_require__(44)('wks')
 	  , uid    = __webpack_require__(45)
-	  , Symbol = __webpack_require__(18).Symbol;
+	  , Symbol = __webpack_require__(8).Symbol;
 	module.exports = function(name){
 	  return store[name] || (store[name] =
 	    Symbol && Symbol[name] || (Symbol || uid)('Symbol.' + name));
@@ -999,7 +978,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global = __webpack_require__(18)
+	var global = __webpack_require__(8)
 	  , SHARED = '__core-js_shared__'
 	  , store  = global[SHARED] || (global[SHARED] = {});
 	module.exports = function(key){
@@ -1043,7 +1022,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var toInteger = __webpack_require__(48)
-	  , defined   = __webpack_require__(15);
+	  , defined   = __webpack_require__(5);
 	// true  -> String#at
 	// false -> String#codePointAt
 	module.exports = function(TO_STRING){
@@ -1077,7 +1056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var anObject = __webpack_require__(50)
 	  , get      = __webpack_require__(52);
-	module.exports = __webpack_require__(19).getIterator = function(it){
+	module.exports = __webpack_require__(9).getIterator = function(it){
 	  var iterFn = get(it);
 	  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
 	  return anObject(iterFn.call(it));
@@ -1108,7 +1087,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var classof   = __webpack_require__(53)
 	  , ITERATOR  = __webpack_require__(43)('iterator')
 	  , Iterators = __webpack_require__(29);
-	module.exports = __webpack_require__(19).getIteratorMethod = function(it){
+	module.exports = __webpack_require__(9).getIteratorMethod = function(it){
 	  if(it != undefined)return it[ITERATOR]
 	    || it['@@iterator']
 	    || Iterators[classof(it)];
@@ -1199,7 +1178,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
@@ -1349,7 +1328,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
@@ -1434,7 +1413,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
@@ -1501,7 +1480,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _toggle = __webpack_require__(6);
+	var _toggle = __webpack_require__(18);
 	
 	var _toggle2 = _interopRequireDefault(_toggle);
 	
@@ -1564,7 +1543,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
@@ -1663,7 +1642,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _toggle = __webpack_require__(6);
+	var _toggle = __webpack_require__(18);
 	
 	var _toggle2 = _interopRequireDefault(_toggle);
 	
@@ -1720,7 +1699,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
@@ -1809,7 +1788,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
@@ -2616,7 +2595,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(10);
+	var _propFill = __webpack_require__(22);
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
