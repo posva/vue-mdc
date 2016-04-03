@@ -45,8 +45,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl.js'
-
 export default {
   data () {
     return {
@@ -62,7 +60,6 @@ export default {
       href: 'http://vuejs.org'
     }
   },
-  components: vmdl.components,
   filters: {
     urlName (url) {
       return url.replace(/^(https?:)?\/\//i, '')

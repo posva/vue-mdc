@@ -29,8 +29,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
@@ -43,7 +41,6 @@ export default {
       let n = parseInt(this.badgeText, 10)
       return isNaN(n) || n <= 0
     }
-  },
-  directives: vmdl.directives
+  }
 }
 </script>

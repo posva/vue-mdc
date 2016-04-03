@@ -49,8 +49,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
@@ -68,8 +66,6 @@ export default {
     label () {
       return 'Can I fly? ' + (this.float ? 'Yes' : 'No')
     }
-  },
-  components: vmdl.components,
-  directives: vmdl.directives
+  }
 }
 </script>

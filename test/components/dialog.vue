@@ -31,8 +31,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl.js'
-
 export default {
   data () {
     return {
@@ -55,8 +53,6 @@ export default {
         return false
       }, () => this.number--)
     }
-  },
-  components: vmdl.components,
-  directives: vmdl.directives
+  }
 }
 </script>

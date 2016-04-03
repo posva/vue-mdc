@@ -23,8 +23,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
@@ -37,7 +35,6 @@ export default {
     indexId (num) {
       return 'id-' + num.toString()
     }
-  },
-  components: vmdl.components
+  }
 }
 </script>

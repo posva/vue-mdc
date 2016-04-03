@@ -19,8 +19,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
@@ -28,7 +26,6 @@ export default {
       buffer: 80,
       indeterminate: false
     }
-  },
-  components: vmdl.components
+  }
 }
 </script>

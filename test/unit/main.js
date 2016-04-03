@@ -1,5 +1,6 @@
 /* global describe */
 import Vue from 'vue'
+import VueMdl from '../../src/vue-mdl'
 require('material-design-lite/material.js')
 require('material-design-lite/material.css')
 
@@ -29,6 +30,7 @@ window.onload = function () {
   (window.mochaPhantomJS || window.mocha).run()
 }
 
+Vue.use(VueMdl)
 Vue.config.debug = true
 const app = new Vue({
   el: '#test',

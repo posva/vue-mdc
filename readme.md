@@ -18,41 +18,33 @@
 
 Reusable Vue components using [Material Design Lite](https://github.com/google/material-design-lite)
 
-__Warning__: This project is still under development. Contributions are welcome
+__Warning__: This project has not reached version 1 yet and there may be
+breaking changes until then. Contributions are welcome!
 
-vue-mdl tries to use the latest versions of material design lite and vue
+vue-mdl tries to use the latest versions of material design lite and vue.
 
 #Usage
 
 ```js
-// browserify/webpack require
-// Use vmdl if you're including vue-mdl directly into the browser
-var vmdl = require('vue-mdl');
-var Vue = require('vue');
+import VueMdl from 'vue-mdl'
+import Vue from 'vue'
 
-// Globally register the checkbox
-vmdl.register(Vue, 'mdl-checkbox');
-// Shorthand
-vmdl.register(Vue, 'checkbox');
-// Globally register all components and directives
-vmdl.registerAll(Vue);
+Vue.use(VueMdl)
 
-// Access any component or directive
-var checkbox = vmdl.components['mdl-checkbox'];
-var badge = vmdl.directives['mdl-badge'];
-var app = new Vue({
-  components: {
-    mdlCheckbox: checkbox
-  },
-  directives: {
-    mdlBadge: badge
+new Vue({
+  el: '#app',
+  data: {
+    checked: false
   }
-});
+})
 ```
 
 ```html
-<mdl-checkbox :checked='check'>Checkbox</mdl-checkbox>
+<mdl-checkbox :checked.sync='check'>Checkbox</mdl-checkbox>
 ```
+
+For more detailed usage about non es6 environments, check the
+[documentation](http://posva.net/vue-mdl/#usage).
 
 #Documentation
 
@@ -80,24 +72,7 @@ npm test
 npm run test:unit
 ```
 
-##End to End tests
-```bash
-npm run test:e2e
-```
-
-It is possible to test one single file by running the dev server in one terminal
-and `nightwatch` in another:
-```bash
-npm run dev-test
-```
-
-```bash
-PORT=8088 ./node_modules/.bin/nightwatch -c build/nightwatch.json --test test/e2e/checkbox.js
-```
-
 #Development
-
-Prefer unit tests over end to end tests.
 
 Run `npm run dev` to run a `webpack-dev-server` that will watch the project
 for modifications and create the bundles. You can then visit

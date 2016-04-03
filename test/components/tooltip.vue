@@ -30,16 +30,12 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
       active: true,
       color: false
     }
-  },
-  components: vmdl.components,
-  directives: vmdl.directives
+  }
 }
 </script>

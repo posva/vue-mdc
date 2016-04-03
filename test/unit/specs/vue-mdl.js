@@ -1,6 +1,7 @@
-/* global Vue describe expect it before app*/
+/* global Vue describe it before app*/
 import utils from '../utils'
-import mdl from '../../../src/vue-mdl'
+import VueMdl from '../../../src/vue-mdl'
+import { MdlCheckbox, MdlBadge, components, directives } from '../../../src/vue-mdl'
 
 describe('Register', function () {
   before(function (done) {
@@ -9,68 +10,40 @@ describe('Register', function () {
     .then(done, done)
   })
 
-  it('has register function', function () {
-    mdl.should.have.property('register')
-    mdl.should.have.property('registerAll')
+  it('exports single components', function () {
+    MdlCheckbox.should.exist.and.be.an.Object
+    MdlCheckbox.should.have.property('template')
   })
 
-  it('throws when name does not exist', function () {
-    (function () {
-      mdl.register(Vue, 'nope')
-    }).should.throw
+  it('exports single directives', function () {
+    MdlBadge.should.exist.and.be.an.Object
+    MdlBadge.should.have.property('bind')
   })
 
-  it('registers single components', function () {
-    expect(Vue.component('mdlCheckbox'))
-    .to.be.ko
-    mdl.register(Vue, 'mdlCheckbox')
-    .should.exist
-    Vue.component('mdlCheckbox')
-    .should.exist
-    expect(Vue.component('mdlRadio'))
-    .to.be.ko
+  it('exports all components', function () {
+    components.should.exist.and.be.an.Object
+    components.should.have.property('MdlCheckbox')
+    components.MdlCheckbox.should.eql(MdlCheckbox)
   })
 
-  it('registers single directives', function () {
-    expect(Vue.directive('mdlRippleEffect'))
-    .to.be.ko
-    mdl.register(Vue, 'mdlRippleEffect')
-    .should.exist
-    Vue.directive('mdlRippleEffect')
-    .should.exist
-    expect(Vue.directive('mdlBadge'))
-    .to.be.ko
+  it('exports all directives', function () {
+    directives.should.exist.and.be.an.Object
+    directives.should.have.property('MdlBadge')
+    directives.MdlBadge.should.eql(MdlBadge)
   })
 
-  it('registers single components with short name', function () {
-    expect(Vue.component('mdlRadio'))
-    .to.be.ko
-    mdl.register(Vue, 'radio')
-    .should.exist
-    Vue.component('mdlRadio')
-    .should.exist
+  it('exports a Vue plugin', function () {
+    VueMdl.should.have.property('install')
+    ;(function () {
+      Vue.use(VueMdl)
+    }).should.not.throw()
   })
 
-  it('registers single directives with short name', function () {
-    expect(Vue.directive('mdlBadge'))
-    .to.be.ko
-    mdl.register(Vue, 'badge')
-    .should.exist
-    Vue.directive('mdlBadge')
-    .should.exist
-    expect(Vue.directive('mdl'))
-    .to.be.ko
+  it('has registered components', function () {
+    Vue.component('MdlCheckbox').should.exist
   })
 
-  it('can register all components and directives', function () {
-    expect(Vue.directive('mdl'))
-    .to.be.ko
-    expect(Vue.component('mdlTooltip'))
-    .to.be.ko
-    mdl.registerAll(Vue)
-    Vue.component('mdlTooltip')
-    .should.exist
-    Vue.directive('mdl')
-    .should.exist
+  it('has registered directives', function () {
+    Vue.directive('MdlBadge').should.exist
   })
 })

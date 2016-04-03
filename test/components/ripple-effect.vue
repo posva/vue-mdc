@@ -10,15 +10,11 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
       check: true
     }
-  },
-  components: vmdl.components,
-  directives: vmdl.directives
+  }
 }
 </script>

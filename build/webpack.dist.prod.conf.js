@@ -4,8 +4,9 @@ var config = require('./webpack.base.conf')
 // naming output files with hashes for better caching.
 // dist/index.html will be auto-generated with correct URLs.
 config.output.filename = 'vue-mdl.min.js'
-config.output.library = 'vmdl'
+config.output.library = 'VueMdl'
 config.output.libraryTarget = 'umd'
+config.output.umdNamedDefine = true
 config.entry = './src/vue-mdl'
 
 // whether to generate source map for production files.

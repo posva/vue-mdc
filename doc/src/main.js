@@ -2,8 +2,9 @@ import Vue from 'vue'
 import VueTransferDom from 'vue-transfer-dom'
 import hljs from 'highlight.js/lib/highlight'
 import path from 'path'
-import vmdl from '../../src/vue-mdl'
-import vmdlDoc from './vmdl-doc.vue'
+// import VueMdl from '../../src/vue-mdl'
+import VueMdl from 'vue-mdl'
+import VmdlDoc from './vmdl-doc.vue'
 
 require('./style/mdl.scss')
 require('highlight.js/styles/tomorrow.css')
@@ -12,7 +13,7 @@ require('material-design-lite/material.min.js')
 let context = require.context('./partials', false, /.vue$/)
 
 Vue.use(VueTransferDom)
-vmdl.registerAll(Vue)
+Vue.use(VueMdl)
 
 Vue.component('title-link', require('./utils/title-link.vue'))
 Vue.directive('hljs', require('./utils/hljs'))
@@ -25,7 +26,7 @@ Vue.config.debug = true
 let app = new Vue({
   el: 'body',
   components: {
-    vmdlDoc
+    VmdlDoc
   }
 })
 

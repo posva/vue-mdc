@@ -32,8 +32,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
@@ -41,7 +39,6 @@ export default {
       size: 'Little',
       disabled: false
     }
-  },
-  components: vmdl.components
+  }
 }
 </script>
