@@ -5,29 +5,75 @@
 .section
   title-link Usage
   .section__content
+    p If you use a module bundler like
+      a(href='https://webpack.github.io/')  webpack
+      |  or
+      a(href='http://browserify.org/')  Browserify
+      | with babel (es6 support), you can import it and use it as a plugin:
+
     pre
       code.javascript.
-        var vmdl = require('vue-mdl');
-        var Vue = require('vue');
+        import VueMdl from 'vue-mdl'
 
-        // Globally register the checkbox
-        vmdl.register(Vue, 'mdl-checkbox');
-        // Shorthand
-        vmdl.register(Vue, 'checkbox');
-        // Globally register all components and directives
-        vmdl.registerAll(Vue);
+        Vue.use(VueMdl)
 
-        // Access any component or directive
-        var checkbox = vmdl.components['mdl-checkbox'];
-        var badge = vmdl.directives['mdl-badge'];
-        var app = new Vue({
+    p If you don't use es6, you'll have to use it this way:
+
+    pre
+      code.javascript.
+        // es5 webpack/browserify
+        var VueMdl = require('vue-mdl')
+
+        Vue.use(VueMdl.default)
+
+    p Using it as a plugin will include all components and directives. Vue MDL also exports
+      | a components and a directives properties containing all components and directives:
+
+    pre
+      code.javascript.
+        // es6
+        import { components, directives } from 'vue-mdl'
+
+        new Vue({
+          components,
+          directives
+        })
+
+        // es5
+        var VueMdl = require('vue-mdl')
+
+        new Vue({
+          components: VueMdl.components,
+          directives: VueMdl.directives
+        })
+
+    p You can also import individually any component or directive
+
+    pre
+      code.javascript.
+        // es6
+        import { MdlCheckbox, MdlBadge } from 'vue-mdl'
+
+        new Vue({
           components: {
-            mdlCheckbox: checkbox
+            MdlCheckbox
           },
           directives: {
-            mdlBadge: badge
+            MdlBadge
           }
-        });
+        })
+
+        // es5
+        var VueMdl = require('vue-mdl')
+
+        new Vue({
+          components: {
+            MdlCheckbox: VueMdl.MdlCheckbox
+          },
+          directives: {
+            MdlBadge: VueMdl.MdlBadge
+          }
+        })
 </template>
 
 <script>

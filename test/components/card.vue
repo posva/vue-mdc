@@ -60,7 +60,6 @@
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
 import utils from '../unit/utils'
 
 export default {
@@ -75,7 +74,6 @@ export default {
       supportingText: 'Here is some supporting text'
     }
   },
-  components: vmdl.components,
   directives: {
     attach: utils.attachDirective
   },

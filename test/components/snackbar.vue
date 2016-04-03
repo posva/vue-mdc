@@ -6,8 +6,6 @@ div
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
@@ -25,7 +23,6 @@ export default {
         timeout: 1000
       })
     }
-  },
-  components: vmdl.components
+  }
 }
 </script>

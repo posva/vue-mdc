@@ -58,8 +58,6 @@
 </template>
 
 <script>
-import vmdl from '../../src/vue-mdl'
-
 export default {
   data () {
     return {
@@ -75,8 +73,6 @@ export default {
       ]
     }
   },
-  directives: vmdl.directives,
-  components: vmdl.components,
   methods: {
     open () {
       this.$els.menu.MaterialMenu.handleForClick_()
