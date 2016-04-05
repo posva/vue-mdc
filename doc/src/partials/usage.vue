@@ -9,7 +9,7 @@
       a(href='https://webpack.github.io/')  webpack
       |  or
       a(href='http://browserify.org/')  Browserify
-      | with babel (es6 support), you can import it and use it as a plugin:
+      |  with babel (es6 support), you can import it and use it as a plugin:
 
     pre
       code.javascript.
