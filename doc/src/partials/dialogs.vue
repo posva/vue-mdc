@@ -91,7 +91,7 @@
         tr
           td.mdl-data-table__cell--non-numeric
             code  title
-          td.mdl-data-table__cell--non-numeric Title of the dialgo
+          td.mdl-data-table__cell--non-numeric Title of the dialog
           td.mdl-data-table__cell--non-numeric Optional
         tr
           td.mdl-data-table__cell--non-numeric
@@ -108,7 +108,7 @@
         tr
           td.mdl-data-table__cell--non-numeric
             code  cancellable
-          td.mdl-data-table__cell--non-numeric Make the dialgo dismissible by clicking outside of it
+          td.mdl-data-table__cell--non-numeric Make the dialog dismissible by clicking outside of it
           td.mdl-data-table__cell--non-numeric This prop doesn't need a value
 
     br
