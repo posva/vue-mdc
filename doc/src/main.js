@@ -16,7 +16,7 @@ Vue.use(VueTransferDom)
 Vue.use(VueMdl)
 
 Vue.component('title-link', require('./utils/title-link.vue'))
-Vue.directive('hljs', require('./utils/hljs'))
+Vue.directive('hljs', require('./utils/hljs').default)
 
 context.keys().forEach(function (comp) {
   Vue.component(path.basename(comp, '.vue'), context(comp))

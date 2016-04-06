@@ -31,6 +31,7 @@ a.title-link(:href.once='link', :id.once='id', :class='{"title-link--big": big}'
 
 <script>
 import _ from 'lodash'
+
 export default {
   props: ['big'],
   data () {

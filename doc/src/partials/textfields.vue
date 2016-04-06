@@ -8,7 +8,12 @@
 .section
   title-link Textfields
   .section__content
-    p The textfield component is highly customizable and allows you to use text inputs and textareas
+    p The textfield component is highly customizable and allows you to use text inputs and textareas.
+      | Instead of using the 
+      code v-model
+      |  directive you have to pass a two way prop named 
+      code value
+      | .
     .flex.center.wrap
       p Hello {{name}}
     .flex.start.wrap
