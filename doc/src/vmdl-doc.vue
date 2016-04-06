@@ -36,7 +36,7 @@ code.hljs
       font-weight: 800
       color: silver
 
-.mdl-data-table
+table.mdl-data-table
   white-space: pre-line
 a
   color: accent-color
