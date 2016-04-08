@@ -40,7 +40,7 @@ new Vue({
 ```
 
 ```html
-<mdl-checkbox :checked.sync='check'>Checkbox</mdl-checkbox>
+<mdl-checkbox :checked.sync='checked'>Checkbox</mdl-checkbox>
 ```
 
 For more detailed usage about non es6 environments, check the

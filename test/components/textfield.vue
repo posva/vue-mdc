@@ -24,6 +24,7 @@ div
       input#sample6.mdl-textfield__input(type='text')
       label.mdl-textfield__label(for='sample6') Expandable Input
   h3 vue
+  mdl-textfield#testme(@change='test' v-on:keyup.left='test(rows, $event)', :value.sync='testme' floating-label="TEST ME")
   mdl-textfield#fly(label='I fly' floating-label)
   mdl-textfield#fly2(floating-label='I fly')
   mdl-textfield#fly-label-dyn(:floating-label='dynFloat')
@@ -59,12 +60,18 @@ export default {
       text: 'Hello textfield',
       pattern: '[0-9]*',
       error: 'Nope',
-      multiText: 'Hello\nmultiline'
+      multiText: 'Hello\nmultiline',
+      testme: ''
     }
   },
   computed: {
     label () {
       return 'Can I fly? ' + (this.float ? 'Yes' : 'No')
+    }
+  },
+  methods: {
+    test () {
+      console.log('Test works', this, arguments)
     }
   }
 }
