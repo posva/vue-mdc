@@ -219,4 +219,15 @@ describe('Textfield', function () {
       return utils.nextTick()
     }).then(done, done)
   })
+
+  it('updates mdl classes when value is changed outside of the input', function (done) {
+    let testme = $('#testme').parent().parent()
+    testme.should.not.have.class('is-dirty')
+    vm.testme = 'hello'
+    utils.nextTick()
+    .then(function () {
+      testme.should.have.class('is-dirty')
+      return utils.nextTick()
+    }).then(done, done)
+  })
 })
