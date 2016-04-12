@@ -1,5 +1,5 @@
 <template lang="jade">
-.mdl-textfield.mdl-js-textfield(v-bind:class='{"mdl-textfield--floating-label": floatingLabel, "mdl-textfield--expandable": expandable, "is-dirty": value}')
+.mdl-textfield.mdl-js-textfield(v-bind:class='{"mdl-textfield--floating-label": floatingLabel, "mdl-textfield--expandable": expandable, "is-dirty": isDirty}')
   slot(v-if='expandable' name='expandable-button')
     label.mdl-button.mdl-js-button.mdl-button--icon(v-bind:for.once='id')
       i.material-icons {{expandable}}
@@ -40,6 +40,11 @@ export default {
     },
     floatingLabel: {
       required: false
+    }
+  },
+  computed: {
+    isDirty () {
+      return '' + this.value
     }
   },
   ready () {

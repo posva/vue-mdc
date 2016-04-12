@@ -227,6 +227,18 @@ describe('Textfield', function () {
     utils.nextTick()
     .then(function () {
       testme.should.have.class('is-dirty')
+      vm.testme = ''
+      return utils.nextTick()
+    }).then(done, done)
+  })
+
+  it('shows the label when value is zero', function (done) {
+    let testme = $('#testme').parent().parent()
+    testme.should.not.have.class('is-dirty')
+    vm.testme = 0
+    utils.nextTick()
+    .then(function () {
+      testme.should.have.class('is-dirty')
       return utils.nextTick()
     }).then(done, done)
   })
