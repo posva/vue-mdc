@@ -1,7 +1,12 @@
 /* global Vue describe it before app*/
 import utils from '../utils'
-import VueMdl from '../../../src/vue-mdl'
-import { MdlCheckbox, MdlBadge, components, directives } from '../../../src/vue-mdl'
+import {
+  default as VueMdl,
+  MdlCheckbox,
+  MdlBadge,
+  components,
+  directives
+} from '../../../src/vue-mdl'
 
 describe('Register', function () {
   before(function (done) {

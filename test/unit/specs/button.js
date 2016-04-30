@@ -44,7 +44,7 @@ describe('Button', function () {
   })
 
   it('can be an anchor link', function () {
-    $('a#anchor-button') .should.exist
+    $('a#anchor-button').should.exist
   })
 
   it('can be colored', function (done) {
