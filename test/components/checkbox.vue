@@ -12,6 +12,7 @@ div
   // We can also use the jade syntax #id for literal ids
   mdl-checkbox.added-class(id='check-dyn' v-bind:checked.sync='check') Dynamic {{check}}
   mdl-checkbox(id='check' v-bind:checked.sync='check' v-bind:disabled='disabled') Check me
+  mdl-checkbox#number(v-bind:checked.sync='numCheck') My value is a number
   input#classic(type='checkbox' v-model='check')
   span Classic checkbox
   input#disable(type='checkbox' v-model='disabled')
@@ -25,6 +26,7 @@ div
 export default {
   data () {
     return {
+      numCheck: 0,
       check: true,
       checks: [],
       disabled: false

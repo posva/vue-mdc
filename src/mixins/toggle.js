@@ -1,9 +1,7 @@
 export default {
   props: {
     checked: {
-      validator (value) {
-        return typeof value === 'boolean' || value instanceof Array
-      },
+      type: [Array, Boolean, Number],
       required: true,
       twoWay: true
     },
@@ -17,10 +15,10 @@ export default {
   },
   computed: {
     isChecked () {
-      if (typeof this.checked === 'boolean') {
-        return this.checked
-      } else {
+      if (this.checked instanceof Array) {
         return this.checked.indexOf(this.value) >= 0
+      } else {
+        return this.checked
       }
     }
   }

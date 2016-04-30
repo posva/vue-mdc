@@ -113,4 +113,17 @@ describe('Checkbox', function () {
       return utils.nextTick()
     }).then(done, done)
   })
+
+  // adding another test break phantomjs...
+  // TODO move to karma
+  it.skip('can start with a numeric value', function (done) {
+    let numCheck = $('#number')
+    vm.numCheck.should.be.eql(0)
+    numCheck.should.not.be.checked
+    vm.numCheck = 1
+    utils.nextTick()
+    .then(function () {
+      numCheck.should.be.checked
+    }).then(done, done)
+  })
 })
