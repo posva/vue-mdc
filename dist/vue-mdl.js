@@ -512,7 +512,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 18 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -520,10 +520,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = {
 	  props: {
 	    checked: {
-	      validator: function validator(value) {
-	        return typeof value === 'boolean' || value instanceof Array;
-	      },
-	
+	      type: [Array, Boolean, Number],
 	      required: true,
 	      twoWay: true
 	    },
@@ -537,10 +534,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  computed: {
 	    isChecked: function isChecked() {
-	      if (typeof this.checked === 'boolean') {
-	        return this.checked;
-	      } else {
+	      if (this.checked instanceof Array) {
 	        return this.checked.indexOf(this.value) >= 0;
+	      } else {
+	        return this.checked;
 	      }
 	    }
 	  }
@@ -1729,6 +1726,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      required: false
 	    }
 	  },
+	  computed: {
+	    isDirty: function isDirty() {
+	      return '' + this.value;
+	    }
+	  },
 	  ready: function ready() {
 	    var _this = this;
 	
@@ -1748,7 +1750,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 79 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-bind:class=\"{&quot;mdl-textfield--floating-label&quot;: floatingLabel, &quot;mdl-textfield--expandable&quot;: expandable, &quot;is-dirty&quot;: value}\" class=\"mdl-textfield mdl-js-textfield\"><slot v-if=\"expandable\" name=\"expandable-button\"><label v-bind:for.once=\"id\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons\">{{expandable}}</i></label></slot><div v-bind:class=\"{&quot;mdl-textfield__expandable-holder&quot;: expandable}\"><slot v-if=\"textarea\" name=\"textarea\"><textarea type=\"text\" v-model=\"value\" v-bind:id.once=\"id\" v-bind:rows=\"rows\" class=\"mdl-textfield__input\"></textarea></slot><slot v-else=\"v-else\" name=\"input\"><input v-bind:type=\"type\" v-model=\"value\" v-bind:id.once=\"id\" v-bind:pattern=\"pattern\" class=\"mdl-textfield__input\"/></slot><slot name=\"label\"><label v-bind:for.once=\"id\" class=\"mdl-textfield__label\">{{label}}</label></slot><slot name=\"error\"><label v-if=\"error\" class=\"mdl-textfield__error\">{{error}}</label></slot></div></div>";
+	module.exports = "<div v-bind:class=\"{&quot;mdl-textfield--floating-label&quot;: floatingLabel, &quot;mdl-textfield--expandable&quot;: expandable, &quot;is-dirty&quot;: isDirty}\" class=\"mdl-textfield mdl-js-textfield\"><slot v-if=\"expandable\" name=\"expandable-button\"><label v-bind:for.once=\"id\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons\">{{expandable}}</i></label></slot><div v-bind:class=\"{&quot;mdl-textfield__expandable-holder&quot;: expandable}\"><slot v-if=\"textarea\" name=\"textarea\"><textarea type=\"text\" v-model=\"value\" v-bind:id.once=\"id\" v-bind:rows=\"rows\" class=\"mdl-textfield__input\"></textarea></slot><slot v-else=\"v-else\" name=\"input\"><input v-bind:type=\"type\" v-model=\"value\" v-bind:id.once=\"id\" v-bind:pattern=\"pattern\" class=\"mdl-textfield__input\"/></slot><slot name=\"label\"><label v-bind:for.once=\"id\" class=\"mdl-textfield__label\">{{label}}</label></slot><slot name=\"error\"><label v-if=\"error\" class=\"mdl-textfield__error\">{{error}}</label></slot></div></div>";
 
 /***/ },
 /* 80 */
