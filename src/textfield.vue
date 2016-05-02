@@ -7,7 +7,7 @@
     slot(v-if='textarea' name='textarea')
       textarea.mdl-textfield__input(type='text' v-model='value' v-bind:id.once='id' v-bind:rows='rows')
     slot(v-else name='input')
-      input.mdl-textfield__input(v-bind:type='type' v-model='value' v-bind:id.once='id' v-bind:pattern='pattern')
+      input.mdl-textfield__input(v-bind:type='type' v-model='value' v-bind:id.once='id' v-bind:pattern='pattern' v-bind:disabled='disabled' v-bind:readonly='readonly')
     slot(name='label')
       label.mdl-textfield__label(v-bind:for.once='id') {{label}}
     slot(name='error')
@@ -31,6 +31,16 @@ export default {
     id: String,
     value: {
       required: false
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    readonly: {
+      type: Boolean,
+      required: false,
+      default: false
     },
     label: String,
     pattern: String,
