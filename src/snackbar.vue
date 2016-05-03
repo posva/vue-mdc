@@ -14,6 +14,6 @@ export default {
     this.$on(this.displayOn, (snackarConfig) => {
       this.$el.MaterialSnackbar.showSnackbar(snackarConfig)
     })
-  },
+  }
 }
 </script>

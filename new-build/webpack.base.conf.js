@@ -5,7 +5,7 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './src/vue-mdl.js'
+    app: './src/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -16,7 +16,9 @@ module.exports = {
     extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
-      'src': path.resolve(__dirname, '../src')
+      'src': path.resolve(__dirname, '../src'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'components': path.resolve(__dirname, '../src/components')
     }
   },
   resolveLoader: {
@@ -53,23 +55,23 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.css$/,
-        loader: 'vue-style!css'
-      },
-      {
         test: /\.html$/,
         loader: 'vue-html'
       },
       {
-        test: /\.scss$/,
-        loaders: ['vue-style', 'css', 'sass']
-      },
-      {
-        test: /\.(png|jpg|svg|gif)(\?embed)?$/,
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {
           limit: 10000,
-          name: '[name].[ext]?[hash:7]'
+          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url',
+        query: {
+          limit: 10000,
+          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
     ]
