@@ -136,6 +136,16 @@
             code type
           td.mdl-data-table__cell--non-numeric Defines the type of the input
           td.mdl-data-table__cell--non-numeric Defaults to text. Only works on non-textarea
+        tr
+          td.mdl-data-table__cell--non-numeric
+            code disabled
+          td.mdl-data-table__cell--non-numeric Disables the input
+          td.mdl-data-table__cell--non-numeric Add it without any value or bind it to a Boolean
+        tr
+          td.mdl-data-table__cell--non-numeric
+            code readonly
+          td.mdl-data-table__cell--non-numeric Makes the input readonly
+          td.mdl-data-table__cell--non-numeric Add it without any value or bind it to a Boolean
     br
 </template>
 
