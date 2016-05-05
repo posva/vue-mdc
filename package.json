@@ -6,13 +6,13 @@
   "scripts": {
     "test": "npm run test:unit",
     "test:e2e": "./build/e2e.sh",
-    "test:unit": "./build/unit.sh",
+    "test:unit": "karma start test/unit/karma.conf.js --single-run",
     "test:chrome": "./build/e2e.sh chrome",
     "test:firefox": "./build/e2e.sh firefox",
     "build": "npm run build:dev && npm run build:prod",
     "build:prod": "webpack --bail --progress --hide-modules --config build/webpack.dist.prod.conf.js",
     "build:dev": "webpack --bail --progress --hide-modules --config build/webpack.dist.dev.conf.js",
-    "dev": "node build/dev-server.js",
+    "dev": "karma start test/unit/karma.dev.conf.js",
     "dev:e2e": "node build/e2e-server.js",
     "dev:doc": "node build/doc-server.js",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.conf.js"
@@ -70,6 +70,7 @@
     "jade": "^1.11.0",
     "jquery": "^2.2.3",
     "karma": "^0.13.22",
+    "karma-chai-dom": "^1.1.0",
     "karma-coverage": "^0.5.5",
     "karma-mocha": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.0",
