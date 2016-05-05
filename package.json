@@ -5,6 +5,7 @@
   "main": "dist/vue-mdl.js",
   "scripts": {
     "test": "npm run test:unit",
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "test:e2e": "./build/e2e.sh",
     "test:unit": "karma start test/unit/karma.conf.js --single-run",
     "test:chrome": "./build/e2e.sh chrome",
