@@ -1,5 +1,5 @@
 import Select from '../../components/Select'
-import { vueTest } from '../utils'
+import { vueTest, delay } from '../utils'
 
 describe('Select', () => {
   let vm
@@ -36,7 +36,7 @@ describe('Select', () => {
     let changes = vm.changes
     select.click()
     vm.nextTick().then(() => {
-      return vm.timeout(100)
+      return delay(100)
     }).then(() => {
       menuUl.should.have.css('clip').match(/rect\(0(px)? [^0]/)
       menuUl.find('li:first').click()

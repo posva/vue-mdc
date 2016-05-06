@@ -26,7 +26,7 @@ export function nextTick (vm) {
   })
 }
 
-export function timeout (timeout) {
+export function delay (timeout) {
   return new Promise(function (resolve) {
     setTimeout(resolve, timeout)
   })
