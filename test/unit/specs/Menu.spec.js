@@ -1,7 +1,7 @@
 import Menu from '../../components/Menu'
 import { vueTest } from '../utils'
 
-describe('Menu', function () {
+describe('Menu', () => {
   let vm
   let menu
   before(() => {
@@ -9,11 +9,11 @@ describe('Menu', function () {
     menu = vm.$('[for=v-menu]')
   })
 
-  it('exists', function () {
+  it('exists', () => {
     menu.should.exist
   })
 
-  it('is upgraded', function () {
+  it('is upgraded', () => {
     menu.should.have.class('mdl-menu')
     menu.should.have.attr('data-upgraded')
     .match(/MaterialMenu/)
