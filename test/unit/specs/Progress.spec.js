@@ -1,4 +1,4 @@
-import Progress from '../../components/progress'
+import Progress from '../../components/Progress'
 import { vueTest } from '../utils'
 
 describe('Progress', () => {

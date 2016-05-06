@@ -1,4 +1,4 @@
-import Badge from '../../components/badge'
+import Badge from '../../components/Badge'
 import { vueTest } from '../utils'
 
 describe('Badge', () => {
