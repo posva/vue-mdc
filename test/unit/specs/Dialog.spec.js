@@ -1,15 +1,12 @@
-/* global describe it before $ app vm*/
-import utils from '../utils'
+import Dialog from '../../components/Dialog'
+import { vueTest } from '../utils'
 
 describe('Dialog', function () {
-  let info = null
-  before(function (done) {
-    app.currentComponent = 'dialog'
-    utils.nextTick()
-    .then(function () {
-      info = $('#info')
-      done()
-    })
+  let vm
+  let info
+  before(() => {
+    vm = vueTest(Dialog)
+    info = vm.$('#info')
   })
 
   it('exists and is hidden', function () {
@@ -19,71 +16,71 @@ describe('Dialog', function () {
 
   it('shows with an event', function (done) {
     vm.$broadcast('infoMessage')
-    utils.nextTick()
+    vm.nextTick()
     .then(function () {
       info.should.be.visible
-      info.find('button').click()
-      return utils.nextTick()
+      info.querySelector('button').click()
+      return vm.nextTick()
     }).then(function () {
       info.should.not.be.visible
     }).then(done, done)
   })
 
   it('has a title', function () {
-    info.find('.mdl-dialog__title').should.have.text('Info message')
+    info.querySelector('.mdl-dialog__title').should.have.text('Info message')
   })
 
   it('has a description', function () {
-    info.find('.mdl-dialog__content').should.have.text('This is a modal example')
+    info.querySelector('.mdl-dialog__content').should.have.text('This is a modal example')
   })
 
   it('call a callback', function (done) {
-    const modal = $('#callback')
+    const modal = vm.$('#callback')
     vm.number.should.be.eql(0)
     vm.$broadcast('messageWithCallback', () => vm.number++)
-    utils.nextTick()
+    vm.nextTick()
     .then(function () {
       vm.number.should.be.eql(0)
-      modal.find('button').click()
-      return utils.nextTick()
+      modal.querySelector('button').click()
+      return vm.nextTick()
     }).then(function () {
       vm.number.should.be.eql(1)
     }).then(done, done)
   })
 
   it('calls a callback without closing', function (done) {
-    const modal = $('#multiple')
+    const modal = vm.$('#multiple')
     vm.number = 0
     vm.$broadcast('multipleActionsMessage', () => {
       vm.number++
       return false
     }, () => vm.number--)
     modal.should.not.be.visible
-    utils.nextTick()
+    vm.nextTick()
     .then(function () {
       vm.number.should.be.eql(0)
       modal.should.be.visible
-      modal.find('button:nth-child(1)').click()
-      return utils.nextTick()
+      modal.querySelector('button:nth-child(1)').click()
+      return vm.nextTick()
     }).then(function () {
       modal.should.be.visible
       vm.number.should.be.eql(1)
-      modal.find('button:nth-child(1)').click()
-      return utils.nextTick()
+      modal.querySelector('button:nth-child(1)').click()
+      return vm.nextTick()
     }).then(function () {
       modal.should.be.visible
       vm.number.should.be.eql(2)
-      modal.find('button:nth-child(2)').click()
-      return utils.nextTick()
+      modal.querySelector('button:nth-child(2)').click()
+      return vm.nextTick()
     }).then(function () {
       modal.should.not.be.visible
       vm.number.should.be.eql(1)
-      return utils.nextTick()
+      return vm.nextTick()
     }).then(done, done)
   })
 
   it('calls a different function when cancelling', function (done) {
-    let modal = $('#cancellable')
+    let modal = vm.$('#cancellable')
     vm.number = 0
     vm.$broadcast('cancellableMessage', function () {
       vm.number = 10
@@ -93,14 +90,14 @@ describe('Dialog', function () {
 
     let modalVm = vm.$children[5]
 
-    utils.nextTick()
+    vm.nextTick()
     .then(function () {
       modal.should.be.visible
       vm.number.should.be.eql(0)
       modalVm.cancel()
       // This doesn't work on phantomjs
       // modal.click()
-      return utils.nextTick()
+      return vm.nextTick()
     }).then(function () {
       modal.should.not.be.visible
       vm.number.should.be.eql(5)
@@ -109,16 +106,16 @@ describe('Dialog', function () {
       }, function () {
         vm.number = 5
       })
-      return utils.nextTick()
+      return vm.nextTick()
     }).then(function () {
       modal.should.be.visible
       vm.number.should.be.eql(5)
-      modal.find('button').click()
-      return utils.nextTick()
+      modal.querySelector('button').click()
+      return vm.nextTick()
     }).then(function () {
       modal.should.not.be.visible
       vm.number.should.be.eql(10)
-      return utils.nextTick()
+      return vm.nextTick()
     }).then(done, done)
   })
 })
