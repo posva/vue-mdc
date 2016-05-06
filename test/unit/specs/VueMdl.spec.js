@@ -1,5 +1,4 @@
-/* global Vue describe it before app*/
-import utils from '../utils'
+import Vue from 'vue'
 import {
   default as VueMdl,
   MdlCheckbox,
@@ -8,47 +7,39 @@ import {
   directives
 } from '../../../src/vue-mdl'
 
-describe('Register', function () {
-  before(function (done) {
-    app.currentComponent = 'none'
-    utils.nextTick()
-    .then(done, done)
-  })
-
-  it('exports single components', function () {
+describe('Register', () => {
+  it('exports single components', () => {
     MdlCheckbox.should.exist.and.be.an.Object
     MdlCheckbox.should.have.property('template')
   })
 
-  it('exports single directives', function () {
+  it('exports single directives', () => {
     MdlBadge.should.exist.and.be.an.Object
     MdlBadge.should.have.property('bind')
   })
 
-  it('exports all components', function () {
+  it('exports all components', () => {
     components.should.exist.and.be.an.Object
     components.should.have.property('MdlCheckbox')
     components.MdlCheckbox.should.eql(MdlCheckbox)
   })
 
-  it('exports all directives', function () {
+  it('exports all directives', () => {
     directives.should.exist.and.be.an.Object
     directives.should.have.property('MdlBadge')
     directives.MdlBadge.should.eql(MdlBadge)
   })
 
-  it('exports a Vue plugin', function () {
+  it('exports a Vue plugin', () => {
     VueMdl.should.have.property('install')
-    ;(function () {
-      Vue.use(VueMdl)
-    }).should.not.throw()
+    ;(() => Vue.use(VueMdl)).should.not.throw()
   })
 
-  it('has registered components', function () {
+  it('has registered components', () => {
     Vue.component('MdlCheckbox').should.exist
   })
 
-  it('has registered directives', function () {
+  it('has registered directives', () => {
     Vue.directive('MdlBadge').should.exist
   })
 })
