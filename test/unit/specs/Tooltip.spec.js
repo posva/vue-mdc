@@ -1,4 +1,4 @@
-import Tooltip from '../../components/tooltip'
+import Tooltip from '../../components/Tooltip'
 import { vueTest } from '../utils'
 
 describe('Tooltip', () => {
