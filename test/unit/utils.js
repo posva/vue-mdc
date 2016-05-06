@@ -11,8 +11,10 @@ export function vueTest (Component) {
     })
   }
 
-  const vm = new Class()
-  vm.$mount()
+  const vm = new Class({
+    replace: false,
+    el: 'body'
+  })
 
   return vm
 }

@@ -8,6 +8,7 @@ testsContext.keys().forEach(testsContext)
 
 import Vue from 'vue'
 import VueMdl from '../../src/vue-mdl'
+require('material-design-lite/material.js')
 
 Vue.use(VueMdl)
 
