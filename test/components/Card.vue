@@ -28,7 +28,7 @@
   br
   p Normal card
   mdl-card#card(:title='title',
-    v-attach:card,
+    v-ref:card,
     v-el:card,
     :subtitle='subtitle',
     :media='media',
@@ -60,8 +60,6 @@
 </template>
 
 <script>
-import utils from '../unit/utils'
-
 export default {
   data () {
     return {
@@ -73,9 +71,6 @@ export default {
       media: '//www.getmdl.io/assets/demos/image_card.jpg',
       supportingText: 'Here is some supporting text'
     }
-  },
-  directives: {
-    attach: utils.attachDirective
   },
   events: {
     cardMenu () {
