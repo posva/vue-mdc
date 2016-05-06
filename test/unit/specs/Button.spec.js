@@ -1,35 +1,32 @@
-/* global describe it before vm $ app*/
-import utils from '../utils'
+import Button from '../../components/button'
+import { vueTest } from '../utils'
 
-const propChecker = function (prop) {
-  let but = $('#button')
-  but.should.not.have.class('mdl-button--' + prop)
-  let variable = prop
-  if (prop === 'mini-fab') {
-    variable = 'miniFab'
-  }
-  vm[variable] = true
-  return utils.nextTick()
-  .then(function () {
-    but.should.have.class('mdl-button--' + prop)
-    vm[variable] = false
-    return utils.nextTick()
-  }).then(function () {
-    but.should.not.have.class('mdl-button--' + prop)
-    return utils.nextTick()
-  })
-}
 
 describe('Button', function () {
-  let button = null
-  before(function (done) {
-    app.currentComponent = 'button'
-    return utils.nextTick()
-    .then(function () {
-      button = $('#button')
-      return done()
+  let vm
+  let button
+  function propChecker  (prop) {
+    let but = vm.$('#button')
+    but.should.not.have.class('mdl-button--' + prop)
+    let variable = prop
+    if (prop === 'mini-fab') {
+      variable = 'miniFab'
     }
-    )
+    vm[variable] = true
+    return vm.nextTick()
+      .then(function () {
+        but.should.have.class('mdl-button--' + prop)
+        vm[variable] = false
+        return vm.nextTick()
+      }).then(function () {
+        but.should.not.have.class('mdl-button--' + prop)
+        return vm.nextTick()
+      })
+  }
+
+  before(() => {
+    vm = vueTest(Button)
+    button = vm.$('#button')
   })
 
   it('exists', function () {
@@ -44,7 +41,7 @@ describe('Button', function () {
   })
 
   it('can be an anchor link', function () {
-    $('a#anchor-button').should.exist
+    vm.$('a#anchor-button').should.exist
   })
 
   it('can be colored', function (done) {
@@ -83,7 +80,7 @@ describe('Button', function () {
   })
 
   it('applies classes even with empty strings in props', function () {
-    let but = $('#html-button')
+    let but = vm.$('#html-button')
     but.should.have.class('mdl-button--raised')
     but.should.have.class('mdl-button--colored')
     but.should.not.have.class('mdl-button--accent')
