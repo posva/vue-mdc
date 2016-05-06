@@ -61,7 +61,6 @@ describe('Card', () => {
     .should.have.lengthOf(0)
   })
   it('can have no menu', () => {
-    debugger
     emptyCard.querySelectorAll('.mdl-card__menu')
     .should.have.lengthOf(0)
   })
@@ -157,7 +156,6 @@ describe('Card', () => {
     should.exist(card.querySelector('.mdl-card__actions button.mdl-button'))
     vm.nextTick()
     .then(() => {
-      debugger
       should.not.exist(card.querySelector('.mdl-card__actions button.mdl-button'))
       should.exist(card.querySelector('.mdl-card__actions a.mdl-button'))
       vm.actions = 'http://google.com'
