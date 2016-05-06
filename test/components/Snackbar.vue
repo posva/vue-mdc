@@ -13,7 +13,6 @@ export default {
   },
   methods: {
     sendMail () {
-      const that = this
       this.$broadcast('mailSent', {
         message: 'Message Sent',
         actionHandler: (event) => {
