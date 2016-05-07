@@ -9,7 +9,7 @@ div
   mdl-select#select-val(label='Country', :value.sync='countryVal', :options='countries')
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

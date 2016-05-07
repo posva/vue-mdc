@@ -16,7 +16,7 @@ div
   label(for='#color') Single Color
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

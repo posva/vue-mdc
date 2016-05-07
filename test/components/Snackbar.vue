@@ -5,7 +5,7 @@ div
   mdl-button(@click='sendMail') Send
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

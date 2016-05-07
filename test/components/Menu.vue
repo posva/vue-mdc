@@ -57,7 +57,7 @@
   mdl-button.mdl-js-ripple-effect(raised colored @click='addOption') Add Option
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

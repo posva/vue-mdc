@@ -30,7 +30,7 @@ div
   span Disable
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

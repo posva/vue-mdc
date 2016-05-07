@@ -9,7 +9,7 @@ div
   mdl-icon-toggle#icon-toggle-ripple(v-mdl-ripple-effect v-bind:checked.sync='check' icon='add')
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

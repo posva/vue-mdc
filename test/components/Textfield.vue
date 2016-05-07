@@ -49,7 +49,7 @@ div
   mdl-checkbox(:checked.sync='float') Float
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

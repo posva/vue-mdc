@@ -20,6 +20,9 @@ var webpackConfig = merge(baseConfig, {
     loaders: {
       js: 'isparta'
     }
+  },
+  isparta: {
+    excludes: ['**/test/**']
   }
 })
 
@@ -36,10 +39,9 @@ webpackConfig.module.preLoaders.unshift({
 })
 
 // only apply babel for test files when using isparta
-webpackConfig.module.loaders.some(function (loader, i) {
+webpackConfig.module.loaders.forEach(function (loader, i) {
   if (loader.loader === 'babel') {
     loader.include = /test\/unit/
-    return true
   }
 })
 

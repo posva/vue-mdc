@@ -31,7 +31,7 @@ div
   span Little
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

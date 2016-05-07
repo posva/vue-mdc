@@ -44,7 +44,7 @@ div
   br
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

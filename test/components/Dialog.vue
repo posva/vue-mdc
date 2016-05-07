@@ -30,7 +30,7 @@ div
         mdl-button.mdl-js-ripple-effect Close
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

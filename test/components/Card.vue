@@ -59,7 +59,7 @@
   mdl-card(supporting-text='This card has no title \n Ha ha')
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

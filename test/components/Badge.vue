@@ -28,7 +28,7 @@ div
   label(for='badge-hide') Hide
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {

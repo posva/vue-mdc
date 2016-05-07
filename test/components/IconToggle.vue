@@ -25,7 +25,7 @@ div
   p#its {{checks | json}}
 </template>
 
-<script>
+<script lang="babel">
 export default {
   data () {
     return {
