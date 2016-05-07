@@ -5,6 +5,7 @@
   "main": "dist/vue-mdl.js",
   "scripts": {
     "test": "npm run test:unit",
+    "start": "node build/dev-server.js",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "test:e2e": "./build/e2e.sh",
     "test:unit": "karma start test/unit/karma.conf.js --single-run",
@@ -47,7 +48,6 @@
     "babel-runtime": "^6.6.1",
     "bluebird": "^3.3.5",
     "chai": "^3.5.0",
-    "chai-jquery": "^2.0.0",
     "chromedriver": "2.21.2",
     "connect-history-api-fallback": "^1.2.0",
     "css-loader": "^0.23.1",
@@ -69,7 +69,6 @@
     "inject-loader": "^2.0.1",
     "isparta-loader": "^2.0.0",
     "jade": "^1.11.0",
-    "jquery": "^2.2.3",
     "karma": "^0.13.22",
     "karma-chai-dom": "^1.1.0",
     "karma-coverage": "^0.5.5",
