@@ -1,0 +1,27 @@
+<template lang="jade">
+div
+  h1 Snackbar
+  mdl-snackbar#snackbar(display-on='mailSent')
+  mdl-button(@click='sendMail') Send
+</template>
+
+<script lang="babel">
+export default {
+  data () {
+    return {
+    }
+  },
+  methods: {
+    sendMail () {
+      this.$broadcast('mailSent', {
+        message: 'Message Sent',
+        actionHandler: (event) => {
+          // Stuff to do when the action is clicked
+        },
+        actionText: 'Undo',
+        timeout: 1000
+      })
+    }
+  }
+}
+</script>

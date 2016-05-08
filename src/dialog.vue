@@ -10,7 +10,6 @@
 </template>
 
 <script>
-/* global componentHandler*/
 import propFill from './mixins/prop-fill'
 import mdlButton from './button.vue'
 
@@ -24,7 +23,7 @@ export default {
     }
   },
   props: {
-    title:{
+    title: {
       type: String
     },
     displayOn: {
