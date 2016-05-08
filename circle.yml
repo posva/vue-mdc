@@ -15,3 +15,7 @@ deployment:
     branch: master
     commands:
       - ./build/gh-pages.sh
+  codecov:
+    branch: feature/karma
+    commands:
+      - bash <(curl -s https://codecov.io/bash)

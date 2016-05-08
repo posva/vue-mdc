@@ -10,7 +10,13 @@ module.exports = {
   'rules': {
     // allow paren-less arrow functions
     'arrow-parens': 0,
+    // allow arrow functions to return a value
+    'no-return-assign': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+  },
+  globals: {
+    componentHandler: true,
+    Event: true
   }
 }

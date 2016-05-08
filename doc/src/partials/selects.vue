@@ -54,8 +54,8 @@
                 value: 'es'
               },
               {
-              name: 'France',
-              value: 'fr'
+                name: 'France',
+                value: 'fr'
               },
               {
                 name: 'China',
@@ -87,8 +87,8 @@ export default {
           value: 'es'
         },
         {
-        name: 'France',
-        value: 'fr'
+          name: 'France',
+          value: 'fr'
         },
         {
           name: 'China',

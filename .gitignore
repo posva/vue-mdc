@@ -9,3 +9,4 @@ doc/doc-bundle.js
 doc/doc-bundle.js.map
 images/
 .tern-port
+npm-debug.log

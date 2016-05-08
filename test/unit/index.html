@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>Vue MDL Unit tests</title>
+  <title>Vue MDL</title>
+  <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +11,8 @@
 </head>
 
 <body>
-  <div id="mocha"></div>
-  <div id="test">
-    <div>
-      <span>Test {{currentTest}}</span>
-      <br>
-      <button @click='previous'>Previous</button>
-      <button @click='next'>Next</button>
-    </div>
-    <component v-attach :is='currentComponent'></component>
-  </div>
-  <!--files will be auto inserted-->
+  <app :components="components"></app>
+  <!-- built files will be auto injected -->
 </body>
 
 </html>

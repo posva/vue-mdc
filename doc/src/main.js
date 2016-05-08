@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueTransferDom from 'vue-transfer-dom'
 import hljs from 'highlight.js/lib/highlight'
 import path from 'path'
-// import VueMdl from '../../src/vue-mdl'
 import VueMdl from '../../src/vue-mdl'
 import VmdlDoc from './vmdl-doc.vue'
 
