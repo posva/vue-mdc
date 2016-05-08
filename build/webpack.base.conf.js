@@ -57,10 +57,6 @@ module.exports = {
         loader: 'vue-html'
       },
       {
-        test: /\.scss$/,
-        loaders: ['vue-style', 'css', 'sass']
-      },
-      {
         test: /\.(png|jpg|svg|gif)(\?embed)?$/,
         loader: 'url',
         query: {
