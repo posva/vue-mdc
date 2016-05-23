@@ -103,8 +103,7 @@ a
       a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl') NPM
   main.mdl-layout__content
     .page-content
-      content-entry(:menu='items[2]')
-      // content-entry(v-for='menu in items', :menu='menu')
+      content-entry(v-for='menu in items', :menu='menu')
 </template>
 
 <script>
