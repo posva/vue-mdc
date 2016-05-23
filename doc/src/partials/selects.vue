@@ -27,7 +27,7 @@
         })
 
     p Provide the options as an array of Values or as an array of objects
-      | with a&nbps;
+      | with a&nbsp;
       code name
       |  and a &nbsp;
       code value
