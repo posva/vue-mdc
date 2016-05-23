@@ -4,54 +4,41 @@ div
   br
   p Value is {{number}}
   #dialog
-    mdl-button(fab, primary, v-on:click='showInfo')
+    mdl-button(fab, primary, v-on:click='$refs.info.open')
       i.material-icons info
-    mdl-button(fab, primary, v-on:click='showMessageWithCallback')
-      i.material-icons plus_one
-    mdl-button(fab, primary, v-on:click='showMultipleActions')
+    mdl-button(fab, primary, v-on:click='$refs.multiple.open')
       i.material-icons more
-    mdl-button(fab, primary, v-on:click='showCancellable')
-      i.material-icons vignette
 
-    mdl-dialog#info(title='Info message' display-on='infoMessage')
+    div
+      p Events
+      ul
+        li(v-for='event in events') {{ event }}
+
+    mdl-dialog#info(v-ref:info v-on:close='closed' v-on:open='opened' title='Info message')
       p This is a modal example
 
-    mdl-dialog#cancellable(cancellable title='Info message' display-on='cancellableMessage')
-      p This is a modal example
-
-    mdl-dialog#callback(title='Increment' display-on='messageWithCallback')
-      p Value is incremented when you click the close button
-
-    mdl-dialog#multiple(title='Multiple Actions' display-on='multipleActionsMessage' full-width)
+    mdl-dialog#multiple(v-ref:multiple title='Multiple Actions' display-on='multipleActionsMessage' full-width)
       p You can specify multiple Actions
       template(slot='actions')
-        mdl-button.mdl-js-ripple-effect(primary colored) Increase
-        mdl-button.mdl-js-ripple-effect(colored) Decrease
-        mdl-button.mdl-js-ripple-effect Close
+        mdl-button.mdl-js-ripple-effect(@click='number++' primary colored) Increase
+        mdl-button.mdl-js-ripple-effect(@click='number--' colored) Decrease
+        mdl-button.mdl-js-ripple-effect(@click='$refs.multiple.close') Close
 </template>
 
 <script lang="babel">
 export default {
   data () {
     return {
-      number: 0
+      number: 0,
+      events: []
     }
   },
   methods: {
-    showInfo () {
-      this.$broadcast('infoMessage')
+    opened () {
+      this.events.push('opened')
     },
-    showCancellable () {
-      this.$broadcast('cancellableMessage')
-    },
-    showMessageWithCallback () {
-      this.$broadcast('messageWithCallback', () => this.number++)
-    },
-    showMultipleActions () {
-      this.$broadcast('multipleActionsMessage', () => {
-        this.number++
-        return false
-      }, () => this.number--)
+    closed () {
+      this.events.push('closed')
     }
   }
 }

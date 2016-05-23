@@ -4,6 +4,9 @@
   <a href="https://circleci.com/gh/posva/vue-mdl">
     <img alt="Circle CI" src="https://img.shields.io/circleci/project/posva/vue-mdl/develop.svg" />
   </a>
+  <a href="https://codecov.io/gh/posva/vue-mdl">
+    <img alt="Codecov Coverage" src="https://img.shields.io/codecov/c/github/posva/vue-mdl/develop.svg?maxAge=2592000" />
+  </a>
   <a href="https://www.npmjs.com/package/vue-mdl"><img src="https://img.shields.io/npm/dm/vue-mdl.svg" alt="Downloads per month"></a>
   <a href="http://waffle.io/posva/vue-mdl"><img src="https://badge.waffle.io/posva/vue-mdl.svg?label=ready&title=Ready" alt="Stories in Ready"></a>
   <br>
@@ -21,7 +24,7 @@ Reusable Vue components using [Material Design Lite](https://github.com/google/m
 __Warning__: This project has not reached version 1 yet and there may be
 breaking changes until then. Contributions are welcome!
 
-vue-mdl relies on the **last versions of vue and material design lite**. Make sure to have your modules up to date 😉 
+‼️ vue-mdl relies on the **last versions of vue and material design lite** but **does not include them**. Make sure to have your modules up to date 😉 and installed (**[Specially for MDL](https://getmdl.io/started/index.html#download)**). Remember to remove the `defer` attribute in case you copy pasted the lines from MDL Doc 😉. See [#20](https://github.com/posva/vue-mdl/issues/20).
 
 #Usage
 

@@ -19,7 +19,6 @@ describe('Textfield', () => {
   })
 
   it('is upgraded', () => {
-    debugger
     let parent = classic.parentElement.parentElement
     classic.should.have.class('mdl-textfield__input')
     parent.should.exist

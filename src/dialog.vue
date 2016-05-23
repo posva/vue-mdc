@@ -1,12 +1,12 @@
 <template lang="jade">
-.mdl-dialog-container(v-show='show' v-on:click.stop='cancel')
-  .mdl-dialog(v-on:click.stop='noAction')
+.mdl-dialog-container(v-show='show')
+  .mdl-dialog
     .mdl-dialog__title {{title}}
     .mdl-dialog__content
       slot
-    .mdl-dialog__actions(v-el:actions, v-bind:class='{ "mdl-dialog__actions--full-width": fullWidth }')
+    .mdl-dialog__actions(v-bind:class='{ "mdl-dialog__actions--full-width": fullWidth }')
       slot(name='actions')
-        mdl-button.mdl-js-ripple-effect Close
+        mdl-button.mdl-js-ripple-effect(v-on:click.stop='close') Close
 </template>
 
 <script>
@@ -26,15 +26,7 @@ export default {
     title: {
       type: String
     },
-    displayOn: {
-      required: true,
-      type: String
-    },
     fullWidth: {
-      fill: true,
-      default: false
-    },
-    cancellable: {
       fill: true,
       default: false
     }
@@ -43,52 +35,16 @@ export default {
     this.eventsAdded = []
     this.$on(this.displayOn, (...callbacks) => {
       this.show = !this.show
-      const actions = this.$els.actions.querySelectorAll('button, [data-action]')
-      this.cancelAction = null
-      if (this.cancellable) {
-        this.cancelAction = callbacks[actions.length] || callbacks[actions.length - 1]
-      }
-      Array.prototype.forEach.call(actions, (action, i) => {
-        let callback
-        if (callbacks[i]) {
-          callback = (event) => {
-            event.stopPropagation()
-            const ret = callbacks[i]()
-            if (ret !== false) this.close()
-          }
-        } else {
-          callback = () => this.close()
-        }
-        action.addEventListener('click', callback)
-        this.eventsAdded.push({
-          el: action,
-          type: 'click',
-          fn: callback
-        })
-      })
     })
   },
-  destroyed () {
-    this.removeEventsListeners()
-  },
   methods: {
-    noAction () {
-    },
-    cancel () {
-      if (this.cancellable) {
-        if (this.cancelAction) this.cancelAction()
-        this.close()
-      }
+    open () {
+      this.show = true
+      this.$emit('open')
     },
     close () {
-      this.removeEventsListeners()
       this.show = false
-    },
-    removeEventsListeners () {
-      this.eventsAdded.forEach((event) => {
-        event.el.removeEventListener(event.type, event.fn)
-      })
-      this.eventsAdded.length = 0
+      this.$emit('close')
     }
   },
   mixins: [propFill]
