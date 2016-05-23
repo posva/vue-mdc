@@ -2903,15 +2903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    title: {
 	      type: String
 	    },
-	    displayOn: {
-	      required: true,
-	      type: String
-	    },
 	    fullWidth: {
-	      fill: true,
-	      default: false
-	    },
-	    cancellable: {
 	      fill: true,
 	      default: false
 	    }
@@ -2921,59 +2913,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    this.eventsAdded = [];
 	    this.$on(this.displayOn, function () {
-	      for (var _len = arguments.length, callbacks = Array(_len), _key = 0; _key < _len; _key++) {
-	        callbacks[_key] = arguments[_key];
-	      }
-	
 	      _this.show = !_this.show;
-	      var actions = _this.$els.actions.querySelectorAll('button, [data-action]');
-	      _this.cancelAction = null;
-	      if (_this.cancellable) {
-	        _this.cancelAction = callbacks[actions.length] || callbacks[actions.length - 1];
-	      }
-	      Array.prototype.forEach.call(actions, function (action, i) {
-	        var callback = void 0;
-	        if (callbacks[i]) {
-	          callback = function callback(event) {
-	            event.stopPropagation();
-	            var ret = callbacks[i]();
-	            if (ret !== false) _this.close();
-	          };
-	        } else {
-	          callback = function callback() {
-	            return _this.close();
-	          };
-	        }
-	        action.addEventListener('click', callback);
-	        _this.eventsAdded.push({
-	          el: action,
-	          type: 'click',
-	          fn: callback
-	        });
-	      });
 	    });
-	  },
-	  destroyed: function destroyed() {
-	    this.removeEventsListeners();
 	  },
 	
 	  methods: {
-	    noAction: function noAction() {},
-	    cancel: function cancel() {
-	      if (this.cancellable) {
-	        if (this.cancelAction) this.cancelAction();
-	        this.close();
-	      }
+	    open: function open() {
+	      this.show = true;
+	      this.$emit('open');
 	    },
 	    close: function close() {
-	      this.removeEventsListeners();
 	      this.show = false;
-	    },
-	    removeEventsListeners: function removeEventsListeners() {
-	      this.eventsAdded.forEach(function (event) {
-	        event.el.removeEventListener(event.type, event.fn);
-	      });
-	      this.eventsAdded.length = 0;
+	      this.$emit('close');
 	    }
 	  },
 	  mixins: [_propFill2.default]
@@ -2983,7 +2934,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 120 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-show=\"show\" v-on:click.stop=\"cancel\" class=\"mdl-dialog-container\"><div v-on:click.stop=\"noAction\" class=\"mdl-dialog\"><div class=\"mdl-dialog__title\">{{title}}</div><div class=\"mdl-dialog__content\"><slot></slot></div><div v-el:actions=\"v-el:actions\" v-bind:class=\"{ &quot;mdl-dialog__actions--full-width&quot;: fullWidth }\" class=\"mdl-dialog__actions\"><slot name=\"actions\"><mdl-button class=\"mdl-js-ripple-effect\">Close</mdl-button></slot></div></div></div>";
+	module.exports = "<div v-show=\"show\" class=\"mdl-dialog-container\"><div class=\"mdl-dialog\"><div class=\"mdl-dialog__title\">{{title}}</div><div class=\"mdl-dialog__content\"><slot></slot></div><div v-bind:class=\"{ &quot;mdl-dialog__actions--full-width&quot;: fullWidth }\" class=\"mdl-dialog__actions\"><slot name=\"actions\"><mdl-button v-on:click.stop=\"close\" class=\"mdl-js-ripple-effect\">Close</mdl-button></slot></div></div></div>";
 
 /***/ }
 /******/ ])
