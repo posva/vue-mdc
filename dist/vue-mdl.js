@@ -519,7 +519,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 23 */
 /***/ function(module, exports) {
 
-	var core = module.exports = {version: '2.3.0'};
+	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
@@ -775,7 +775,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/toggles/checkbox.vue"
 	  if (!module.hot.data) {
@@ -868,7 +868,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/toggles/radio.vue"
 	  if (!module.hot.data) {
@@ -1405,7 +1405,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/button.vue"
 	  if (!module.hot.data) {
@@ -1521,7 +1521,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/anchor-button.vue"
 	  if (!module.hot.data) {
@@ -1575,7 +1575,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/progress.vue"
 	  if (!module.hot.data) {
@@ -1660,7 +1660,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/spinner.vue"
 	  if (!module.hot.data) {
@@ -1727,7 +1727,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/toggles/icon-toggle.vue"
 	  if (!module.hot.data) {
@@ -1790,7 +1790,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/slider.vue"
 	  if (!module.hot.data) {
@@ -1889,7 +1889,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/toggles/switch.vue"
 	  if (!module.hot.data) {
@@ -1946,7 +1946,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/textfield.vue"
 	  if (!module.hot.data) {
@@ -2052,7 +2052,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/tooltip.vue"
 	  if (!module.hot.data) {
@@ -2119,7 +2119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/menu/menu.vue"
 	  if (!module.hot.data) {
@@ -2169,7 +2169,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/menu/menu-item.vue"
 	  if (!module.hot.data) {
@@ -2214,7 +2214,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/card.vue"
 	  if (!module.hot.data) {
@@ -2337,7 +2337,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/snackbar.vue"
 	  if (!module.hot.data) {
@@ -2393,7 +2393,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/select.vue"
 	  if (!module.hot.data) {
@@ -2819,7 +2819,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "/Users/posva/vue-mdl/src/dialog.vue"
 	  if (!module.hot.data) {
