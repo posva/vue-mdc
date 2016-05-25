@@ -78,6 +78,19 @@ describe('Button', () => {
     .then(done, done)
   })
 
+  it('has the correct icon element when specified', (done) => {
+    let but = vm.$('#icon-button')
+    vm.icon = 'content_copy'
+
+    vm.nextTick().then(() => {
+      console.log(but)
+      let i = but.querySelector('i')
+      i.should.exist
+      i.should.have.class('material-icons')
+      i.should.have.text('content_copy')
+    }).then(done, done)
+  })
+
   it('applies classes even with empty strings in props', () => {
     let but = vm.$('#html-button')
     but.should.have.class('mdl-button--raised')
