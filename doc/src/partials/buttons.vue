@@ -6,7 +6,7 @@
   title-link Buttons
   .section__content
     p The button component allows to easily toggle classes. It supports the 
-      a(href='#ripple-effect')
+      a(v-link.literal='/ripple-effect')
         code ripple-effect
     .flex.start.wrap
       mdl-button.space Button

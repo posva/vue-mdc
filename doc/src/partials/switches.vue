@@ -6,7 +6,7 @@
   title-link Switches
   .section__content
     p Switches support the
-      a(href='#ripple-effect')  ripple effect
+      a(v-link.literal='/ripple-effect')  ripple effect
     .flex.start.wrap
       mdl-switch(:checked.sync='checked') Switch
       mdl-switch.mdl-js-ripple-effect(:checked.sync='checked') Ripple Effect

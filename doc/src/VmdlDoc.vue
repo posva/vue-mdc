@@ -38,8 +38,8 @@ code.hljs
 
 table.mdl-data-table
   white-space: pre-line
-a
-  color: accent-color
+p a
+  color: rgb(0, 150, 136)
   text-decoration: none
 .mdl-layout--fixed-drawer > .mdl-layout__header .mdl-layout__header-row
   padding: 1em
@@ -99,17 +99,16 @@ a
       i.material-icons link
       | Links
     nav.mdl-navigation
-      a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl') Github
-      a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl') NPM
+      a.mdl-navigation__link.mdl-navigation__link--icon(href='https://github.com/posva/vue-mdl' target='_blank') Github
+      a.mdl-navigation__link.mdl-navigation__link--icon(href='https://www.npmjs.com/package/vue-mdl' target='_blank') NPM
   main.mdl-layout__content
     .page-content
-      content-entry(v-for='menu in items', :menu='menu')
+      router-view
 </template>
 
 <script>
 /* global docsearch*/
 import menuEntry from './utils/menu-entry.vue'
-import contentEntry from './utils/content-entry.vue'
 
 export default {
   data () {
@@ -159,6 +158,7 @@ export default {
     }
   },
   ready () {
+    componentHandler.upgradeElement(this.$el)
     docsearch({
       apiKey: 'b3174bbc58c9406adac95c2cfef57702',
       indexName: 'vue-mdl',
@@ -166,8 +166,7 @@ export default {
     })
   },
   components: {
-    menuEntry,
-    contentEntry
+    menuEntry
   }
 }
 </script>

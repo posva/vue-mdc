@@ -1,9 +1,9 @@
 <template lang="jade">
-a.mdl-layout-title.mdl-layout-title--icon(:href.once='makeLink(menu.name)')
+span.mdl-layout-title.mdl-layout-title--icon
   i.material-icons {{menu.icon}}
   span {{menu.name}}
 nav.mdl-navigation(v-for='sub in menu.items')
-  a.mdl-navigation__link(:href.once='makeLink(sub)', @click='closeMenu()') {{sub}}
+  a.mdl-navigation__link(:href.once='makeLink(sub)', @click.prevent='go(sub)') {{sub}}
 </template>
 
 <script>
@@ -17,7 +17,11 @@ export default {
   },
   methods: {
     makeLink (text) {
-      return '#' + _.kebabCase(text)
+      return '/#!/' + _.kebabCase(text)
+    },
+    go (path) {
+      this.$router.go({ path: `/${_.kebabCase(path)}` })
+      this.closeMenu()
     },
     closeMenu () {
       if (this.$parent.$els.drawer.classList.contains('is-visible')) {

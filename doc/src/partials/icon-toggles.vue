@@ -6,9 +6,9 @@
   title-link Icon Toggles
   .section__content
     p The icon-toggle component works the same way as the
-      a(href='#checkboxes')  checkbox component
+      a(v-link.literal='/checkboxes')  checkbox component
       |. It also supports the
-      a(href='#ripple-effect')  ripple effect
+      a(v-link.literal='/ripple-effect')  ripple effect
     .flex.start.wrap
       mdl-icon-toggle(:checked.sync='bold', icon='format_bold')
       mdl-icon-toggle.mdl-js-ripple-effect(:checked.sync='italic', icon='format_italic')
