@@ -6,7 +6,7 @@
   title-link Radio Buttons
   .section__content
     p The radio button supports the
-      a(href='#ripple-effect')  ripple effect
+      a(v-link.literal='/ripple-effect')  ripple effect
     .flex.start.wrap
       mdl-radio(:checked.sync='checked', value='option 1') Option 1
     .flex.start.wrap

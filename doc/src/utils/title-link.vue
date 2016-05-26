@@ -22,7 +22,7 @@ a.title-link
 </style>
 
 <template lang="jade">
-a.title-link(:href.once='link', :id.once='id', :class='{"title-link--big": big}')
+a.title-link(v-link='link', :id.once='id', :class='{"title-link--big": big}')
   h2(v-if='big')
     slot
   h3(v-else)
@@ -41,7 +41,7 @@ export default {
   },
   computed: {
     link () {
-      return '#' + this.id
+      return '/' + this.id
     }
   },
   ready () {

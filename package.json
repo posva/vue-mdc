@@ -12,7 +12,6 @@
     "build:prod": "webpack --bail --progress --hide-modules --config build/webpack.dist.prod.conf.js",
     "build:dev": "webpack --bail --progress --hide-modules --config build/webpack.dist.dev.conf.js",
     "dev": "karma start test/unit/karma.dev.conf.js",
-    "dev:e2e": "node build/e2e-server.js",
     "dev:doc": "NODE_ENV=doc node build/dev-server.js",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.conf.js"
   },
@@ -92,6 +91,7 @@
     "vue-hot-reload-api": "^1.3.2",
     "vue-html-loader": "^1.2.2",
     "vue-loader": "^8.4.0",
+    "vue-router": "^0.7.13",
     "vue-style-loader": "^1.0.0",
     "vue-transfer-dom": "^1.1.0",
     "webpack": "^1.13.1",

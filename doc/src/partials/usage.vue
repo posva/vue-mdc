@@ -6,9 +6,9 @@
   title-link Usage
   .section__content
     p If you use a module bundler like
-      a(href='https://webpack.github.io/')  webpack
+      a(target='_blank' href='https://webpack.github.io/')  webpack
       |  or
-      a(href='http://browserify.org/')  Browserify
+      a(target='_blank' href='http://browserify.org/')  Browserify
       |  with babel (es6 support), you can import it and use it as a plugin:
 
     pre
