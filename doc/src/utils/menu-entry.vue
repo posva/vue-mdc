@@ -3,7 +3,7 @@ span.mdl-layout-title.mdl-layout-title--icon
   i.material-icons {{menu.icon}}
   span {{menu.name}}
 nav.mdl-navigation(v-for='sub in menu.items')
-  a.mdl-navigation__link(:href.once='makeLink(sub)', @click.prevent='go(sub)') {{sub}}
+  a.mdl-navigation__link(v-link='makeLink(sub)' @click='closeMenu') {{sub}}
 </template>
 
 <script>
@@ -17,11 +17,7 @@ export default {
   },
   methods: {
     makeLink (text) {
-      return '/#!/' + _.kebabCase(text)
-    },
-    go (path) {
-      this.$router.go({ path: `/${_.kebabCase(path)}` })
-      this.closeMenu()
+      return `/${_.kebabCase(text)}`
     },
     closeMenu () {
       if (this.$parent.$els.drawer.classList.contains('is-visible')) {
