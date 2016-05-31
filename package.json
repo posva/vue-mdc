@@ -12,6 +12,7 @@
     "build:prod": "webpack --bail --progress --hide-modules --config build/webpack.dist.prod.conf.js",
     "build:dev": "webpack --bail --progress --hide-modules --config build/webpack.dist.dev.conf.js",
     "dev": "karma start test/unit/karma.dev.conf.js",
+    "dev:integration": "node build/dev-server.js",
     "dev:doc": "NODE_ENV=doc node build/dev-server.js",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.conf.js"
   },
