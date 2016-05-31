@@ -31,12 +31,6 @@ export default {
       default: false
     }
   },
-  ready () {
-    this.eventsAdded = []
-    this.$on(this.displayOn, (...callbacks) => {
-      this.show = !this.show
-    })
-  },
   methods: {
     open () {
       this.show = true
