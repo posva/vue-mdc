@@ -77,18 +77,14 @@ npm run test:unit
 
 #Development
 
-Run `npm run dev` to run a `webpack-dev-server` that will watch the project
-for modifications and create the bundles. You can then visit
-[http://localhost:8080](http://localhost:8080).
+Run `npm run dev` and visit [http://localhost:8080](http://localhost:8080).
 
 Create tests pages inside `test/components`. Add unit tests to `test/unit/specs`
 and modify `test/unit/main.js` to load the test.
 
 You can also serve the tests pages without running the unit tests by running
-`npm run dev:test`.
-This will serve the tests at `localhost:8088`.
-You must add `#<component_name>` to the address. For instance, if you want to
-load the checkbox example you must go to `localhost:8088/#checkbox`
+`npm run dev:integration`. This makes easy to actually see and manually test
+components.
 
 #Contributing
 
