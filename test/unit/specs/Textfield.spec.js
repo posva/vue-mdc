@@ -233,4 +233,10 @@ describe('Textfield', () => {
       return vm.nextTick()
     }).then(done, done)
   })
+
+  it('binds a required attr', () => {
+    vm.$('#expandable').should.not.have.attr('required')
+    vm.$('#required').should.have.attr('required')
+    vm.$('#required-textarea').should.have.attr('required')
+  })
 })
