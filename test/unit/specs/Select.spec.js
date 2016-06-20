@@ -56,5 +56,14 @@ describe('Select', () => {
       return vm.nextTick()
     }).then(done, done)
   })
+
+  it('can be reseted', (done) => {
+    select.should.not.have.value('')
+    vm.country = ''
+    vm.nextTick().then(() => {
+      select.should.have.value('')
+      return vm.nextTick()
+    }).then(done, done)
+  })
 })
 
