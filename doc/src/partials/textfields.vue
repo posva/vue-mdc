@@ -146,6 +146,11 @@
             code readonly
           td.mdl-data-table__cell--non-numeric Makes the input readonly
           td.mdl-data-table__cell--non-numeric Add it without any value or bind it to a Boolean
+        tr
+          td.mdl-data-table__cell--non-numeric
+            code maxlength
+          td.mdl-data-table__cell--non-numeric Defines the maxlength of the input or textarea
+          td.mdl-data-table__cell--non-numeric This uses html attribute maxlength
     br
 </template>
 

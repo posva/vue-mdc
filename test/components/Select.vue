@@ -20,6 +20,10 @@ export default {
       countriesArray: ['Russia', 'Spain', 'France', 'China'],
       countries: [
         {
+          name: 'Select One',
+          value: ''
+        },
+        {
           name: 'Russia',
           value: 'ru'
         },
