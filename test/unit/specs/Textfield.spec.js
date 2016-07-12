@@ -239,4 +239,10 @@ describe('Textfield', () => {
     vm.$('#required').should.have.attr('required')
     vm.$('#required-textarea').should.have.attr('required')
   })
+
+  it('binds maxlength attr', () => {
+    vm.$('#expandable').should.not.have.attr('maxlength')
+    vm.$('#maxlength-input').should.have.attr('maxlength', '10')
+    vm.$('#maxlength-textarea').should.have.attr('maxlength', '10')
+  })
 })

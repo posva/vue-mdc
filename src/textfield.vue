@@ -5,9 +5,9 @@
       i.material-icons {{expandable}}
   div(v-bind:class='{"mdl-textfield__expandable-holder": expandable}')
     slot(v-if='textarea' name='textarea')
-      textarea.mdl-textfield__input(type='text' v-model='value' v-bind:required='required' v-bind:id.once='id' v-bind:rows='rows')
+      textarea.mdl-textfield__input(type='text' v-model='value' v-bind:required='required' v-bind:id.once='id' v-bind:rows='rows' v-bind:maxlength='maxlength')
     slot(v-else name='input')
-      input.mdl-textfield__input(v-bind:type='type' v-model='value' v-bind:id.once='id' v-bind:pattern='pattern' v-bind:disabled='disabled' v-bind:required='required' v-bind:readonly='readonly')
+      input.mdl-textfield__input(v-bind:type='type' v-model='value' v-bind:id.once='id' v-bind:pattern='pattern' v-bind:disabled='disabled' v-bind:required='required' v-bind:readonly='readonly' v-bind:maxlength='maxlength')
     slot(name='label')
       label.mdl-textfield__label(v-bind:for.once='id') {{label}}
     slot(name='error')
@@ -20,6 +20,9 @@ import propFill from './mixins/prop-fill'
 
 export default {
   props: {
+    maxlength: {
+      required: false
+    },
     expandable: String,
     type: {
       type: String,

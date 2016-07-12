@@ -49,6 +49,8 @@ div
   mdl-checkbox(:checked.sync='float') Float
   <mdl-textfield :value.sync='requiredValue' id='required' floating-label='Required' required></mdl-textfield>
   <mdl-textfield :value.sync='requiredValue' id='required-textarea' floating-label='Required' required textarea></mdl-textfield>
+  mdl-textfield#maxlength-input(:value.sync='requiredValue', :maxlength='maxlength', floating-label="Maxlength")
+  mdl-textfield#maxlength-textarea(:value.sync='requiredValue', :maxlength='maxlength', floating-label="Maxlength" textarea)
 </template>
 
 <script lang="babel">
@@ -64,7 +66,8 @@ export default {
       error: 'Nope',
       multiText: 'Hello\nmultiline',
       testme: '',
-      requiredValue: ''
+      requiredValue: '',
+      maxlength: 10
     }
   },
   computed: {
