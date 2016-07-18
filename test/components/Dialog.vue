@@ -4,11 +4,11 @@ div
   br
   p Value is {{number}}
   #dialog
-    mdl-button(fab, primary, v-on:click='$refs.info.open')
+    mdl-button(fab, primary, v-on:click='open("info")')
       i.material-icons info
-    mdl-button(fab, primary, v-on:click='$refs.multiple.open')
+    mdl-button(fab, primary, v-on:click='open("multiple")')
       i.material-icons more
-    mdl-button(fab, primary, v-on:click='$refs.select.open')
+    mdl-button(fab, primary, v-on:click='open("select")')
       i.material-icons language
 
     div
@@ -62,6 +62,9 @@ export default {
     },
     closed () {
       this.events.push('closed')
+    },
+    open (ref) {
+      this.$refs[ref].open()
     }
   }
 }
