@@ -1,13 +1,15 @@
 <template>
   <div class="mdl-tabs is-upgraded">
+    <!-- Generated tab links -->
     <div class="mdl-tabs__tab-bar">
-      <tab-link class="mdl-tabs__tab"
-         :class="{ 'is-active': tab === selected }"
-         @click.prevent="selected = tab"
-         v-for="tab in tabs"
+      <tab-link
+          class="mdl-tabs__tab"
+          v-for="tab in tabs"
+          :class="{ 'is-active': $index === selected }"
+          @click.prevent="selected = $index"
       >{{tab}}</tab-link>
     </div>
-
+    <!-- Tabs content -->
     <slot></slot>
   </div>
 </template>
@@ -17,28 +19,20 @@ import propFill from '../mixins/prop-fill'
 import TabLink from './tab-link.vue'
 
 export default {
+  props: {
+    selected: Number,
+    twoWay: true
+  },
   data () {
     return {
-      shared: {
-        // use an object to share the same variable across tabs
-        selected: ''
-      },
       tabs: []
     }
   },
-  computed: {
-    selected: {
-      set (selected) {
-        this.shared.selected = selected
-      },
-      get () {
-        return this.shared.selected
-      }
-    }
-  },
   methods: {
+    isSelected (tab) {
+      return this.tabs.indexOf(tab) === this.selected
+    },
     addTab (tab) {
-      if (!this.selected) this.selected = tab
       this.tabs.push(tab)
     },
     removeTab (tab) {

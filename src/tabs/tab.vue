@@ -1,6 +1,6 @@
 <template>
   <div class="mdl-tabs__panel"
-       :class="{'is-active': selected === title }"
+       :class="{'is-active': selected }"
   >
     <slot></slot>
   </div>
@@ -8,14 +8,9 @@
 
 <script>
 export default {
-  data () {
-    return {
-      shared: this.$parent.shared
-    }
-  },
   computed: {
     selected () {
-      return this.shared.selected
+      return this.$parent.isSelected(this.title)
     }
   },
   props: {

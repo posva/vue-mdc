@@ -1,7 +1,7 @@
 import Tabs from '../../components/Tabs'
 import { vueTest } from '../utils'
 
-describe('Tabs', () => {
+describe.only('Tabs', () => {
   let vm, simple, three, dynamicTabs
   before((done) => {
     vm = vueTest(Tabs)
@@ -31,7 +31,7 @@ describe('Tabs', () => {
     panel.should.have.class('is-active')
   })
 
-  it.skip('updates selected tab', (done) => {
+  it('updates selected tab', (done) => {
     vm.selected = 1
     vm.nextTick().then(() => {
       const tab = getTab(simple, vm.selected)
