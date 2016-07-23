@@ -1,8 +1,7 @@
 <template>
   <a class="mdl-tabs__tab"
      href="#"
-  >
-    <slot></slot>
+  >{{tab.title}}
     <span v-el:ripple class="mdl-tabs__ripple-container mdl-js-ripple-effect">
       <span class="mdl-ripple"></span>
     </span>
@@ -11,6 +10,9 @@
 
 <script>
 export default {
+  props: {
+    tab: Object
+  },
   ready () {
     componentHandler.upgradeElement(this.$els.ripple, 'MaterialRipple')
   }

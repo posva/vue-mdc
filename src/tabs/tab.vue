@@ -7,23 +7,45 @@
 </template>
 
 <script>
+function tabToOject (tab) {
+  return typeof tab === 'string'
+       ? { id: tab, title: tab }
+       : { id: tab.id || tab.title, ...tab }
+}
+
 export default {
   computed: {
     selected () {
-      return this.$parent.isSelected(this.title)
+      return this.$parent.isSelected(this.tabData)
+    },
+    id () {
+      return typeof this.tab === 'string'
+           ? this.tab
+           : this.tab.id || this.tab.title
+    },
+    tabData () {
+      return tabToOject(this.tab)
     }
   },
   props: {
-    title: {
+    tab: {
       required: true,
-      type: String
+      type: [String, Object]
+    }
+  },
+  watch: {
+    tab (newTab, oldTab) {
+      this.$parent.updateTab(tabToOject(oldTab), this.tabData)
+      console.log(`${oldTab} -> ${newTab}`, this.tabData)
     }
   },
   ready () {
-    this.$parent.addTab(this.title)
+    this.$parent.addTab(this.tabData)
+    console.log('added', this.tabData.title, 'at', this.tabData.id)
   },
   beforeDestroy () {
-    this.$parent.removeTab(this.title)
+    console.log('removed', this.tabData.title, 'at', this.tabData.id)
+    this.$parent.removeTab(this.tabData)
   }
 }
 </script>
