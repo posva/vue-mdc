@@ -2,7 +2,7 @@
   <div>
     <h1>Tabs</h1>
 
-    <mdl-tabs id="tabs" :selected.sync="selected">
+    <mdl-tabs :no-ripple-effect="!ripples" id="tabs" :selected.sync="selected">
       <mdl-tab tab="Tab 1">
         Tab 1
       </mdl-tab>
@@ -21,7 +21,7 @@
 
     <mdl-tabs id="dyn-tabs" v-ref:tabs :selected.sync="selected">
       <mdl-tab
-          v-for="tab in tabs"
+          v-for="tab in dynTabs"
           track-by="$index"
           :tab="{title: tab, id: $index}"
       >
@@ -33,10 +33,11 @@
     <br>
 
     <button @click="addTab">Add Tab</button>
-    <div v-for="tab in tabs" track-by="$index">
+    <div v-for="tab in dynTabs" track-by="$index">
       <span>{{tab}}</span>
       <button @click="removeTab($index)">X</button>
     </div>
+    <input type="checkbox" v-model="ripples"> Ripples
   </div>
 </template>
 
@@ -45,19 +46,18 @@ export default {
   data () {
     return {
       selected: 'Tab 1',
+      ripples: true,
       tabIndex: 0,
-      tabs: []
+      tabs: [],
+      dynTabs: []
     }
   },
   methods: {
     addTab () {
-      this.tabs.push(`Tab ${++this.tabIndex}`)
+      this.dynTabs.push(`Tab ${++this.tabIndex}`)
     },
     removeTab (tab) {
-      this.tabs.splice(this.tabs.indexOf(tab), 1)
-      if (this.$refs.tabs.selected === tab) {
-        this.$refs.tabs.selected = this.$refs.tabs.tabs[0] || ''
-      }
+      this.dynTabs.splice(this.dynTabs.indexOf(tab), 1)
     }
   }
 }

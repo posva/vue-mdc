@@ -36,15 +36,12 @@ export default {
   watch: {
     tab (newTab, oldTab) {
       this.$parent.updateTab(tabToOject(oldTab), this.tabData)
-      console.log(`${oldTab} -> ${newTab}`, this.tabData)
     }
   },
   ready () {
     this.$parent.addTab(this.tabData)
-    console.log('added', this.tabData.title, 'at', this.tabData.id)
   },
   beforeDestroy () {
-    console.log('removed', this.tabData.title, 'at', this.tabData.id)
     this.$parent.removeTab(this.tabData)
   }
 }

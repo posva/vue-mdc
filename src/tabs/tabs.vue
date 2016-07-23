@@ -6,6 +6,7 @@
           class="mdl-tabs__tab"
           v-for="tab in tabs"
           track-by="id"
+          :no-ripple-effect="noRippleEffect"
           :class="{ 'is-active': isSelected(tab) }"
           @click.prevent="selectTab(tab)"
           :tab="tab"
@@ -17,9 +18,6 @@
 </template>
 
 <script>
-// TODO Easy way track by index automatically
-// write tests about removal
-// With same titles use ids
 import propFill from '../mixins/prop-fill'
 import TabLink from './tab-link.vue'
 
@@ -38,6 +36,10 @@ export default {
     selected: {
       required: true,
       twoWay: true
+    },
+    noRippleEffect: {
+      fill: true,
+      required: false
     }
   },
   data () {
@@ -53,7 +55,7 @@ export default {
       return id === this.selected
     },
     addTab (tab) {
-      // TODO check for duplicates
+      // TODO check for duplicates and throw error
       this.tabs.push(tab)
     },
     updateTab ({id}, tab) {
