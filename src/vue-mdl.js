@@ -19,6 +19,8 @@ import MdlCard from './card.vue'
 import MdlSnackbar from './snackbar.vue'
 import MdlSelect from './select.vue'
 import MdlDialog from './dialog.vue'
+import MdlTabs from './tabs/tabs.vue'
+import MdlTab from './tabs/tab.vue'
 
 export const components = {
   MdlCheckbox,
@@ -37,7 +39,9 @@ export const components = {
   MdlCard,
   MdlSnackbar,
   MdlSelect,
-  MdlDialog
+  MdlDialog,
+  MdlTabs,
+  MdlTab
 }
 
 export const directives = {
@@ -56,6 +60,7 @@ export default {
     })
   }
 }
+
 export {
   // directives
   Mdl,
@@ -78,5 +83,7 @@ export {
   MdlCard,
   MdlSnackbar,
   MdlSelect,
-  MdlDialog
+  MdlDialog,
+  MdlTabs,
+  MdlTab
 }

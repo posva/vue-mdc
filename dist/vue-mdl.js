@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlCheckbox = exports.MdlRippleEffect = exports.MdlBadge = exports.Mdl = exports.directives = exports.components = undefined;
+	exports.MdlTab = exports.MdlTabs = exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlCheckbox = exports.MdlRippleEffect = exports.MdlBadge = exports.Mdl = exports.directives = exports.components = undefined;
 	
 	var _keys = __webpack_require__(1);
 	
@@ -145,6 +145,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _dialog2 = _interopRequireDefault(_dialog);
 	
+	var _tabs = __webpack_require__(121);
+	
+	var _tabs2 = _interopRequireDefault(_tabs);
+	
+	var _tab = __webpack_require__(127);
+	
+	var _tab2 = _interopRequireDefault(_tab);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var components = exports.components = {
@@ -164,7 +172,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  MdlCard: _card2.default,
 	  MdlSnackbar: _snackbar2.default,
 	  MdlSelect: _select2.default,
-	  MdlDialog: _dialog2.default
+	  MdlDialog: _dialog2.default,
+	  MdlTabs: _tabs2.default,
+	  MdlTab: _tab2.default
 	};
 	
 	var directives = exports.directives = {
@@ -203,6 +213,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.MdlSnackbar = _snackbar2.default;
 	exports.MdlSelect = _select2.default;
 	exports.MdlDialog = _dialog2.default;
+	exports.MdlTabs = _tabs2.default;
+	exports.MdlTab = _tab2.default;
 
 /***/ },
 /* 1 */
@@ -943,6 +955,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	exports.default = {
 	  beforeCompile: function beforeCompile() {
+	    if (!this._props) return;
 	    var _iteratorNormalCompletion = true;
 	    var _didIteratorError = false;
 	    var _iteratorError = undefined;
@@ -2938,6 +2951,357 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports) {
 
 	module.exports = "<div v-show=\"show\" class=\"mdl-dialog-container\"><div class=\"mdl-dialog\"><div class=\"mdl-dialog__title\">{{title}}</div><div class=\"mdl-dialog__content\"><slot></slot></div><div v-bind:class=\"{ &quot;mdl-dialog__actions--full-width&quot;: fullWidth }\" class=\"mdl-dialog__actions\"><slot name=\"actions\"><mdl-button v-on:click.stop=\"close\" class=\"mdl-js-ripple-effect\">Close</mdl-button></slot></div></div></div>";
+
+/***/ },
+/* 121 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(122)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/tabs/tabs.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(126)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./tabs.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 122 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _propFill = __webpack_require__(45);
+	
+	var _propFill2 = _interopRequireDefault(_propFill);
+	
+	var _tabLink = __webpack_require__(123);
+	
+	var _tabLink2 = _interopRequireDefault(_tabLink);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function findTabIndex(tabs, id) {
+	  for (var i = 0; i < tabs.length; ++i) {
+	    if (tabs[i].id === id) {
+	      return i;
+	    }
+	  }
+	  return -1;
+	}
+	
+	exports.default = {
+	  props: {
+	    selected: {
+	      required: true,
+	      twoWay: true
+	    },
+	    noRippleEffect: {
+	      fill: true,
+	      required: false
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      tabs: []
+	    };
+	  },
+	
+	  methods: {
+	    selectTab: function selectTab(_ref) {
+	      var id = _ref.id;
+	
+	      this.selected = id;
+	    },
+	    isSelected: function isSelected(_ref2) {
+	      var id = _ref2.id;
+	
+	      return id === this.selected;
+	    },
+	    addTab: function addTab(tab) {
+	      this.tabs.push(tab);
+	    },
+	    updateTab: function updateTab(_ref3, tab) {
+	      var id = _ref3.id;
+	
+	      var index = findTabIndex(this.tabs, id);
+	      if (index > -1) this.tabs.splice(index, 1, tab);
+	    },
+	    removeTab: function removeTab(_ref4) {
+	      var id = _ref4.id;
+	
+	      var index = findTabIndex(this.tabs, id);
+	      if (index > -1) this.tabs.splice(index, 1);
+	    }
+	  },
+	  mixins: [_propFill2.default],
+	  components: { TabLink: _tabLink2.default }
+	};
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(124)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/tabs/tab-link.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(125)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./tab-link.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 124 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  props: {
+	    tab: Object,
+	    noRippleEffect: {
+	      required: false
+	    }
+	  },
+	  ready: function ready() {
+	    componentHandler.upgradeElement(this.$els.ripple, 'MaterialRipple');
+	  }
+	};
+
+/***/ },
+/* 125 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<a class=\"mdl-tabs__tab\"\n   href=\"#\"\n>{{tab.title}}\n  <span v-el:ripple\n        v-show=\"!noRippleEffect\"\n        class=\"mdl-tabs__ripple-container mdl-js-ripple-effect\">\n    <span class=\"mdl-ripple\"></span>\n  </span>\n</a>\n";
+
+/***/ },
+/* 126 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"mdl-tabs is-upgraded\">\n  <!-- Generated tab links -->\n  <div class=\"mdl-tabs__tab-bar\">\n    <tab-link\n        class=\"mdl-tabs__tab\"\n        v-for=\"tab in tabs\"\n        track-by=\"id\"\n        :no-ripple-effect=\"noRippleEffect\"\n        :class=\"{ 'is-active': isSelected(tab) }\"\n        @click.prevent=\"selectTab(tab)\"\n        :tab=\"tab\"\n    ></tab-link>\n  </div>\n  <!-- Tabs content -->\n  <slot></slot>\n</div>\n";
+
+/***/ },
+/* 127 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(128)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/tabs/tab.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(136)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./tab.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 128 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends2 = __webpack_require__(129);
+	
+	var _extends3 = _interopRequireDefault(_extends2);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function tabToOject(tab) {
+	  return typeof tab === 'string' ? { id: tab, title: tab } : (0, _extends3.default)({ id: tab.id || tab.title }, tab);
+	}
+	
+	exports.default = {
+	  computed: {
+	    selected: function selected() {
+	      return this.$parent.isSelected(this.tabData);
+	    },
+	    id: function id() {
+	      return typeof this.tab === 'string' ? this.tab : this.tab.id || this.tab.title;
+	    },
+	    tabData: function tabData() {
+	      return tabToOject(this.tab);
+	    }
+	  },
+	  props: {
+	    tab: {
+	      required: true,
+	      type: [String, Object]
+	    }
+	  },
+	  watch: {
+	    tab: function tab(newTab, oldTab) {
+	      this.$parent.updateTab(tabToOject(oldTab), this.tabData);
+	    }
+	  },
+	  ready: function ready() {
+	    this.$parent.addTab(this.tabData);
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    this.$parent.removeTab(this.tabData);
+	  }
+	};
+
+/***/ },
+/* 129 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	exports.__esModule = true;
+	
+	var _assign = __webpack_require__(130);
+	
+	var _assign2 = _interopRequireDefault(_assign);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _assign2.default || function (target) {
+	  for (var i = 1; i < arguments.length; i++) {
+	    var source = arguments[i];
+	
+	    for (var key in source) {
+	      if (Object.prototype.hasOwnProperty.call(source, key)) {
+	        target[key] = source[key];
+	      }
+	    }
+	  }
+	
+	  return target;
+	};
+
+/***/ },
+/* 130 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(131), __esModule: true };
+
+/***/ },
+/* 131 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(132);
+	module.exports = __webpack_require__(23).Object.assign;
+
+/***/ },
+/* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(22);
+	
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(133)});
+
+/***/ },
+/* 133 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 19.1.2.1 Object.assign(target, source, ...)
+	var getKeys  = __webpack_require__(6)
+	  , gOPS     = __webpack_require__(134)
+	  , pIE      = __webpack_require__(135)
+	  , toObject = __webpack_require__(4)
+	  , IObject  = __webpack_require__(10)
+	  , $assign  = Object.assign;
+	
+	// should work with symbols and should have deterministic property order (V8 bug)
+	module.exports = !$assign || __webpack_require__(32)(function(){
+	  var A = {}
+	    , B = {}
+	    , S = Symbol()
+	    , K = 'abcdefghijklmnopqrst';
+	  A[S] = 7;
+	  K.split('').forEach(function(k){ B[k] = k; });
+	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
+	  var T     = toObject(target)
+	    , aLen  = arguments.length
+	    , index = 1
+	    , getSymbols = gOPS.f
+	    , isEnum     = pIE.f;
+	  while(aLen > index){
+	    var S      = IObject(arguments[index++])
+	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
+	      , length = keys.length
+	      , j      = 0
+	      , key;
+	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
+	  } return T;
+	} : $assign;
+
+/***/ },
+/* 134 */
+/***/ function(module, exports) {
+
+	exports.f = Object.getOwnPropertySymbols;
+
+/***/ },
+/* 135 */
+/***/ function(module, exports) {
+
+	exports.f = {}.propertyIsEnumerable;
+
+/***/ },
+/* 136 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"mdl-tabs__panel\"\n     :class=\"{'is-active': selected }\"\n>\n  <slot></slot>\n</div>\n";
 
 /***/ }
 /******/ ])
