@@ -136,6 +136,7 @@ export default {
           'Snackbars',
           'Spinners',
           'Switches',
+          'Tabs',
           'Textfields',
           'Tooltips'
         ]
