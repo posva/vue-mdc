@@ -44,12 +44,12 @@ export default {
       this.$el.dispatchEvent(event)
     },
     setName () {
-      const oldName = this.name
+      this.name = null
       for (let i = 0; i < this.optionsObject.length; ++i) {
         let option = this.optionsObject[i]
         if (this.value === option.value) this.name = option.name
       }
-      if (this.name === oldName) this.name = this.value
+      if (!this.name) this.name = this.value
       this.$els.textfield.MaterialTextfield.change(this.name)
       this.$els.textfield.MaterialTextfield.boundBlurHandler()
     }
@@ -89,7 +89,7 @@ export default {
     this.setName()
   },
   watch: {
-    value (val, oldVal) {
+    value () {
       this.setName()
     }
   }

@@ -83,7 +83,6 @@ describe('Button', () => {
     vm.icon = 'content_copy'
 
     vm.nextTick().then(() => {
-      console.log(but)
       let i = but.querySelector('i')
       i.should.exist
       i.should.have.class('material-icons')
