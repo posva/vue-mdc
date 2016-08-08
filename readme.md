@@ -96,8 +96,8 @@ If you wrote a new feature or fixed a bug make sure to add the corresponding tes
 Releasing is done using the git flow model
 
 - Start a new release `git flow release start x.x.x`
-- Bump package.json version
 - Run `npm run build`
+- Bump package.json version
 - Commit the version. No more info needed
 - Run `git flow release finish`
 - Write the changelog in the tag notes
