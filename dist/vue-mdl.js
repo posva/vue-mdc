@@ -2767,12 +2767,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.$el.dispatchEvent(event);
 	    },
 	    setName: function setName() {
-	      var oldName = this.name;
+	      this.name = null;
 	      for (var i = 0; i < this.optionsObject.length; ++i) {
 	        var option = this.optionsObject[i];
 	        if (this.value === option.value) this.name = option.name;
 	      }
-	      if (this.name === oldName) this.name = this.value;
+	      if (!this.name) this.name = this.value;
 	      this.$els.textfield.MaterialTextfield.change(this.name);
 	      this.$els.textfield.MaterialTextfield.boundBlurHandler();
 	    }
@@ -2813,7 +2813,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  watch: {
-	    value: function value(val, oldVal) {
+	    value: function value() {
 	      this.setName();
 	    }
 	  }
