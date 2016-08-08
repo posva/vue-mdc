@@ -65,5 +65,21 @@ describe('Select', () => {
       return vm.nextTick()
     }).then(done, done)
   })
+
+  it('binds a value but shows the name', (done) => {
+    vm.countryVal = 'fr'
+    vm.nextTick().then(() => {
+      selectVal.should.have.value('France')
+      vm.countryVal = 'es'
+      return vm.nextTick()
+    }).then(() => {
+      selectVal.should.have.value('Spain')
+      vm.$refs.selectVal.selectValue({name: 'France', value: 'fr'})
+      return vm.nextTick()
+    }).then(() => {
+      selectVal.should.have.value('France')
+      vm.countryVal.should.eql('fr')
+    }).then(done, done)
+  })
 })
 

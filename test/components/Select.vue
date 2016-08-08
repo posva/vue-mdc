@@ -6,7 +6,7 @@ div
   p Changed {{changes}}
   mdl-select#select(v-if='visible', label='Country', @change='changes++', :value.sync='country', :options='countriesArray')
   br
-  mdl-select#select-val(label='Country', :value.sync='countryVal', :options='countries')
+  mdl-select#select-val(v-ref:select-val label='Country', :value.sync='countryVal', :options='countries')
 </template>
 
 <script lang="babel">
