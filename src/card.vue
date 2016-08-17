@@ -81,7 +81,7 @@ export default {
     slots.forEach((slot, pos) => {
       if (this[slot] === true) {
         let el = this.$el.children[pos]
-        if (!el.attributes.getNamedItem('slot')) {
+        if (!el || !el.attributes.getNamedItem('slot')) {
           this[slot] = ''
         }
       }
