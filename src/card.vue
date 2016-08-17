@@ -15,7 +15,7 @@
     .mdl-card__actions.mdl-card--border
       mdl-anchor-button.mdl-js-ripple-effect(colored v-if='isActionsURL' v-bind:href='actions'
         v-bind:target='actionsTarget') {{actionsText}}
-      mdl-button.mdl-js-ripple-effect(colored v-else) {{actionsText}}
+      mdl-button.mdl-js-ripple-effect(colored v-else v-on:click='triggerActionsEvent') {{actionsText}}
   // TODO some way of creating a menu or action
   slot(name='menu' v-if='menu')
     .mdl-card__menu

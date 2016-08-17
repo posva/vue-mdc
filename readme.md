@@ -14,6 +14,7 @@
   <a href="https://david-dm.org/posva/vue-mdl#info=peerDependencies" title="peerDependency status"><img src="https://david-dm.org/posva/vue-mdl/peer-status.svg"/></a>
   <br>
   <a href="https://www.npmjs.com/package/vue-mdl"><img src="https://img.shields.io/npm/v/vue-mdl.svg" alt="Latest npm release"></a>
+  <a href="https://gitter.im/posva/vue-mdl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badgel"><img src="https://badges.gitter.im/posva/vue-mdl.svg" alt="Gitter"></a>
   <a href="https://github.com/posva/vue-mdl/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="MIT License"></a>
 </p>
 
@@ -96,8 +97,8 @@ If you wrote a new feature or fixed a bug make sure to add the corresponding tes
 Releasing is done using the git flow model
 
 - Start a new release `git flow release start x.x.x`
-- Bump package.json version
 - Run `npm run build`
+- Bump package.json version
 - Commit the version. No more info needed
 - Run `git flow release finish`
 - Write the changelog in the tag notes

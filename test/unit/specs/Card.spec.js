@@ -125,30 +125,18 @@ describe('Card', () => {
     }).then(done, done)
   })
 
-  it('dispatchs events for actions button', (done) => {
-    let called = false
-    vm.$once('someEventName', () => {
-      called = true
-    })
-    vm.$refs.card.triggerActionsEvent()
-    vm.nextTick()
-    .then(() => {
-      called.should.be.true
-      return vm.nextTick()
-    }).then(done, done)
+  it('dispatchs events for actions button', () => {
+    const spy = sinon.spy()
+    vm.$once('increaseNum', spy)
+    vm.$('#actions-button button').click()
+    spy.should.have.been.calledOnce
   })
 
-  it('dispatchs events for menu button', (done) => {
-    let called = false
-    vm.$once('cardMenu', () => {
-      called = true
-    })
-    vm.$refs.card.triggerMenuEvent()
-    vm.nextTick()
-    .then(() => {
-      called.should.be.true
-      return vm.nextTick()
-    }).then(done, done)
+  it('dispatchs events for menu button', () => {
+    const spy = sinon.spy()
+    vm.$once('cardMenu', spy)
+    vm.$('#menu .mdl-card__menu button').click()
+    spy.should.have.been.calledOnce
   })
 
   it('has an anchor if actions is an URL', (done) => {

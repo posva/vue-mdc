@@ -38,6 +38,11 @@
     :actions='actions',
     menu='cardMenu'
     )
+  mdl-card#menu(
+    title='Menu',
+    :supporting-text='"Menu was called " + menuCallCount + " times."',
+    menu='cardMenu'
+  )
   br
   mdl-textfield(:value.sync='title', floating-label='Card Title')
   mdl-textfield(:value.sync='subtitle', floating-label='Card subtitle')
@@ -57,12 +62,15 @@
       h2.mdl-card__title-text Title from slot
   br
   mdl-card(supporting-text='This card has no title \n Ha ha')
+  mdl-card#actions-button(:title='"Emitted events " + num', actions='increaseNum', actions-text='Increase count')
 </template>
 
-<script lang="babel">
+<script>
 export default {
   data () {
     return {
+      num: 0,
+      menuCallCount: 0,
       title: 'Card Title',
       actions: 'someEventName',
       actionsText: 'Vuejs.org',
@@ -74,8 +82,11 @@ export default {
   },
   events: {
     cardMenu () {
-      console.log('hey')
+      this.menuCallCount++
       return true // stop propagation
+    },
+    increaseNum () {
+      this.num++
     }
   }
 }
