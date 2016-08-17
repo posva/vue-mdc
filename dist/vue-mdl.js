@@ -2314,7 +2314,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    slots.forEach(function (slot, pos) {
 	      if (_this[slot] === true) {
 	        var el = _this.$el.children[pos];
-	        if (!el.attributes.getNamedItem('slot')) {
+	        if (!el || !el.attributes.getNamedItem('slot')) {
 	          _this[slot] = '';
 	        }
 	      }
