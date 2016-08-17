@@ -63,6 +63,7 @@
   br
   mdl-card(supporting-text='This card has no title \n Ha ha')
   mdl-card#actions-button(:title='"Emitted events " + num', actions='increaseNum', actions-text='Increase count')
+  mdl-card(title="Empty slot", :supporting-text='""', :actions='""')
 </template>
 
 <script>
