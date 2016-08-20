@@ -102,8 +102,7 @@ Releasing is done using the git flow model
 - Commit the version. No more info needed
 - Run `git flow release finish`
 - Write the changelog in the tag notes
-- Push master and develop branches `git push --all`
-- Push tags `git push --tags`
+- Push master and develop branches `git push --all --follow-tags`
 - Publish it to npm: `npm publish`
 
 #License
