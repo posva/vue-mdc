@@ -5,7 +5,7 @@
       i.material-icons {{expandable}}
   div(v-bind:class='{"mdl-textfield__expandable-holder": expandable}')
     slot(v-if='textarea' name='textarea')
-      textarea.mdl-textfield__input(type='text' v-model='value' v-bind:required='required' v-bind:id.once='id' v-bind:rows='rows' v-bind:maxlength='maxlength')
+      textarea.mdl-textfield__input(type='text' v-model='value' v-bind:required='required' v-bind:id.once='id' v-bind:rows='rows' v-bind:disabled='disabled' v-bind:readonly='readonly' v-bind:maxlength='maxlength')
     slot(v-else name='input')
       input.mdl-textfield__input(v-bind:type='type' v-model='value' v-bind:id.once='id' v-bind:pattern='pattern' v-bind:disabled='disabled' v-bind:required='required' v-bind:readonly='readonly' v-bind:maxlength='maxlength')
     slot(name='label')

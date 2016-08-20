@@ -51,6 +51,11 @@ div
   <mdl-textfield :value.sync='requiredValue' id='required-textarea' floating-label='Required' required textarea></mdl-textfield>
   mdl-textfield#maxlength-input(:value.sync='requiredValue', :maxlength='maxlength', floating-label="Maxlength")
   mdl-textfield#maxlength-textarea(:value.sync='requiredValue', :maxlength='maxlength', floating-label="Maxlength" textarea)
+  mdl-textfield#disabled-input(:value.sync='text', disabled, floating-label="Disabled")
+  mdl-textfield#disabled-textarea(:value.sync='text', disabled, floating-label="Disabled" textarea)
+  mdl-textfield#readonly-input(:value.sync='text', readonly, floating-label="Disabled")
+  mdl-textfield#readonly-textarea(:value.sync='text', readonly, floating-label="Disabled" textarea)
+
 </template>
 
 <script lang="babel">
