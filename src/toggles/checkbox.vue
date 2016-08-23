@@ -6,7 +6,6 @@ label.mdl-checkbox.mdl-js-checkbox(v-bind:for.once='id' v-bind:class='{ "is-disa
 </template>
 
 <script>
-/* global componentHandler*/
 import common from '../mixins/toggle'
 export default {
   ready () {

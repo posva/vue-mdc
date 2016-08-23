@@ -4,7 +4,6 @@ ul.mdl-menu.mdl-js-menu(v-bind:for.once='for')
 </template>
 
 <script>
-/* global componentHandler*/
 export default {
   props: ['for'],
   ready () {
