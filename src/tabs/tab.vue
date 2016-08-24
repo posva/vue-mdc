@@ -1,6 +1,7 @@
 <template>
   <div class="mdl-tabs__panel"
        :class="{'is-active': selected }"
+       v-if="hasSlot()"
   >
     <slot></slot>
   </div>
@@ -43,6 +44,11 @@ export default {
   },
   beforeDestroy () {
     this.$parent.removeTab(this.tabData)
+  },
+  methods: {
+    hasSlot (name = 'default') {
+      return name in this._slotContents
+    }
   }
 }
 </script>
