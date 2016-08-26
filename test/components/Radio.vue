@@ -9,17 +9,17 @@ div
     input#option-2.mdl-radio__button(type='radio', name='options', value='2')
     span.mdl-radio__label Second
   h3 vue
-  mdl-radio.added-class(v-model='fruit' id='banana' value='Banana') Banana
-  mdl-radio(v-model='fruit' id='pineapple' value='Pineapple') Pineapple
-  mdl-radio(v-model='fruit' id='kiwi' value='Kiwi') Kiwi
+  mdl-radio.added-class(type="radio" v-model='fruit' id='banana' value='Banana') Banana
+  mdl-radio(type="radio" v-model='fruit' id='pineapple' value='Pineapple') Pineapple
+  mdl-radio(type="radio" v-model='fruit' id='kiwi' value='Kiwi') Kiwi
   br
   p#text {{size}} {{fruit}}
-  mdl-radio(v-modelc='size' id='extra' value='Extra' v-if='disabled') Extra
-  mdl-radio(v-model='size' id='big' value='Big' v-bind:disabled='disabled') Big
-  mdl-radio(v-model='size' id='medium' value='Medium') Medium
-  mdl-radio(v-model='size' id='little' value='Little') Little
+  mdl-radio(type="radio" v-model='size' id='extra' value='Extra' v-if='disabled') Extra
+  mdl-radio(type="radio" v-model='size' id='big' value='Big' v-bind:disabled='disabled') Big
+  mdl-radio(type="radio" v-model='size' id='medium' value='Medium') Medium
+  mdl-radio(type="radio" v-model='size' id='little' value='Little') Little
   br
-  <mdl-radio v-model='size' id='html-radio' value='HTML' disabled>HTML</mdl-radio>
+  <mdl-radio type='radio' v-model='size' id='html-radio' value='HTML' disabled>HTML</mdl-radio>
   input#disable(type='checkbox' v-bind:disabled='disabled')
   span Disable Big
   br

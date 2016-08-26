@@ -58,6 +58,8 @@ describe('Radio', () => {
     vm.disabled = true
     vm.nextTick()
     .then(() => {
+      big = vm.$('#big')
+      bigLabel = vm.$('label[for=big]')
       big.disabled.should.be.true
       big.should.have.attr('disabled')
       bigLabel.should.have.class('is-disabled')
