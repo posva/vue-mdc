@@ -24,13 +24,8 @@ describe('Snackbar', () => {
     snackbar.querySelector('.mdl-snackbar__text').should.be.empty
   })
 
-  it('shows with an event', (done) => {
-    vm.$broadcast('mailSent', {
-      message: 'Test event',
-      actionText: 'Undo',
-      actionHandler (event) {},
-      timeout: 10
-    })
+  it('shows when invoked', (done) => {
+    vm.showSnackbar({ message: 'Test event', actionText: 'Undo' })
     vm.nextTick()
     .then(() => {
       snackbar.querySelector('.mdl-snackbar__text').should.have.text('Test event')

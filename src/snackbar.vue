@@ -8,12 +8,13 @@
 /* global componentHandler*/
 
 export default {
-  props: ['displayOn'],
   mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialSnackbar')
-    this.$on(this.displayOn, (snackarConfig) => {
-      this.$el.MaterialSnackbar.showSnackbar(snackarConfig)
-    })
+  },
+  methods: {
+    showSnackbar: function (config) {
+      this.$el.MaterialSnackbar.showSnackbar(config)
+    }
   }
 }
 </script>
