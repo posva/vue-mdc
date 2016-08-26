@@ -10,15 +10,15 @@ div
     span.mdl-checkbox__label No ripple
   h3 vue
   // We can also use the jade syntax #id for literal ids
-  mdl-checkbox.added-class(id='check-dyn' v-bind:checked.sync='check') Dynamic {{check}}
-  mdl-checkbox#check(v-bind:checked.sync='check' v-bind:disabled='disabled') Check me
-  mdl-checkbox#number(v-bind:checked.sync='numCheck') My value is a number
+  mdl-checkbox.added-class(id='check-dyn' type="checkbox" v-model='check') Dynamic {{check}}
+  mdl-checkbox#check(type="checkbox" v-model='check' v-bind:disabled='disabled') Check me
+  mdl-checkbox#number(type="checkbox" v-model='numCheck') My value is a number
   input#classic(type='checkbox' v-model='check')
   span Classic checkbox
   input#disable(type='checkbox' v-model='disabled')
   span Disable
-  mdl-checkbox(v-if='disabled' id='v-if' v-bind:checked.sync='check' v-bind:disabled='disabled') v-if
-  mdl-checkbox(v-for='n in 3' v-bind:value='indexId(n)' v-bind:id='indexId(n)' v-bind:checked.sync='checks') v-for {{indexId(n)}}
+  mdl-checkbox(v-if='disabled' id='v-if' type="checkbox" v-model='check' v-bind:disabled='disabled') v-if
+  mdl-checkbox(v-for='n in 3' v-bind:value='indexId(n)' v-bind:id='indexId(n)' type="checkbox" v-model='checks') v-for {{indexId(n)}}
   p#checks {{checks}}
 </template>
 
