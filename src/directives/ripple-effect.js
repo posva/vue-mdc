@@ -1,5 +1,5 @@
 export default {
-  bind () {
-    this.el.classList.add('mdl-js-ripple-effect')
+  bind (el) {
+    el.classList.add('mdl-js-ripple-effect')
   }
 }

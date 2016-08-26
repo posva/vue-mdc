@@ -5,10 +5,10 @@
       <tab-link
           class="mdl-tabs__tab"
           v-for="tab in tabs"
-          track-by="id"
+          :key="tab.id"
           :no-ripple-effect="noRippleEffect"
           :class="{ 'is-active': isSelected(tab) }"
-          @click.prevent="selectTab(tab)"
+          @click.native="selectTab(tab)"
           :tab="tab"
       ></tab-link>
     </div>
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import propFill from '../mixins/prop-fill'
 import TabLink from './tab-link.vue'
 
 // indexOf with object
@@ -33,12 +32,12 @@ function findTabIndex (tabs, id) {
 
 export default {
   props: {
-    selected: {
-      required: true,
-      twoWay: true
+    value: {
+      required: false,
+      type: [String, Number]
     },
     noRippleEffect: {
-      fill: true,
+      type: Boolean,
       required: false
     }
   },
@@ -49,10 +48,10 @@ export default {
   },
   methods: {
     selectTab ({id}) {
-      this.selected = id
+      this.$emit('input', id)
     },
     isSelected ({id}) {
-      return id === this.selected
+      return id === this.value
     },
     addTab (tab) {
       // TODO check for duplicates and throw error
@@ -67,7 +66,6 @@ export default {
       if (index > -1) this.tabs.splice(index, 1)
     }
   },
-  mixins: [propFill],
   components: {TabLink}
 }
 </script>

@@ -9,7 +9,7 @@
 
 export default {
   props: ['displayOn'],
-  ready () {
+  mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialSnackbar')
     this.$on(this.displayOn, (snackarConfig) => {
       this.$el.MaterialSnackbar.showSnackbar(snackarConfig)

@@ -22,7 +22,7 @@ div
   span Disable
   mdl-icon-toggle(v-if='disabled' icon='face' id='v-if' v-bind:checked.sync='check' v-bind:disabled='disabled')
   mdl-icon-toggle(v-for='n in 3' icon='face' v-bind:value='indexId(n)' v-bind:id='indexId(n)' v-bind:checked.sync='checks')
-  p#its {{checks | json}}
+  p#its {{checks}}
 </template>
 
 <script lang="babel">

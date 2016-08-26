@@ -1,13 +1,13 @@
 <template lang="jade">
-ul.mdl-menu.mdl-js-menu(v-bind:for.once='for')
+ul.mdl-menu.mdl-js-menu(v-bind:for.once='target')
   slot
 </template>
 
 <script>
 /* global componentHandler*/
 export default {
-  props: ['for'],
-  ready () {
+  props: ['target'],
+  mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialMenu')
   }
   // beforeDestroy () {
