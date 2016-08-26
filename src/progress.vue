@@ -1,5 +1,5 @@
 <template lang="jade">
-.mdl-progress.mdl-js-progress(v-bind:class='{ "mdl-progress__indeterminate": indeterminate }')
+.mdl-progress.mdl-js-progress(v-bind:class="{ 'mdl-progress__indeterminate': indeterminate }")
 </template>
 
 <script>
@@ -13,11 +13,9 @@ export default {
     buffer: {
       required: false
     },
-    indeterminate: {
-      fill: true
-    }
+    indeterminate: Boolean
   },
-  ready () {
+  mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialProgress')
 
     if (this.progress != null) {
@@ -29,7 +27,6 @@ export default {
       this.$el.MaterialProgress.setBuffer(this.buffer)
       this.$watch('buffer', val => this.$el.MaterialProgress.setBuffer(val))
     }
-  },
-  mixins: [propFill]
+  }
 }
 </script>

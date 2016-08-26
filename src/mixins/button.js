@@ -15,33 +15,18 @@ export default {
     }
   },
   props: {
-    disabled: {
-      fill: true
-    },
+    disabled: Boolean,
     icon: {
       required: false
     },
-    accent: {
-      fill: true
-    },
-    primary: {
-      fill: true
-    },
-    miniFab: {
-      fill: true
-    },
-    fab: {
-      fill: true
-    },
-    raised: {
-      fill: true
-    },
-    colored: {
-      fill: true
-    }
+    accent: Boolean,
+    primary: Boolean,
+    miniFab: Boolean,
+    fab: Boolean,
+    raised: Boolean,
+    colored: Boolean
   },
-  mixins: [propFill],
-  ready () {
+  mounted () {
     componentHandler.upgradeElement(this.$el)
   }
 }

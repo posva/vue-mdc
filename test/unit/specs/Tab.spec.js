@@ -139,7 +139,7 @@ describe('Tabs', () => {
       vm.selected = 'Tab 1'
       const tabs = getTabs(simple)
       tabs[1].click()
-      vm.selected.should.eql('Tab 2')
+      vm.selected.should.eql('Tab 2');
     })
   })
 

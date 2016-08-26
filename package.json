@@ -34,7 +34,7 @@
   "author": "posva",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^1.0.26"
+    "vue": "^2.0.0-rc.3"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
@@ -89,11 +89,11 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1",
     "url-loader": "^0.5.7",
-    "vue": "^1.0.26",
-    "vue-hot-reload-api": "^1.2.0",
+    "vue": "^2.0.0-rc.3",
+    "vue-hot-reload-api": "^2.0.6",
     "vue-html-loader": "^1.2.3",
-    "vue-loader": "^8.5.2",
-    "vue-router": "^0.7.13",
+    "vue-loader": "^9.3.2",
+    "vue-router": "^2.0.0-rc.3",
     "vue-style-loader": "^1.0.0",
     "vue-transfer-dom": "^1.1.0",
     "webpack": "^1.13.2",

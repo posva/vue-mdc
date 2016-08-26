@@ -127,14 +127,14 @@ describe('Card', () => {
 
   it('dispatchs events for actions button', () => {
     const spy = sinon.spy()
-    vm.$once('increaseNum', spy)
+    vm.$refs.increaseCard.$once('increaseNum', spy)
     vm.$('#actions-button button').click()
     spy.should.have.been.calledOnce
   })
 
   it('dispatchs events for menu button', () => {
     const spy = sinon.spy()
-    vm.$once('cardMenu', spy)
+    vm.$refs.cardMenu.$once('cardMenu', spy)
     vm.$('#menu .mdl-card__menu button').click()
     spy.should.have.been.calledOnce
   })

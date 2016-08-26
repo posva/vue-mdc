@@ -4,13 +4,12 @@
     .mdl-dialog__title {{title}}
     .mdl-dialog__content
       slot
-    .mdl-dialog__actions(v-bind:class='{ "mdl-dialog__actions--full-width": fullWidth }')
+    .mdl-dialog__actions(v-bind:class="{ 'mdl-dialog__actions--full-width': fullWidth }")
       slot(name='actions')
-        mdl-button.mdl-js-ripple-effect(v-on:click.stop='close') Close
+        mdl-button.mdl-js-ripple-effect(v-on:click.native.stop='close') Close
 </template>
 
 <script>
-import propFill from './mixins/prop-fill'
 import mdlButton from './button.vue'
 
 export default {
@@ -26,10 +25,7 @@ export default {
     title: {
       type: String
     },
-    fullWidth: {
-      fill: true,
-      default: false
-    }
+    fullWidth: Boolean
   },
   methods: {
     open () {
@@ -40,8 +36,7 @@ export default {
       this.show = false
       this.$emit('close')
     }
-  },
-  mixins: [propFill]
+  }
 }
 </script>
 <style>

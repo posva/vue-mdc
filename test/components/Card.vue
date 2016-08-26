@@ -28,8 +28,7 @@
   br
   p Normal card
   mdl-card#card(:title='title',
-    v-ref:card,
-    v-el:card,
+    ref='card',
     :subtitle='subtitle',
     :media='media',
     :supporting-text='supportingText',
@@ -39,12 +38,14 @@
     menu='cardMenu'
     )
   mdl-card#menu(
+    ref='cardMenu',
     title='Menu',
-    :supporting-text='"Menu was called " + menuCallCount + " times."',
-    menu='cardMenu'
+    :supporting-text="'Menu was called ' + menuCallCount + ' times.'",
+    menu='cardMenu',
+    v-on:cardMenu='increaseMenuCount'
   )
   br
-  mdl-textfield(:value.sync='title', floating-label='Card Title')
+  mdl-textfield(v-model='title', floating-label='Card Title')
   mdl-textfield(:value.sync='subtitle', floating-label='Card subtitle')
   mdl-textfield(:value.sync='media', floating-label='Card Media')
   mdl-textfield(textarea, :value.sync='supportingText', floating-label='Card supporting text')
@@ -62,8 +63,8 @@
       h2.mdl-card__title-text Title from slot
   br
   mdl-card(supporting-text='This card has no title \n Ha ha')
-  mdl-card#actions-button(:title='"Emitted events " + num', actions='increaseNum', actions-text='Increase count')
-  mdl-card(title="Empty slot", :supporting-text='""', :actions='""')
+  mdl-card#actions-button(ref='increaseCard', :title="'Emitted events ' + num", actions='increaseNum', actions-text='Increase count', v-on:increaseNum='increaseNum')
+  mdl-card(title="Empty slot", :supporting-text="''", :actions="''")
 </template>
 
 <script>
@@ -81,12 +82,11 @@ export default {
       supportingText: 'Here is some supporting text'
     }
   },
-  events: {
-    cardMenu () {
+  methods: {
+    increaseMenuCount: function () {
       this.menuCallCount++
-      return true // stop propagation
     },
-    increaseNum () {
+    increaseNum: function () {
       this.num++
     }
   }

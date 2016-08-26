@@ -19,7 +19,7 @@ div
     span Disable
   mdl-switch(v-if='disabled' id='v-if' v-bind:checked.sync='check' v-bind:disabled='disabled') v-if
   mdl-switch(v-for='n in 3' v-bind:value='indexId(n)' v-bind:id='indexId(n)' v-bind:checked.sync='checks') v-for {{indexId(n)}}
-  p#checks {{checks | json}}
+  p#checks {{checks}}
 </template>
 
 <script lang="babel">

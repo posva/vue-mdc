@@ -2,7 +2,7 @@
   <a class="mdl-tabs__tab"
      href="#"
   >{{tab.title}}
-    <span v-el:ripple
+    <span ref="ripple"
           v-show="!noRippleEffect"
           class="mdl-tabs__ripple-container mdl-js-ripple-effect">
       <span class="mdl-ripple"></span>
@@ -18,8 +18,8 @@ export default {
       required: false
     }
   },
-  ready () {
-    componentHandler.upgradeElement(this.$els.ripple, 'MaterialRipple')
+  mounted () {
+    componentHandler.upgradeElement(this.$refs.ripple, 'MaterialRipple')
   }
 }
 </script>
