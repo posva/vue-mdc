@@ -50,9 +50,9 @@
           i.material-icons mood
           | Send Feedback
   mdl-button.mdl-js-ripple-effect(raised colored v-on:click.native='open') Open the menu
-  mdl-checkbox(v-model='group') Show Group
-  mdl-checkbox(v-model='show') Show Menu
-  mdl-checkbox(v-model='showButton') Show Button
+  mdl-checkbox(type="checkbox" v-model='group') Show Group
+  mdl-checkbox(type="checkbox" v-model='show') Show Menu
+  mdl-checkbox(type="checkbox" v-model='showButton') Show Button
   mdl-textfield(v-model='newOption', floating-label='New Option')
   mdl-button.mdl-js-ripple-effect(raised colored v-on:click.native='addOption') Add Option
 </template>

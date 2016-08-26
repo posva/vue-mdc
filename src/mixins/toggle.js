@@ -1,9 +1,7 @@
 export default {
   props: {
     checked: {
-      type: [Array, Boolean, Number],
-      required: true,
-      twoWay: true
+      required: true
     },
     disabled: {
       required: false
@@ -13,13 +11,9 @@ export default {
       required: false
     }
   },
-  computed: {
-    isChecked () {
-      if (this.checked instanceof Array) {
-        return this.checked.indexOf(this.value) >= 0
-      } else {
-        return this.checked
-      }
+  methods: {
+    fireChange: function (event) {
+      this.$emit('change', event)
     }
   }
 }

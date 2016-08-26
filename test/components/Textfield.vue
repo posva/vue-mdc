@@ -47,7 +47,7 @@ div
   br
   p {{text}}
   p {{testme}}
-  mdl-checkbox(v-model='float') Float
+  mdl-checkbox(type="checkbox" v-model='float') Float
   <mdl-textfield v-model='requiredValue' id='required' floating-label='Required' required></mdl-textfield>
   <mdl-textfield v-model='requiredValue' id='required-textarea' floating-label='Required' required textarea></mdl-textfield>
   mdl-textfield#maxlength-input(v-model='requiredValue', :maxlength='maxlength', floating-label="Maxlength")
