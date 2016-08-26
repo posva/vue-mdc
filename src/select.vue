@@ -37,11 +37,8 @@ export default {
     }
   },
   methods: {
-    selectValue (option) {
-      this.value = option.value
-      this.name = option.name
-      let event = new Event('change')
-      this.$el.dispatchEvent(event)
+    selectValue ({value}) {
+      this.$emit('input', value)
     },
     setName () {
       this.name = null
@@ -89,7 +86,7 @@ export default {
     this.setName()
   },
   watch: {
-    value () {
+    value: function () {
       this.setName()
     }
   }
