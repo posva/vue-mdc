@@ -10,7 +10,7 @@ import {
 describe('Register', () => {
   it('exports single components', () => {
     MdlCheckbox.should.exist.and.be.an.Object
-    MdlCheckbox.should.have.property('template')
+    MdlCheckbox.should.have.property('render')
   })
 
   it('exports single directives', () => {
