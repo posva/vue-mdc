@@ -6,8 +6,6 @@ label.mdl-radio.mdl-js-radio(v-bind:for.once='id' v-bind:class="{ 'is-disabled':
 </template>
 
 <script>
-import propFill from '../mixins/prop-fill'
-
 export default {
   data: function () {
     return {

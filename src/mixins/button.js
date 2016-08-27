@@ -1,5 +1,3 @@
-import propFill from './prop-fill'
-
 export default {
   computed: {
     cssClasses () {

@@ -3,8 +3,6 @@
 </template>
 
 <script>
-import propFill from './mixins/prop-fill'
-
 export default {
   props: {
     active: {
