@@ -8,13 +8,24 @@
 /* global componentHandler*/
 
 export default {
+  props: {
+    displayOn: {
+      type: String,
+      required: true
+    },
+    eventSource: {
+      type: Object,
+      required: false,
+      default: function () {
+        return this.$root
+      }
+    }
+  },
   mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialSnackbar')
-  },
-  methods: {
-    showSnackbar: function (config) {
-      this.$el.MaterialSnackbar.showSnackbar(config)
-    }
+    this.eventSource.$on(this.displayOn, (snackbarConfig) => {
+      this.$el.MaterialSnackbar.showSnackbar(snackbarConfig)
+    })
   }
 }
 </script>
