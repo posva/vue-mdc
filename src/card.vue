@@ -73,7 +73,6 @@ export default {
   },
   methods: {
     triggerMenuEvent () {
-      console.log('About to emit: ', this.menu)
       this.$emit(this.menu)
     },
     triggerActionsEvent () {
