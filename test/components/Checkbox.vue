@@ -18,7 +18,7 @@ div
   input#disable(type='checkbox' v-model='disabled')
   span Disable
   mdl-checkbox(v-if='disabled' id='v-if' type="checkbox" v-model='check' v-bind:disabled='disabled') v-if
-  mdl-checkbox(v-for='n in 3' v-bind:value='indexId(n)' v-bind:id='indexId(n)' type="checkbox" v-model='checks') v-for {{indexId(n)}}
+  mdl-checkbox(v-for='(label, n) in 3' v-bind:value='indexId(n)' v-bind:id='indexId(n)' type="checkbox" v-model='checks') v-for {{indexId(n)}}
   p#checks {{checks}}
 </template>
 
