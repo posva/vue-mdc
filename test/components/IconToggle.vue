@@ -21,7 +21,7 @@ div
   input#disable(type='checkbox' v-model='disabled')
   span Disable
   mdl-icon-toggle(v-if='disabled' icon='face' id='v-if' type="checkbox" v-model='check' v-bind:disabled='disabled')
-  mdl-icon-toggle(v-for='n in 3' icon='face' v-bind:value.once='indexId(n)' v-bind:id.once='indexId(n)' type="checkbox" v-model='checks')
+  mdl-icon-toggle(v-for='(label, n) in 3' icon='face' v-bind:value.once='indexId(n)' v-bind:id.once='indexId(n)' type="checkbox" v-model='checks')
   p#its {{checks}}
 </template>
 
