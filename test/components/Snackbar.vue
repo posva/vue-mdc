@@ -1,29 +1,30 @@
 <template lang="jade">
 div
   h1 Snackbar
-  mdl-snackbar#snackbar(ref='snackbar')
+  mdl-snackbar#snackbar(display-on='sendMail')
+  mdl-snackbar#source(display-on='sendMail', :event-source="bus")
   mdl-button(@click.native='sendMail') Send
 </template>
 
 <script lang="babel">
+import Vue from 'vue'
+
 export default {
   data () {
     return {
+      bus: new Vue()
     }
   },
   methods: {
-    showSnackbar ({message, actionText}) {
-      this.$refs.snackbar.showSnackbar({
-        message: message,
+    sendMail () {
+      this.$root.$emit('sendMail', {
+        message: 'Message Sent',
         actionHandler: (event) => {
           // Stuff to do when the action is clicked
         },
-        actionText: actionText,
+        actionText: 'Undo',
         timeout: 1000
       })
-    },
-    sendMail () {
-      this.showSnackbar({ message: 'Message Sent', actionText: 'Undo' })
     }
   }
 }
