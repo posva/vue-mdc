@@ -1,6 +1,6 @@
 <template lang="jade">
-label.mdl-radio.mdl-js-radio(v-bind:for.once='id' v-bind:class="{ 'is-disabled': disabled, 'is-checked': checked, 'is-upgraded': upgraded }")
-  input.mdl-radio__button(v-bind:id.once='id' type='radio' v-bind:name.once='name' v-bind:value='value' v-bind:checked='checked' v-on:change='fireChangedEvent' v-bind:disabled='disabled')
+label.mdl-radio.mdl-js-radio(v-bind:for.once='id' v-bind:class="{ 'is-disabled': disabled, 'is-checked': isChecked, 'is-upgraded': upgraded }")
+  input.mdl-radio__button(v-bind:id.once='id' type='radio' v-bind:name.once='name' v-bind:value='radioValue' v-bind:checked="isChecked" v-on:change="fireChangedEvent" v-bind:disabled='disabled')
   span.mdl-radio__label
     slot
 </template>
@@ -15,17 +15,22 @@ export default {
   props: {
     id: String,
     name: String,
-    value: {
+    radioValue: {
       required: true
     },
-    checked: {
+    value: {
       required: true
     },
     disabled: Boolean
   },
+  computed: {
+    isChecked: function () {
+      return this.value === this.radioValue
+    }
+  },
   methods: {
-    fireChangedEvent (event) {
-      this.$emit('change', this.value)
+    fireChangedEvent () {
+      this.$emit('input', this.radioValue)
     }
   },
   mounted () {
