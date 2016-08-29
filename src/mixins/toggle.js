@@ -1,19 +1,35 @@
 export default {
   props: {
-    checked: {
+    value: {
+      type: [Array, Boolean, Number],
       required: true
     },
     disabled: {
       required: false
     },
     id: String,
-    value: {
+    checkValue: {
       required: false
     }
   },
-  methods: {
-    fireChange: function (event) {
-      this.$emit('change', event)
+  computed: {
+    isChecked () {
+      if (this.value instanceof Array) {
+        return this.value.indexOf(this.checkValue) >= 0
+      } else {
+        return this.value
+      }
+    }
+  },
+  beforeMount: function () {
+    this.checked = this.value
+  },
+  watch: {
+    value: function (value, oldValue) {
+      this.checked = value
+    },
+    checked: function (value, oldValue) {
+      this.$emit('input', value)
     }
   }
 }

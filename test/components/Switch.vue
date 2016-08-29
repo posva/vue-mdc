@@ -10,15 +10,15 @@ div
     span.mdl-switch__label No ripple
   h3 vue
   p
-    mdl-switch.added-class(id='check-dyn' type="checkbox" v-model='check') Dynamic {{check}}
-    mdl-switch(id='check' type="checkbox" v-model='check' v-bind:disabled='disabled') Check me
+    mdl-switch.added-class(id='check-dyn' v-model='check') Dynamic {{check}}
+    mdl-switch(id='check' v-model='check' v-bind:disabled='disabled') Check me
   p
     input#classic(type='checkbox' v-model='check')
     span Classic checkbox
     input#disable(type='checkbox' v-model='disabled')
     span Disable
-  mdl-switch(v-if='disabled' id='v-if' type="checkbox" v-model='check' v-bind:disabled='disabled') v-if
-  mdl-switch(v-for='(label, n) in 3' v-bind:value='indexId(n)' v-bind:id='indexId(n)' type="checkbox" v-model='checks') v-for {{indexId(n)}}
+  mdl-switch(v-if='disabled' id='v-if' v-model='check' v-bind:disabled='disabled') v-if
+  mdl-switch(v-for='(label, n) in 3' v-bind:checkValue='indexId(n)' v-bind:id='indexId(n)' v-model='checks') v-for {{indexId(n)}}
   p#checks {{checks}}
 </template>
 
