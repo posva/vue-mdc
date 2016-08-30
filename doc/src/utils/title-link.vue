@@ -23,7 +23,8 @@ a.title-link
 
 <template lang="jade">
 router-link.title-link(:to='link', :id.once='id', :class="{'title-link--big': big}")
-  slot
+  component(:is='header')
+    slot
 </template>
 
 <script>
@@ -39,6 +40,9 @@ export default {
   computed: {
     link () {
       return '/' + this.id
+    },
+    header () {
+      return this.big ? 'h2' : 'h3'
     }
   },
   ready () {
