@@ -8,14 +8,14 @@ export default {
       required: false
     },
     id: String,
-    checkValue: {
+    selectedValue: {
       required: false
     }
   },
   computed: {
     isChecked () {
       if (this.value instanceof Array) {
-        return this.value.indexOf(this.checkValue) >= 0
+        return this.value.indexOf(this.selectedValue) >= 0
       } else {
         return this.value
       }
@@ -25,10 +25,10 @@ export default {
     this.checked = this.value
   },
   watch: {
-    value: function (value, oldValue) {
+    value: function (value) {
       this.checked = value
     },
-    checked: function (value, oldValue) {
+    checked: function (value) {
       this.$emit('input', value)
     }
   }
