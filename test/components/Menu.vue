@@ -75,7 +75,7 @@ export default {
   },
   methods: {
     open () {
-      this.$els.menu.MaterialMenu.handleForClick_()
+      this.$refs.menu.MaterialMenu.handleForClick_()
     },
     addOption () {
       this.options.push(this.newOption)
