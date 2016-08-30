@@ -6,43 +6,43 @@
   title-link Checkboxes
   .section__content
     p The checkbox supports the
-      a(v-link.literal='/ripple-effect')  ripple effect
+      router-link(to="/ripple-effect")  ripple effect
     .flex.start.wrap
-      mdl-checkbox(:checked.sync='checked') Checkbox
-      mdl-checkbox.mdl-js-ripple-effect(:checked.sync='checked') Ripple Effect
-      mdl-checkbox(:checked.sync='checked', disabled) Disabled
+      mdl-checkbox(v-model='checked') Checkbox
+      mdl-checkbox.mdl-js-ripple-effect(v-model='checked') Ripple Effect
+      mdl-checkbox(v-model='checked', disabled) Disabled
     pre
       code.html
-        p= '<mdl-checkbox :checked.sync="checked">Checkbox</mdl-checkbox>'
-        p= '<mdl-checkbox :checked.sync="checked" class="mdl-js-ripple-effect">Ripple Effect</mdl-checkbox>'
-        p= '<mdl-checkbox :checked.sync="checked" disabled>Disabled</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checked">Checkbox</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checked" class="mdl-js-ripple-effect">Ripple Effect</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checked" disabled>Disabled</mdl-checkbox>'
 
     p You can pass an 
       code id
       |  to the component to access through the form element
     pre
       code.html
-        p= '<mdl-checkbox id="Subscribe" :checked.sync="subscribe">Subscribe</mdl-checkbox>'
+        p= '<mdl-checkbox id="Subscribe" v-model="subscribe">Subscribe</mdl-checkbox>'
 
     p Instead of using multiple booleans for a group of checkboxes, you can directly pass the same array to multiple checkboxes. If you do this you also need to specify the 
      code value
      |  prop
 
     .flex.start.wrap
-      mdl-checkbox(:checked.sync='checks', value='one') One
-      mdl-checkbox(:checked.sync='checks', value='two') Two
-      mdl-checkbox(:checked.sync='checks', value='three') Three
-      mdl-checkbox(:checked.sync='checks', value='four') Four
-      mdl-checkbox(:checked.sync='checks', value='five') Five
-      p Arrays content: {{checks | json}}
+      mdl-checkbox(v-model='checks', selected-value='one') One
+      mdl-checkbox(v-model='checks', selected-value='two') Two
+      mdl-checkbox(v-model='checks', selected-value='three') Three
+      mdl-checkbox(v-model='checks', selected-value='four') Four
+      mdl-checkbox(v-model='checks', selected-value='five') Five
+      p Arrays content: {{checks}}
 
     pre
       code.html
-        p= '<mdl-checkbox :checked.sync="checks" value="one">One</mdl-checkbox>'
-        p= '<mdl-checkbox :checked.sync="checks" value="two">Two</mdl-checkbox>'
-        p= '<mdl-checkbox :checked.sync="checks" value="three">Three</mdl-checkbox>'
-        p= '<mdl-checkbox :checked.sync="checks" value="four">Four</mdl-checkbox>'
-        p= '<mdl-checkbox :checked.sync="checks" value="five">Five</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checks" selected-value="one">One</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checks" selected-value="two">Two</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checks" selected-value="three">Three</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checks" selected-value="four">Four</mdl-checkbox>'
+        p= '<mdl-checkbox v-model="checks" selected-value="five">Five</mdl-checkbox>'
 
     h5 Prop List
     table.mdl-data-table.mdl-js-data-table
@@ -61,9 +61,9 @@
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code checked
+            code value
           td.mdl-data-table__cell--non-numeric Control whether the checkbox is checked or not
-          td.mdl-data-table__cell--non-numeric You must use a two way binding. You can either use a boolean or an array
+          td.mdl-data-table__cell--non-numeric Typically used with 'v-model' binding. You can either use a boolean or an array
         tr
           td.mdl-data-table__cell--non-numeric
             code id
@@ -71,7 +71,7 @@
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code value
+            code selected-value
           td.mdl-data-table__cell--non-numeric Defines the value of the checkbox. Useful when passing an array to the 
             code checked
             |  prop

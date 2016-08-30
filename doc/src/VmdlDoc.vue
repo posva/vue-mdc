@@ -85,7 +85,7 @@ p a
 </style>
 
 <template lang="jade">
-.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header(v-el='menu')
+.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header(ref='menu')
   header.mdl-layout__header
     .mdl-layout__header-row
       span.header-title
@@ -93,7 +93,7 @@ p a
         | Vue MDL
       .mdl-layout-spacer
       mdl-textfield.mdl-textfield--align-right(id='search' expandable='search' v-bind:value.sync='filter')
-  .mdl-layout__drawer(v-el:drawer)
+  .mdl-layout__drawer(ref='drawer')
     menu-entry(v-for='menu in items', :menu='menu')
     span.mdl-layout-title.mdl-layout-title--icon
       i.material-icons link
@@ -107,7 +107,7 @@ p a
 </template>
 
 <script>
-/* global docsearch*/
+/* global docsearch */
 import menuEntry from './utils/menu-entry.vue'
 
 export default {

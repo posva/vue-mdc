@@ -15,15 +15,15 @@
         li Icon Toggles
         li Switches
     .flex.start.wrap
-      mdl-radio.mdl-js-ripple-effect(:checked.sync='radio', value='radio') Radio
+      mdl-radio.mdl-js-ripple-effect(v-model='radio', selected-value='radio') Radio
     .flex.start.wrap
       mdl-button.mdl-js-ripple-effect(raised colored) Button
     .flex.start.wrap
-      mdl-checkbox.reset-width.mdl-js-ripple-effect(:checked.sync='check') Checkbox
+      mdl-checkbox.reset-width.mdl-js-ripple-effect(v-model='check') Checkbox
     .flex.start.wrap
-      mdl-icon-toggle.mdl-js-ripple-effect(:checked.sync='check', icon='format_bold')
+      mdl-icon-toggle.mdl-js-ripple-effect(v-model='check', icon='format_bold')
     .flex.start.wrap
-      mdl-switch.reset-width.mdl-js-ripple-effect(:checked.sync='check') Switch
+      mdl-switch.reset-width.mdl-js-ripple-effect(v-model='check') Switch
 
     p At the moment, the 
       code v-mdl-ripple-effect

@@ -6,42 +6,42 @@
   title-link Icon Toggles
   .section__content
     p The icon-toggle component works the same way as the
-      a(v-link.literal='/checkboxes')  checkbox component
+      router-link(to="/checkboxes")  checkbox component
       |. It also supports the
-      a(v-link.literal='/ripple-effect')  ripple effect
+      router-link(to="/ripple-effect")  ripple effect
     .flex.start.wrap
-      mdl-icon-toggle(:checked.sync='bold', icon='format_bold')
-      mdl-icon-toggle.mdl-js-ripple-effect(:checked.sync='italic', icon='format_italic')
-      mdl-icon-toggle(:checked.sync='underline', icon='format_underlined', disabled)
+      mdl-icon-toggle(v-model='bold', icon='format_bold')
+      mdl-icon-toggle.mdl-js-ripple-effect(v-model='italic', icon='format_italic')
+      mdl-icon-toggle(v-model='underline', icon='format_underlined', disabled)
     pre
       code.html
-        p= '<mdl-icon-toggle :checked.sync="checked"  icon="format_bold"></mdl-icon-toggle>'
-        p= '<mdl-icon-toggle :checked.sync="checked" icon="format_italic" class="mdl-js-ripple-effect"></mdl-icon-toggle>'
-        p= '<mdl-icon-toggle :checked.sync="checked" icon="format_underlined" disabled></mdl-icon-toggle>'
+        p= '<mdl-icon-toggle v-model="checked"  icon="format_bold"></mdl-icon-toggle>'
+        p= '<mdl-icon-toggle v-model="checked" icon="format_italic" class="mdl-js-ripple-effect"></mdl-icon-toggle>'
+        p= '<mdl-icon-toggle v-model="checked" icon="format_underlined" disabled></mdl-icon-toggle>'
 
     p You can pass an 
       code id
       |  to the component to access through the form element
     pre
       code.html
-        p= '<mdl-icon-toggle id="Subscribe" :checked.sync="subscribe">Subscribe</mdl-icon-toggle>'
+        p= '<mdl-icon-toggle id="Subscribe" v-model="subscribe">Subscribe</mdl-icon-toggle>'
 
     p Instead of using multiple booleans for a group of checkboxes, you can directly pass the same array to multiple checkboxes. If you do this you also need to specify the 
      code value
      |  prop
 
     .flex.start.wrap
-      mdl-icon-toggle(:checked.sync='styles', icon='format_bold', value='bold')
-      mdl-icon-toggle(:checked.sync='styles', icon='format_italic', value='italic')
-      mdl-icon-toggle(:checked.sync='styles', icon='format_underlined', value='underlined')
+      mdl-icon-toggle(v-model='styles', icon='format_bold', selected-value='bold')
+      mdl-icon-toggle(v-model='styles', icon='format_italic', selected-value='italic')
+      mdl-icon-toggle(v-model='styles', icon='format_underlined', selected-value='underlined')
     .flex.start.wrap
-      p Arrays content: {{styles | json}}
+      p Arrays content: {{styles}}
 
     pre
       code.html
-        p= '<mdl-icon-toggle :checked.sync="styles" icon="format_bold" value="bold"></mdl-icon-toggle>'
-        p= '<mdl-icon-toggle :checked.sync="styles" icon="format_italic" value="italic"></mdl-icon-toggle>'
-        p= '<mdl-icon-toggle :checked.sync="styles" icon="format_underlined" value="underlined"></mdl-icon-toggle>'
+        p= '<mdl-icon-toggle v-model="styles" icon="format_bold" selected-value="bold"></mdl-icon-toggle>'
+        p= '<mdl-icon-toggle v-model="styles" icon="format_italic" selected-value="italic"></mdl-icon-toggle>'
+        p= '<mdl-icon-toggle v-model="styles" icon="format_underlined" selected-value="underlined"></mdl-icon-toggle>'
 
     h5 Prop List
     table.mdl-data-table.mdl-js-data-table
@@ -65,9 +65,9 @@
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code checked
+            code value
           td.mdl-data-table__cell--non-numeric Control whether the icon toggle is checked or not
-          td.mdl-data-table__cell--non-numeric You must use a two way binding. You can either use a boolean or an array
+          td.mdl-data-table__cell--non-numeric Typicaly used with 'v-model'. You can either use a boolean or an array
         tr
           td.mdl-data-table__cell--non-numeric
             code id
@@ -75,7 +75,7 @@
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code value
+            code selected-value
           td.mdl-data-table__cell--non-numeric Defines the value of the toggle. Useful when passing an array to the 
             code checked
             |  prop

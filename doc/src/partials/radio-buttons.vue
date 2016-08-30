@@ -6,22 +6,22 @@
   title-link Radio Buttons
   .section__content
     p The radio button supports the
-      a(v-link.literal='/ripple-effect')  ripple effect
+      router-link(to="/ripple-effect")  ripple effect
     .flex.start.wrap
-      mdl-radio(:checked.sync='checked', value='option 1') Option 1
+      mdl-radio(v-model='checked', selected-value='option 1') Option 1
     .flex.start.wrap
-      mdl-radio.mdl-js-ripple-effect(:checked.sync='checked', value='option 2') Option 2
+      mdl-radio.mdl-js-ripple-effect(v-model='checked', selected-value='option 2') Option 2
     .flex.start.wrap
-      mdl-radio(:checked.sync='checked', value='option 3') Option 3
+      mdl-radio(v-model='checked', selected-value='option 3') Option 3
     .flex.start.wrap
-      mdl-radio(:checked.sync='checked', disabled, value='option 4') Option 4
+      mdl-radio(v-model='checked', disabled, selected-value='option 4') Option 4
     p Option selected: {{checked}}
     pre
       code.html
-        p= '<mdl-radio :checked.sync="check" value="option 1">Option 1</mdl-radio>'
-        p= '<mdl-radio :checked.sync="check" class="mdl-js-ripple-effect" value="option 2">Option 2</mdl-radio>'
-        p= '<mdl-radio :checked.sync="check" value="option 3">Option 3</mdl-radio>'
-        p= '<mdl-radio :checked.sync="check" value="option 4" disabled>Option 4</mdl-radio>'
+        p= '<mdl-radio v-model="check" selected-value="option 1">Option 1</mdl-radio>'
+        p= '<mdl-radio v-model="check" class="mdl-js-ripple-effect" selected-value="option 2">Option 2</mdl-radio>'
+        p= '<mdl-radio v-model="check" selected-value="option 3">Option 3</mdl-radio>'
+        p= '<mdl-radio v-model="check" selected-value="option 4" disabled>Option 4</mdl-radio>'
 
     p You can pass an 
       code id
@@ -30,7 +30,7 @@
       |  to the component to access through the form element
     pre
       code.html
-        p= '<mdl-radio name="subscription-pro" id="subscription-pro" :checked.sync="subscription" value="pro">Pro Subscription</mdl-radio>'
+        p= '<mdl-radio name="subscription-pro" id="subscription-pro" v-model="subscription" selected-value="pro">Pro Subscription</mdl-radio>'
 
     h5 Prop List
     table.mdl-data-table.mdl-js-data-table
@@ -49,9 +49,9 @@
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code checked
+            code value
           td.mdl-data-table__cell--non-numeric Variable to assign when the radio button is checked
-          td.mdl-data-table__cell--non-numeric You must use a two way binding
+          td.mdl-data-table__cell--non-numeric Typically used with 'v-model'.
         tr
           td.mdl-data-table__cell--non-numeric
             code name
@@ -64,7 +64,7 @@
           td.mdl-data-table__cell--non-numeric
         tr
           td.mdl-data-table__cell--non-numeric
-            code value
+            code selected-value
           td.mdl-data-table__cell--non-numeric Defines the value of the radio button
           td.mdl-data-table__cell--non-numeric This prop is required
     br

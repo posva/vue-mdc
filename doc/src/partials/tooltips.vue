@@ -10,12 +10,12 @@
       code  for
       |  prop to bind to the correct dom element
     .flex.center.wrap
-      mdl-tooltip(for='add-button') Add something!
+      mdl-tooltip(target='add-button') Add something!
       mdl-button#add-button(fab, primary)
         i.material-icons add
     pre
       code.html
-        p= '<mdl-tooltip for="add-button">Add something!</mdl-tooltip>'
+        p= '<mdl-tooltip target="add-button">Add something!</mdl-tooltip>'
         p= '<mdl-button id="add-button" fab primary>'
         p= '  <i class="material-icons">add</i>'
         p= '</mdl-button>'
@@ -25,12 +25,12 @@
       |  prop
 
     .flex.center.wrap
-      mdl-tooltip(large, for='send-button') Let it go!
+      mdl-tooltip(large, target='send-button') Let it go!
       mdl-button#send-button(raised, primary)
         i.material-icons send
     pre
       code.html
-        p= '<mdl-tooltip for="send-button" large>Let it go!</mdl-tooltip>'
+        p= '<mdl-tooltip target="send-button" large>Let it go!</mdl-tooltip>'
         p= '<mdl-button id="send-button" fab primary>'
         p= '  <i class="material-icons">send</i>'
         p= '</mdl-button>'
@@ -38,7 +38,7 @@
     p You can also add html inside the tooltip
 
     .flex.center.wrap
-      mdl-tooltip(large, for='mood-button')
+      mdl-tooltip(large, target='mood-button')
         | Here is some
         strong  custom
         code  html
@@ -48,7 +48,7 @@
         i.material-icons mood
     pre
       code.html
-        p= '<mdl-tooltip for="mood-button">Add something!</mdl-tooltip>'
+        p= '<mdl-tooltip target="mood-button">Add something!</mdl-tooltip>'
         p= '<mdl-button id="mood-button" fab primary>'
         p= '  Here is some <strong>custom</strong> <code>html</code><br/><i class="material-icons">mood</i>'
         p= '</mdl-button>'
@@ -63,7 +63,7 @@
       tbody
         tr
           td.mdl-data-table__cell--non-numeric
-            code  for
+            code  target
           td.mdl-data-table__cell--non-numeric
             code id
             |  of another item. The tooltip is binded to the item with the specified

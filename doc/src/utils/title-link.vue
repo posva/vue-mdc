@@ -22,11 +22,8 @@ a.title-link
 </style>
 
 <template lang="jade">
-a.title-link(v-link='link', :id.once='id', :class='{"title-link--big": big}')
-  h2(v-if='big')
-    slot
-  h3(v-else)
-    slot
+router-link.title-link(:to='link', :id.once='id', :class="{'title-link--big': big}")
+  slot
 </template>
 
 <script>
