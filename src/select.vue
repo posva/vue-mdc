@@ -84,7 +84,7 @@ export default {
     this.setName()
   },
   watch: {
-    value: function () {
+    value () {
       this.setName()
     }
   }

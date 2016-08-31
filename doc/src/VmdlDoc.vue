@@ -92,7 +92,7 @@ p a
         img.mdl-layout__header-logo(src='http://vuejs.org/images/logo.png')
         | Vue MDL
       .mdl-layout-spacer
-      mdl-textfield.mdl-textfield--align-right(id='search' expandable='search' v-bind:value.sync='filter')
+      mdl-textfield.mdl-textfield--align-right(id='search' expandable='search' v-model='filter')
   .mdl-layout__drawer(ref='drawer')
     menu-entry(v-for='menu in items', :menu='menu')
     span.mdl-layout-title.mdl-layout-title--icon

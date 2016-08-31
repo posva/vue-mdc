@@ -11,7 +11,9 @@ export default {
     buffer: {
       required: false
     },
-    indeterminate: Boolean
+    indeterminate: {
+      required: false
+    }
   },
   mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialProgress')

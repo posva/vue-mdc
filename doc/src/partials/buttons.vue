@@ -10,7 +10,7 @@
         code ripple-effect
     .flex.start.wrap
       mdl-button.space Button
-      mdl-button.space(mdl-ripple-effect) Ripple Effect
+      mdl-button.space(v-mdl-ripple-effect) Ripple Effect
       mdl-button.space(disabled) Disabled
       mdl-button.space(icon)
         i.material-icons star

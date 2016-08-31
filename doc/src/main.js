@@ -31,18 +31,17 @@ Vue.mixin({
   }
 })
 
-let routerMap = [
+let routes = [
   { path: '/', redirect: '/installation' }
 ]
+
 context.keys().forEach(function (comp) {
   let name = path.basename(comp, '.vue')
   Vue.component(name, context(comp))
-  routerMap.push({ path: `/${name}`, component: context(comp) })
+  routes.push({ path: `/${name}`, component: context(comp) })
 })
 
-let router = new VueRouter({
-  routes: routerMap
-})
+let router = new VueRouter({ routes })
 
 Vue.config.debug = process.env.NODE_ENV !== 'production'
 new Vue({

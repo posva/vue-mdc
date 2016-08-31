@@ -1,5 +1,5 @@
 export default {
   bind (el) {
-    componentHandler.upgradeElements(el)
+    componentHandler.upgradeElements(this && this.el || el)
   }
 }

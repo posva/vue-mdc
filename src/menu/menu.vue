@@ -7,6 +7,7 @@ ul.mdl-menu.mdl-js-menu(v-bind:for.once='target')
 export default {
   props: ['target'],
   mounted () {
+    console.log('Menu: ', this.$el)
     componentHandler.upgradeElement(this.$el, 'MaterialMenu')
   }
   // beforeDestroy () {
