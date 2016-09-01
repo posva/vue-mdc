@@ -5,7 +5,6 @@ label.mdl-icon-toggle.mdl-js-icon-toggle(v-bind:for.once='id' class='' v-bind:cl
 </template>
 
 <script>
-/* global componentHandler*/
 import common from '../mixins/toggle'
 
 export default {

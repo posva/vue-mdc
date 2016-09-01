@@ -15,8 +15,6 @@
 </template>
 
 <script>
-/* global componentHandler*/
-
 export default {
   props: {
     maxlength: {

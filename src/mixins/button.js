@@ -1,5 +1,3 @@
-/* global componentHandler*/
-
 export default {
   computed: {
     cssClasses () {

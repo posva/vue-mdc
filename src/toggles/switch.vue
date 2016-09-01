@@ -6,7 +6,6 @@ label.mdl-switch.mdl-js-switch(v-bind:for.once='id' v-bind:class="{ 'is-disabled
 </template>
 
 <script>
-/* global componentHandler*/
 import common from '../mixins/toggle'
 
 export default {
