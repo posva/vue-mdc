@@ -109,3 +109,8 @@ Releasing is done using the git flow model
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2016 Eduardo San Martin Morote
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/posva/vue-mdl/badge.svg?style=beer-square)](https://beerpay.io/posva/vue-mdl)  [![Beerpay](https://beerpay.io/posva/vue-mdl/make-wish.svg?style=flat-square)](https://beerpay.io/posva/vue-mdl?focus=wish)
