@@ -24,8 +24,8 @@ i.material-icons.mdl-badge
       span(v-mdl-badge.no-background='value') Inbox
       i.material-icons(v-mdl-badge.overlap='text') account_box
     .flex.start.wrap
-      mdl-textfield(:value.sync='value', label='Badge Number', floating-label)
-      mdl-textfield(:value.sync='text', label='Badge Text', floating-label)
+      mdl-textfield(v-model='value', label='Badge Number', floating-label)
+      mdl-textfield(v-model='text', label='Badge Text', floating-label)
 
     p Pass the text you want to the directive:
     pre
@@ -56,8 +56,8 @@ i.material-icons.mdl-badge
       span(v-mdl-badge='num', :hide-badge='zero') Inbox
       span(v-mdl-badge.number='num', :hide-badge='hide') Inbox
     .flex.start.wrap
-      mdl-slider(min=0 max=15 v-bind:value.sync='num')
-      mdl-checkbox(:checked.sync='hide') Hide
+      mdl-slider(min=0 max=15 v-model='num')
+      mdl-checkbox(v-model='hide') Hide
 
     pre
       code.html

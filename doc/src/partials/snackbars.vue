@@ -17,11 +17,11 @@
     .flex.center.wrap
       mdl-snackbar(display-on='mailSent')
     .flex.center.wrap
-      mdl-button(raised, colored, @click='$broadcast("mailSent", { message: "Message Sent" })') Show
+      mdl-button(raised, colored, @click.native="$root.$emit('mailSent', { message: 'Message Sent' })") Show
     pre
       code.html
         p= '<mdl-snackbar display-on="mailSent"></mdl-snackbar>'
-        p= '<mdl-button raised colored @click="$broadcast(\'mailSent\', { message: \'Message Sent\' })">Show</mdl-button>'
+        p= '<mdl-button raised colored @click.native="$root.$emit(\'mailSent\', { message: \'Message Sent\' })">Show</mdl-button>'
 
     p The object passed when broadcasting the event 
       code mailSent
@@ -33,12 +33,12 @@
     .flex.center.wrap
       mdl-snackbar(display-on='colorChanged')
     .flex.center.wrap
-      mdl-button(:style='buttonStyle', raised, @click='changeColor') Change color
+      mdl-button(:style='buttonStyle', raised, @click.native='changeColor') Change color
 
     pre
       code.html
         p= '<mdl-snackbar display-on="colorChanged"></mdl-snackbar>'
-        p= '<mdl-button raised :style="buttonStyle" @click="changeColor">Change color</mdl-button>'
+        p= '<mdl-button raised :style="buttonStyle" @click.native="changeColor">Change color</mdl-button>'
       code.javascript.
         new Vue({
           data: {
@@ -58,7 +58,7 @@
           methods: {
             changeColor () {
               this.color = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
-              this.$broadcast('colorChanged', {
+              this.$root.$emit('colorChanged', {
                 message: 'Color changed',
                 actionHandler: (event) => {
                   this.color = null
@@ -96,7 +96,7 @@ export default {
   methods: {
     changeColor () {
       this.color = `#${Math.floor(Math.random() * 0xFFFFFF).toString(16)}`
-      this.$broadcast('colorChanged', {
+      this.$root.$emit('colorChanged', {
         message: 'Color changed',
         actionHandler: (event) => {
           this.color = null

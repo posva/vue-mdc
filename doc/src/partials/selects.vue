@@ -12,12 +12,12 @@
       |  html element.
 
     .flex.center.wrap
-      mdl-select#country-select(label='Country', :value.sync='country', :options='countriesArray')
+      mdl-select#country-select(label='Country', v-model='country', :options='countriesArray')
     .flex.center.wrap
       p Selected country is {{country}}
     pre
       code.html
-        p= '<mdl-select label="Country" id="contry-select" :value.sync="country" :options="countriesArray"></mdl-select>'
+        p= '<mdl-select label="Country" id="contry-select" v-model="country" :options="countriesArray"></mdl-select>'
       code.javascript.
         new Vue({
           data: {
@@ -34,12 +34,12 @@
       |  properties.
 
     .flex.center.wrap
-      mdl-select#country-select-2(label='Country', :value.sync='countryVal', :options='countries')
+      mdl-select#country-select-2(label='Country', v-model='countryVal', :options='countries')
     .flex.center.wrap
       p Selected country is {{countryVal}}
     pre
       code.html
-        p= '<mdl-select label="Country" id="contry-select" :value.sync="country" :options="countries"></mdl-select>'
+        p= '<mdl-select label="Country" id="contry-select" v-model="country" :options="countries"></mdl-select>'
       code.javascript.
         new Vue({
           data: {

@@ -17,7 +17,10 @@ context.keys().forEach((comp) => {
 
 /* eslint-disable no-new */
 new Vue({
-  el: 'body',
+  el: '#app',
+  render: function (h) {
+    return h('app', { props: { components: this.components } })
+  },
   data: {
     components
   },

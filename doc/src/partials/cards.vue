@@ -41,8 +41,8 @@
     .flex.start.wrap
       mdl-card.reset-height.white-space(:title='cardTitle', :supporting-text='supportingText', actions, actions-text='View updates')
     .flex.start.wrap
-      mdl-textfield(:value.sync='cardTitle', floating-label='Card Title')
-      mdl-textfield(textarea, :value.sync='supportingText', floating-label='Supporting Text')
+      mdl-textfield(v-model='cardTitle', floating-label='Card Title')
+      mdl-textfield(textarea, v-model='supportingText', floating-label='Supporting Text')
 
     p Pass the text you want to the directive:
     pre

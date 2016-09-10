@@ -17,18 +17,18 @@
     .flex.center.wrap
       p Hello {{name}}
     .flex.start.wrap
-      mdl-textfield.space(label='Name', :value.sync='name')
-      mdl-textfield.space(floating-label='Name', :value.sync='name')
+      mdl-textfield.space(label='Name', v-model='name')
+      mdl-textfield.space(floating-label='Name', v-model='name')
     pre
       code.html
-        p= '<mdl-textfield label="Name" :value.sync="name"></mdl-textfield>'
-        p= '<mdl-textfield floating-label="Name" :value.sync="name"></mdl-textfield>'
+        p= '<mdl-textfield label="Name" v-model="name"></mdl-textfield>'
+        p= '<mdl-textfield floating-label="Name" v-model="name"></mdl-textfield>'
 
     p Use the 
       code textarea
       |  prop to use a textarea instead of an input
     .flex.start.wrap
-      mdl-textfield(floating-label='Textarea', textarea, rows='4', :value.sync='text')
+      mdl-textfield(floating-label='Textarea', textarea, rows='4', v-model='text')
       p {{text}}
     pre
       code.html= '<mdl-textfield floating-label="Name" textarea rows="4"></mdl-textfield>'
@@ -63,13 +63,13 @@
     // .flex.start.wrap
     //   mdl-textfield(:floating-label='float', :label='label', :textarea='textarea', :rows='rows')
     // .flex.start.wrap
-    //   mdl-checkbox.reset-width.space(:checked.sync='float') Floating label
-    //   mdl-checkbox.reset-width.space(:checked.sync='textarea') Textarea
+    //   mdl-checkbox.reset-width.space(v-model='float') Floating label
+    //   mdl-checkbox.reset-width.space(v-model='textarea') Textarea
     // .flex.start.wrap
     //   p Rows: 
-    //   mdl-slider.reset-width.space(:value.sync='rows', min='1', max='20')
+    //   mdl-slider.reset-width.space(v-model='rows', min='1', max='20')
     // .flex.start.wrap
-    //   mdl-textfield.space(:value.sync='label', floating-label='Label')
+    //   mdl-textfield.space(v-model='label', floating-label='Label')
     // p Result:
     // pre
     //   code.html(v-hljs='playgroundHtml')

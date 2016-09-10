@@ -31,7 +31,7 @@ export default {
       fill: true
     }
   },
-  ready () {
+  mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialSlider')
 
     this.$el.MaterialSlider.change(this.value)

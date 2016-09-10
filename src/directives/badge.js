@@ -3,36 +3,28 @@ const checkNumber = function (num) {
   return num > 0
 }
 
-const dataBadgeSetter = function (hide, value) {
-  if (hide) {
-    this.el.removeAttribute('data-badge')
-  } else if (!this.isNumber || checkNumber(value)) {
-    this.el.setAttribute('data-badge', value)
+const updateBadgeValue = function (el, binding) {
+  if (!binding.modifiers.number || checkNumber(binding.value)) {
+    el.setAttribute('data-badge', binding.value)
   } else {
-    this.el.removeAttribute('data-badge')
+    el.removeAttribute('data-badge')
   }
 }
 
 export default {
-  bind () {
-    this.el.classList.add('mdl-badge')
-    if ('overlap' in this.modifiers) {
-      this.el.classList.add('mdl-badge--overlap')
+  bind (el, binding) {
+    el.classList.add('mdl-badge')
+    if ('overlap' in binding.modifiers) {
+      el.classList.add('mdl-badge--overlap')
     }
-    if ('no-background' in this.modifiers) {
-      this.el.classList.add('mdl-badge--no-background')
+    if ('no-background' in binding.modifiers) {
+      el.classList.add('mdl-badge--no-background')
     }
-    this.isNumber = 'number' in this.modifiers
+
+    updateBadgeValue(el, binding)
   },
-  params: ['hide-badge'],
-  paramWatchers: {
-    hideBadge (hide) {
-      dataBadgeSetter.call(this, hide, this.value)
-    }
-  },
-  update (value) {
-    this.value = value
-    dataBadgeSetter.call(this, this.params.hideBadge, value)
+  update (el, binding) {
+    updateBadgeValue(el, binding)
   }
 }
 

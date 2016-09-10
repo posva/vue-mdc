@@ -1,8 +1,6 @@
 import hljs from 'highlight.js/lib/highlight'
 
-export default {
-  update (value) {
-    this.el.innerText = value
-    hljs.highlightBlock(this.el)
-  }
+export default function (el, { value }) {
+  el.innerText = value
+  hljs.highlightBlock(el)
 }

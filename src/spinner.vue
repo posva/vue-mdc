@@ -1,23 +1,24 @@
 <template lang="jade">
-.mdl-spinner.mdl-js-spinner(v-bind:class='{ "mdl-spinner--single-color": singleColor, "is-active": active }')
+.mdl-spinner.mdl-js-spinner(v-bind:class="{ 'mdl-spinner--single-color': singleColor, 'is-active': active, 'is-upgraded': upgraded }")
 </template>
 
 <script>
-import propFill from './mixins/prop-fill'
-
 export default {
   props: {
     active: {
       default: true,
       type: Boolean
     },
-    singleColor: {
-      fill: true
+    singleColor: Boolean
+  },
+  data: function () {
+    return {
+      upgraded: false
     }
   },
-  ready () {
+  mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialSpinner')
-  },
-  mixins: [propFill]
+    this.upgraded = true
+  }
 }
 </script>

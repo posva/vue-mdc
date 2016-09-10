@@ -92,6 +92,7 @@ describe('Button', () => {
 
   it('applies classes even with empty strings in props', () => {
     let but = vm.$('#html-button')
+    console.log('html-button', but)
     but.should.have.class('mdl-button--raised')
     but.should.have.class('mdl-button--colored')
     but.should.not.have.class('mdl-button--accent')

@@ -5,8 +5,8 @@
 .section
   title-link Buttons
   .section__content
-    p The button component allows to easily toggle classes. It supports the 
-      a(v-link.literal='/ripple-effect')
+    p The button component allows to easily toggle classes. It supports the
+      router-link(to="/ripple-effect")
         code ripple-effect
     .flex.start.wrap
       mdl-button.space Button
@@ -17,7 +17,7 @@
     pre
       code.html
         p= '<mdl-button>Button</mdl-button>'
-        p= '<mdl-button v-mdl-ripple-effect>Ripple Effect</mdl-button>'
+        p= '<mdl-button mdl-ripple-effect>Ripple Effect</mdl-button>'
         p= '<mdl-button disabled>Disabled</mdl-button>'
         p= '<mdl-button icon>'
         p= '  <i class="material-icons">star</i>'
@@ -31,17 +31,17 @@
         i.material-icons(v-if='iconText') {{iconText}}
         span(v-else) {{text}}
     .flex.center.wrap
-      mdl-checkbox.reset-width.space(:checked.sync='colored') Colored
-      mdl-checkbox.reset-width.space(:checked.sync='raised') Raised
-      mdl-checkbox.reset-width.space(:checked.sync='disabled') Disabled
-      mdl-checkbox.reset-width.space(:checked.sync='icon') Icon
-      mdl-checkbox.reset-width.space(:checked.sync='accent') Accent
-      mdl-checkbox.reset-width.space(:checked.sync='primary') Primary
-      mdl-checkbox.reset-width.space(:checked.sync='miniFab') Mini Fab
-      mdl-checkbox.reset-width.space(:checked.sync='fab') Fab
+      mdl-checkbox.reset-width.space(v-model='colored') Colored
+      mdl-checkbox.reset-width.space(v-model='raised') Raised
+      mdl-checkbox.reset-width.space(v-model='disabled') Disabled
+      mdl-checkbox.reset-width.space(v-model='icon') Icon
+      mdl-checkbox.reset-width.space(v-model='accent') Accent
+      mdl-checkbox.reset-width.space(v-model='primary') Primary
+      mdl-checkbox.reset-width.space(v-model='miniFab') Mini Fab
+      mdl-checkbox.reset-width.space(v-model='fab') Fab
     .flex.start.wrap
-      mdl-textfield.space(:value.sync='text', label='Text', floating-label)
-      mdl-textfield.space(:value.sync='iconText', label='Icon', floating-label)
+      mdl-textfield.space(v-model='text', label='Text', floating-label)
+      mdl-textfield.space(v-model='iconText', label='Icon', floating-label)
     p Result:
     pre
       code.html(v-hljs='playgroundHtml')

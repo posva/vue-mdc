@@ -22,10 +22,8 @@ a.title-link
 </style>
 
 <template lang="jade">
-a.title-link(v-link='link', :id.once='id', :class='{"title-link--big": big}')
-  h2(v-if='big')
-    slot
-  h3(v-else)
+router-link.title-link(:to='link', :id.once='id', :class="{'title-link--big': big}")
+  component(:is='header')
     slot
 </template>
 
@@ -42,6 +40,9 @@ export default {
   computed: {
     link () {
       return '/' + this.id
+    },
+    header () {
+      return this.big ? 'h2' : 'h3'
     }
   },
   ready () {

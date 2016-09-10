@@ -7,15 +7,15 @@
   .section__content
     p The dialog component allows for verification of user actions, simple data input, and alerts to provide extra information to users. To display dialogs, use events.
 
-    div(v-transfer-dom)
-      mdl-dialog(v-ref:info-message title='Hi there')
+    div
+      mdl-dialog(ref='infoMessage' title='Hi there')
         p Hello. This is an information message. You can click outside or in the close button to close it.
     .flex.center.wrap
-      mdl-button(fab, primary, v-on:click='$refs.infoMessage.open')
+      mdl-button(fab, primary, v-on:click.native='$refs.infoMessage.open')
         i.material-icons power_settings_new
     pre
       code.html
-        p= '<mdl-dialog v-ref:info-message title="Hi there">'
+        p= '<mdl-dialog ref="infoMessage" title="Hi there">'
         p= '  <p>Hello. This is an information message. You can click outside or in the close button to close it.</p>'
         p= '</mdl-dialog>'
 
@@ -32,15 +32,15 @@
 
     pre
       code.html
-        p= '<div v-transfer-dom>'
-        p= '  <mdl-dialog v-ref:info-message title="Hi there">'
+        p= '<div>'
+        p= '  <mdl-dialog ref="infoMessage" title="Hi there">'
         p= '    <p>Hello. This is an information message. You can click outside or in the close button to close it.</p>'
         p= '  </mdl-dialog>'
         p= '</div>'
 
     p The example above use this technique to prevent the menu from overlapping.
 
-    p The dialgo component emits an&nbsp;
+    p The dialog component emits an&nbsp;
       code open
       |  event when it opens as well as a&nbsp;
       code close
@@ -49,7 +49,7 @@
 
     pre
       code.html
-        p= '<mdl-dialog @close="closeCallback" v-ref:info-message title="Hi there">'
+        p= '<mdl-dialog @close="closeCallback" ref="infoMessage" title="Hi there">'
         p= '  <p>Hello. This is an information message. You can click outside or in the close button to close it.</p>'
         p= '</mdl-dialog>'
 
@@ -64,26 +64,26 @@
       code actions
       |  slot:
 
-    div(v-transfer-dom)
-      mdl-dialog(v-ref:multiple full-width title='Hi there')
+    div
+      mdl-dialog(ref='multiple' full-width title='Hi there')
         p Hello.
         p Number is {{ number }}
         p Increase the number or decrease without closing this modal
         template(slot="actions")
-          mdl-button(primary, v-on:click='number++') Increase
-          mdl-button(primary, v-on:click='number--') Decrease
-          mdl-button(v-on:click='$refs.multiple.close') Close
+          mdl-button(primary, v-on:click.native='number++') Increase
+          mdl-button(primary, v-on:click.native='number--') Decrease
+          mdl-button(v-on:click.native='$refs.multiple.close') Close
     .flex.center.wrap
-      mdl-button(fab, primary, v-on:click='$refs.multiple.open')
+      mdl-button(fab, primary, v-on:click.native='$refs.multiple.open')
         i.material-icons power_settings_new
     pre
       code.html
-        p= '<mdl-dialog v-ref:multiple full-width title="Hi there">'
+        p= '<mdl-dialog ref="multiple" full-width title="Hi there">'
         p= '  <p>Hello</p>'
         p= '  <template slot="actions">'
-        p= '    <mdl-button primary @click="number++">Increase</mdl-button>'
-        p= '    <mdl-button primary @click="number--">Decrease</mdl-button>'
-        p= '    <mdl-button @click="$refs.multiple.close">Close</mdl-button>'
+        p= '    <mdl-button primary @click.native="number++">Increase</mdl-button>'
+        p= '    <mdl-button primary @click.native="number--">Decrease</mdl-button>'
+        p= '    <mdl-button @click.native="$refs.multiple.close">Close</mdl-button>'
         p= '  </template>'
         p= '</mdl-dialog>'
 

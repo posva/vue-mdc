@@ -19,7 +19,7 @@
       |  prop to
       code  false
     .flex.start.wrap
-      mdl-checkbox(:checked.sync='active') Active
+      mdl-checkbox(v-model='active') Active
     .flex.center.wrap
       mdl-spinner(:active='active')
     pre

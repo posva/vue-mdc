@@ -2,11 +2,11 @@
 div
   h1 Select
   h3 vue
-  mdl-checkbox(:checked.sync='visible') Visible
-  p Changed {{changes}}
-  mdl-select#select(v-if='visible', label='Country', @change='changes++', :value.sync='country', :options='countriesArray')
-  br
-  mdl-select#select-val(v-ref:select-val label='Country', :value.sync='countryVal', :options='countries')
+  mdl-checkbox(type="checkbox" v-model='visible') Visible
+  p Country {{country}}
+  mdl-select#select(v-if='visible', label='Country', v-model='country', :options='countriesArray')
+  p Country Val {{countryVal}}
+  mdl-select#select-val(ref='selectVal' label='Country', v-model='countryVal', :options='countries')
 </template>
 
 <script lang="babel">

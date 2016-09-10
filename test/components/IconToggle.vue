@@ -13,16 +13,16 @@ div
     i.mdl-icon-toggle__label.material-icons http
   h3 vue
   // We can also use the jade syntax #id for literal ids
-  mdl-icon-toggle.added-class(id='it' icon='face' v-bind:checked.sync='check' v-bind:disabled='disabled')
-  mdl-icon-toggle(id='dit' v-bind:icon='icon' v-bind:checked.sync='check')
+  mdl-icon-toggle.added-class(id='it' icon='face' v-model='check' v-bind:disabled='disabled')
+  mdl-icon-toggle(id='dit' v-bind:icon='icon' v-model='check')
   input#dit-val(type='text' v-model='icon')
   input#classic(type='checkbox' v-model='check')
   span Classic icon-toggle
   input#disable(type='checkbox' v-model='disabled')
   span Disable
-  mdl-icon-toggle(v-if='disabled' icon='face' id='v-if' v-bind:checked.sync='check' v-bind:disabled='disabled')
-  mdl-icon-toggle(v-for='n in 3' icon='face' v-bind:value='indexId(n)' v-bind:id='indexId(n)' v-bind:checked.sync='checks')
-  p#its {{checks | json}}
+  mdl-icon-toggle(v-if='disabled' icon='face' id='v-if' v-model='check' v-bind:disabled='disabled')
+  mdl-icon-toggle(v-for='(label, n) in 3' icon='face' v-bind:checkValue.once='indexId(n)' v-bind:id.once='indexId(n)' v-model='checks')
+  p#its {{checks}}
 </template>
 
 <script lang="babel">
