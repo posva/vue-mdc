@@ -3,8 +3,8 @@
          :for="id"
          :class="cssClasses">
     <input class="mdl-icon-toggle__input"
-           :value="val"
            type="checkbox"
+           :value="val"
            :id="id"
            v-model="checked"
            @change="fireChange"
