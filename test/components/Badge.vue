@@ -3,43 +3,52 @@
     background: aquamarine;
   }
 </style>
-<template lang="jade">
-div
-  h1 Badges
-  h3 MDL
-  span.material-icons.mdl-badge(data-badge='1') account_box
-  span.material-icons.mdl-badge(data-badge='♥') account_box
-  span.material-icons.mdl-badge.mdl-overlap(data-badge='♥') account_box
-  span.material-icons.mdl-badge.mdl-badge--no-background(data-badge='♥') account_box
-  span.material-icons.mdl-badge.mdl-overlap.mdl-badge--no-background(data-badge='♥') account_box
-  h3 vue
-  i.material-icons.mdl-badge--blue(v-mdl-badge.literal='3') account_box
-  i.material-icons(v-mdl-badge.literal='3') account_box
-  i.material-icons#badge(v-mdl-badge='badgeText') account_box
-  i.material-icons#badge-nb(v-mdl-badge.no-background='badgeText') account_box
-  i.material-icons#badge-overlap(v-mdl-badge.overlap.no-background='badgeText') account_box
-  span#badge-2(v-mdl-badge='3') Inbox
-  i.material-icons#hider(v-mdl-badge='badgeText', :hide-badge='zero') account_box
-  i.material-icons#number(v-mdl-badge.number='badgeText') account_box
-  i.material-icons#hider-multi(v-mdl-badge.number='badgeText', :hide-badge='hide') account_box
-  br
-  input#badge-val(type='text' v-model='badgeText')
-  input#badge-hide(type='checkbox' v-model='hide')
-  label(for='badge-hide') Hide
+<template>
+  <div>
+    <h1>Badges</h1>
+    <mdl-badge :badge="badgeText"
+               :overlap="overlap"
+               :no-background="noBackground"
+               :hide="hide"
+    >
+      <i id="badge" class="material-icons">{{ icon }}</i>
+    </mdl-badge>
+    <mdl-badge :badge="badgeText"
+               :overlap="overlap"
+    >
+      <span ref="badgeText">{{ text }}</span>
+    </mdl-badge>
+    <br/>
+    <input v-model="icon" type="text"/>
+    <br/>
+    <input v-model="badgeText" type="text"/>
+    <br/>
+    <input v-model="text" type="text"/>
+    <br/>
+    <label>
+      <input v-model="overlap" type="checkbox"/> Overlap
+    </label>
+    <br/>
+    <label>
+      <input v-model="hide" type="checkbox"/> Hide
+    </label>
+    <br/>
+    <label>
+      <input v-model="noBackground" type="checkbox"/> No Background
+    </label>
+  </div>
 </template>
 
-<script lang="babel">
+<script>
 export default {
   data () {
     return {
+      icon: 'account_box',
+      text: 'Inbox',
       badgeText: '♥',
-      hide: false
-    }
-  },
-  computed: {
-    zero () {
-      let n = parseInt(this.badgeText, 10)
-      return isNaN(n) || n <= 0
+      hide: false,
+      overlap: false,
+      noBackground: true
     }
   }
 }

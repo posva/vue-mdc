@@ -1,9 +1,9 @@
-import MdlBadge from './directives/badge'
 import Mdl from './directives/mdl'
 import MdlRippleEffect from './directives/ripple-effect'
 
 import MdlCheckbox from './toggles/checkbox.vue'
 import MdlRadio from './toggles/radio.vue'
+import MdlBadge from './badge.js'
 import MdlButton from './button.vue'
 import MdlAnchorButton from './anchor-button.vue'
 import MdlProgress from './progress.vue'
@@ -41,12 +41,12 @@ export const components = {
   MdlSelect,
   MdlDialog,
   MdlTabs,
-  MdlTab
+  MdlTab,
+  MdlBadge
 }
 
 export const directives = {
   Mdl,
-  MdlBadge,
   MdlRippleEffect
 }
 
@@ -64,10 +64,10 @@ export default {
 export {
   // directives
   Mdl,
-  MdlBadge,
   MdlRippleEffect,
   // components
   MdlCheckbox,
+  MdlBadge,
   MdlSwitch,
   MdlRadio,
   MdlIconToggle,

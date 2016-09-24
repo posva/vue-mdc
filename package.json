@@ -89,7 +89,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
     "url-loader": "^0.5.7",
-    "vue": "^2.0.0-rc.3",
+    "vue": "^2.0.0-rc.7",
     "vue-hot-reload-api": "^2.0.6",
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^9.3.2",
