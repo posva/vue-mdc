@@ -9,7 +9,7 @@ label.mdl-checkbox.mdl-js-checkbox(v-bind:for.once='id' v-bind:class="{ 'is-disa
 import common from '../mixins/toggle'
 
 export default {
-  data: function () {
+  data () {
     return {
       upgraded: false
     }
