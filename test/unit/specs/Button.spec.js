@@ -1,7 +1,7 @@
 import Button from '../../components/Button'
 import { vueTest } from '../utils'
 
-describe.only('Button', () => {
+describe('Button', () => {
   let vm
   let button
   function propChecker (prop) {

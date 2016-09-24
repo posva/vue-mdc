@@ -1,22 +1,26 @@
-<template lang="jade">
-label.mdl-checkbox.mdl-js-checkbox(v-bind:for.once='id' v-bind:class="{ 'is-disabled': disabled, 'is-checked': checked, 'is-upgraded': upgraded }")
-  input.mdl-checkbox__input(v-bind:value='value' type='checkbox' v-bind:id.once='id' v-bind:checked='checked' v-on:change='fireChange' v-bind:disabled='disabled')
-  span.mdl-checkbox__label
-    slot
+<template>
+  <label class="mdl-checkbox mdl-js-checkbox is-upgraded"
+         :class="cssClasses"
+         :for="id">
+    <input class="mdl-checkbox__input"
+           :value="val"
+           type="checkbox"
+           :id="id"
+           v-model="checked"
+           @change="fireChange"
+           :disabled="disabled"/>
+    <span class="mdl-checkbox__label">
+      <slot></slot>
+    </span>
+  </label>
 </template>
 
 <script>
 import common from '../mixins/toggle'
 
 export default {
-  data () {
-    return {
-      upgraded: false
-    }
-  },
   mounted () {
     componentHandler.upgradeElements(this.$el)
-    this.upgraded = true
   },
   mixins: [common]
 }

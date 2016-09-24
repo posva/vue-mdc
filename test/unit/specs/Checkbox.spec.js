@@ -25,7 +25,7 @@ describe('Checkbox', () => {
   })
 
   it('is checked', () => {
-    check.should.be.checked
+    check.checked.should.be.true
     checkLabel.should.have.class('is-checked')
   })
 
@@ -33,12 +33,12 @@ describe('Checkbox', () => {
     vm.check = false
     vm.nextTick()
     .then(() => {
-      check.should.not.be.checked
+      check.checked.should.not.be.true
       checkLabel.should.not.have.class('is-checked')
       vm.check = true
       return vm.nextTick()
     }).then(() => {
-      check.should.be.checked
+      check.checked.should.be.true
       checkLabel.should.have.class('is-checked')
       return vm.nextTick()
     }).then(done, done)
@@ -59,11 +59,11 @@ describe('Checkbox', () => {
   })
 
   it('updates when disabled', (done) => {
-    check.should.be.checked
+    check.checked.should.be.true
     vm.check = false
     vm.nextTick()
     .then(() => {
-      check.should.not.be.checked
+      check.checked.should.not.be.true
       vm.check = true
       vm.disabled = false
       return vm.nextTick()
@@ -79,33 +79,33 @@ describe('Checkbox', () => {
     let id0 = vm.$('#id-0')
     let id1 = vm.$('#id-1')
     let id2 = vm.$('#id-2')
-    id0.should.not.be.checked
-    id1.should.not.be.checked
-    id2.should.not.be.checked
+    id0.checked.should.not.be.true
+    id1.checked.should.not.be.true
+    id2.checked.should.not.be.true
     vm.checks = ['id-0']
     vm.nextTick()
     .then(() => {
-      id0.should.be.checked
-      id1.should.not.be.checked
-      id2.should.not.be.checked
+      id0.checked.should.be.true
+      id1.checked.should.not.be.true
+      id2.checked.should.not.be.true
       vm.checks = ['id-0', 'id-1']
       return vm.nextTick()
     }).then(() => {
-      id0.should.be.checked
-      id1.should.be.checked
-      id2.should.not.be.checked
+      id0.checked.should.be.true
+      id1.checked.should.be.true
+      id2.checked.should.not.be.true
       vm.checks = ['id-1']
       return vm.nextTick()
     }).then(() => {
-      id0.should.not.be.checked
-      id1.should.be.checked
-      id2.should.not.be.checked
+      id0.checked.should.not.be.true
+      id1.checked.should.be.true
+      id2.checked.should.not.be.true
       vm.checks = ['id-1', 'id-0']
       return vm.nextTick()
     }).then(() => {
-      id0.should.be.checked
-      id1.should.be.checked
-      id2.should.not.be.checked
+      id0.checked.should.be.true
+      id1.checked.should.be.true
+      id2.checked.should.not.be.true
       return vm.nextTick()
     }).then(done, done)
   })
@@ -113,11 +113,11 @@ describe('Checkbox', () => {
   it('can start with a numeric value', (done) => {
     let numCheck = vm.$('#number')
     vm.numCheck.should.be.eql(0)
-    numCheck.should.not.be.checked
+    numCheck.checked.should.not.be.true
     vm.numCheck = 1
     vm.nextTick()
     .then(() => {
-      numCheck.should.be.checked
+      numCheck.checked.should.be.true
     }).then(done, done)
   })
 })
