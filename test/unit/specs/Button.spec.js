@@ -1,7 +1,7 @@
 import Button from '../../components/Button'
 import { vueTest } from '../utils'
 
-describe('Button', () => {
+describe.only('Button', () => {
   let vm
   let button
   function propChecker (prop) {
@@ -92,7 +92,6 @@ describe('Button', () => {
 
   it('applies classes even with empty strings in props', () => {
     let but = vm.$('#html-button')
-    console.log('html-button', but)
     but.should.have.class('mdl-button--raised')
     but.should.have.class('mdl-button--colored')
     but.should.not.have.class('mdl-button--accent')

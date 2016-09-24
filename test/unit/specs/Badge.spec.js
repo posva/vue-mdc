@@ -17,7 +17,7 @@ function testClassToggling ({ vm, selector, variable, cssClass }) {
     })
 }
 
-describe.only('Badge', () => {
+describe('Badge', () => {
   let vm
 
   before((done) => {
