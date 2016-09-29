@@ -20,7 +20,7 @@ div
   mdl-radio(type="radio" v-model='size' id='little' val='Little') Little
   br
   <mdl-radio type='radio' v-model='size' id='html-radio' val='HTML' disabled>HTML</mdl-radio>
-  input#disable(type='checkbox' v-bind:disabled='disabled')
+  input#disable(type='checkbox' v-model='disabled')
   span Disable Big
   br
   input(v-model='size' type="radio" id='big-or' value='Big')
