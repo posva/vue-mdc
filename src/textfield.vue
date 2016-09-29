@@ -1,17 +1,42 @@
-<template lang="jade">
-.mdl-textfield.mdl-js-textfield(v-bind:class="{'mdl-textfield--floating-label': floatingLabel, 'mdl-textfield--expandable': expandable, 'is-dirty': isDirty, 'is-disabled': disabled}")
-  slot(v-if='expandable' name='expandable-button')
-    label.mdl-button.mdl-js-button.mdl-button--icon(v-bind:for.once='id')
-      i.material-icons {{expandable}}
-  div(v-bind:class="{'mdl-textfield__expandable-holder': expandable}")
-    slot(v-if='textarea' name='textarea')
-      textarea.mdl-textfield__input(type='text' v-bind:value='value' v-on:input='fireInputEvent' v-bind:required='required' v-bind:id.once='id' v-bind:rows='rows' v-bind:maxlength='maxlength')
-    slot(v-else name='input')
-      input.mdl-textfield__input(v-bind:type='type' v-bind:value='value' v-on:input='fireInputEvent' v-bind:id.once='id' v-bind:pattern='pattern' v-bind:disabled='disabled' v-bind:required='required' v-bind:readonly='readonly' v-bind:maxlength='maxlength')
-    slot(name='label')
-      label.mdl-textfield__label(v-bind:for.once='id') {{displayLabel}}
-    slot(name='error')
-      label.mdl-textfield__error(v-if='error') {{error}}
+<template>
+  <div class="mdl-textfield mdl-js-textfield"
+       :class="{'mdl-textfield--floating-label': floatingLabel, 'mdl-textfield--expandable': expandable, 'is-dirty': isDirty, 'is-disabled': disabled}">
+    <slot v-if="expandable" name="expandable-button">
+      <label class="mdl-button mdl-js-button mdl-button--icon" :for="id">
+        <i class="material-icons">{{expandable}}</i>
+      </label>
+    </slot>
+    <div :class="{'mdl-textfield__expandable-holder': expandable}">
+      <slot v-if="textarea" name="textarea">
+        <textarea class="mdl-textfield__input"
+                  type="text"
+                  :value="value"
+                  @input="fireInputEvent"
+                  :required="required"
+                  :id="id"
+                  :rows="rows"
+                  :maxlength="maxlength">
+        </textarea>
+      </slot>
+      <slot v-else="v-else" name="input">
+        <input class="mdl-textfield__input"
+               :type="type"
+               :value="value"
+               @input="fireInputEvent"
+               :id="id" :pattern="pattern"
+               :disabled="disabled"
+               :required="required"
+               :readonly="readonly"
+               :maxlength="maxlength"/>
+      </slot>
+      <slot name="label">
+        <label class="mdl-textfield__label" :for="id">{{displayLabel}}</label>
+      </slot>
+      <slot name="error">
+        <label class="mdl-textfield__error" v-if="error">{{error}}</label>
+      </slot>
+    </div>
+  </div>
 </template>
 
 <script>
