@@ -19,9 +19,12 @@ Vue.use(VueRouter)
 Vue.directive('hljs', require('./utils/hljs').default)
 Vue.directive('highlight', {
   inserted (el) {
-    Vue.nextTick(() => {
-      hljs.highlightBlock(el)
-    })
+    Vue.nextTick(() => hljs.highlightBlock(el))
+  },
+  update (el, { value }) {
+    if (!value) return
+    el.innerText = value
+    Vue.nextTick(() => hljs.highlightBlock(el))
   }
 })
 
