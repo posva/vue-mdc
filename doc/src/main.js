@@ -19,7 +19,9 @@ Vue.use(VueRouter)
 Vue.directive('hljs', require('./utils/hljs').default)
 Vue.directive('highlight', {
   inserted (el) {
-    hljs.highlightBlock(el)
+    Vue.nextTick(() => {
+      hljs.highlightBlock(el)
+    })
   }
 })
 
@@ -38,12 +40,8 @@ context.keys().forEach(function (comp) {
     path: `/${name}`
   })
 })
-console.log(routes)
-window.routes = routes
 
-const router = new VueRouter({
-  routes
-})
+const router = new VueRouter({ routes })
 
 /* eslint-disable no-new */
 new Vue({

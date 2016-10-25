@@ -15,10 +15,11 @@
             >Vue MDL</router-link>
           </span>
           <div class="mdl-layout-spacer"></div>
-          <!-- <mdl-textfield class="mdl-textfield--align-right" -->
-          <!-- id="search" -->
-          <!-- expandable="search" -->
-          <!-- v-bind:value.sync="filter"/> -->
+          <MdlTextfield class="mdl-textfield--align-right"
+                         id="search"
+                         expandable="search"
+                         v-docsearch
+          />
         </div>
       </header>
       <div class="mdl-layout__drawer" ref="drawer">
@@ -49,7 +50,7 @@
 </template>
 
 <script>
-/* global docsearch*/
+/* global docsearch */
 import NavEntry from './utils/NavEntry.vue'
 import NavItem from './utils/NavItem.vue'
 
@@ -62,7 +63,44 @@ export default {
           name: 'Getting started',
           icon: 'home',
           items: [
-            'Installation'
+            'Installation',
+            'Usage'
+          ]
+        },
+        {
+          name: 'Components',
+          icon: 'extension',
+          items: [
+            'Buttons',
+            'Cards',
+            'Checkboxes',
+            'Icon Toggles',
+            'Menus',
+            'Progress bars',
+            'Radio Buttons',
+            'Sliders',
+            'Snackbars',
+            'Spinners',
+            'Switches',
+            'Tabs',
+            'Textfields',
+            'Tooltips'
+          ]
+        },
+        {
+          name: 'Custom Components',
+          icon: 'extension',
+          items: [
+            'Selects',
+            'Dialogs'
+          ]
+        },
+        {
+          name: 'Directives',
+          icon: 'settings_ethernet',
+          items: [
+            'Badges',
+            'Ripple Effect'
           ]
         }
       ]
@@ -70,13 +108,19 @@ export default {
   },
   mounted () {
     componentHandler.upgradeElement(this.$el)
-    docsearch({
-      apiKey: 'b3174bbc58c9406adac95c2cfef57702',
-      indexName: 'vue-mdl',
-      inputSelector: '#search'
-    })
   },
-  components: { NavEntry, NavItem }
+  components: { NavEntry, NavItem },
+  directives: {
+    docsearch: {
+      inserted () {
+        docsearch({
+          apiKey: 'b3174bbc58c9406adac95c2cfef57702',
+          indexName: 'vue-mdl',
+          inputSelector: '#search'
+        })
+      }
+    }
+  }
 }
 </script>
 
