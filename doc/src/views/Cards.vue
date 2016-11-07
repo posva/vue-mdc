@@ -9,8 +9,8 @@
       </div>
 
       <div class="flex start wrap">
-        <mdl-textfield v-bind:value.sync="cardTitle" floating-label="Card Title"></mdl-textfield>
-        <mdl-textfield textarea="textarea" :value.sync="supportingText" floating-label="Supporting Text"></mdl-textfield>
+        <mdl-textfield v-model="cardTitle" floating-label="Card Title"></mdl-textfield>
+        <mdl-textfield textarea="textarea" v-model="supportingText" floating-label="Supporting Text"></mdl-textfield>
       </div>
 
       <p>Pass the text you want to the directive:</p>

@@ -44,6 +44,11 @@ context.keys().forEach(function (comp) {
   })
 })
 
+routes.push({
+  path: '*',
+  redirect: { name: 'installation' }
+})
+
 const router = new VueRouter({ routes })
 
 /* eslint-disable no-new */
