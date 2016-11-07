@@ -59,97 +59,97 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.MdlTab = exports.MdlTabs = exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlCheckbox = exports.MdlRippleEffect = exports.MdlBadge = exports.Mdl = exports.directives = exports.components = undefined;
+	exports.MdlTab = exports.MdlTabs = exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlBadge = exports.MdlCheckbox = exports.MdlRippleEffect = exports.Mdl = exports.directives = exports.components = undefined;
 	
 	var _keys = __webpack_require__(1);
 	
 	var _keys2 = _interopRequireDefault(_keys);
 	
-	var _badge = __webpack_require__(36);
-	
-	var _badge2 = _interopRequireDefault(_badge);
-	
-	var _mdl = __webpack_require__(37);
+	var _mdl = __webpack_require__(36);
 	
 	var _mdl2 = _interopRequireDefault(_mdl);
 	
-	var _rippleEffect = __webpack_require__(38);
+	var _rippleEffect = __webpack_require__(37);
 	
 	var _rippleEffect2 = _interopRequireDefault(_rippleEffect);
 	
-	var _checkbox = __webpack_require__(39);
+	var _checkbox = __webpack_require__(38);
 	
 	var _checkbox2 = _interopRequireDefault(_checkbox);
 	
-	var _radio = __webpack_require__(43);
+	var _radio = __webpack_require__(42);
 	
 	var _radio2 = _interopRequireDefault(_radio);
 	
-	var _button = __webpack_require__(69);
+	var _badge = __webpack_require__(45);
+	
+	var _badge2 = _interopRequireDefault(_badge);
+	
+	var _button = __webpack_require__(46);
 	
 	var _button2 = _interopRequireDefault(_button);
 	
-	var _anchorButton = __webpack_require__(73);
+	var _anchorButton = __webpack_require__(50);
 	
 	var _anchorButton2 = _interopRequireDefault(_anchorButton);
 	
-	var _progress = __webpack_require__(76);
+	var _progress = __webpack_require__(53);
 	
 	var _progress2 = _interopRequireDefault(_progress);
 	
-	var _spinner = __webpack_require__(79);
+	var _spinner = __webpack_require__(56);
 	
 	var _spinner2 = _interopRequireDefault(_spinner);
 	
-	var _iconToggle = __webpack_require__(82);
+	var _iconToggle = __webpack_require__(59);
 	
 	var _iconToggle2 = _interopRequireDefault(_iconToggle);
 	
-	var _slider = __webpack_require__(85);
+	var _slider = __webpack_require__(62);
 	
 	var _slider2 = _interopRequireDefault(_slider);
 	
-	var _switch = __webpack_require__(88);
+	var _switch = __webpack_require__(65);
 	
 	var _switch2 = _interopRequireDefault(_switch);
 	
-	var _textfield = __webpack_require__(91);
+	var _textfield = __webpack_require__(68);
 	
 	var _textfield2 = _interopRequireDefault(_textfield);
 	
-	var _tooltip = __webpack_require__(94);
+	var _tooltip = __webpack_require__(71);
 	
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 	
-	var _menu = __webpack_require__(97);
+	var _menu = __webpack_require__(74);
 	
 	var _menu2 = _interopRequireDefault(_menu);
 	
-	var _menuItem = __webpack_require__(100);
+	var _menuItem = __webpack_require__(77);
 	
 	var _menuItem2 = _interopRequireDefault(_menuItem);
 	
-	var _card = __webpack_require__(103);
+	var _card = __webpack_require__(80);
 	
 	var _card2 = _interopRequireDefault(_card);
 	
-	var _snackbar = __webpack_require__(106);
+	var _snackbar = __webpack_require__(83);
 	
 	var _snackbar2 = _interopRequireDefault(_snackbar);
 	
-	var _select = __webpack_require__(109);
+	var _select = __webpack_require__(86);
 	
 	var _select2 = _interopRequireDefault(_select);
 	
-	var _dialog = __webpack_require__(116);
+	var _dialog = __webpack_require__(93);
 	
 	var _dialog2 = _interopRequireDefault(_dialog);
 	
-	var _tabs = __webpack_require__(121);
+	var _tabs = __webpack_require__(98);
 	
 	var _tabs2 = _interopRequireDefault(_tabs);
 	
-	var _tab = __webpack_require__(127);
+	var _tab = __webpack_require__(104);
 	
 	var _tab2 = _interopRequireDefault(_tab);
 	
@@ -174,12 +174,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  MdlSelect: _select2.default,
 	  MdlDialog: _dialog2.default,
 	  MdlTabs: _tabs2.default,
-	  MdlTab: _tab2.default
+	  MdlTab: _tab2.default,
+	  MdlBadge: _badge2.default
 	};
 	
 	var directives = exports.directives = {
 	  Mdl: _mdl2.default,
-	  MdlBadge: _badge2.default,
 	  MdlRippleEffect: _rippleEffect2.default
 	};
 	
@@ -194,9 +194,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	exports.Mdl = _mdl2.default;
-	exports.MdlBadge = _badge2.default;
 	exports.MdlRippleEffect = _rippleEffect2.default;
 	exports.MdlCheckbox = _checkbox2.default;
+	exports.MdlBadge = _badge2.default;
 	exports.MdlSwitch = _switch2.default;
 	exports.MdlRadio = _radio2.default;
 	exports.MdlIconToggle = _iconToggle2.default;
@@ -695,47 +695,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 36 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var checkNumber = function checkNumber(num) {
-	  num = parseInt(num, 10);
-	  return num > 0;
-	};
-	
-	var dataBadgeSetter = function dataBadgeSetter(hide, value) {
-	  if (hide) {
-	    this.el.removeAttribute('data-badge');
-	  } else if (!this.isNumber || checkNumber(value)) {
-	    this.el.setAttribute('data-badge', value);
-	  } else {
-	    this.el.removeAttribute('data-badge');
-	  }
-	};
-	
 	exports.default = {
-	  bind: function bind() {
-	    this.el.classList.add('mdl-badge');
-	    if ('overlap' in this.modifiers) {
-	      this.el.classList.add('mdl-badge--overlap');
-	    }
-	    if ('no-background' in this.modifiers) {
-	      this.el.classList.add('mdl-badge--no-background');
-	    }
-	    this.isNumber = 'number' in this.modifiers;
-	  },
-	
-	  params: ['hide-badge'],
-	  paramWatchers: {
-	    hideBadge: function hideBadge(hide) {
-	      dataBadgeSetter.call(this, hide, this.value);
-	    }
-	  },
-	  update: function update(value) {
-	    this.value = value;
-	    dataBadgeSetter.call(this, this.params.hideBadge, value);
+	  bind: function bind(el) {
+	    componentHandler.upgradeElements(el);
 	  }
 	};
 
@@ -743,78 +710,78 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 37 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = {
-	  bind: function bind() {
-	    componentHandler.upgradeElements(this.el);
+	  bind: function bind(el) {
+	    el.classList.add('mdl-js-ripple-effect');
 	  }
 	};
 
 /***/ },
 /* 38 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	var __vue_exports__, __vue_options__
 	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = {
-	  bind: function bind() {
-	    this.el.classList.add('mdl-js-ripple-effect');
+	/* script */
+	__vue_exports__ = __webpack_require__(39)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(41)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/checkbox.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-59130e27", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-59130e27", __vue_options__)
 	  }
-	};
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] checkbox.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
 /* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(40)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/toggles/checkbox.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(42)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./checkbox.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	
-	var _toggle = __webpack_require__(41);
+	var _toggle = __webpack_require__(40);
 	
 	var _toggle2 = _interopRequireDefault(_toggle);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    componentHandler.upgradeElements(this.$el);
 	  },
 	
@@ -822,167 +789,312 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = {
 	  props: {
-	    checked: {
-	      type: [Array, Boolean, Number],
-	      required: true,
-	      twoWay: true
-	    },
-	    disabled: {
-	      required: false
-	    },
+	    disabled: { required: false },
 	    id: String,
 	    value: {
-	      required: false
+	      type: [Array, Boolean, Number],
+	      required: true
+	    },
+	    val: { required: false }
+	  },
+	  data: function data() {
+	    return {
+	      checkedProxy: false
+	    };
+	  },
+	
+	  computed: {
+	    checked: {
+	      get: function get() {
+	        return this.value;
+	      },
+	      set: function set(val) {
+	        this.checkedProxy = val;
+	      }
+	    },
+	    isChecked: function isChecked() {
+	      return this.value instanceof Array ? this.value.indexOf(this.val) >= 0 : this.value;
+	    },
+	    cssClasses: function cssClasses() {
+	      return {
+	        'is-disabled': this.disabled,
+	        'is-checked': this.isChecked
+	      };
 	    }
 	  },
-	  computed: {
-	    isChecked: function isChecked() {
-	      if (this.checked instanceof Array) {
-	        return this.checked.indexOf(this.value) >= 0;
-	      } else {
-	        return this.checked;
-	      }
+	  methods: {
+	    fireChange: function fireChange(event) {
+	      this.$emit('input', this.checkedProxy);
 	    }
 	  }
 	};
 
 /***/ },
-/* 42 */
-/***/ function(module, exports) {
-
-	module.exports = "<label v-bind:for.once=\"id\" v-bind:class=\"{ &quot;is-disabled&quot;: disabled, &quot;is-checked&quot;: isChecked }\" class=\"mdl-checkbox mdl-js-checkbox\"><input v-bind:value=\"value\" type=\"checkbox\" v-bind:id.once=\"id\" v-model=\"checked\" v-bind:disabled=\"disabled\" class=\"mdl-checkbox__input\"/><span class=\"mdl-checkbox__label\"><slot></slot></span></label>";
-
-/***/ },
-/* 43 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(44)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/toggles/radio.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(68)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('label', {
+	    staticClass: "mdl-checkbox mdl-js-checkbox is-upgraded",
+	    class: cssClasses,
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_h('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (checked),
+	      expression: "checked"
+	    }],
+	    staticClass: "mdl-checkbox__input",
+	    attrs: {
+	      "type": "checkbox",
+	      "id": id,
+	      "disabled": disabled
+	    },
+	    domProps: {
+	      "value": val,
+	      "checked": Array.isArray(checked) ? _i(checked, val) > -1 : _q(checked, true)
+	    },
+	    on: {
+	      "change": [function($event) {
+	        var $$a = checked,
+	          $$el = $event.target,
+	          $$c = $$el.checked ? (true) : (false);
+	        if (Array.isArray($$a)) {
+	          var $$v = val,
+	            $$i = _i($$a, $$v);
+	          if ($$c) {
+	            $$i < 0 && (checked = $$a.concat($$v))
+	          } else {
+	            $$i > -1 && (checked = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+	          }
+	        } else {
+	          checked = $$c
+	        }
+	      }, fireChange]
+	    }
+	  }), " ", _h('span', {
+	    staticClass: "mdl-checkbox__label"
+	  }, [_t("default")])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-59130e27", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(43)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(44)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/radio.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./radio.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-3842db47", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-3842db47", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] radio.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  props: {
+	    name: String,
+	    disabled: { required: false },
+	    id: String,
+	    value: {
+	      type: [String, Number],
+	      required: true
+	    },
+	    val: { required: true }
+	  },
+	  computed: {
+	    checked: {
+	      get: function get() {
+	        return this.value;
+	      },
+	      set: function set(val) {
+	        this.checkedProxy = val;
+	      }
+	    },
+	    isChecked: function isChecked() {
+	      return this.value === this.val;
+	    },
+	    cssClasses: function cssClasses() {
+	      return {
+	        'is-disabled': this.disabled,
+	        'is-checked': this.isChecked
+	      };
+	    }
+	  },
+	  mounted: function mounted() {
+	    componentHandler.upgradeElements(this.$el);
+	  },
+	
+	  methods: {
+	    fireChange: function fireChange(event) {
+	      this.$emit('input', this.checkedProxy);
+	    }
+	  }
+	};
 
 /***/ },
 /* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	  props: {
-	    id: String,
-	    name: String,
-	    value: {
-	      required: true
-	    },
-	    checked: {
-	      required: true,
-	      twoWay: true
-	    },
-	    disabled: {
-	      fill: true
+	module.exports={render:function (){with(this) {
+	  return _h('label', {
+	    staticClass: "mdl-radio mdl-js-radio is-upgraded",
+	    class: cssClasses,
+	    attrs: {
+	      "for": id
 	    }
-	  },
-	  computed: {
-	    isChecked: function isChecked() {
-	      return this.checked === this.value;
+	  }, [_h('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (checked),
+	      expression: "checked"
+	    }],
+	    staticClass: "mdl-radio__button",
+	    attrs: {
+	      "type": "radio",
+	      "id": id,
+	      "name": name,
+	      "disabled": disabled
+	    },
+	    domProps: {
+	      "value": val,
+	      "checked": _q(checked, val)
+	    },
+	    on: {
+	      "change": [function($event) {
+	        checked = val
+	      }, fireChange]
 	    }
-	  },
-	  ready: function ready() {
-	    componentHandler.upgradeElements(this.$el);
-	  },
-	
-	  mixins: [_propFill2.default]
-	};
+	  }), " ", _h('span', {
+	    staticClass: "mdl-radio__label"
+	  }, [_t("default")])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-3842db47", module.exports)
+	  }
+	}
 
 /***/ },
 /* 45 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	function shouldAddProp(_ref) {
+	  var hide = _ref.hide,
+	      badge = _ref.badge;
 	
-	var _keys = __webpack_require__(1);
-	
-	var _keys2 = _interopRequireDefault(_keys);
-	
-	var _getIterator2 = __webpack_require__(46);
-	
-	var _getIterator3 = _interopRequireDefault(_getIterator2);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	  return !hide && badge;
+	}
 	
 	exports.default = {
-	  beforeCompile: function beforeCompile() {
-	    if (!this._props) return;
-	    var _iteratorNormalCompletion = true;
-	    var _didIteratorError = false;
-	    var _iteratorError = undefined;
+	  functional: true,
+	  props: {
+	    badge: [String, Number],
+	    overlap: [Boolean, String],
+	    noBackground: [Boolean, String],
+	    hide: Boolean
+	  },
+	  render: function render(h, context) {
+	    if (context.children.length !== 1) {
+	      console.error('MdlBadge must have exactly one child');
+	    }
 	
-	    try {
-	      for (var _iterator = (0, _getIterator3.default)((0, _keys2.default)(this._props)), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	        var prop = _step.value;
+	    var child = context.children[0];
 	
-	        var data = this._props[prop];
-	        if (data.options.fill && data.raw === '') {
-	          this[prop] = prop;
-	        }
+	    if (!child.elm) {
+	      child.data = child.data || {};
+	
+	      child.data.staticClass = child.data.staticClass || '';
+	      child.data.staticClass += ' mdl-badge';
+	      if (context.props.overlap) child.data.staticClass += ' mdl-badge--overlap';
+	      if (context.props.noBackground) child.data.staticClass += ' mdl-badge--no-background';
+	
+	      child.data.attrs = child.data.attrs || {};
+	      if (shouldAddProp(context.props)) {
+	        child.data.attrs['data-badge'] = context.props.badge;
 	      }
-	    } catch (err) {
-	      _didIteratorError = true;
-	      _iteratorError = err;
-	    } finally {
-	      try {
-	        if (!_iteratorNormalCompletion && _iterator.return) {
-	          _iterator.return();
-	        }
-	      } finally {
-	        if (_didIteratorError) {
-	          throw _iteratorError;
-	        }
+	    } else {
+	      child.elm.removeAttribute('data-badge');
+	      if (shouldAddProp(context.props)) {
+	        child.elm.dataset.badge = context.props.badge;
+	      }
+	
+	      child.elm.classList.remove('mdl-badge--no-background');
+	      if (context.props.noBackground) {
+	        child.elm.classList.add('mdl-badge--no-background');
+	      }
+	
+	      child.elm.classList.remove('mdl-badge--overlap');
+	      if (context.props.overlap) {
+	        child.elm.classList.add('mdl-badge--overlap');
 	      }
 	    }
+	
+	    return child;
 	  }
 	};
 
@@ -990,446 +1102,47 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(47), __esModule: true };
-
-/***/ },
-/* 47 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(48);
-	__webpack_require__(63);
-	module.exports = __webpack_require__(65);
-
-/***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(49);
-	var global        = __webpack_require__(18)
-	  , hide          = __webpack_require__(26)
-	  , Iterators     = __webpack_require__(52)
-	  , TO_STRING_TAG = __webpack_require__(61)('toStringTag');
+	var __vue_exports__, __vue_options__
 	
-	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
-	  var NAME       = collections[i]
-	    , Collection = global[NAME]
-	    , proto      = Collection && Collection.prototype;
-	  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
-	  Iterators[NAME] = Iterators.Array;
+	/* script */
+	__vue_exports__ = __webpack_require__(47)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(49)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var addToUnscopables = __webpack_require__(50)
-	  , step             = __webpack_require__(51)
-	  , Iterators        = __webpack_require__(52)
-	  , toIObject        = __webpack_require__(9);
-	
-	// 22.1.3.4 Array.prototype.entries()
-	// 22.1.3.13 Array.prototype.keys()
-	// 22.1.3.29 Array.prototype.values()
-	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(53)(Array, 'Array', function(iterated, kind){
-	  this._t = toIObject(iterated); // target
-	  this._i = 0;                   // next index
-	  this._k = kind;                // kind
-	// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , kind  = this._k
-	    , index = this._i++;
-	  if(!O || index >= O.length){
-	    this._t = undefined;
-	    return step(1);
-	  }
-	  if(kind == 'keys'  )return step(0, index);
-	  if(kind == 'values')return step(0, O[index]);
-	  return step(0, [index, O[index]]);
-	}, 'values');
-	
-	// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
-	Iterators.Arguments = Iterators.Array;
-	
-	addToUnscopables('keys');
-	addToUnscopables('values');
-	addToUnscopables('entries');
-
-/***/ },
-/* 50 */
-/***/ function(module, exports) {
-
-	module.exports = function(){ /* empty */ };
-
-/***/ },
-/* 51 */
-/***/ function(module, exports) {
-
-	module.exports = function(done, value){
-	  return {value: value, done: !!done};
-	};
-
-/***/ },
-/* 52 */
-/***/ function(module, exports) {
-
-	module.exports = {};
-
-/***/ },
-/* 53 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var LIBRARY        = __webpack_require__(54)
-	  , $export        = __webpack_require__(22)
-	  , redefine       = __webpack_require__(55)
-	  , hide           = __webpack_require__(26)
-	  , has            = __webpack_require__(8)
-	  , Iterators      = __webpack_require__(52)
-	  , $iterCreate    = __webpack_require__(56)
-	  , setToStringTag = __webpack_require__(60)
-	  , getPrototypeOf = __webpack_require__(62)
-	  , ITERATOR       = __webpack_require__(61)('iterator')
-	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
-	  , FF_ITERATOR    = '@@iterator'
-	  , KEYS           = 'keys'
-	  , VALUES         = 'values';
-	
-	var returnThis = function(){ return this; };
-	
-	module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED){
-	  $iterCreate(Constructor, NAME, next);
-	  var getMethod = function(kind){
-	    if(!BUGGY && kind in proto)return proto[kind];
-	    switch(kind){
-	      case KEYS: return function keys(){ return new Constructor(this, kind); };
-	      case VALUES: return function values(){ return new Constructor(this, kind); };
-	    } return function entries(){ return new Constructor(this, kind); };
-	  };
-	  var TAG        = NAME + ' Iterator'
-	    , DEF_VALUES = DEFAULT == VALUES
-	    , VALUES_BUG = false
-	    , proto      = Base.prototype
-	    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
-	    , $default   = $native || getMethod(DEFAULT)
-	    , $entries   = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined
-	    , $anyNative = NAME == 'Array' ? proto.entries || $native : $native
-	    , methods, key, IteratorPrototype;
-	  // Fix native
-	  if($anyNative){
-	    IteratorPrototype = getPrototypeOf($anyNative.call(new Base));
-	    if(IteratorPrototype !== Object.prototype){
-	      // Set @@toStringTag to native iterators
-	      setToStringTag(IteratorPrototype, TAG, true);
-	      // fix for some old engines
-	      if(!LIBRARY && !has(IteratorPrototype, ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
-	    }
-	  }
-	  // fix Array#{values, @@iterator}.name in V8 / FF
-	  if(DEF_VALUES && $native && $native.name !== VALUES){
-	    VALUES_BUG = true;
-	    $default = function values(){ return $native.call(this); };
-	  }
-	  // Define iterator
-	  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
-	    hide(proto, ITERATOR, $default);
-	  }
-	  // Plug for library
-	  Iterators[NAME] = $default;
-	  Iterators[TAG]  = returnThis;
-	  if(DEFAULT){
-	    methods = {
-	      values:  DEF_VALUES ? $default : getMethod(VALUES),
-	      keys:    IS_SET     ? $default : getMethod(KEYS),
-	      entries: $entries
-	    };
-	    if(FORCED)for(key in methods){
-	      if(!(key in proto))redefine(proto, key, methods[key]);
-	    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-	  }
-	  return methods;
-	};
-
-/***/ },
-/* 54 */
-/***/ function(module, exports) {
-
-	module.exports = true;
-
-/***/ },
-/* 55 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(26);
-
-/***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var create         = __webpack_require__(57)
-	  , descriptor     = __webpack_require__(35)
-	  , setToStringTag = __webpack_require__(60)
-	  , IteratorPrototype = {};
-	
-	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(26)(IteratorPrototype, __webpack_require__(61)('iterator'), function(){ return this; });
-	
-	module.exports = function(Constructor, NAME, next){
-	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
-	  setToStringTag(Constructor, NAME + ' Iterator');
-	};
-
-/***/ },
-/* 57 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	var anObject    = __webpack_require__(28)
-	  , dPs         = __webpack_require__(58)
-	  , enumBugKeys = __webpack_require__(20)
-	  , IE_PROTO    = __webpack_require__(16)('IE_PROTO')
-	  , Empty       = function(){ /* empty */ }
-	  , PROTOTYPE   = 'prototype';
-	
-	// Create object with fake `null` prototype: use iframe Object with cleared prototype
-	var createDict = function(){
-	  // Thrash, waste and sodomy: IE GC bug
-	  var iframe = __webpack_require__(33)('iframe')
-	    , i      = enumBugKeys.length
-	    , gt     = '>'
-	    , iframeDocument;
-	  iframe.style.display = 'none';
-	  __webpack_require__(59).appendChild(iframe);
-	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-	  // createDict = iframe.contentWindow.Object;
-	  // html.removeChild(iframe);
-	  iframeDocument = iframe.contentWindow.document;
-	  iframeDocument.open();
-	  iframeDocument.write('<script>document.F=Object</script' + gt);
-	  iframeDocument.close();
-	  createDict = iframeDocument.F;
-	  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
-	  return createDict();
-	};
-	
-	module.exports = Object.create || function create(O, Properties){
-	  var result;
-	  if(O !== null){
-	    Empty[PROTOTYPE] = anObject(O);
-	    result = new Empty;
-	    Empty[PROTOTYPE] = null;
-	    // add "__proto__" for Object.getPrototypeOf polyfill
-	    result[IE_PROTO] = O;
-	  } else result = createDict();
-	  return Properties === undefined ? result : dPs(result, Properties);
-	};
-
-/***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var dP       = __webpack_require__(27)
-	  , anObject = __webpack_require__(28)
-	  , getKeys  = __webpack_require__(6);
-	
-	module.exports = __webpack_require__(31) ? Object.defineProperties : function defineProperties(O, Properties){
-	  anObject(O);
-	  var keys   = getKeys(Properties)
-	    , length = keys.length
-	    , i = 0
-	    , P;
-	  while(length > i)dP.f(O, P = keys[i++], Properties[P]);
-	  return O;
-	};
-
-/***/ },
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(18).document && document.documentElement;
-
-/***/ },
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var def = __webpack_require__(27).f
-	  , has = __webpack_require__(8)
-	  , TAG = __webpack_require__(61)('toStringTag');
-	
-	module.exports = function(it, tag, stat){
-	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
-	};
-
-/***/ },
-/* 61 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var store      = __webpack_require__(17)('wks')
-	  , uid        = __webpack_require__(19)
-	  , Symbol     = __webpack_require__(18).Symbol
-	  , USE_SYMBOL = typeof Symbol == 'function';
-	
-	var $exports = module.exports = function(name){
-	  return store[name] || (store[name] =
-	    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-	};
-	
-	$exports.store = store;
-
-/***/ },
-/* 62 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(8)
-	  , toObject    = __webpack_require__(4)
-	  , IE_PROTO    = __webpack_require__(16)('IE_PROTO')
-	  , ObjectProto = Object.prototype;
-	
-	module.exports = Object.getPrototypeOf || function(O){
-	  O = toObject(O);
-	  if(has(O, IE_PROTO))return O[IE_PROTO];
-	  if(typeof O.constructor == 'function' && O instanceof O.constructor){
-	    return O.constructor.prototype;
-	  } return O instanceof Object ? ObjectProto : null;
-	};
-
-/***/ },
-/* 63 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $at  = __webpack_require__(64)(true);
-	
-	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(53)(String, 'String', function(iterated){
-	  this._t = String(iterated); // target
-	  this._i = 0;                // next index
-	// 21.1.5.2.1 %StringIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , index = this._i
-	    , point;
-	  if(index >= O.length)return {value: undefined, done: true};
-	  point = $at(O, index);
-	  this._i += point.length;
-	  return {value: point, done: false};
-	});
-
-/***/ },
-/* 64 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(14)
-	  , defined   = __webpack_require__(5);
-	// true  -> String#at
-	// false -> String#codePointAt
-	module.exports = function(TO_STRING){
-	  return function(that, pos){
-	    var s = String(defined(that))
-	      , i = toInteger(pos)
-	      , l = s.length
-	      , a, b;
-	    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
-	    a = s.charCodeAt(i);
-	    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-	      ? TO_STRING ? s.charAt(i) : a
-	      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-	  };
-	};
-
-/***/ },
-/* 65 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var anObject = __webpack_require__(28)
-	  , get      = __webpack_require__(66);
-	module.exports = __webpack_require__(23).getIterator = function(it){
-	  var iterFn = get(it);
-	  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
-	  return anObject(iterFn.call(it));
-	};
-
-/***/ },
-/* 66 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var classof   = __webpack_require__(67)
-	  , ITERATOR  = __webpack_require__(61)('iterator')
-	  , Iterators = __webpack_require__(52);
-	module.exports = __webpack_require__(23).getIteratorMethod = function(it){
-	  if(it != undefined)return it[ITERATOR]
-	    || it['@@iterator']
-	    || Iterators[classof(it)];
-	};
-
-/***/ },
-/* 67 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// getting tag from 19.1.3.6 Object.prototype.toString()
-	var cof = __webpack_require__(11)
-	  , TAG = __webpack_require__(61)('toStringTag')
-	  // ES3 wrong here
-	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
-	
-	// fallback for IE11 Script Access Denied error
-	var tryGet = function(it, key){
-	  try {
-	    return it[key];
-	  } catch(e){ /* empty */ }
-	};
-	
-	module.exports = function(it){
-	  var O, T, B;
-	  return it === undefined ? 'Undefined' : it === null ? 'Null'
-	    // @@toStringTag case
-	    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
-	    // builtinTag case
-	    : ARG ? cof(O)
-	    // ES3 arguments fallback
-	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-	};
-
-/***/ },
-/* 68 */
-/***/ function(module, exports) {
-
-	module.exports = "<label v-bind:for.once=\"id\" v-bind:class=\"{ &quot;is-disabled&quot;: disabled, &quot;is-checked&quot;: isChecked }\" class=\"mdl-radio mdl-js-radio\"><input v-bind:id.once=\"id\" type=\"radio\" v-bind:name.once=\"name\" v-bind:value=\"value\" v-model=\"checked\" v-bind:disabled=\"disabled\" class=\"mdl-radio__button\"/><span class=\"mdl-radio__label\"><slot></slot></span></label>";
-
-/***/ },
-/* 69 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(70)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/button.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(72)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
 	}
-	if (false) {(function () {  module.hot.accept()
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/button.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./button.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-22205eb4", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-22205eb4", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] button.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 70 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1438,7 +1151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _button = __webpack_require__(71);
+	var _button = __webpack_require__(48);
 	
 	var _button2 = _interopRequireDefault(_button);
 	
@@ -1449,21 +1162,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 71 */
-/***/ function(module, exports, __webpack_require__) {
+/* 48 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
 	exports.default = {
 	  computed: {
 	    cssClasses: function cssClasses() {
@@ -1479,73 +1185,89 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  props: {
-	    disabled: {
-	      fill: true
-	    },
+	    disabled: Boolean,
 	    icon: {
 	      required: false
 	    },
-	    accent: {
-	      fill: true
-	    },
-	    primary: {
-	      fill: true
-	    },
-	    miniFab: {
-	      fill: true
-	    },
-	    fab: {
-	      fill: true
-	    },
-	    raised: {
-	      fill: true
-	    },
-	    colored: {
-	      fill: true
-	    }
+	    accent: Boolean,
+	    primary: Boolean,
+	    miniFab: Boolean,
+	    fab: Boolean,
+	    raised: Boolean,
+	    colored: Boolean
 	  },
-	  mixins: [_propFill2.default],
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    componentHandler.upgradeElement(this.$el);
 	  }
 	};
 
 /***/ },
-/* 72 */
-/***/ function(module, exports) {
-
-	module.exports = "<button v-bind:disabled=\"disabled\" v-bind:class=\"cssClasses\" class=\"mdl-button mdl-js-button\"><slot><i v-if=\"icon\" class=\"material-icons\">{{icon}}</i></slot></button>";
-
-/***/ },
-/* 73 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(74)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/anchor-button.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(75)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('button', {
+	    staticClass: "mdl-button mdl-js-button",
+	    class: cssClasses,
+	    attrs: {
+	      "disabled": disabled
+	    }
+	  }, [_t("default", [(icon) ? _h('i', {
+	    staticClass: "material-icons"
+	  }, [_s(icon)]) : _e()])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-22205eb4", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(51)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(52)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/anchor-button.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./anchor-button.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-7979d0f4", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-7979d0f4", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] anchor-button.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 74 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1554,7 +1276,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _button = __webpack_require__(71);
+	var _button = __webpack_require__(48);
 	
 	var _button2 = _interopRequireDefault(_button);
 	
@@ -1565,55 +1287,79 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 75 */
-/***/ function(module, exports) {
-
-	module.exports = "<a v-bind:disabled=\"disabled\" v-bind:class=\"cssClasses\" class=\"mdl-button mdl-js-button\"><slot><i v-if=\"icon\" class=\"material-icons\">{{icon}}</i></slot></a>";
-
-/***/ },
-/* 76 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(77)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/progress.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(78)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('a', {
+	    staticClass: "mdl-button mdl-js-button",
+	    class: cssClasses,
+	    attrs: {
+	      "disabled": disabled
+	    }
+	  }, [_t("default", [(icon) ? _h('i', {
+	    staticClass: "material-icons"
+	  }, [_s(icon)]) : _e()])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-7979d0f4", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(54)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(55)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/progress.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./progress.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-235def21", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-235def21", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] progress.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 77 */
-/***/ function(module, exports, __webpack_require__) {
+/* 54 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
 	exports.default = {
 	  props: {
 	    progress: {
@@ -1622,11 +1368,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    buffer: {
 	      required: false
 	    },
-	    indeterminate: {
-	      fill: true
-	    }
+	    indeterminate: Boolean
 	  },
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    var _this = this;
 	
 	    componentHandler.upgradeElement(this.$el, 'MaterialProgress');
@@ -1644,114 +1388,157 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _this.$el.MaterialProgress.setBuffer(val);
 	      });
 	    }
-	  },
-	
-	  mixins: [_propFill2.default]
+	  }
 	};
 
 /***/ },
-/* 78 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-bind:class=\"{ &quot;mdl-progress__indeterminate&quot;: indeterminate }\" class=\"mdl-progress mdl-js-progress\"></div>";
-
-/***/ },
-/* 79 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(80)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/spinner.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(81)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-progress mdl-js-progress",
+	    class: {
+	      'mdl-progress__indeterminate': indeterminate
+	    }
+	  })
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-235def21", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(57)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(58)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/spinner.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./spinner.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-04226856", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-04226856", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] spinner.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 80 */
-/***/ function(module, exports, __webpack_require__) {
+/* 57 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
 	exports.default = {
 	  props: {
 	    active: {
 	      default: true,
 	      type: Boolean
 	    },
-	    singleColor: {
-	      fill: true
-	    }
+	    singleColor: Boolean
 	  },
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    componentHandler.upgradeElement(this.$el, 'MaterialSpinner');
-	  },
-	
-	  mixins: [_propFill2.default]
+	  }
 	};
 
 /***/ },
-/* 81 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-bind:class=\"{ &quot;mdl-spinner--single-color&quot;: singleColor, &quot;is-active&quot;: active }\" class=\"mdl-spinner mdl-js-spinner\"></div>";
-
-/***/ },
-/* 82 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(83)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/toggles/icon-toggle.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(84)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-spinner mdl-js-spinner",
+	    class: {
+	      'mdl-spinner--single-color': singleColor, 'is-active': active
+	    }
+	  })
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-04226856", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(60)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(61)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/icon-toggle.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./icon-toggle.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-15cede18", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-15cede18", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] icon-toggle.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 83 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1760,7 +1547,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _toggle = __webpack_require__(41);
+	var _toggle = __webpack_require__(40);
 	
 	var _toggle2 = _interopRequireDefault(_toggle);
 	
@@ -1773,147 +1560,267 @@ return /******/ (function(modules) { // webpackBootstrap
 	      type: String
 	    }
 	  },
-	  mixins: [_toggle2.default],
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    componentHandler.upgradeElements(this.$el);
-	  }
+	  },
+	
+	  mixins: [_toggle2.default]
 	};
 
 /***/ },
-/* 84 */
-/***/ function(module, exports) {
-
-	module.exports = "<label v-bind:for.once=\"id\" v-bind:class=\"{ &quot;is-disabled&quot;: disabled, &quot;is-checked&quot;: isChecked }\" class=\"mdl-icon-toggle mdl-js-icon-toggle\"><input v-bind:value=\"value\" type=\"checkbox\" v-bind:id.once=\"id\" v-model=\"checked\" v-bind:disabled=\"disabled\" class=\"mdl-icon-toggle__input\"/><i class=\"mdl-icon-toggle__label material-icons\">{{icon}}</i></label>";
-
-/***/ },
-/* 85 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(86)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/slider.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(87)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('label', {
+	    staticClass: "mdl-icon-toggle mdl-js-icon-toggle is-upgraded",
+	    class: cssClasses,
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_h('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (checked),
+	      expression: "checked"
+	    }],
+	    staticClass: "mdl-icon-toggle__input",
+	    attrs: {
+	      "type": "checkbox",
+	      "id": id,
+	      "disabled": disabled
+	    },
+	    domProps: {
+	      "value": val,
+	      "checked": Array.isArray(checked) ? _i(checked, val) > -1 : _q(checked, true)
+	    },
+	    on: {
+	      "change": [function($event) {
+	        var $$a = checked,
+	          $$el = $event.target,
+	          $$c = $$el.checked ? (true) : (false);
+	        if (Array.isArray($$a)) {
+	          var $$v = val,
+	            $$i = _i($$a, $$v);
+	          if ($$c) {
+	            $$i < 0 && (checked = $$a.concat($$v))
+	          } else {
+	            $$i > -1 && (checked = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+	          }
+	        } else {
+	          checked = $$c
+	        }
+	      }, fireChange]
+	    }
+	  }), " ", _h('i', {
+	    staticClass: "mdl-icon-toggle__label material-icons"
+	  }, [_s(icon)])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-15cede18", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 62 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(63)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(64)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/slider.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./slider.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-1b7fb2d5", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-1b7fb2d5", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] slider.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 86 */
-/***/ function(module, exports, __webpack_require__) {
+/* 63 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
 	exports.default = {
+	  computed: {
+	    model: function model() {
+	      return this.value;
+	    },
+	    lowerBackgroundStyle: function lowerBackgroundStyle() {
+	      return {
+	        flex: this.relativeValue + ' 1 0%'
+	      };
+	    },
+	    upperBackgroundStyle: function upperBackgroundStyle() {
+	      return {
+	        flex: 1 - this.relativeValue + ' 1 0%'
+	      };
+	    },
+	    relativeValue: function relativeValue() {
+	      var val = Math.round((this.value - this.min) / this.step) * this.step;
+	      return val / (this.max - this.min);
+	    }
+	  },
 	  props: {
 	    value: {
-	      required: true,
-	      twoWay: true
-	    },
-	    step: {
-	      required: false
-	    },
-	    min: {
+	      type: Number,
 	      required: true
 	    },
+	    step: {
+	      type: Number,
+	      default: 1
+	    },
+	    min: {
+	      type: Number,
+	      default: 0
+	    },
 	    max: {
+	      type: Number,
 	      required: true
 	    },
 	    disabled: {
-	      fill: true
+	      required: false
 	    }
 	  },
-	  ready: function ready() {
-	    var _this = this;
-	
-	    componentHandler.upgradeElement(this.$el, 'MaterialSlider');
-	
-	    this.$el.MaterialSlider.change(this.value);
-	    this.$watch('value', function (val) {
-	      return _this.$el.MaterialSlider.change(val);
-	    });
-	
-	    this.$watch('min', function (val) {
-	      if (val > _this.value) {
-	        _this.$el.MaterialSlider.change(val);
-	      }
-	    });
-	
-	    this.$watch('max', function (val) {
-	      if (val < _this.value) {
-	        _this.$el.MaterialSlider.change(val);
-	      }
-	    });
-	
-	    this.$watch('step', function (val) {
-	      return _this.$el.MaterialSlider.change(val * Math.round(_this.value / val));
-	    });
+	  methods: {
+	    onInput: function onInput(event) {
+	      this.$emit('input', Number(event.target.value));
+	    }
 	  },
-	
-	  mixins: [_propFill2.default]
+	  mounted: function mounted() {
+	    return;
+	  }
 	};
 
 /***/ },
-/* 87 */
-/***/ function(module, exports) {
-
-	module.exports = "<input type=\"range\" v-model=\"value\" v-bind:min=\"min\" v-bind:max=\"max\" v-bind:step=\"step\" v-bind:disabled=\"disabled\" class=\"mdl-slider mdl-js-slider\"/>";
-
-/***/ },
-/* 88 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(89)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/toggles/switch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(90)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-slider__container"
+	  }, [_h('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (model),
+	      expression: "model"
+	    }],
+	    ref: "input",
+	    staticClass: "mdl-slider mdl-js-slider is-upgraded",
+	    attrs: {
+	      "type": "range",
+	      "min": min,
+	      "max": max,
+	      "step": step,
+	      "data-upgraded": ",MaterialSlider",
+	      "disabled": disabled
+	    },
+	    domProps: {
+	      "value": _s(model)
+	    },
+	    on: {
+	      "input": [function($event) {
+	        model = $event.target.value
+	      }, onInput]
+	    }
+	  }), " ", _h('div', {
+	    staticClass: "mdl-slider__background-flex"
+	  }, [_h('div', {
+	    staticClass: "mdl-slider__background-lower",
+	    style: (lowerBackgroundStyle)
+	  }), " ", _h('div', {
+	    staticClass: "mdl-slider__background-upper",
+	    style: (upperBackgroundStyle)
+	  })])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-1b7fb2d5", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(66)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(67)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/switch.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./switch.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-83b727d0", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-83b727d0", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] switch.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 89 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1922,69 +1829,129 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _toggle = __webpack_require__(41);
+	var _toggle = __webpack_require__(40);
 	
 	var _toggle2 = _interopRequireDefault(_toggle);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  mixins: [_toggle2.default],
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    componentHandler.upgradeElements(this.$el);
-	  }
+	  },
+	
+	  mixins: [_toggle2.default]
 	};
 
 /***/ },
-/* 90 */
-/***/ function(module, exports) {
-
-	module.exports = "<label v-bind:for.once=\"id\" v-bind:class=\"{ &quot;is-disabled&quot;: disabled, &quot;is-checked&quot;: isChecked }\" class=\"mdl-switch mdl-js-switch\"><input v-bind:value=\"value\" type=\"checkbox\" v-bind:id.once=\"id\" v-model=\"checked\" v-bind:disabled=\"disabled\" class=\"mdl-switch__input\"/><span class=\"mdl-switch__label\"><slot></slot></span></label>";
-
-/***/ },
-/* 91 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(92)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/textfield.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(93)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('label', {
+	    staticClass: "mdl-switch mdl-js-switch is-upgraded",
+	    class: cssClasses,
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_h('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (checked),
+	      expression: "checked"
+	    }],
+	    staticClass: "mdl-switch__input",
+	    attrs: {
+	      "type": "checkbox",
+	      "id": id,
+	      "disabled": disabled
+	    },
+	    domProps: {
+	      "value": val,
+	      "checked": Array.isArray(checked) ? _i(checked, val) > -1 : _q(checked, true)
+	    },
+	    on: {
+	      "change": [function($event) {
+	        var $$a = checked,
+	          $$el = $event.target,
+	          $$c = $$el.checked ? (true) : (false);
+	        if (Array.isArray($$a)) {
+	          var $$v = val,
+	            $$i = _i($$a, $$v);
+	          if ($$c) {
+	            $$i < 0 && (checked = $$a.concat($$v))
+	          } else {
+	            $$i > -1 && (checked = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+	          }
+	        } else {
+	          checked = $$c
+	        }
+	      }, fireChange]
+	    }
+	  }), " ", _h('span', {
+	    staticClass: "mdl-switch__label"
+	  }, [_t("default")])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-83b727d0", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(69)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(70)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/textfield.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./textfield.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-00ca46a9", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-00ca46a9", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] textfield.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 92 */
-/***/ function(module, exports, __webpack_require__) {
+/* 69 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
 	exports.default = {
 	  props: {
 	    maxlength: {
@@ -2023,136 +1990,228 @@ return /******/ (function(modules) { // webpackBootstrap
 	    label: String,
 	    pattern: String,
 	    error: String,
-	    textarea: {
-	      fill: true
-	    },
-	    floatingLabel: {
-	      required: false
-	    }
+	    textarea: Boolean,
+	    floatingLabel: [Boolean, String]
 	  },
 	  computed: {
+	    displayLabel: function displayLabel() {
+	      return this.label || this.floatingLabel;
+	    },
 	    isDirty: function isDirty() {
 	      return '' + this.value;
 	    }
 	  },
-	  ready: function ready() {
-	    var _this = this;
-	
-	    componentHandler.upgradeElement(this.$el);
-	    if (this.floatingLabel && this.label == null) {
-	      this.label = this.floatingLabel;
-	      this.$watch('floatingLabel', function (val) {
-	        return _this.label = val;
-	      });
+	  methods: {
+	    fireInputEvent: function fireInputEvent(event) {
+	      this.$emit('input', event.target.value);
 	    }
 	  },
-	
-	  mixins: [_propFill2.default]
+	  mounted: function mounted() {
+	    componentHandler.upgradeElement(this.$el);
+	  }
 	};
 
 /***/ },
-/* 93 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-bind:class=\"{&quot;mdl-textfield--floating-label&quot;: floatingLabel, &quot;mdl-textfield--expandable&quot;: expandable, &quot;is-dirty&quot;: isDirty, &quot;is-disabled&quot;: disabled}\" class=\"mdl-textfield mdl-js-textfield\"><slot v-if=\"expandable\" name=\"expandable-button\"><label v-bind:for.once=\"id\" class=\"mdl-button mdl-js-button mdl-button--icon\"><i class=\"material-icons\">{{expandable}}</i></label></slot><div v-bind:class=\"{&quot;mdl-textfield__expandable-holder&quot;: expandable}\"><slot v-if=\"textarea\" name=\"textarea\"><textarea type=\"text\" v-model=\"value\" v-bind:required=\"required\" v-bind:id.once=\"id\" v-bind:rows=\"rows\" v-bind:maxlength=\"maxlength\" class=\"mdl-textfield__input\"></textarea></slot><slot v-else=\"v-else\" name=\"input\"><input v-bind:type=\"type\" v-model=\"value\" v-bind:id.once=\"id\" v-bind:pattern=\"pattern\" v-bind:disabled=\"disabled\" v-bind:required=\"required\" v-bind:readonly=\"readonly\" v-bind:maxlength=\"maxlength\" class=\"mdl-textfield__input\"/></slot><slot name=\"label\"><label v-bind:for.once=\"id\" class=\"mdl-textfield__label\">{{label}}</label></slot><slot name=\"error\"><label v-if=\"error\" class=\"mdl-textfield__error\">{{error}}</label></slot></div></div>";
-
-/***/ },
-/* 94 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(95)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/tooltip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(96)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-textfield mdl-js-textfield",
+	    class: {
+	      'mdl-textfield--floating-label': floatingLabel, 'mdl-textfield--expandable': expandable, 'is-dirty': isDirty, 'is-disabled': disabled
+	    }
+	  }, [(expandable) ? _t("expandable-button", [_h('label', {
+	    staticClass: "mdl-button mdl-js-button mdl-button--icon",
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_h('i', {
+	    staticClass: "material-icons"
+	  }, [_s(expandable)])])]) : _e(), " ", _h('div', {
+	    class: {
+	      'mdl-textfield__expandable-holder': expandable
+	    }
+	  }, [(textarea) ? _t("textarea", [_h('textarea', {
+	    staticClass: "mdl-textfield__input",
+	    attrs: {
+	      "type": "text",
+	      "required": required,
+	      "id": id,
+	      "rows": rows,
+	      "maxlength": maxlength
+	    },
+	    domProps: {
+	      "value": value
+	    },
+	    on: {
+	      "input": fireInputEvent
+	    }
+	  })]) : _t("input", [_h('input', {
+	    staticClass: "mdl-textfield__input",
+	    attrs: {
+	      "type": type,
+	      "id": id,
+	      "pattern": pattern,
+	      "disabled": disabled,
+	      "required": required,
+	      "readonly": readonly,
+	      "maxlength": maxlength
+	    },
+	    domProps: {
+	      "value": value
+	    },
+	    on: {
+	      "input": fireInputEvent
+	    }
+	  })]), " ", " ", _t("label", [_h('label', {
+	    staticClass: "mdl-textfield__label",
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_s(displayLabel)])]), " ", _t("error", [(error) ? _h('label', {
+	    staticClass: "mdl-textfield__error"
+	  }, [_s(error)]) : _e()])])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-00ca46a9", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(72)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(73)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/tooltip.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tooltip.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-e7023682", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-e7023682", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] tooltip.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 95 */
-/***/ function(module, exports, __webpack_require__) {
+/* 72 */
+/***/ function(module, exports) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
 	exports.default = {
 	  props: {
-	    for: {
+	    target: {
 	      required: true,
 	      type: String
 	    },
-	    large: {
-	      fill: true
-	    }
+	    large: Boolean
 	  },
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    componentHandler.upgradeElement(this.$el, 'MaterialTooltip');
-	  },
-	
-	  mixins: [_propFill2.default]
+	  }
 	};
 
 /***/ },
-/* 96 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-bind:for=\"for\" v-bind:class=\"{&quot;mdl-tooltip--large&quot;: large}\" class=\"mdl-tooltip\"><slot></slot></div>";
-
-/***/ },
-/* 97 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(98)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/menu/menu.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(99)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-tooltip",
+	    class: {
+	      'mdl-tooltip--large': large
+	    },
+	    attrs: {
+	      "for": target
+	    }
+	  }, [_t("default")])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-e7023682", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 74 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(75)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(76)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/menu/menu.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./menu.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-67b9a9cb", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-67b9a9cb", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] menu.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 98 */
+/* 75 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2161,93 +2220,146 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	exports.default = {
-	  props: ['for'],
-	  ready: function ready() {
+	  props: ['target'],
+	  mounted: function mounted() {
 	    componentHandler.upgradeElement(this.$el, 'MaterialMenu');
 	  }
 	};
 
 /***/ },
-/* 99 */
-/***/ function(module, exports) {
-
-	module.exports = "<ul v-bind:for.once=\"for\" class=\"mdl-menu mdl-js-menu\"><slot></slot></ul>";
-
-/***/ },
-/* 100 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(101)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/menu/menu-item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(102)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('ul', {
+	    staticClass: "mdl-menu mdl-js-menu",
+	    attrs: {
+	      "for": target
+	    }
+	  }, [_t("default")])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-67b9a9cb", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 77 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(78)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(79)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/menu/menu-item.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./menu-item.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-37cc8005", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-37cc8005", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] menu-item.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 101 */
+/* 78 */
 /***/ function(module, exports) {
 
 	"use strict";
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = {};
 
 /***/ },
-/* 102 */
-/***/ function(module, exports) {
-
-	module.exports = "<li class=\"mdl-menu__item\"><slot></slot></li>";
-
-/***/ },
-/* 103 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(104)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/card.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(105)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('li', {
+	    staticClass: "mdl-menu__item"
+	  }, [_t("default")])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-37cc8005", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(81)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(82)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/card.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./card.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-46fd66f8", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-46fd66f8", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] card.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 104 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2256,11 +2368,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _button = __webpack_require__(69);
+	var _button = __webpack_require__(46);
 	
 	var _button2 = _interopRequireDefault(_button);
 	
-	var _anchorButton = __webpack_require__(73);
+	var _anchorButton = __webpack_require__(50);
 	
 	var _anchorButton2 = _interopRequireDefault(_anchorButton);
 	
@@ -2279,42 +2391,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  props: {
-	    title: {
-	      type: String,
-	      default: true
-	    },
-	    menu: {
-	      default: true
-	    },
-	    actions: {
-	      type: String,
-	      default: true
-	    },
+	    title: String,
+	    menu: String,
+	    actions: String,
 	    actionsTarget: {
 	      default: '_self',
 	      type: String
 	    },
 	    actionsText: String,
-	    media: {
-	      default: true,
-	      type: String
-	    },
-	    subtitle: {
-	      default: true,
-	      type: String
-	    },
-	    supportingText: {
-	      default: true,
-	      type: String
-	    }
+	    media: String,
+	    subtitle: String,
+	    supportingText: String
 	  },
-	  compiled: function compiled() {
+	  mounted: function mounted() {
 	    var _this = this;
 	
 	    slots.forEach(function (slot, pos) {
 	      if (_this[slot] === true) {
 	        var el = _this.$el.children[pos];
-	        if (!el || !el.attributes.getNamedItem('slot')) {
+	        if (!el || !_this.$el.attributes.getNamedItem('slot')) {
 	          _this[slot] = '';
 	        }
 	      }
@@ -2323,10 +2418,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  methods: {
 	    triggerMenuEvent: function triggerMenuEvent() {
-	      this.$dispatch(this.menu);
+	      this.$emit(this.menu);
 	    },
 	    triggerActionsEvent: function triggerActionsEvent() {
-	      this.$dispatch(this.actions);
+	      this.$emit(this.actions);
 	    }
 	  },
 	  components: {
@@ -2336,41 +2431,115 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 105 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"mdl-card mdl-shadow--2dp\"><slot name=\"title\" v-if=\"title\"><div class=\"mdl-card__title\"><h2 class=\"mdl-card__title-text\">{{title}}</h2></div></slot><slot name=\"subtitle\" v-if=\"subtitle\"><div class=\"mdl-card__subtitle-text\">{{subtitle}}</div></slot><slot name=\"supporting-text\" v-if=\"supportingText\"><div class=\"mdl-card__supporting-text\">{{supportingText}}</div></slot><slot name=\"media\" v-if=\"media\"><div class=\"mdl-card__media\"><img :src=\"media\"/></div></slot><!-- TODO this was an anchor--><slot name=\"actions\" v-if=\"actions\"><div class=\"mdl-card__actions mdl-card--border\"><mdl-anchor-button colored=\"colored\" v-if=\"isActionsURL\" v-bind:href=\"actions\" v-bind:target=\"actionsTarget\" class=\"mdl-js-ripple-effect\">{{actionsText}}</mdl-anchor-button><mdl-button colored=\"colored\" v-else=\"v-else\" v-on:click=\"triggerActionsEvent\" class=\"mdl-js-ripple-effect\">{{actionsText}}</mdl-button></div></slot><!-- TODO some way of creating a menu or action--><slot name=\"menu\" v-if=\"menu\"><div class=\"mdl-card__menu\"><mdl-button icon=\"icon\" @click=\"triggerMenuEvent\" class=\"mdl-js-ripple-effect\"><i class=\"material-icons\">share</i></mdl-button></div></slot></div>";
-
-/***/ },
-/* 106 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(107)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/snackbar.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(108)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-card mdl-shadow--2dp"
+	  }, [(title) ? _t("title", [_h('div', {
+	    staticClass: "mdl-card__title"
+	  }, [_h('h2', {
+	    staticClass: "mdl-card__title-text"
+	  }, [_s(title)])])]) : _e(), (subtitle) ? _t("subtitle", [_h('div', {
+	    staticClass: "mdl-card__subtitle-text"
+	  }, [_s(subtitle)])]) : _e(), (supportingText) ? _t("supporting-text", [_h('div', {
+	    staticClass: "mdl-card__supporting-text"
+	  }, [_s(supportingText)])]) : _e(), (media) ? _t("media", [_h('div', {
+	    staticClass: "mdl-card__media"
+	  }, [_h('img', {
+	    attrs: {
+	      "src": media
+	    }
+	  })])]) : _e(), (actions) ? _t("actions", [_h('div', {
+	    staticClass: "mdl-card__actions mdl-card--border"
+	  }, [(isActionsURL) ? _h('mdl-anchor-button', {
+	    staticClass: "mdl-js-ripple-effect",
+	    attrs: {
+	      "colored": "colored",
+	      "href": actions,
+	      "target": actionsTarget
+	    }
+	  }, [_s(actionsText)]) : _h('mdl-button', {
+	    staticClass: "mdl-js-ripple-effect",
+	    attrs: {
+	      "colored": "colored"
+	    },
+	    nativeOn: {
+	      "click": function($event) {
+	        triggerActionsEvent($event)
+	      }
+	    }
+	  }, [_s(actionsText)])])]) : _e(), (menu) ? _t("menu", [_h('div', {
+	    staticClass: "mdl-card__menu"
+	  }, [_h('mdl-button', {
+	    staticClass: "mdl-js-ripple-effect",
+	    attrs: {
+	      "icon": "icon"
+	    },
+	    nativeOn: {
+	      "click": function($event) {
+	        triggerMenuEvent($event)
+	      }
+	    }
+	  }, [_m(0)])])]) : _e()])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('i', {
+	    staticClass: "material-icons"
+	  }, ["share"])
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-46fd66f8", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(84)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(85)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/snackbar.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./snackbar.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-b5ac2c0e", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-b5ac2c0e", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] snackbar.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 107 */
+/* 84 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2379,70 +2548,123 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	exports.default = {
-	  props: ['displayOn'],
-	  ready: function ready() {
+	  props: {
+	    displayOn: {
+	      type: String,
+	      required: true
+	    },
+	    eventSource: {
+	      type: Object,
+	      required: false,
+	      default: function _default() {
+	        return this.$root;
+	      }
+	    }
+	  },
+	  mounted: function mounted() {
 	    var _this = this;
 	
 	    componentHandler.upgradeElement(this.$el, 'MaterialSnackbar');
-	    this.$on(this.displayOn, function (snackarConfig) {
-	      _this.$el.MaterialSnackbar.showSnackbar(snackarConfig);
+	    this.eventSource.$on(this.displayOn, function (snackbarConfig) {
+	      _this.$el.MaterialSnackbar.showSnackbar(snackbarConfig);
 	    });
 	  }
 	};
 
 /***/ },
-/* 108 */
-/***/ function(module, exports) {
-
-	module.exports = "<div aria-live=\"assertive\" aria-atomic=\"true\" aria-relevant=\"text\" class=\"mdl-snackbar mdl-js-snackbar\"><div class=\"mdl-snackbar__text\"></div><button type=\"button\" class=\"mdl-snackbar__action\"></button></div>";
-
-/***/ },
-/* 109 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(110)
-	__vue_script__ = __webpack_require__(114)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/select.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(115)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _m(0)
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-snackbar mdl-js-snackbar",
+	    attrs: {
+	      "aria-live": "assertive",
+	      "aria-atomic": "true",
+	      "aria-relevant": "text"
+	    }
+	  }, [_h('div', {
+	    staticClass: "mdl-snackbar__text"
+	  }), _h('button', {
+	    staticClass: "mdl-snackbar__action",
+	    attrs: {
+	      "type": "button"
+	    }
+	  })])
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-b5ac2c0e", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(87)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(91)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(92)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/select.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./select.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-76dce970", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-76dce970", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] select.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 110 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(111);
+	var content = __webpack_require__(88);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(113)(content, {});
+	var update = __webpack_require__(90)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./select.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./select.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-76dce970!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./select.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-76dce970!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./select.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2452,21 +2674,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 111 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(112)();
+	exports = module.exports = __webpack_require__(89)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "\n.getmdl-select .mdl-icon-toggle__label {\n  float:right;\n  margin-top:-30px;\n  color: rgba(0, 0, 0, 0.4);\n}\n\n.getmdl-select.is-focused .mdl-icon-toggle__label {\n  color: #3f51b5;\n}\n\n.getmdl-select .mdl-menu__container {\n  width: 100% !important;\n}\n.getmdl-select .mdl-menu__container .mdl-menu {\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "\n.getmdl-select .mdl-icon-toggle__label {\n  float:right;\n  margin-top:-30px;\n  color: rgba(0, 0, 0, 0.4);\n}\n.getmdl-select.is-focused .mdl-icon-toggle__label {\n  color: #3f51b5;\n}\n.getmdl-select .mdl-menu__container {\n  width: 100% !important;\n}\n.getmdl-select .mdl-menu__container .mdl-menu {\n  width: 100%;\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 112 */
+/* 89 */
 /***/ function(module, exports) {
 
 	/*
@@ -2522,7 +2744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 113 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -2744,7 +2966,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 114 */
+/* 91 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2760,11 +2982,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  methods: {
-	    selectValue: function selectValue(option) {
-	      this.value = option.value;
-	      this.name = option.name;
-	      var event = new Event('change');
-	      this.$el.dispatchEvent(event);
+	    selectValue: function selectValue(_ref) {
+	      var value = _ref.value;
+	
+	      this.$emit('input', value);
 	    },
 	    setName: function setName() {
 	      this.name = null;
@@ -2773,8 +2994,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (this.value === option.value) this.name = option.name;
 	      }
 	      if (!this.name) this.name = this.value;
-	      this.$els.textfield.MaterialTextfield.change(this.name);
-	      this.$els.textfield.MaterialTextfield.boundBlurHandler();
+	      this.$refs.textfield.MaterialTextfield.change(this.name);
+	      this.$refs.textfield.MaterialTextfield.boundBlurHandler();
 	    }
 	  },
 	  computed: {
@@ -2807,7 +3028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      required: true
 	    }
 	  },
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    componentHandler.upgradeElements(this.$el);
 	    this.setName();
 	  },
@@ -2820,58 +3041,137 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 115 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-el:textfield=\"v-el:textfield\" class=\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select\"><input v-bind:id.once=\"id\" v-el:input=\"v-el:input\" v-model=\"name\" type=\"text\" readonly=\"\" tabindex=\"-1\" class=\"mdl-textfield__input\"/><label v-bind:for.once=\"id\"><i class=\"mdl-icon-toggle__label material-icons\">keyboard_arrow_down</i></label><label v-bind:for.once=\"id\" class=\"mdl-textfield__label\">{{label}}</label><ul v-bind:for.once=\"id\" class=\"mdl-menu mdl-menu--bottom-left mdl-js-menu\"><li v-for=\"option in optionsObject\" v-on:click=\"selectValue(option)\" class=\"mdl-menu__item\">{{option.name}}</li></ul></div>";
-
-/***/ },
-/* 116 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(117)
-	__vue_script__ = __webpack_require__(119)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/dialog.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(120)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    ref: "textfield",
+	    staticClass: "mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select"
+	  }, [_h('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (name),
+	      expression: "name"
+	    }],
+	    ref: "input",
+	    staticClass: "mdl-textfield__input",
+	    attrs: {
+	      "id": id,
+	      "type": "text",
+	      "readonly": "",
+	      "tabindex": "-1"
+	    },
+	    domProps: {
+	      "value": _s(name)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) return;
+	        name = $event.target.value
+	      }
+	    }
+	  }), _h('label', {
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_m(0)]), _h('label', {
+	    staticClass: "mdl-textfield__label",
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_s(label)]), _h('ul', {
+	    staticClass: "mdl-menu mdl-menu--bottom-left mdl-js-menu",
+	    attrs: {
+	      "for": id
+	    }
+	  }, [_l((optionsObject), function(option) {
+	    return _h('li', {
+	      staticClass: "mdl-menu__item",
+	      on: {
+	        "click": function($event) {
+	          selectValue(option)
+	        }
+	      }
+	    }, [_s(option.name)])
+	  })])])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('i', {
+	    staticClass: "mdl-icon-toggle__label material-icons"
+	  }, ["keyboard_arrow_down"])
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-76dce970", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 93 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(94)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(96)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(97)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/dialog.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./dialog.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-f1faa888", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-f1faa888", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] dialog.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 117 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(118);
+	var content = __webpack_require__(95);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(113)(content, {});
+	var update = __webpack_require__(90)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dialog.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dialog.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-f1faa888!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dialog.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-f1faa888!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dialog.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2881,21 +3181,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 118 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(112)();
+	exports = module.exports = __webpack_require__(89)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mdl-dialog-container {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-wrap: wrap;\n      -ms-flex-wrap: wrap;\n          flex-wrap: wrap;\n  -webkit-box-pack:center;\n  -webkit-justify-content:center;\n      -ms-flex-pack:center;\n          justify-content:center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  top:0;\n  left: 0;\n  z-index: 10000;\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\n  background-color:white;\n  padding: 1em;\n  color: black;\n  width: initial;\n  min-width: 280px;\n}\n", ""]);
+	exports.push([module.id, "\n.mdl-dialog-container {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content:center;\n  align-items: center;\n  top:0;\n  left: 0;\n  z-index: 10000;\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\n  background-color:white;\n  padding: 1em;\n  color: black;\n  width: initial;\n  min-width: 280px;\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 119 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2904,11 +3204,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	var _button = __webpack_require__(69);
+	var _button = __webpack_require__(46);
 	
 	var _button2 = _interopRequireDefault(_button);
 	
@@ -2928,10 +3224,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    title: {
 	      type: String
 	    },
-	    fullWidth: {
-	      fill: true,
-	      default: false
-	    }
+	    fullWidth: Boolean
 	  },
 	  methods: {
 	    open: function open() {
@@ -2942,46 +3235,95 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.show = false;
 	      this.$emit('close');
 	    }
-	  },
-	  mixins: [_propFill2.default]
+	  }
 	};
 
 /***/ },
-/* 120 */
-/***/ function(module, exports) {
-
-	module.exports = "<div v-show=\"show\" class=\"mdl-dialog-container\"><div class=\"mdl-dialog\"><div class=\"mdl-dialog__title\">{{title}}</div><div class=\"mdl-dialog__content\"><slot></slot></div><div v-bind:class=\"{ &quot;mdl-dialog__actions--full-width&quot;: fullWidth }\" class=\"mdl-dialog__actions\"><slot name=\"actions\"><mdl-button v-on:click.stop=\"close\" class=\"mdl-js-ripple-effect\">Close</mdl-button></slot></div></div></div>";
-
-/***/ },
-/* 121 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(122)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/tabs/tabs.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(126)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (show),
+	      expression: "show"
+	    }],
+	    staticClass: "mdl-dialog-container"
+	  }, [_h('div', {
+	    staticClass: "mdl-dialog"
+	  }, [_h('div', {
+	    staticClass: "mdl-dialog__title"
+	  }, [_s(title)]), _h('div', {
+	    staticClass: "mdl-dialog__content"
+	  }, [_t("default")]), _h('div', {
+	    staticClass: "mdl-dialog__actions",
+	    class: {
+	      'mdl-dialog__actions--full-width': fullWidth
+	    }
+	  }, [_t("actions", [_h('mdl-button', {
+	    staticClass: "mdl-js-ripple-effect",
+	    nativeOn: {
+	      "click": function($event) {
+	        $event.stopPropagation();
+	        close($event)
+	      }
+	    }
+	  }, ["Close"])])])])])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-f1faa888", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 98 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(99)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(103)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/tabs/tabs.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tabs.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-4b9415aa", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-4b9415aa", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] tabs.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 122 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2990,11 +3332,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _propFill = __webpack_require__(45);
-	
-	var _propFill2 = _interopRequireDefault(_propFill);
-	
-	var _tabLink = __webpack_require__(123);
+	var _tabLink = __webpack_require__(100);
 	
 	var _tabLink2 = _interopRequireDefault(_tabLink);
 	
@@ -3011,12 +3349,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	exports.default = {
 	  props: {
-	    selected: {
-	      required: true,
-	      twoWay: true
+	    value: {
+	      required: false,
+	      type: [String, Number]
 	    },
 	    noRippleEffect: {
-	      fill: true,
+	      type: Boolean,
 	      required: false
 	    }
 	  },
@@ -3030,12 +3368,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    selectTab: function selectTab(_ref) {
 	      var id = _ref.id;
 	
-	      this.selected = id;
+	      this.$emit('input', id);
 	    },
 	    isSelected: function isSelected(_ref2) {
 	      var id = _ref2.id;
 	
-	      return id === this.selected;
+	      return id === this.value;
 	    },
 	    addTab: function addTab(tab) {
 	      this.tabs.push(tab);
@@ -3053,40 +3391,54 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (index > -1) this.tabs.splice(index, 1);
 	    }
 	  },
-	  mixins: [_propFill2.default],
 	  components: { TabLink: _tabLink2.default }
 	};
 
 /***/ },
-/* 123 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(124)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/tabs/tab-link.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(125)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(101)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(102)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
-	if (false) {(function () {  module.hot.accept()
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/tabs/tab-link.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tab-link.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-192c3c5f", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-192c3c5f", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] tab-link.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 124 */
+/* 101 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3101,53 +3453,123 @@ return /******/ (function(modules) { // webpackBootstrap
 	      required: false
 	    }
 	  },
-	  ready: function ready() {
-	    componentHandler.upgradeElement(this.$els.ripple, 'MaterialRipple');
+	  mounted: function mounted() {
+	    componentHandler.upgradeElement(this.$refs.ripple, 'MaterialRipple');
 	  }
 	};
 
 /***/ },
-/* 125 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<a class=\"mdl-tabs__tab\"\n   href=\"#\"\n>{{tab.title}}\n  <span v-el:ripple\n        v-show=\"!noRippleEffect\"\n        class=\"mdl-tabs__ripple-container mdl-js-ripple-effect\">\n    <span class=\"mdl-ripple\"></span>\n  </span>\n</a>\n";
-
-/***/ },
-/* 126 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"mdl-tabs is-upgraded\">\n  <!-- Generated tab links -->\n  <div class=\"mdl-tabs__tab-bar\">\n    <tab-link\n        class=\"mdl-tabs__tab\"\n        v-for=\"tab in tabs\"\n        track-by=\"id\"\n        :no-ripple-effect=\"noRippleEffect\"\n        :class=\"{ 'is-active': isSelected(tab) }\"\n        @click.prevent=\"selectTab(tab)\"\n        :tab=\"tab\"\n    ></tab-link>\n  </div>\n  <!-- Tabs content -->\n  <slot></slot>\n</div>\n";
-
-/***/ },
-/* 127 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(128)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/tabs/tab.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(136)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	module.exports={render:function (){with(this) {
+	  return _h('a', {
+	    staticClass: "mdl-tabs__tab",
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, [_s(tab.title) + "\n  ", _h('span', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (!noRippleEffect),
+	      expression: "!noRippleEffect"
+	    }],
+	    ref: "ripple",
+	    staticClass: "mdl-tabs__ripple-container mdl-js-ripple-effect"
+	  }, [_m(0)])])
+	}},staticRenderFns: [function (){with(this) {
+	  return _h('span', {
+	    staticClass: "mdl-ripple"
+	  })
+	}}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-192c3c5f", module.exports)
+	  }
 	}
-	if (false) {(function () {  module.hot.accept()
+
+/***/ },
+/* 103 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-tabs is-upgraded"
+	  }, [_h('div', {
+	    staticClass: "mdl-tabs__tab-bar"
+	  }, [_l((tabs), function(tab) {
+	    return _h('tab-link', {
+	      key: tab.id,
+	      staticClass: "mdl-tabs__tab",
+	      class: {
+	        'is-active': isSelected(tab)
+	      },
+	      attrs: {
+	        "no-ripple-effect": noRippleEffect,
+	        "tab": tab
+	      },
+	      nativeOn: {
+	        "click": function($event) {
+	          selectTab(tab)
+	        }
+	      }
+	    })
+	  })]), " ", " ", _t("default")])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-4b9415aa", module.exports)
+	  }
+	}
+
+/***/ },
+/* 104 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(105)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(113)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/posva/vue-mdl/src/tabs/tab.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tab.vue"
+	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
+	    hotAPI.createRecord("data-v-9751ea10", __vue_options__)
 	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
+	    hotAPI.reload("data-v-9751ea10", __vue_options__)
 	  }
 	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] tab.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
 
 /***/ },
-/* 128 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3156,7 +3578,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _extends2 = __webpack_require__(129);
+	var _extends2 = __webpack_require__(106);
 	
 	var _extends3 = _interopRequireDefault(_extends2);
 	
@@ -3189,7 +3611,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.$parent.updateTab(tabToOject(oldTab), this.tabData);
 	    }
 	  },
-	  ready: function ready() {
+	  mounted: function mounted() {
 	    this.$parent.addTab(this.tabData);
 	  },
 	  beforeDestroy: function beforeDestroy() {
@@ -3198,14 +3620,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 129 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	
-	var _assign = __webpack_require__(130);
+	var _assign = __webpack_require__(107);
 	
 	var _assign2 = _interopRequireDefault(_assign);
 	
@@ -3226,36 +3648,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 130 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(131), __esModule: true };
+	module.exports = { "default": __webpack_require__(108), __esModule: true };
 
 /***/ },
-/* 131 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(132);
+	__webpack_require__(109);
 	module.exports = __webpack_require__(23).Object.assign;
 
 /***/ },
-/* 132 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.1 Object.assign(target, source)
 	var $export = __webpack_require__(22);
 	
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(133)});
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(110)});
 
 /***/ },
-/* 133 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 19.1.2.1 Object.assign(target, source, ...)
 	var getKeys  = __webpack_require__(6)
-	  , gOPS     = __webpack_require__(134)
-	  , pIE      = __webpack_require__(135)
+	  , gOPS     = __webpack_require__(111)
+	  , pIE      = __webpack_require__(112)
 	  , toObject = __webpack_require__(4)
 	  , IObject  = __webpack_require__(10)
 	  , $assign  = Object.assign;
@@ -3286,22 +3708,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	} : $assign;
 
 /***/ },
-/* 134 */
+/* 111 */
 /***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
 /***/ },
-/* 135 */
+/* 112 */
 /***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
 /***/ },
-/* 136 */
-/***/ function(module, exports) {
+/* 113 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div class=\"mdl-tabs__panel\"\n     :class=\"{'is-active': selected }\"\n>\n  <slot></slot>\n</div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mdl-tabs__panel",
+	    class: {
+	      'is-active': selected
+	    }
+	  }, [_t("default")])
+	}},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-9751ea10", module.exports)
+	  }
+	}
 
 /***/ }
 /******/ ])
