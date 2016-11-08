@@ -107,7 +107,7 @@ p a
 </template>
 
 <script>
-/* global docsearch*/
+/* global docsearch */
 import menuEntry from './utils/menu-entry.vue'
 
 export default {
