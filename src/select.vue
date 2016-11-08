@@ -28,8 +28,6 @@
 </template>
 
 <script>
-/* global componentHandler*/
-
 export default {
   data () {
     return {

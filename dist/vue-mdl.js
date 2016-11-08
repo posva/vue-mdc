@@ -145,11 +145,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _dialog2 = _interopRequireDefault(_dialog);
 	
-	var _tabs = __webpack_require__(121);
+	var _tabs = __webpack_require__(123);
 	
 	var _tabs2 = _interopRequireDefault(_tabs);
 	
-	var _tab = __webpack_require__(127);
+	var _tab = __webpack_require__(129);
 	
 	var _tab2 = _interopRequireDefault(_tab);
 	
@@ -774,6 +774,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(40)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -782,14 +783,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(42)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./checkbox.vue"
+	  var id = "_v-59130e27/checkbox.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -867,6 +874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(44)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -875,14 +883,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(68)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./radio.vue"
+	  var id = "_v-3842db47/radio.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1199,6 +1213,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // Thrash, waste and sodomy: IE GC bug
 	  var iframe = __webpack_require__(33)('iframe')
 	    , i      = enumBugKeys.length
+	    , lt     = '<'
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
@@ -1208,7 +1223,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // html.removeChild(iframe);
 	  iframeDocument = iframe.contentWindow.document;
 	  iframeDocument.open();
-	  iframeDocument.write('<script>document.F=Object</script' + gt);
+	  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
 	  iframeDocument.close();
 	  createDict = iframeDocument.F;
 	  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
@@ -1226,6 +1241,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  } else result = createDict();
 	  return Properties === undefined ? result : dPs(result, Properties);
 	};
+
 
 /***/ },
 /* 58 */
@@ -1405,6 +1421,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(70)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1413,14 +1430,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(72)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./button.vue"
+	  var id = "_v-22205eb4/button.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1521,6 +1544,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(74)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1529,14 +1553,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(75)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./anchor-button.vue"
+	  var id = "_v-7979d0f4/anchor-button.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1575,6 +1605,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(77)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1583,14 +1614,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(78)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./progress.vue"
+	  var id = "_v-235def21/progress.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1660,6 +1697,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(80)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1668,14 +1706,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(81)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./spinner.vue"
+	  var id = "_v-04226856/spinner.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1727,6 +1771,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(83)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1735,14 +1780,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(84)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./icon-toggle.vue"
+	  var id = "_v-15cede18/icon-toggle.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1790,6 +1841,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(86)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1798,14 +1850,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(87)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./slider.vue"
+	  var id = "_v-1b7fb2d5/slider.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1889,6 +1947,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(89)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1897,14 +1956,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(90)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./switch.vue"
+	  var id = "_v-83b727d0/switch.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1946,6 +2011,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(92)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -1954,14 +2020,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(93)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./textfield.vue"
+	  var id = "_v-00ca46a9/textfield.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2061,6 +2133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(95)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -2069,14 +2142,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(96)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tooltip.vue"
+	  var id = "_v-e7023682/tooltip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2128,6 +2207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(98)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -2136,14 +2216,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(99)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./menu.vue"
+	  var id = "_v-67b9a9cb/menu.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2178,6 +2264,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(101)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -2186,14 +2273,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(102)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./menu-item.vue"
+	  var id = "_v-37cc8005/menu-item.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2223,6 +2316,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(104)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -2231,14 +2325,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(105)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./card.vue"
+	  var id = "_v-46fd66f8/card.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2346,6 +2446,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(107)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
@@ -2354,14 +2455,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(108)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./snackbar.vue"
+	  var id = "_v-b5ac2c0e/snackbar.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2401,6 +2508,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__webpack_require__(110)
 	__vue_script__ = __webpack_require__(114)
 	if (__vue_script__ &&
@@ -2410,14 +2518,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_template__ = __webpack_require__(115)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./select.vue"
+	  var id = "_v-76dce970/select.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2830,23 +2944,30 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
 	__webpack_require__(117)
 	__vue_script__ = __webpack_require__(119)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/dialog.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(120)
+	__vue_template__ = __webpack_require__(122)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./dialog.vue"
+	  var id = "_v-f1faa888/dialog.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2889,7 +3010,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mdl-dialog-container {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-wrap: wrap;\n      -ms-flex-wrap: wrap;\n          flex-wrap: wrap;\n  -webkit-box-pack:center;\n  -webkit-justify-content:center;\n      -ms-flex-pack:center;\n          justify-content:center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  top:0;\n  left: 0;\n  z-index: 10000;\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\n  background-color:white;\n  padding: 1em;\n  color: black;\n  width: initial;\n  min-width: 280px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mdl-dialog-container {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-pack:center;\n      -ms-flex-pack:center;\n          justify-content:center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  top:0;\n  left: 0;\n  z-index: 10000;\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\n  background-color:white;\n  padding: 1em;\n  color: black;\n  width: initial;\n  min-width: 280px;\n}\n", ""]);
 	
 	// exports
 
@@ -2903,6 +3024,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	
+	var _focusTrap = __webpack_require__(120);
+	
+	var _focusTrap2 = _interopRequireDefault(_focusTrap);
 	
 	var _propFill = __webpack_require__(45);
 	
@@ -2933,13 +3058,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	      default: false
 	    }
 	  },
+	  ready: function ready() {
+	    this._focusTrap = (0, _focusTrap2.default)(this.$el);
+	  },
+	
 	  methods: {
 	    open: function open() {
+	      var _this = this;
+	
 	      this.show = true;
+	      this.$nextTick(function () {
+	        return _this._focusTrap.activate();
+	      });
 	      this.$emit('open');
 	    },
 	    close: function close() {
 	      this.show = false;
+	      this._focusTrap.deactivate();
 	      this.$emit('close');
 	    }
 	  },
@@ -2948,31 +3083,322 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 120 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var tabbable = __webpack_require__(121);
+	
+	var listeningFocusTrap = null;
+	
+	function focusTrap(element, userOptions) {
+	  var tabbableNodes = [];
+	  var nodeFocusedBeforeActivation = null;
+	  var active = false;
+	
+	  var container = (typeof element === 'string')
+	    ? document.querySelector(element)
+	    : element;
+	
+	  var config = userOptions || {};
+	  config.returnFocusOnDeactivate = (userOptions && userOptions.returnFocusOnDeactivate != undefined)
+	    ? userOptions.returnFocusOnDeactivate
+	    : true;
+	  config.escapeDeactivates = (userOptions && userOptions.escapeDeactivates != undefined)
+	    ? userOptions.escapeDeactivates
+	    : true;
+	
+	  var trap = {
+	    activate: activate,
+	    deactivate: deactivate,
+	    pause: removeListeners,
+	    unpause: addListeners,
+	  };
+	
+	  return trap;
+	
+	  function activate(activateOptions) {
+	    var defaultedActivateOptions = {
+	      onActivate: (activateOptions && activateOptions.onActivate !== undefined)
+	        ? activateOptions.onActivate
+	        : config.onActivate,
+	    };
+	
+	    active = true;
+	    nodeFocusedBeforeActivation = document.activeElement;
+	
+	    if (defaultedActivateOptions.onActivate) {
+	      defaultedActivateOptions.onActivate();
+	    }
+	
+	    addListeners();
+	    return trap;
+	  }
+	
+	  function deactivate(deactivateOptions) {
+	    var defaultedDeactivateOptions = {
+	      returnFocus: (deactivateOptions && deactivateOptions.returnFocus != undefined)
+	        ? deactivateOptions.returnFocus
+	        : config.returnFocusOnDeactivate,
+	      onDeactivate: (deactivateOptions && deactivateOptions.onDeactivate !== undefined)
+	        ? deactivateOptions.onDeactivate
+	        : config.onDeactivate,
+	    };
+	
+	    removeListeners();
+	
+	    if (defaultedDeactivateOptions.onDeactivate) {
+	      defaultedDeactivateOptions.onDeactivate();
+	    }
+	
+	    if (defaultedDeactivateOptions.returnFocus) {
+	      setTimeout(function() {
+	        tryFocus(nodeFocusedBeforeActivation);
+	      }, 0);
+	    }
+	
+	    active = false;
+	    return this;
+	  }
+	
+	  function addListeners() {
+	    if (!active) return;
+	
+	    // There can be only one listening focus trap at a time
+	    if (listeningFocusTrap) {
+	      listeningFocusTrap.pause();
+	    }
+	    listeningFocusTrap = trap;
+	
+	    updateTabbableNodes();
+	    tryFocus(firstFocusNode());
+	    document.addEventListener('focus', checkFocus, true);
+	    document.addEventListener('click', checkClick, true);
+	    document.addEventListener('mousedown', checkPointerDown, true);
+	    document.addEventListener('touchstart', checkPointerDown, true);
+	    document.addEventListener('keydown', checkKey, true);
+	
+	    return trap;
+	  }
+	
+	  function removeListeners() {
+	    if (!active || listeningFocusTrap !== trap) return;
+	
+	    document.removeEventListener('focus', checkFocus, true);
+	    document.removeEventListener('click', checkClick, true);
+	    document.removeEventListener('mousedown', checkPointerDown, true);
+	    document.removeEventListener('touchstart', checkPointerDown, true);
+	    document.removeEventListener('keydown', checkKey, true);
+	
+	    listeningFocusTrap = null;
+	
+	    return trap;
+	  }
+	
+	  function getNodeForOption(key) {
+	    var node = config[key];
+	    if (!node) {
+	      return null;
+	    }
+	    if (typeof node === 'string') {
+	      node = document.querySelector(node);
+	      if (!node) {
+	        throw new Error('`'+key+'` refers to no known node');
+	      }
+	    }
+	    return node;
+	  }
+	
+	  function firstFocusNode() {
+	    var node = getNodeForOption('initialFocus') || tabbableNodes[0] || getNodeForOption('fallbackFocus');
+	
+	    if (!node) {
+	      throw new Error('You can\'t have a focus-trap without at least one focusable element');
+	    }
+	
+	    return node;
+	  }
+	
+	  // This needs to be done on mousedown and touchstart instead of click
+	  // so that it precedes the focus event
+	  function checkPointerDown(e) {
+	    if (config.clickOutsideDeactivates && !container.contains(e.target)) {
+	      deactivate({ returnFocus: false });
+	    }
+	  }
+	
+	  function checkClick(e) {
+	    if (config.clickOutsideDeactivates) return;
+	    if (container.contains(e.target)) return;
+	    e.preventDefault();
+	    e.stopImmediatePropagation();
+	  }
+	
+	  function checkFocus(e) {
+	    if (container.contains(e.target)) return;
+	    e.preventDefault();
+	    e.stopImmediatePropagation();
+	    // Checking for a blur method here resolves a Firefox issue (#15)
+	    if (typeof e.target.blur === 'function') e.target.blur();
+	  }
+	
+	  function checkKey(e) {
+	    if (e.key === 'Tab' || e.keyCode === 9) {
+	      handleTab(e);
+	    }
+	
+	    if (config.escapeDeactivates !== false && isEscapeEvent(e)) {
+	      deactivate();
+	    }
+	  }
+	
+	  function handleTab(e) {
+	    e.preventDefault();
+	    updateTabbableNodes();
+	    var currentFocusIndex = tabbableNodes.indexOf(e.target);
+	    var lastTabbableNode = tabbableNodes[tabbableNodes.length - 1];
+	    var firstTabbableNode = tabbableNodes[0];
+	
+	    if (e.shiftKey) {
+	      if (e.target === firstTabbableNode || tabbableNodes.indexOf(e.target) === -1) {
+	        return tryFocus(lastTabbableNode);
+	      }
+	      return tryFocus(tabbableNodes[currentFocusIndex - 1]);
+	    }
+	
+	    if (e.target === lastTabbableNode) return tryFocus(firstTabbableNode);
+	
+	    tryFocus(tabbableNodes[currentFocusIndex + 1]);
+	  }
+	
+	  function updateTabbableNodes() {
+	    tabbableNodes = tabbable(container);
+	  }
+	}
+	
+	function isEscapeEvent(e) {
+	  return e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27;
+	}
+	
+	function tryFocus(node) {
+	  if (!node || !node.focus) return;
+	  node.focus();
+	  if (node.tagName.toLowerCase() === 'input') {
+	    node.select();
+	  }
+	}
+	
+	module.exports = focusTrap;
+
+
+/***/ },
+/* 121 */
+/***/ function(module, exports) {
+
+	module.exports = function(el) {
+	  var basicTabbables = [];
+	  var orderedTabbables = [];
+	  var isHidden = createIsHidden();
+	
+	  var candidates = el.querySelectorAll('input, select, a[href], textarea, button, [tabindex]');
+	
+	  var candidate, candidateIndex;
+	  for (var i = 0, l = candidates.length; i < l; i++) {
+	    candidate = candidates[i];
+	    candidateIndex = candidate.tabIndex;
+	
+	    if (
+	      candidateIndex < 0
+	      || (candidate.tagName === 'INPUT' && candidate.type === 'hidden')
+	      || candidate.disabled
+	      || isHidden(candidate)
+	    ) {
+	      continue;
+	    }
+	
+	    if (candidateIndex === 0) {
+	      basicTabbables.push(candidate);
+	    } else {
+	      orderedTabbables.push({
+	        tabIndex: candidateIndex,
+	        node: candidate,
+	      });
+	    }
+	  }
+	
+	  var tabbableNodes = orderedTabbables
+	    .sort(function(a, b) {
+	      return a.tabIndex - b.tabIndex;
+	    })
+	    .map(function(a) {
+	      return a.node
+	    });
+	
+	  Array.prototype.push.apply(tabbableNodes, basicTabbables);
+	
+	  return tabbableNodes;
+	}
+	
+	function createIsHidden() {
+	  // Node cache must be refreshed on every check, in case
+	  // the content of the element has changed
+	  var nodeCache = [];
+	
+	  return function isHidden(node) {
+	    if (node === document.documentElement) return false;
+	
+	    // Find the cached node (Array.prototype.find not available in IE9)
+	    for (var i = 0, length = nodeCache.length; i < length; i++) {
+	      if (nodeCache[i][0] === node) return nodeCache[i][1];
+	    }
+	
+	    var result = false;
+	    var style = window.getComputedStyle(node);
+	    if (style.visibility === 'hidden' || style.display === 'none') {
+	      result = true;
+	    } else if (node.parentNode) {
+	      result = isHidden(node.parentNode);
+	    }
+	
+	    nodeCache.push([node, result]);
+	
+	    return result;
+	  }
+	}
+
+
+/***/ },
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-show=\"show\" class=\"mdl-dialog-container\"><div class=\"mdl-dialog\"><div class=\"mdl-dialog__title\">{{title}}</div><div class=\"mdl-dialog__content\"><slot></slot></div><div v-bind:class=\"{ &quot;mdl-dialog__actions--full-width&quot;: fullWidth }\" class=\"mdl-dialog__actions\"><slot name=\"actions\"><mdl-button v-on:click.stop=\"close\" class=\"mdl-js-ripple-effect\">Close</mdl-button></slot></div></div></div>";
 
 /***/ },
-/* 121 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(122)
+	var __vue_styles__ = {}
+	__vue_script__ = __webpack_require__(124)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/tabs/tabs.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(126)
+	__vue_template__ = __webpack_require__(128)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tabs.vue"
+	  var id = "_v-4b9415aa/tabs.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2981,7 +3407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 122 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2994,7 +3420,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _propFill2 = _interopRequireDefault(_propFill);
 	
-	var _tabLink = __webpack_require__(123);
+	var _tabLink = __webpack_require__(125);
 	
 	var _tabLink2 = _interopRequireDefault(_tabLink);
 	
@@ -3058,26 +3484,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 123 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(124)
+	var __vue_styles__ = {}
+	__vue_script__ = __webpack_require__(126)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/tabs/tab-link.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(125)
+	__vue_template__ = __webpack_require__(127)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tab-link.vue"
+	  var id = "_v-192c3c5f/tab-link.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3086,7 +3519,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 124 */
+/* 126 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3107,38 +3540,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 125 */
+/* 127 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<a class=\"mdl-tabs__tab\"\n   href=\"#\"\n>{{tab.title}}\n  <span v-el:ripple\n        v-show=\"!noRippleEffect\"\n        class=\"mdl-tabs__ripple-container mdl-js-ripple-effect\">\n    <span class=\"mdl-ripple\"></span>\n  </span>\n</a>\n";
 
 /***/ },
-/* 126 */
+/* 128 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"mdl-tabs is-upgraded\">\n  <!-- Generated tab links -->\n  <div class=\"mdl-tabs__tab-bar\">\n    <tab-link\n        class=\"mdl-tabs__tab\"\n        v-for=\"tab in tabs\"\n        track-by=\"id\"\n        :no-ripple-effect=\"noRippleEffect\"\n        :class=\"{ 'is-active': isSelected(tab) }\"\n        @click.prevent=\"selectTab(tab)\"\n        :tab=\"tab\"\n    ></tab-link>\n  </div>\n  <!-- Tabs content -->\n  <slot></slot>\n</div>\n";
 
 /***/ },
-/* 127 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(128)
+	var __vue_styles__ = {}
+	__vue_script__ = __webpack_require__(130)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/tabs/tab.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(136)
+	__vue_template__ = __webpack_require__(138)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	__vue_options__.template = __vue_template__
 	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./tab.vue"
+	  var id = "_v-9751ea10/tab.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3147,7 +3587,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	})()}
 
 /***/ },
-/* 128 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3156,7 +3596,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _extends2 = __webpack_require__(129);
+	var _extends2 = __webpack_require__(131);
 	
 	var _extends3 = _interopRequireDefault(_extends2);
 	
@@ -3198,14 +3638,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 129 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	
-	var _assign = __webpack_require__(130);
+	var _assign = __webpack_require__(132);
 	
 	var _assign2 = _interopRequireDefault(_assign);
 	
@@ -3226,36 +3666,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 130 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(131), __esModule: true };
-
-/***/ },
-/* 131 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(132);
-	module.exports = __webpack_require__(23).Object.assign;
-
-/***/ },
 /* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(22);
-	
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(133)});
+	module.exports = { "default": __webpack_require__(133), __esModule: true };
 
 /***/ },
 /* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(134);
+	module.exports = __webpack_require__(23).Object.assign;
+
+/***/ },
+/* 134 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(22);
+	
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(135)});
+
+/***/ },
+/* 135 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	// 19.1.2.1 Object.assign(target, source, ...)
 	var getKeys  = __webpack_require__(6)
-	  , gOPS     = __webpack_require__(134)
-	  , pIE      = __webpack_require__(135)
+	  , gOPS     = __webpack_require__(136)
+	  , pIE      = __webpack_require__(137)
 	  , toObject = __webpack_require__(4)
 	  , IObject  = __webpack_require__(10)
 	  , $assign  = Object.assign;
@@ -3286,19 +3726,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	} : $assign;
 
 /***/ },
-/* 134 */
+/* 136 */
 /***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
 /***/ },
-/* 135 */
+/* 137 */
 /***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
 /***/ },
-/* 136 */
+/* 138 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"mdl-tabs__panel\"\n     :class=\"{'is-active': selected }\"\n>\n  <slot></slot>\n</div>\n";

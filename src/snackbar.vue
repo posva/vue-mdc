@@ -5,8 +5,6 @@
 </template>
 
 <script>
-/* global componentHandler*/
-
 export default {
   props: ['displayOn'],
   ready () {

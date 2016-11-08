@@ -3,7 +3,6 @@
 </template>
 
 <script>
-/* global componentHandler*/
 import propFill from './mixins/prop-fill'
 
 export default {

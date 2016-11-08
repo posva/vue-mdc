@@ -1,4 +1,3 @@
-/* global componentHandler*/
 import propFill from './prop-fill'
 
 export default {
