@@ -1,44 +1,68 @@
-<template lang="jade">
-.mdl-dialog-container(v-show='show')
-  .mdl-dialog
-    .mdl-dialog__title {{title}}
-    .mdl-dialog__content
-      slot
-    .mdl-dialog__actions(v-bind:class="{ 'mdl-dialog__actions--full-width': fullWidth }")
-      slot(name='actions')
-        mdl-button.mdl-js-ripple-effect(v-on:click.native.stop='close') Close
+<template>
+<div class="mdl-dialog-container" v-show="show">
+  <div class="mdl-dialog">
+    <div class="mdl-dialog__title">{{title}}</div>
+    <div class="mdl-dialog__content">
+      <slot></slot>
+    </div>
+    <div class="mdl-dialog__actions" :class="actionsClasses">
+      <slot name="actions">
+        <mdl-button class="mdl-js-ripple-effect" @click.native.stop="close">Close</mdl-button>
+      </slot>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
 import mdlButton from './button.vue'
+import createFocusTrap from 'focus-trap'
 
 export default {
   components: {
     mdlButton
   },
+
+  computed: {
+    actionsClasses () {
+      return {
+        'mdl-dialog__actions--full-width': this.fullWidth
+      }
+    }
+  },
+
   data () {
     return {
       show: false
     }
   },
+
   props: {
     title: {
       type: String
     },
     fullWidth: Boolean
   },
+
+  mounted () {
+    this._focusTrap = createFocusTrap(this.$el)
+  },
+
   methods: {
     open () {
       this.show = true
+      this.$nextTick(() => this._focusTrap.activate())
       this.$emit('open')
     },
     close () {
       this.show = false
+      this._focusTrap.deactivate()
       this.$emit('close')
     }
   }
 }
 </script>
+
 <style>
 .mdl-dialog-container {
   position: fixed;

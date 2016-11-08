@@ -109,5 +109,8 @@
   "bugs": {
     "url": "https://github.com/posva/vue-mdl/issues"
   },
-  "homepage": "https://github.com/posva/vue-mdl#readme"
+  "homepage": "https://github.com/posva/vue-mdl#readme",
+  "dependencies": {
+    "focus-trap": "^2.1.0"
+  }
 }
