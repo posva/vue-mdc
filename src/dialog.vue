@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import createFocusTrap from 'focus-trap'
 import propFill from './mixins/prop-fill'
 import mdlButton from './button.vue'
 
@@ -31,13 +32,18 @@ export default {
       default: false
     }
   },
+  ready () {
+    this._focusTrap = createFocusTrap(this.$el)
+  },
   methods: {
     open () {
       this.show = true
+      this.$nextTick(() => this._focusTrap.activate())
       this.$emit('open')
     },
     close () {
       this.show = false
+      this._focusTrap.deactivate()
       this.$emit('close')
     }
   },
