@@ -22,7 +22,7 @@ var webpackConfig = merge(baseConfig, {
     }
   },
   isparta: {
-    excludes: ['**/test/**']
+    exclude: ['**/test/**']
   }
 })
 
@@ -35,7 +35,7 @@ webpackConfig.module.preLoaders.unshift({
   test: /\.js$/,
   loader: 'isparta',
   include: projectRoot,
-  exclude: /test\/unit|node_modules/
+  exclude: /test\/unit|node_modules|test\/components/
 })
 
 // only apply babel for test files when using isparta
@@ -47,7 +47,7 @@ webpackConfig.module.loaders.forEach(function (loader, i) {
 
 karmaConf.webpack = webpackConfig
 karmaConf.reporters.push('coverage')
-karmaConf. coverageReporter = {
+karmaConf.coverageReporter = {
   dir: './coverage',
   reporters: [
     { type: 'lcov', subdir: '.' },

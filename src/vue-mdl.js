@@ -1,5 +1,4 @@
 import Mdl from './directives/mdl'
-import MdlRippleEffect from './directives/ripple-effect'
 
 import MdlCheckbox from './toggles/checkbox.vue'
 import MdlRadio from './toggles/radio.vue'
@@ -21,6 +20,7 @@ import MdlSelect from './select.vue'
 import MdlDialog from './dialog.vue'
 import MdlTabs from './tabs/tabs.vue'
 import MdlTab from './tabs/tab.vue'
+import MdlChip from './chip.vue'
 
 export const components = {
   MdlCheckbox,
@@ -42,12 +42,12 @@ export const components = {
   MdlDialog,
   MdlTabs,
   MdlTab,
-  MdlBadge
+  MdlBadge,
+  MdlChip
 }
 
 export const directives = {
-  Mdl,
-  MdlRippleEffect
+  Mdl
 }
 
 export default {
@@ -64,7 +64,6 @@ export default {
 export {
   // directives
   Mdl,
-  MdlRippleEffect,
   // components
   MdlCheckbox,
   MdlBadge,
@@ -85,5 +84,6 @@ export {
   MdlSelect,
   MdlDialog,
   MdlTabs,
-  MdlTab
+  MdlTab,
+  MdlChip
 }
