@@ -5,7 +5,7 @@
   <mdl-slider id="step" ref="step" v-model="value" :min="min" :max="max" :step="step"></mdl-slider>
   <mdl-slider id="default-values" v-model="value" :max="max"></mdl-slider>
   <mdl-slider id="disable" v-model="value" :min="min" :max="max" :disabled="disabled" :step="step"></mdl-slider>
-  <mdl-slider id='no-args-disabled' v-model='value' :min='min' :max='max' disabled/>
+  <mdl-slider id='no-args-disabled' v-model='value' :min='min' :max='max' disabled></mdl-slider>
   <br/>
   <br/>
   <label>

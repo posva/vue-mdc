@@ -32,10 +32,10 @@
     <br>
     <br>
 
-    <button @click.native="addTab">Add Tab</button>
+    <button @click="addTab">Add Tab</button>
     <div v-for="(tab, index) in dynTabs" :key="index">
       <span>{{tab}}</span>
-      <button @click.native="removeTab(index)">X</button>
+      <button @click="removeTab(index)">X</button>
     </div>
     <input type="checkbox" v-model="ripples"> Ripples
   </div>
@@ -57,7 +57,7 @@ export default {
       this.dynTabs.push(`Tab ${++this.tabIndex}`)
     },
     removeTab (tab) {
-      this.dynTabs.splice(this.dynTabs.indexOf(tab), 1)
+      this.dynTabs.splice(tab, 1)
     }
   }
 }
