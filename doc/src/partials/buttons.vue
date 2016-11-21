@@ -166,7 +166,7 @@ export default {
       (this.disabled ? ' disabled' : '') +
       (this.accent ? ' accent' : '') +
       (this.primary ? ' primary' : '') +
-      (this.miniFab ? ' min-fab' : '') +
+      (this.miniFab ? ' mini-fab' : '') +
       (this.fab ? ' fab' : '') +
       (this.raised ? ' raised' : '') +
       '>' +
