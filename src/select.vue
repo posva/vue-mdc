@@ -93,19 +93,27 @@ export default {
 
 <style>
 .getmdl-select .mdl-icon-toggle__label {
-  float:right;
-  margin-top:-30px;
+  float: right;
+  margin-top: -30px;
   color: rgba(0, 0, 0, 0.4);
 }
-
 .getmdl-select.is-focused .mdl-icon-toggle__label {
   color: #3f51b5;
 }
-
 .getmdl-select .mdl-menu__container {
   width: 100% !important;
+  overflow: hidden;
 }
-.getmdl-select .mdl-menu__container .mdl-menu {
+.getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item {
+  font-size: 16px;
+}
+
+.getmdl-select__fullwidth, .mdl-menu {
   width: 100%;
+}
+
+.getmdl-select__fix-height .mdl-menu__container {
+  overflow-y: auto;
+  max-height: 300px !important;
 }
 </style>
