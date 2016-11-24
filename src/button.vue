@@ -4,7 +4,7 @@
           :disabled="disabled"
   >
     <slot>
-      <i class="material-icons" v-if="icon" >{{ icon }}</i>
+      <i class="material-icons" v-if="isIconSpecified" >{{ icon }}</i>
     </slot>
   </button>
 </template>

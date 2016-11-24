@@ -10,13 +10,14 @@ export default {
         'mdl-button--raised': this.raised,
         'mdl-button--colored': this.colored
       }
+    },
+    isIconSpecified () {
+      return this.icon && typeof this.icon === 'string'
     }
   },
   props: {
     disabled: Boolean,
-    icon: {
-      required: false
-    },
+    icon: [String, Boolean],
     accent: Boolean,
     primary: Boolean,
     miniFab: Boolean,
