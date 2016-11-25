@@ -40,8 +40,15 @@
 </template>
 
 <script>
+import autosize from 'autosize'
+
 export default {
   props: {
+    autosize: {
+      type: [Boolean, String],
+      required: false,
+      default: false
+    },
     maxlength: {
       required: false
     },
@@ -88,6 +95,9 @@ export default {
     isDirty () {
       return '' + this.value
     }
+  },
+  ready () {
+    if (this.autosize && this.textarea) autosize(this.$el.querySelector('textarea'))
   },
   methods: {
     fireInputEvent: function (event) {
