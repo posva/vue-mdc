@@ -13,7 +13,9 @@
       <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
     </label>
     <label class="mdl-textfield__label" :for="id">{{label}}</label>
-    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" :for="id">
+    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu"
+        ref="menu"
+        :for="id">
       <li class="mdl-menu__item"
           v-for="option in optionsObject"
           @click="selectValue(option)"
@@ -32,6 +34,7 @@ export default {
 
   methods: {
     selectValue ({value}) {
+      /* setTimeout(() => this.$refs.menu.MaterialTextfield.updateClasses_(), 250) */
       this.$emit('input', value)
     },
     setName () {
@@ -108,11 +111,12 @@ export default {
   font-size: 16px;
 }
 
-.getmdl-select__fullwidth, .mdl-menu {
-  width: 100%;
+.getmdl-select .mdl-menu {
+  /* Remove the 2px border */
+  width: calc(100% - 2px);
 }
 
-.getmdl-select__fix-height .mdl-menu__container {
+.getmdl-select--fixed-height .mdl-menu__container {
   overflow-y: auto;
   max-height: 300px !important;
 }

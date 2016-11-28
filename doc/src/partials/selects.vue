@@ -68,6 +68,8 @@
     p MDL need an&nbsp;
       code id
       |  to handle the menu toggling.
+
+    p TODO talk about overflow-y auto and max-height: x !important
 </template>
 
 <script>
