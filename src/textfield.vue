@@ -96,9 +96,6 @@ export default {
       return '' + this.value
     }
   },
-  ready () {
-    if (this.autosize && this.textarea) autosize(this.$el.querySelector('textarea'))
-  },
   methods: {
     fireInputEvent: function (event) {
       this.$emit('input', event.target.value)
@@ -106,6 +103,7 @@ export default {
   },
   mounted () {
     componentHandler.upgradeElement(this.$el)
+    if (this.autosize && this.textarea) autosize(this.$el.querySelector('textarea'))
   }
 }
 </script>
