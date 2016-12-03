@@ -13,38 +13,38 @@
         <h3>Fixed Header</h3>
         <div class="single-container">
         <mdl-layout fixed-header class="single-container">
-            <mdl-header-row :title="title" slot="header">
-            </mdl-header-row>
+            <mdl-layout-header-row :title="title" slot="header">
+            </mdl-layout-header-row>
 
-            <mdl-content>
+            <mdl-layout-content>
                 <h3>Test Content</h3>
                 <p>{{content}}</p>
-            </mdl-content>
+            </mdl-layout-content>
         </mdl-layout>
         </div>
         
         <h3>Fixed Drawer</h3>
         <div class="single-container">
         <mdl-layout fixed-header fixed-drawer class="single-container">
-            <mdl-header-row :title="title" slot="header">
-            </mdl-header-row>
+            <mdl-layout-header-row :title="title" slot="header">
+            </mdl-layout-header-row>
 
-            <mdl-drawer title="Drawer Content">
-            </mdl-drawer>
+            <mdl-layout-drawer title="Drawer Content">
+            </mdl-layout-drawer>
             
-            <mdl-content>
+            <mdl-layout-content>
                 <h3>Test Content</h3>
                 <p>{{content}}</p>
-            </mdl-content>
+            </mdl-layout-content>
         </mdl-layout>
         </div>
 
         <h3>Waterfall Header</h3>
         <div class="single-container">
         <mdl-layout fixed-header waterfall class="single-container">
-            <mdl-header-row :title="title" slot="header">
-            </mdl-header-row>
-            <mdl-header-row slot="header">
+            <mdl-layout-header-row :title="title" slot="header">
+            </mdl-layout-header-row>
+            <mdl-layout-header-row slot="header">
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation -->
                 <nav class="mdl-navigation">
@@ -53,24 +53,24 @@
                     <a class="mdl-navigation__link" href="">Link</a>
                     <a class="mdl-navigation__link" href="">Link</a>
                 </nav>
-            </mdl-header-row>
+            </mdl-layout-header-row>
 
-            <mdl-content>
+            <mdl-layout-content>
                 <div class="scroll-content">
                 <h3>Test Content</h3>
                 <p>{{content}}</p>
                 </div>
-            </mdl-content>
+            </mdl-layout-content>
         </mdl-layout>
         </div>
 
         <h3>Tabs</h3>
         <div class="single-container">
         <mdl-layout fixed-header class="single-container">
-            <mdl-header-row :title="title" slot="header">
-            </mdl-header-row>
+            <mdl-layout-header-row :title="title" slot="header">
+            </mdl-layout-header-row>
 
-            <mdl-content>
+            <mdl-layout-content>
               <mdl-layout-tab title="First">
                 <h4>First</h4>
                 <p>Tab content</p>
@@ -81,7 +81,7 @@
                 <h4>Second</h4>
                 <p>Some more content</p>
               </mdl-layout-tab>
-            </mdl-content>
+            </mdl-layout-content>
         </mdl-layout>
         </div>
     </div>
