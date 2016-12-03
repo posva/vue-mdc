@@ -9,6 +9,14 @@ describe('Layout', () => {
     lay.should.not.have.class('mdl-layout--' + prop)
     let variable = prop
 
+    if (prop === 'fixed-header') {
+      variable = 'fixedHeader'
+    } else if (prop === 'fixed-drawer') {
+      variable = 'fixedDrawer'
+    } else if (prop === 'fixed-tabs') {
+      variable = 'fixedTabs'
+    }
+
     vm[variable] = true
     return vm.nextTick()
       .then(() => {
@@ -28,7 +36,6 @@ describe('Layout', () => {
 
   it('exists', () => {
     layout.should.exist
-    layout.should.be.visible
   })
 
   it('is upgraded', () => {
@@ -44,6 +51,11 @@ describe('Layout', () => {
 
   it('can have fixed drawer', (done) => {
     propChecker('fixed-drawer')
+    .then(done, done)
+  })
+
+  it('can have fixed tabs', (done) => {
+    propChecker('fixed-tabs')
     .then(done, done)
   })
 })
