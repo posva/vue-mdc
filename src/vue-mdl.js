@@ -8,6 +8,7 @@ import MdlAnchorButton from './anchor-button.vue'
 import MdlProgress from './progress.vue'
 import MdlSpinner from './spinner.vue'
 import MdlIconToggle from './toggles/icon-toggle.vue'
+import MdlLayout from './layout/layout.vue'
 import MdlSlider from './slider.vue'
 import MdlSwitch from './toggles/switch.vue'
 import MdlTextfield from './textfield.vue'
@@ -21,6 +22,10 @@ import MdlDialog from './dialog.vue'
 import MdlTabs from './tabs/tabs.vue'
 import MdlTab from './tabs/tab.vue'
 import MdlChip from './chip.vue'
+import MdlHeaderRow from './layout/header-row.vue'
+import MdlDrawer from './layout/drawer.vue'
+import MdlContent from './layout/content.vue'
+import MdlLayoutTab from './layout/layout-tab.vue'
 
 export const components = {
   MdlCheckbox,
@@ -30,6 +35,7 @@ export const components = {
   MdlProgress,
   MdlButton,
   MdlAnchorButton,
+  MdlLayout,
   MdlSpinner,
   MdlSlider,
   MdlTextfield,
@@ -43,7 +49,11 @@ export const components = {
   MdlTabs,
   MdlTab,
   MdlBadge,
-  MdlChip
+  MdlChip,
+  MdlHeaderRow,
+  MdlDrawer,
+  MdlContent,
+  MdlLayoutTab
 }
 
 export const directives = {
@@ -72,6 +82,7 @@ export {
   MdlIconToggle,
   MdlButton,
   MdlAnchorButton,
+  MdlLayout,
   MdlProgress,
   MdlSpinner,
   MdlSlider,
@@ -85,5 +96,9 @@ export {
   MdlDialog,
   MdlTabs,
   MdlTab,
-  MdlChip
+  MdlChip,
+  MdlHeaderRow,
+  MdlDrawer,
+  MdlContent,
+  MdlLayoutTab
 }
