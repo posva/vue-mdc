@@ -2,6 +2,14 @@
     <div style="margin: 25px;">
         <h1>Layout</h1>
 
+        <h3>Default Layout</h3>
+        <mdl-layout 
+            :fixed-header="fixedHeader" 
+            :fixed-drawer="fixedDrawer" 
+            :fixed-tabs="fixedTabs"
+            id="layout">
+        </mdl-layout>
+
         <h3>Fixed Header</h3>
         <div class="single-container">
         <mdl-layout fixed-header class="single-container">
@@ -84,7 +92,10 @@ export default {
   data () {
     return {
       title: 'Test Title',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra ultricies sem, dapibus imperdiet est pellentesque et. Donec at turpis at tortor auctor convallis. Pellentesque non interdum ante. Aenean sed tempor quam, sit amet viverra elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ac elit varius, elementum odio sed, tincidunt leo. Nullam ac porta mauris. Aenean posuere, nibh nec ultrices euismod, enim tortor venenatis tortor, eget ullamcorper quam mi vitae nibh. Etiam mollis efficitur augue. Vestibulum nec lacus sed nisi pretium blandit tempus sit amet tortor. Nulla tincidunt nec ligula ut porttitor.'
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra ultricies sem, dapibus imperdiet est pellentesque et. Donec at turpis at tortor auctor convallis. Pellentesque non interdum ante. Aenean sed tempor quam, sit amet viverra elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ac elit varius, elementum odio sed, tincidunt leo. Nullam ac porta mauris. Aenean posuere, nibh nec ultrices euismod, enim tortor venenatis tortor, eget ullamcorper quam mi vitae nibh. Etiam mollis efficitur augue. Vestibulum nec lacus sed nisi pretium blandit tempus sit amet tortor. Nulla tincidunt nec ligula ut porttitor.',
+      fixedHeader: false,
+      fixedDrawer: false,
+      fixedTabs: false
     }
   }
 }
