@@ -97,13 +97,15 @@ export default {
     },
     focus () {
       this.$refs.focusTarget.focus()
+      return this
     },
-    focusAndSelect () {
-      this.$refs.focusTarget.focus()
+    select () {
       this.$refs.focusTarget.select()
+      return this
     },
     blur () {
       this.$refs.focusTarget.blur()
+      return this
     }
   },
   mounted () {
