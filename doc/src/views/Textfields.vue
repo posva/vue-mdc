@@ -7,12 +7,12 @@
         <p>Hello {{name}}</p>
       </div>
       <div class="flex start wrap">
-        <mdl-textfield label="Name" :value.sync="name" class="space"></mdl-textfield>
-        <mdl-textfield floating-label="Name" :value.sync="name" class="space"></mdl-textfield>
-      </div><pre><code class="html"><p>&lt;mdl-textfield label=&quot;Name&quot; :value.sync=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p><p>&lt;mdl-textfield floating-label=&quot;Name&quot; :value.sync=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p></code></pre>
+        <mdl-textfield label="Name" v-model="name" class="space"></mdl-textfield>
+        <mdl-textfield floating-label="Name" v-model="name" class="space"></mdl-textfield>
+      </div><pre><code class="html"><p>&lt;mdl-textfield label=&quot;Name&quot; v-model=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p><p>&lt;mdl-textfield floating-label=&quot;Name&quot; v-model=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p></code></pre>
       <p>Use the<code>textarea</code> prop to use a textarea instead of an input</p>
       <div class="flex start wrap">
-        <mdl-textfield floating-label="Textarea" textarea="textarea" rows="4" :value.sync="text"></mdl-textfield>
+        <mdl-textfield floating-label="Textarea" textarea="textarea" rows="4" v-model="text"></mdl-textfield>
         <p>{{text}}</p>
       </div><pre><code class="html">&lt;mdl-textfield floating-label=&quot;Name&quot; textarea rows=&quot;4&quot;&gt;&lt;/mdl-textfield&gt;</code></pre>
       <p>You can dynamically bind the<code>floating-label</code> prop and use the<code>label</code>prop for the real label if you need to control whether the label can floats or not</p><pre><code class="html">&lt;mdl-textfield :floating-label=&quot;float&quot; label=&quot;Name&quot; textarea&gt;&lt;/mdl-textfield&gt;</code><code class="javascript">new Vue({
