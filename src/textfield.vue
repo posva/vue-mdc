@@ -9,6 +9,7 @@
     <div :class="{'mdl-textfield__expandable-holder': expandable}">
       <slot v-if="textarea" name="textarea">
         <textarea class="mdl-textfield__input"
+                  ref="focusTarget"
                   type="text"
                   :value="value"
                   @input="fireInputEvent"
@@ -20,6 +21,7 @@
       </slot>
       <slot v-else="v-else" name="input">
         <input class="mdl-textfield__input"
+               ref="focusTarget"
                :type="type"
                :value="value"
                @input="fireInputEvent"
@@ -92,6 +94,16 @@ export default {
   methods: {
     fireInputEvent: function (event) {
       this.$emit('input', event.target.value)
+    },
+    focus () {
+      this.$refs.focusTarget.focus()
+    },
+    focusAndSelect () {
+      this.$refs.focusTarget.focus()
+      this.$refs.focusTarget.select()
+    },
+    blur () {
+      this.$refs.focusTarget.blur()
     }
   },
   mounted () {
