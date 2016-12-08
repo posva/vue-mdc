@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     onInput (event) {
-      this.$emit('input', Number(event.target.value))
+      this.$emit('input', typeof this.value === 'string' ? event.target.value : Number(event.target.value))
     }
   }
 }
