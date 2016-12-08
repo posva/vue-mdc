@@ -36,16 +36,16 @@ export default {
       }
     },
     valueNumber () {
-      return parseInt(this.value)
+      return Number(this.value)
     },
     stepNumber () {
-      return parseInt(this.step)
+      return Number(this.step)
     },
     minNumber () {
-      return parseInt(this.min)
+      return Number(this.min)
     },
     maxNumber () {
-      return parseInt(this.max)
+      return Number(this.max)
     },
     relativeValue () {
       const val = Math.round((this.valueNumber - this.minNumber) / this.stepNumber) * this.stepNumber
