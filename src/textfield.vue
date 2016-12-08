@@ -29,6 +29,7 @@
                :disabled="disabled"
                :required="required"
                :readonly="readonly"
+               :autocomplete="autocomplete"
                :maxlength="maxlength"/>
       </slot>
       <slot name="label">
@@ -44,6 +45,7 @@
 <script>
 export default {
   props: {
+    autocomplete: String,
     maxlength: {
       required: false
     },
