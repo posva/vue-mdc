@@ -35,9 +35,18 @@ export default {
         flex: `${1 - this.relativeValue} 1 0%`
       }
     },
+    stepNumber () {
+      return parseInt(this.step)
+    },
+    minNumber () {
+      return parseInt(this.min)
+    },
+    maxNumber () {
+      return parseInt(this.max)
+    },
     relativeValue () {
-      const val = Math.round((this.value - this.min) / this.step) * this.step
-      return val / (this.max - this.min)
+      const val = Math.round((this.value - this.minNumber) / this.stepNumber) * this.stepNumber
+      return val / (this.maxNumber - this.minNumber)
     }
   },
   props: {
@@ -46,15 +55,15 @@ export default {
       required: true
     },
     step: {
-      type: Number,
+      type: [String, Number],
       default: 1
     },
     min: {
-      type: Number,
+      type: [String, Number],
       default: 0
     },
     max: {
-      type: Number,
+      type: [String, Number],
       required: true
     },
     disabled: {
