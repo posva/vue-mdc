@@ -73,8 +73,10 @@ export default {
     }
   },
   methods: {
-    onInput (event) {
-      this.$emit('input', typeof this.value === 'string' ? event.target.value : Number(event.target.value))
+    onInput ({ target: { value } }) {
+      this.$emit('input',
+                 typeof this.value === 'string' ? value : Number(value)
+      )
     }
   }
 }
