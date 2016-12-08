@@ -6,7 +6,7 @@
            :min="min"
            :max="max"
            :step="step"
-           v-model="model"
+           v-model="valueNumber"
            @input="onInput"
            data-upgraded=",MaterialSlider"
            :disabled="disabled">
@@ -24,7 +24,6 @@
 <script>
 export default {
   computed: {
-    model () { return this.valueNumber },
     lowerBackgroundStyle () {
       return {
         flex: `${this.relativeValue} 1 0%`
@@ -77,9 +76,6 @@ export default {
     onInput (event) {
       this.$emit('input', Number(event.target.value))
     }
-  },
-  mounted () {
-    return
   }
 }
 </script>
