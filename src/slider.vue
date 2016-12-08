@@ -6,7 +6,7 @@
            :min="min"
            :max="max"
            :step="step"
-           v-model="model"
+           v-model="valueNumber"
            @input="onInput"
            data-upgraded=",MaterialSlider"
            :disabled="disabled">
@@ -24,7 +24,6 @@
 <script>
 export default {
   computed: {
-    model () { return this.value },
     lowerBackgroundStyle () {
       return {
         flex: `${this.relativeValue} 1 0%`
@@ -35,26 +34,38 @@ export default {
         flex: `${1 - this.relativeValue} 1 0%`
       }
     },
+    valueNumber () {
+      return Number(this.value)
+    },
+    stepNumber () {
+      return Number(this.step)
+    },
+    minNumber () {
+      return Number(this.min)
+    },
+    maxNumber () {
+      return Number(this.max)
+    },
     relativeValue () {
-      const val = Math.round((this.value - this.min) / this.step) * this.step
-      return val / (this.max - this.min)
+      const val = Math.round((this.valueNumber - this.minNumber) / this.stepNumber) * this.stepNumber
+      return val / (this.maxNumber - this.minNumber)
     }
   },
   props: {
     value: {
-      type: Number,
+      type: [String, Number],
       required: true
     },
     step: {
-      type: Number,
+      type: [String, Number],
       default: 1
     },
     min: {
-      type: Number,
+      type: [String, Number],
       default: 0
     },
     max: {
-      type: Number,
+      type: [String, Number],
       required: true
     },
     disabled: {
@@ -63,11 +74,8 @@ export default {
   },
   methods: {
     onInput (event) {
-      this.$emit('input', Number(event.target.value))
+      this.$emit('input', typeof this.value === 'string' ? event.target.value : Number(event.target.value))
     }
-  },
-  mounted () {
-    return
   }
 }
 </script>
