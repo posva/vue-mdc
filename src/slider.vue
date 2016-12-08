@@ -24,7 +24,7 @@
 <script>
 export default {
   computed: {
-    model () { return this.value },
+    model () { return this.valueNumber },
     lowerBackgroundStyle () {
       return {
         flex: `${this.relativeValue} 1 0%`
@@ -34,6 +34,9 @@ export default {
       return {
         flex: `${1 - this.relativeValue} 1 0%`
       }
+    },
+    valueNumber () {
+      return parseInt(this.value)
     },
     stepNumber () {
       return parseInt(this.step)
@@ -45,13 +48,13 @@ export default {
       return parseInt(this.max)
     },
     relativeValue () {
-      const val = Math.round((this.value - this.minNumber) / this.stepNumber) * this.stepNumber
+      const val = Math.round((this.valueNumber - this.minNumber) / this.stepNumber) * this.stepNumber
       return val / (this.maxNumber - this.minNumber)
     }
   },
   props: {
     value: {
-      type: Number,
+      type: [String, Number],
       required: true
     },
     step: {
