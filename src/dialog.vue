@@ -41,22 +41,26 @@ export default {
     title: {
       type: String
     },
-    fullWidth: Boolean
+    fullWidth: Boolean,
+    noFocusTrap: {
+      type: Boolean,
+      default: false
+    }
   },
 
   mounted () {
-    this._focusTrap = createFocusTrap(this.$el)
+    if (!this.noFocusTrap) this._focusTrap = createFocusTrap(this.$el)
   },
 
   methods: {
     open () {
       this.show = true
-      this.$nextTick(() => this._focusTrap.activate())
+      if (!this.noFocusTrap) this.$nextTick(() => this._focusTrap.activate())
       this.$emit('open')
     },
     close () {
       this.show = false
-      this._focusTrap.deactivate()
+      if (!this.noFocusTrap) this._focusTrap.deactivate()
       this.$emit('close')
     }
   }
