@@ -55,12 +55,12 @@ export default {
   methods: {
     open () {
       this.show = true
-      if (!this.noFocusTrap) this.$nextTick(() => this._focusTrap.activate())
+      if (this._focusTrap) this.$nextTick(() => this._focusTrap.activate())
       this.$emit('open')
     },
     close () {
       this.show = false
-      if (!this.noFocusTrap) this._focusTrap.deactivate()
+      if (this._focusTrap) this._focusTrap.deactivate()
       this.$emit('close')
     }
   }
