@@ -63,6 +63,12 @@ export default {
       if (this._focusTrap) this._focusTrap.deactivate()
       this.$emit('close')
     }
+  },
+  
+  watch: {
+    noFocusTrap (noFocusTrap) {
+      this._focusTrap = noFocusTrap ? null : createFocusTrap(this.$el)
+    }
   }
 }
 </script>
