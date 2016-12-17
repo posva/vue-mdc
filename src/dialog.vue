@@ -64,7 +64,7 @@ export default {
       this.$emit('close')
     }
   },
-  
+
   watch: {
     noFocusTrap (noFocusTrap) {
       this._focusTrap = noFocusTrap ? null : createFocusTrap(this.$el)
