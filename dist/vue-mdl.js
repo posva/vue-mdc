@@ -829,14 +829,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('label', {
 	    staticClass: "mdl-checkbox mdl-js-checkbox is-upgraded",
 	    class: _vm.cssClasses,
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._h('input', {
+	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -871,10 +871,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }, _vm.fireChange]
 	    }
-	  }), " ", _vm._h('span', {
+	  }), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-checkbox__label"
-	  }, [_vm._t("default")])])
+	  }, [_vm._t("default")], true)])
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -980,14 +981,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('label', {
 	    staticClass: "mdl-radio mdl-js-radio is-upgraded",
 	    class: _vm.cssClasses,
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._h('input', {
+	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -1010,10 +1011,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.checked = _vm.val
 	      }, _vm.fireChange]
 	    }
-	  }), " ", _vm._h('span', {
+	  }), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-radio__label"
-	  }, [_vm._t("default")])])
+	  }, [_vm._t("default")], true)])
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -1194,17 +1196,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('button', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('button', {
 	    staticClass: "mdl-button mdl-js-button",
 	    class: _vm.cssClasses,
 	    attrs: {
 	      "disabled": _vm.disabled
 	    }
-	  }, [_vm._t("default", [(_vm.isIconSpecified) ? _vm._h('i', {
+	  }, [_vm._t("default", [(_vm.isIconSpecified) ? _c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._s(_vm.icon)]) : _vm._e()])])
+	  }, [_vm._v(_vm._s(_vm.icon))]) : _vm._e()])], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -1280,17 +1283,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('a', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('a', {
 	    staticClass: "mdl-button mdl-js-button",
 	    class: _vm.cssClasses,
 	    attrs: {
 	      "disabled": _vm.disabled
 	    }
-	  }, [_vm._t("default", [(_vm.isIconSpecified) ? _vm._h('i', {
+	  }, [_vm._t("default", [(_vm.isIconSpecified) ? _c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._s(_vm.icon)]) : _vm._e()])])
+	  }, [_vm._v(_vm._s(_vm.icon))]) : _vm._e()])], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -1386,14 +1390,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-progress mdl-js-progress",
 	    class: {
 	      'mdl-progress__indeterminate': _vm.indeterminate
 	    }
 	  })
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -1471,14 +1476,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-spinner mdl-js-spinner",
 	    class: {
 	      'mdl-spinner--single-color': _vm.singleColor, 'is-active': _vm.active
 	    }
 	  })
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -1564,14 +1570,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('label', {
 	    staticClass: "mdl-icon-toggle mdl-js-icon-toggle is-upgraded",
 	    class: _vm.cssClasses,
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._h('input', {
+	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -1606,10 +1612,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }, _vm.fireChange]
 	    }
-	  }), " ", _vm._h('i', {
+	  }), _vm._v(" "), _c('i', {
 	    staticClass: "mdl-icon-toggle__label material-icons"
-	  }, [_vm._s(_vm.icon)])])
+	  }, [_vm._v(_vm._s(_vm.icon))])])
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -1733,10 +1740,10 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-slider__container"
-	  }, [_vm._h('input', {
+	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -1761,16 +1768,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.valueNumber = $event.target.value
 	      }, _vm.onInput]
 	    }
-	  }), " ", _vm._h('div', {
+	  }), _vm._v(" "), _c('div', {
 	    staticClass: "mdl-slider__background-flex"
-	  }, [_vm._h('div', {
+	  }, [_c('div', {
 	    staticClass: "mdl-slider__background-lower",
 	    style: (_vm.lowerBackgroundStyle)
-	  }), " ", _vm._h('div', {
+	  }), _vm._v(" "), _c('div', {
 	    staticClass: "mdl-slider__background-upper",
 	    style: (_vm.upperBackgroundStyle)
 	  })])])
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -1850,14 +1858,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('label', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('label', {
 	    staticClass: "mdl-switch mdl-js-switch is-upgraded",
 	    class: _vm.cssClasses,
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._h('input', {
+	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -1892,10 +1900,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }, _vm.fireChange]
 	    }
-	  }), " ", _vm._h('span', {
+	  }), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-switch__label"
-	  }, [_vm._t("default")])])
+	  }, [_vm._t("default")], true)])
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -2032,24 +2041,24 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-textfield mdl-js-textfield",
 	    class: {
 	      'mdl-textfield--floating-label': _vm.floatingLabel, 'mdl-textfield--expandable': _vm.expandable, 'is-dirty': _vm.isDirty, 'is-disabled': _vm.disabled
 	    }
-	  }, [(_vm.expandable) ? _vm._t("expandable-button", [_vm._h('label', {
+	  }, [(_vm.expandable) ? _vm._t("expandable-button", [_c('label', {
 	    staticClass: "mdl-button mdl-js-button mdl-button--icon",
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._h('i', {
+	  }, [_c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._s(_vm.expandable)])])]) : _vm._e(), " ", _vm._h('div', {
+	  }, [_vm._v(_vm._s(_vm.expandable))])])]) : _vm._e(), _vm._v(" "), _c('div', {
 	    class: {
 	      'mdl-textfield__expandable-holder': _vm.expandable
 	    }
-	  }, [(_vm.textarea) ? _vm._t("textarea", [_vm._h('textarea', {
+	  }, [(_vm.textarea) ? _vm._t("textarea", [_c('textarea', {
 	    ref: "focusTarget",
 	    staticClass: "mdl-textfield__input",
 	    attrs: {
@@ -2065,7 +2074,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "input": _vm.fireInputEvent
 	    }
-	  })]) : _vm._t("input", [_vm._h('input', {
+	  })]) : _vm._t("input", [_c('input', {
 	    ref: "focusTarget",
 	    staticClass: "mdl-textfield__input",
 	    attrs: {
@@ -2084,15 +2093,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "input": _vm.fireInputEvent
 	    }
-	  })]), " ", " ", _vm._t("label", [_vm._h('label', {
+	  })]), _vm._v(" "), _vm._v(" "), _vm._t("label", [_c('label', {
 	    staticClass: "mdl-textfield__label",
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._s(_vm.displayLabel)])]), " ", _vm._t("error", [(_vm.error) ? _vm._h('label', {
+	  }, [_vm._v(_vm._s(_vm.displayLabel))])]), _vm._v(" "), _vm._t("error", [(_vm.error) ? _c('label', {
 	    staticClass: "mdl-textfield__error"
-	  }, [_vm._s(_vm.error)]) : _vm._e()])])])
+	  }, [_vm._v(_vm._s(_vm.error))]) : _vm._e()])], true)], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -2170,8 +2180,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-tooltip",
 	    class: {
 	      'mdl-tooltip--large': _vm.large
@@ -2179,8 +2189,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    attrs: {
 	      "for": _vm.target
 	    }
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -2252,14 +2263,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('ul', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('ul', {
 	    staticClass: "mdl-menu mdl-js-menu",
 	    attrs: {
 	      "for": _vm.target
 	    }
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -2326,11 +2338,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('li', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('li', {
 	    staticClass: "mdl-menu__item"
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -2458,33 +2471,33 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-card mdl-shadow--2dp"
-	  }, [(_vm.title) ? _vm._t("title", [_vm._h('div', {
+	  }, [(_vm.title) ? _vm._t("title", [_c('div', {
 	    staticClass: "mdl-card__title"
-	  }, [_vm._h('h2', {
+	  }, [_c('h2', {
 	    staticClass: "mdl-card__title-text"
-	  }, [_vm._s(_vm.title)])])]) : _vm._e(), (_vm.subtitle) ? _vm._t("subtitle", [_vm._h('div', {
+	  }, [_vm._v(_vm._s(_vm.title))])])]) : _vm._e(), (_vm.subtitle) ? _vm._t("subtitle", [_c('div', {
 	    staticClass: "mdl-card__subtitle-text"
-	  }, [_vm._s(_vm.subtitle)])]) : _vm._e(), (_vm.supportingText) ? _vm._t("supporting-text", [_vm._h('div', {
+	  }, [_vm._v(_vm._s(_vm.subtitle))])]) : _vm._e(), (_vm.supportingText) ? _vm._t("supporting-text", [_c('div', {
 	    staticClass: "mdl-card__supporting-text"
-	  }, [_vm._s(_vm.supportingText)])]) : _vm._e(), (_vm.media) ? _vm._t("media", [_vm._h('div', {
+	  }, [_vm._v(_vm._s(_vm.supportingText))])]) : _vm._e(), (_vm.media) ? _vm._t("media", [_c('div', {
 	    staticClass: "mdl-card__media"
-	  }, [_vm._h('img', {
+	  }, [_c('img', {
 	    attrs: {
 	      "src": _vm.media
 	    }
-	  })])]) : _vm._e(), (_vm.actions) ? _vm._t("actions", [_vm._h('div', {
+	  })])]) : _vm._e(), (_vm.actions) ? _vm._t("actions", [_c('div', {
 	    staticClass: "mdl-card__actions mdl-card--border"
-	  }, [(_vm.isActionsURL) ? _vm._h('mdl-anchor-button', {
+	  }, [(_vm.isActionsURL) ? _c('mdl-anchor-button', {
 	    staticClass: "mdl-js-ripple-effect",
 	    attrs: {
 	      "colored": "colored",
 	      "href": _vm.actions,
 	      "target": _vm.actionsTarget
 	    }
-	  }, [_vm._s(_vm.actionsText)]) : _vm._h('mdl-button', {
+	  }, [_vm._v(_vm._s(_vm.actionsText))]) : _c('mdl-button', {
 	    staticClass: "mdl-js-ripple-effect",
 	    attrs: {
 	      "colored": "colored"
@@ -2494,9 +2507,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.triggerActionsEvent($event)
 	      }
 	    }
-	  }, [_vm._s(_vm.actionsText)])])]) : _vm._e(), (_vm.menu) ? _vm._t("menu", [_vm._h('div', {
+	  }, [_vm._v(_vm._s(_vm.actionsText))])])]) : _vm._e(), (_vm.menu) ? _vm._t("menu", [_c('div', {
 	    staticClass: "mdl-card__menu"
-	  }, [_vm._h('mdl-button', {
+	  }, [_c('mdl-button', {
 	    staticClass: "mdl-js-ripple-effect",
 	    attrs: {
 	      "icon": "icon"
@@ -2506,10 +2519,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.triggerMenuEvent($event)
 	      }
 	    }
-	  }, [_vm._h('i', {
+	  }, [_c('i', {
 	    staticClass: "material-icons"
-	  }, ["share"])])])]) : _vm._e()])
+	  }, [_vm._v("share")])])])]) : _vm._e()], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -2598,25 +2612,26 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
 	  return _vm._m(0)
-	},staticRenderFns: [function (){var _vm=this;
-	  return _vm._h('div', {
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-snackbar mdl-js-snackbar",
 	    attrs: {
 	      "aria-live": "assertive",
 	      "aria-atomic": "true",
 	      "aria-relevant": "text"
 	    }
-	  }, [_vm._h('div', {
+	  }, [_c('div', {
 	    staticClass: "mdl-snackbar__text"
-	  }), _vm._h('button', {
+	  }), _c('button', {
 	    staticClass: "mdl-snackbar__action",
 	    attrs: {
 	      "type": "button"
 	    }
 	  })])
 	}]}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -3073,11 +3088,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    ref: "textfield",
 	    staticClass: "mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select"
-	  }, [_vm._h('input', {
+	  }, [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
@@ -3096,7 +3111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    on: {
 	      "keydown": function($event) {
-	        if ($event.keyCode !== 13 && $event.keyCode !== 32) { return; }
+	        if (_vm._k($event.keyCode, "enter", 13) && _vm._k($event.keyCode, "space", 32)) { return; }
 	        _vm.open($event)
 	      },
 	      "input": function($event) {
@@ -3104,36 +3119,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.name = $event.target.value
 	      }
 	    }
-	  }), " ", _vm._h('label', {
+	  }), _vm._v(" "), _c('label', {
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._m(0)]), " ", _vm._h('label', {
+	  }, [_c('i', {
+	    staticClass: "mdl-icon-toggle__label material-icons"
+	  }, [_vm._v("keyboard_arrow_down")])]), _vm._v(" "), _c('label', {
 	    staticClass: "mdl-textfield__label",
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._s(_vm.label)]), " ", _vm._h('ul', {
+	  }, [_vm._v(_vm._s(_vm.label))]), _vm._v(" "), _c('ul', {
 	    ref: "menu",
 	    staticClass: "mdl-menu mdl-menu--bottom-left mdl-js-menu",
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._l((_vm.optionsObject), function(option) {
-	    return _vm._h('li', {
+	  }, _vm._l((_vm.optionsObject), function(option) {
+	    return _c('li', {
 	      staticClass: "mdl-menu__item",
 	      on: {
 	        "click": function($event) {
 	          _vm.selectValue(option)
 	        }
 	      }
-	    }, [_vm._s(option.name)])
-	  })])])
-	},staticRenderFns: [function (){var _vm=this;
-	  return _vm._h('i', {
-	    staticClass: "mdl-icon-toggle__label material-icons"
-	  }, ["keyboard_arrow_down"])
-	}]}
+	    }, [_vm._v(_vm._s(option.name))])
+	  }))])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -3523,9 +3537,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = function(el) {
 	  var basicTabbables = [];
 	  var orderedTabbables = [];
-	  var isHidden = createIsHidden();
 	
-	  var candidates = el.querySelectorAll('input, select, a[href], textarea, button, [tabindex]');
+	  // A node is "available" if
+	  // - it's computed style
+	  var isUnavailable = createIsUnavailable();
+	
+	  var candidateSelectors = [
+	    'input',
+	    'select',
+	    'a[href]',
+	    'textarea',
+	    'button',
+	    '[tabindex]',
+	  ];
+	
+	  var candidates = el.querySelectorAll(candidateSelectors);
 	
 	  var candidate, candidateIndex;
 	  for (var i = 0, l = candidates.length; i < l; i++) {
@@ -3536,7 +3562,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      candidateIndex < 0
 	      || (candidate.tagName === 'INPUT' && candidate.type === 'hidden')
 	      || candidate.disabled
-	      || isHidden(candidate)
+	      || isUnavailable(candidate)
 	    ) {
 	      continue;
 	    }
@@ -3564,30 +3590,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return tabbableNodes;
 	}
 	
-	function createIsHidden() {
+	function createIsUnavailable() {
 	  // Node cache must be refreshed on every check, in case
 	  // the content of the element has changed
-	  var nodeCache = [];
+	  var isOffCache = [];
 	
-	  return function isHidden(node) {
+	  // "off" means `display: none;`, as opposed to "hidden",
+	  // which means `visibility: hidden;`. getComputedStyle
+	  // accurately reflects visiblity in context but not
+	  // "off" state, so we need to recursively check parents.
+	
+	  function isOff(node, nodeComputedStyle) {
 	    if (node === document.documentElement) return false;
 	
 	    // Find the cached node (Array.prototype.find not available in IE9)
-	    for (var i = 0, length = nodeCache.length; i < length; i++) {
-	      if (nodeCache[i][0] === node) return nodeCache[i][1];
+	    for (var i = 0, length = isOffCache.length; i < length; i++) {
+	      if (isOffCache[i][0] === node) return isOffCache[i][1];
 	    }
+	
+	    nodeComputedStyle = nodeComputedStyle || window.getComputedStyle(node);
 	
 	    var result = false;
-	    var style = window.getComputedStyle(node);
-	    if (style.visibility === 'hidden' || style.display === 'none') {
+	
+	    if (nodeComputedStyle.display === 'none') {
 	      result = true;
 	    } else if (node.parentNode) {
-	      result = isHidden(node.parentNode);
+	      result = isOff(node.parentNode);
 	    }
 	
-	    nodeCache.push([node, result]);
+	    isOffCache.push([node, result]);
 	
 	    return result;
+	  }
+	
+	  return function isUnavailable(node) {
+	    if (node === document.documentElement) return false;
+	
+	    var computedStyle = window.getComputedStyle(node);
+	
+	    if (isOff(node, computedStyle)) return true;
+	
+	    return computedStyle.visibility === 'hidden';
 	  }
 	}
 
@@ -3596,8 +3639,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -3605,16 +3648,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	      expression: "show"
 	    }],
 	    staticClass: "mdl-dialog-container"
-	  }, [_vm._h('div', {
+	  }, [_c('div', {
 	    staticClass: "mdl-dialog"
-	  }, [_vm._h('div', {
+	  }, [_c('div', {
 	    staticClass: "mdl-dialog__title"
-	  }, [_vm._s(_vm.title)]), " ", _vm._h('div', {
+	  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('div', {
 	    staticClass: "mdl-dialog__content"
-	  }, [_vm._t("default")]), " ", _vm._h('div', {
+	  }, [_vm._t("default")], true), _vm._v(" "), _c('div', {
 	    staticClass: "mdl-dialog__actions",
 	    class: _vm.actionsClasses
-	  }, [_vm._t("actions", [_vm._h('mdl-button', {
+	  }, [_vm._t("actions", [_c('mdl-button', {
 	    staticClass: "mdl-js-ripple-effect",
 	    nativeOn: {
 	      "click": function($event) {
@@ -3622,8 +3665,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.close($event)
 	      }
 	    }
-	  }, ["Close"])])])])])
+	  }, [_vm._v("Close")])])], true)])])
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -3816,13 +3860,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('a', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('a', {
 	    staticClass: "mdl-tabs__tab",
 	    attrs: {
 	      "href": "#"
 	    }
-	  }, [_vm._s(_vm.tab.title) + "\n  ", _vm._h('span', {
+	  }, [_vm._v(_vm._s(_vm.tab.title) + "\n  "), _c('span', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
@@ -3831,12 +3875,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }],
 	    ref: "ripple",
 	    staticClass: "mdl-tabs__ripple-container mdl-js-ripple-effect"
-	  }, [_vm._m(0)])])
-	},staticRenderFns: [function (){var _vm=this;
-	  return _vm._h('span', {
+	  }, [_c('span', {
 	    staticClass: "mdl-ripple"
-	  })
-	}]}
+	  })])])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -3848,13 +3891,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-tabs is-upgraded"
-	  }, [_vm._h('div', {
+	  }, [_c('div', {
 	    staticClass: "mdl-tabs__tab-bar"
-	  }, [_vm._l((_vm.tabs), function(tab) {
-	    return _vm._h('tab-link', {
+	  }, _vm._l((_vm.tabs), function(tab) {
+	    return _c('tab-link', {
 	      key: tab.id,
 	      staticClass: "mdl-tabs__tab",
 	      class: {
@@ -3870,8 +3913,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }
 	    })
-	  })]), " ", " ", _vm._t("default")])
+	  })), _vm._v(" "), _vm._v(" "), _vm._t("default")], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -4078,14 +4122,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('div', {
 	    staticClass: "mdl-tabs__panel",
 	    class: {
 	      'is-active': _vm.selected
 	    }
-	  }, [_vm._t("default")])
+	  }, [_vm._t("default")], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
@@ -4179,20 +4224,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('span', {
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	  return _c('span', {
 	    staticClass: "mdl-chip",
 	    class: _vm.chipClasses
-	  }, [_vm._t("chip-contact", [(_vm.contact) ? _vm._h('span', {
+	  }, [_vm._t("chip-contact", [(_vm.contact) ? _c('span', {
 	    staticClass: "mdl-chip__contact mdl-color--teal mdl-color-text--white"
-	  }, [_vm._s(_vm.contact)]) : _vm._e(), " ", (_vm.contactImage) ? _vm._h('img', {
+	  }, [_vm._v(_vm._s(_vm.contact))]) : _vm._e(), _vm._v(" "), (_vm.contactImage) ? _c('img', {
 	    staticClass: "mdl-chip__contact",
 	    attrs: {
 	      "src": _vm.contactImage
 	    }
-	  }) : _vm._e()]), " ", _vm._h('span', {
+	  }) : _vm._e()]), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-chip__text"
-	  }, [_vm._t("default")]), " ", (_vm.deletable) ? _vm._h('a', {
+	  }, [_vm._t("default")], true), _vm._v(" "), (_vm.deletable) ? _c('a', {
 	    staticClass: "mdl-chip__action",
 	    attrs: {
 	      "href": "#"
@@ -4203,10 +4248,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.$emit('delete')
 	      }
 	    }
-	  }, [_vm._h('i', {
+	  }, [_c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._s(_vm.deleteIcon)])]) : _vm._e()])
+	  }, [_vm._v(_vm._s(_vm.deleteIcon))])]) : _vm._e()], true)
 	},staticRenderFns: []}
+	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
