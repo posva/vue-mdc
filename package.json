@@ -1,6 +1,6 @@
 {
   "name": "vue-mdl",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Reusable Vue components using Material Design Lite",
   "main": "dist/vue-mdl.js",
   "scripts": {
