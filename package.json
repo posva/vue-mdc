@@ -1,6 +1,6 @@
 {
   "name": "vue-mdl",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "Reusable Vue components using Material Design Lite",
   "main": "dist/vue-mdl.js",
   "scripts": {
@@ -34,7 +34,7 @@
   "author": "posva",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^1.0.0 || ^2.0.0"
+    "vue": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.18.0",
