@@ -33,7 +33,7 @@
                :maxlength="maxlength"/>
       </slot>
       <slot name="label">
-        <label class="mdl-textfield__label" :for="id">{{displayLabel}}</label>
+        <label class="mdl-textfield__label" v-if="displayLabel" :for="id">{{displayLabel}}</label>
       </slot>
       <slot name="error">
         <label class="mdl-textfield__error" v-if="error">{{error}}</label>
