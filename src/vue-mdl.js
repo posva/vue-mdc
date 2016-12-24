@@ -25,7 +25,6 @@ import MdlLayout from './layout/layout.vue'
 import MdlLayoutHeaderRow from './layout/header-row.vue'
 import MdlLayoutDrawer from './layout/drawer.vue'
 import MdlLayoutContent from './layout/content.vue'
-import MdlLayoutTab from './layout/layout-tab.vue'
 
 export const components = {
   MdlCheckbox,
@@ -52,8 +51,7 @@ export const components = {
   MdlLayout,
   MdlLayoutHeaderRow,
   MdlLayoutDrawer,
-  MdlLayoutContent,
-  MdlLayoutTab
+  MdlLayoutContent
 }
 
 export const directives = {
@@ -99,6 +97,5 @@ export {
   MdlLayout,
   MdlLayoutHeaderRow,
   MdlLayoutDrawer,
-  MdlLayoutContent,
-  MdlLayoutTab
+  MdlLayoutContent
 }
