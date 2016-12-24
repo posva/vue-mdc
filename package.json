@@ -5,14 +5,14 @@
   "main": "dist/vue-mdl.js",
   "scripts": {
     "test": "npm run lint && npm run test:unit",
-    "start": "NODE_ENV=dev node build/dev-server.js",
+    "start": "npm run dev:integration",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "test:unit": "karma start test/unit/karma.conf.js --single-run",
     "build": "npm run build:dev && npm run build:prod",
     "build:prod": "webpack --bail --progress --hide-modules --config build/webpack.dist.prod.conf.js",
     "build:dev": "webpack --bail --progress --hide-modules --config build/webpack.dist.dev.conf.js",
     "dev": "karma start test/unit/karma.dev.conf.js",
-    "dev:integration": "node build/dev-server.js",
+    "dev:integration": "NODE_ENV=dev node build/dev-server.js",
     "dev:doc": "NODE_ENV=doc node build/dev-server.js",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.conf.js"
   },
