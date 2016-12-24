@@ -53,9 +53,4 @@ describe('Layout', () => {
     propChecker('fixed-drawer')
     .then(done, done)
   })
-
-  it('can have fixed tabs', (done) => {
-    propChecker('fixed-tabs')
-    .then(done, done)
-  })
 })

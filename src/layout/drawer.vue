@@ -1,8 +1,8 @@
 <template>
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title" v-if="title">{{title}}</span>
-        <slot></slot>
-    </div>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title" v-if="title">{{title}}</span>
+    <slot></slot>
+  </div>
 </template>
 
 <script>

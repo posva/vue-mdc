@@ -1,11 +1,11 @@
 <template>
-    <section class="mdl-layout__tab-panel"
-            :class="activeClass"
-            :id="id">
-      <div class="page-content">
-        <slot></slot>  
-      </div>
-    </section>
+  <section class="mdl-layout__tab-panel"
+           :class="activeClass"
+           :id="id">
+    <div class="page-content">
+      <slot></slot>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
       }
     }
   },
-  data: function () {
+  data () {
     return {
       id: '',
       isActive: false

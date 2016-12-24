@@ -1,7 +1,5 @@
 <template>
-    <main class="mdl-layout__content">
-        <div class="page-content">
-            <slot></slot>
-        </div>
-    </main>
+  <main class="mdl-layout__content">
+    <slot></slot>
+  </main>
 </template>
