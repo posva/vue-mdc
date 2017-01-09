@@ -796,7 +796,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-59130e27/checkbox.vue"
+	  var id = "_v-5f1acec8/checkbox.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -896,7 +896,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3842db47/radio.vue"
+	  var id = "_v-541b6cf2/radio.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1443,7 +1443,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-22205eb4/button.vue"
+	  var id = "_v-91220d4a/button.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1566,7 +1566,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7979d0f4/anchor-button.vue"
+	  var id = "_v-41c8ad9e/anchor-button.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1627,7 +1627,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-235def21/progress.vue"
+	  var id = "_v-6e9482d4/progress.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1719,7 +1719,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-04226856/spinner.vue"
+	  var id = "_v-4554b9c0/spinner.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1793,7 +1793,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-15cede18/icon-toggle.vue"
+	  var id = "_v-e76c1342/icon-toggle.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1863,7 +1863,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1b7fb2d5/slider.vue"
+	  var id = "_v-380248ec/slider.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1969,7 +1969,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-83b727d0/switch.vue"
+	  var id = "_v-1d5e0fcd/switch.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2033,7 +2033,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-00ca46a9/textfield.vue"
+	  var id = "_v-066c65d4/textfield.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2100,7 +2100,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    floatingLabel: {
 	      required: false
-	    }
+	    },
+	    autocomplete: String
 	  },
 	  computed: {
 	    isDirty: function isDirty() {
@@ -2155,7 +2156,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-e7023682/tooltip.vue"
+	  var id = "_v-58365aac/tooltip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2229,7 +2230,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-67b9a9cb/menu.vue"
+	  var id = "_v-6d5bc8f6/menu.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2286,7 +2287,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-37cc8005/menu-item.vue"
+	  var id = "_v-d1f3b88c/menu-item.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2338,7 +2339,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-46fd66f8/card.vue"
+	  var id = "_v-00ad1e79/card.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2468,7 +2469,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-b5ac2c0e/snackbar.vue"
+	  var id = "_v-4a81b96e/snackbar.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2531,7 +2532,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-76dce970/select.vue"
+	  var id = "_v-3f5c1225/select.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2967,7 +2968,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f1faa888/dialog.vue"
+	  var id = "_v-4f81d471/dialog.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3296,9 +3297,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = function(el) {
 	  var basicTabbables = [];
 	  var orderedTabbables = [];
-	  var isHidden = createIsHidden();
 	
-	  var candidates = el.querySelectorAll('input, select, a[href], textarea, button, [tabindex]');
+	  // A node is "available" if
+	  // - it's computed style
+	  var isUnavailable = createIsUnavailable();
+	
+	  var candidateSelectors = [
+	    'input',
+	    'select',
+	    'a[href]',
+	    'textarea',
+	    'button',
+	    '[tabindex]',
+	  ];
+	
+	  var candidates = el.querySelectorAll(candidateSelectors);
 	
 	  var candidate, candidateIndex;
 	  for (var i = 0, l = candidates.length; i < l; i++) {
@@ -3309,7 +3322,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      candidateIndex < 0
 	      || (candidate.tagName === 'INPUT' && candidate.type === 'hidden')
 	      || candidate.disabled
-	      || isHidden(candidate)
+	      || isUnavailable(candidate)
 	    ) {
 	      continue;
 	    }
@@ -3337,30 +3350,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return tabbableNodes;
 	}
 	
-	function createIsHidden() {
+	function createIsUnavailable() {
 	  // Node cache must be refreshed on every check, in case
 	  // the content of the element has changed
-	  var nodeCache = [];
+	  var isOffCache = [];
 	
-	  return function isHidden(node) {
+	  // "off" means `display: none;`, as opposed to "hidden",
+	  // which means `visibility: hidden;`. getComputedStyle
+	  // accurately reflects visiblity in context but not
+	  // "off" state, so we need to recursively check parents.
+	
+	  function isOff(node, nodeComputedStyle) {
 	    if (node === document.documentElement) return false;
 	
 	    // Find the cached node (Array.prototype.find not available in IE9)
-	    for (var i = 0, length = nodeCache.length; i < length; i++) {
-	      if (nodeCache[i][0] === node) return nodeCache[i][1];
+	    for (var i = 0, length = isOffCache.length; i < length; i++) {
+	      if (isOffCache[i][0] === node) return isOffCache[i][1];
 	    }
+	
+	    nodeComputedStyle = nodeComputedStyle || window.getComputedStyle(node);
 	
 	    var result = false;
-	    var style = window.getComputedStyle(node);
-	    if (style.visibility === 'hidden' || style.display === 'none') {
+	
+	    if (nodeComputedStyle.display === 'none') {
 	      result = true;
 	    } else if (node.parentNode) {
-	      result = isHidden(node.parentNode);
+	      result = isOff(node.parentNode);
 	    }
 	
-	    nodeCache.push([node, result]);
+	    isOffCache.push([node, result]);
 	
 	    return result;
+	  }
+	
+	  return function isUnavailable(node) {
+	    if (node === document.documentElement) return false;
+	
+	    var computedStyle = window.getComputedStyle(node);
+	
+	    if (isOff(node, computedStyle)) return true;
+	
+	    return computedStyle.visibility === 'hidden';
 	  }
 	}
 
@@ -3398,7 +3428,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-4b9415aa/tabs.vue"
+	  var id = "_v-404fd754/tabs.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3510,7 +3540,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-192c3c5f/tab-link.vue"
+	  var id = "_v-3504ce0a/tab-link.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3578,7 +3608,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-9751ea10/tab.vue"
+	  var id = "_v-59aeda6d/tab.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
