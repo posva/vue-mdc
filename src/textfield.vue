@@ -60,7 +60,8 @@ export default {
     },
     floatingLabel: {
       required: false
-    }
+    },
+    autocomplete: String
   },
   computed: {
     isDirty () {
