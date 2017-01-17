@@ -79,7 +79,7 @@
     "mocha": "^3.2.0",
     "node-sass": "^4.1.1",
     "normalize.css": "^5.0.0",
-    "ora": "^0.4.0",
+    "ora": "^1.0.0",
     "phantomjs-prebuilt": "^2.1.14",
     "sass-loader": "^4.1.1",
     "selenium-server": "^3.0.1",
