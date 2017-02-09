@@ -9,7 +9,7 @@
       <div class="flex center wrap">
         <mdl-button raised="raised" colored="colored" @click.native="$root.$emit('mailSent', { message: 'Message Sent' })">Show</mdl-button>
       </div><pre><code class="html"><p>&lt;mdl-snackbar display-on=&quot;mailSent&quot;&gt;&lt;/mdl-snackbar&gt;</p><p>&lt;mdl-button raised colored @click=&quot;$root.$emit('mailSent', { message: 'Message Sent' })&quot;&gt;Show&lt;/mdl-button&gt;</p></code></pre>
-      <p>The object passed when broadcasting the event<code>mailSent</code>, is the data passsed to the<a target="_blank" href="http://www.getmdl.io/components/index.html#snackbar-section"><code>showSnackbar</code> function</a>. For instance you can pass a callback for an action:</p>
+      <p>The object passed when broadcasting the event<code>mailSent</code>, is the data passsed to the<a target="_blank" href="https://www.getmdl.io/components/index.html#snackbar-section"><code>showSnackbar</code> function</a>. For instance you can pass a callback for an action:</p>
       <div class="flex center wrap">
         <mdl-snackbar display-on="colorChanged"></mdl-snackbar>
       </div>

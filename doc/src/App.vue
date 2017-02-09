@@ -9,7 +9,7 @@
         <div class="mdl-layout__header-row">
           <span class="header-title">
             <img class="mdl-layout__header-logo"
-                 src="http://vuejs.org/images/logo.png"/>
+                 src="https://vuejs.org/images/logo.png"/>
             <router-link to="/"
                          class="u-no-text-decoration"
             >Vue MDL</router-link>
@@ -71,6 +71,7 @@ export default {
           name: 'Components',
           icon: 'extension',
           items: [
+            'Badges',
             'Buttons',
             'Cards',
             'Checkboxes',
@@ -96,10 +97,9 @@ export default {
           ]
         },
         {
-          name: 'Directives',
-          icon: 'settings_ethernet',
+          name: 'Misc',
+          icon: 'style',
           items: [
-            'Badges',
             'Ripple Effect'
           ]
         }
