@@ -2,28 +2,40 @@
   <div class="section">
     <title-link>Textfields</title-link>
     <div class="section__content">
-      <p>The textfield component is highly customizable and allows you to use text inputs and textareas. Instead of using the<code>v-model</code> directive you have to pass a two way prop named<code>value</code>.</p>
+      <p>The textfield component is highly customizable and allows you to use text inputs and textareas. Instead of using the <code>v-model</code> directive you have to pass a two way prop named <code>value</code>.</p>
       <div class="flex center wrap">
         <p>Hello {{name}}</p>
       </div>
       <div class="flex start wrap">
         <mdl-textfield label="Name" v-model="name" class="space"></mdl-textfield>
         <mdl-textfield floating-label="Name" v-model="name" class="space"></mdl-textfield>
-      </div><pre><code class="html"><p>&lt;mdl-textfield label=&quot;Name&quot; v-model=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p><p>&lt;mdl-textfield floating-label=&quot;Name&quot; v-model=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p></code></pre>
-      <p>Use the<code>textarea</code> prop to use a textarea instead of an input</p>
+      </div>
+
+      <pre><code v-highlight class="html"><p>&lt;mdl-textfield label=&quot;Name&quot; v-model=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p><p>&lt;mdl-textfield floating-label=&quot;Name&quot; v-model=&quot;name&quot;&gt;&lt;/mdl-textfield&gt;</p></code></pre>
+      <p>Use the <code>textarea</code> prop to use a textarea instead of an input</p>
       <div class="flex start wrap">
-        <mdl-textfield floating-label="Textarea" textarea="textarea" rows="4" v-model="text"></mdl-textfield>
-        <p>{{text}}</p>
-      </div><pre><code class="html">&lt;mdl-textfield floating-label=&quot;Name&quot; textarea rows=&quot;4&quot;&gt;&lt;/mdl-textfield&gt;</code></pre>
-      <p>You can dynamically bind the<code>floating-label</code> prop and use the<code>label</code>prop for the real label if you need to control whether the label can floats or not</p><pre><code class="html">&lt;mdl-textfield :floating-label=&quot;float&quot; label=&quot;Name&quot; textarea&gt;&lt;/mdl-textfield&gt;</code><code class="javascript">new Vue({
+        <div>
+          <mdl-textfield floating-label="Textarea" textarea="textarea" rows="4" v-model="text"></mdl-textfield>
+        </div>
+        <div style="padding-left: 1rem">
+          <pre>{{text}}</pre>
+        </div>
+      </div>
+
+      <pre><code v-highlight class="html">&lt;mdl-textfield floating-label=&quot;Name&quot; textarea rows=&quot;4&quot;&gt;&lt;/mdl-textfield&gt;</code></pre>
+      <p>You can dynamically bind the <code>floating-label</code> prop and use the <code>label</code> prop for the real label if you need to control whether the label can floats or not</p>
+
+      <pre><code v-highlight class="html">&lt;mdl-textfield :floating-label=&quot;float&quot; label=&quot;Name&quot; textarea&gt;&lt;/mdl-textfield&gt;</code>
+        <code v-highlight class="javascript">new Vue({
   el: '#app',
   data: {floating: false}
 })
       </code></pre>
-      <p>You can make the textfield expandable by using the<code>expandable</code> prop and setting and<code>id</code> on the element.</p>
+      <p>You can make the textfield expandable by using the <code>expandable</code> prop and setting and<code>id</code> on the element.</p>
       <div class="flex start wrap">
         <mdl-textfield id="demo-expandable-button" expandable="search"></mdl-textfield>
-      </div><pre><code class="html">&lt;mdl-textfield id=&quot;demo-expandable-button&quot; expandable=&quot;search&quot;&gt;&lt;/mdl-textfield&gt;</code></pre>
+      </div>
+      <pre><code v-highlight class="html">&lt;mdl-textfield id=&quot;demo-expandable-button&quot; expandable=&quot;search&quot;&gt;&lt;/mdl-textfield&gt;</code></pre>
       <!-- h5 Playground-->
       <!-- .flex.start.wrap-->
       <!--   mdl-textfield(:floating-label='float', :label='label', :textarea='textarea', :rows='rows')-->
@@ -51,16 +63,16 @@
           <tr>
             <td class="mdl-data-table__cell--non-numeric"><code>value</code></td>
             <td class="mdl-data-table__cell--non-numeric">Defines a value for the textfield</td>
-            <td class="mdl-data-table__cell--non-numeric">Should be used with the<code>.sync</code> modifier</td>
+            <td class="mdl-data-table__cell--non-numeric">You should use the <code>v-model</code> directive instead of directly binding this prop</td>
           </tr>
           <tr>
             <td class="mdl-data-table__cell--non-numeric"><code>label</code></td>
             <td class="mdl-data-table__cell--non-numeric">Defines the label used on the the textfield</td>
-            <td class="mdl-data-table__cell--non-numeric">You don't need this if you use<code>floating-label</code></td>
+            <td class="mdl-data-table__cell--non-numeric">You don't need this if you use <code>floating-label</code></td>
           </tr>
           <tr>
             <td class="mdl-data-table__cell--non-numeric"><code>floating-label</code></td>
-            <td class="mdl-data-table__cell--non-numeric">Defines whether the label should float or not. If the given value is a String, you don't need to provide a<code>label</code> prop</td>
+            <td class="mdl-data-table__cell--non-numeric">Defines whether the label should float or not. If the given value is a String, you don't need to provide a <code>label</code> prop</td>
             <td class="mdl-data-table__cell--non-numeric"></td>
           </tr>
           <tr>
@@ -71,7 +83,7 @@
           <tr>
             <td class="mdl-data-table__cell--non-numeric"><code>rows</code></td>
             <td class="mdl-data-table__cell--non-numeric">Controls the number of rows used in the textarea</td>
-            <td class="mdl-data-table__cell--non-numeric">Needs the<code>textarea</code> prop</td>
+            <td class="mdl-data-table__cell--non-numeric">Needs the <code>textarea</code> prop</td>
           </tr>
           <tr>
             <td class="mdl-data-table__cell--non-numeric"><code>pattern</code></td>
@@ -81,7 +93,7 @@
           <tr>
             <td class="mdl-data-table__cell--non-numeric"><code>error</code></td>
             <td class="mdl-data-table__cell--non-numeric">Defines the error displayed when the input text doesn't match the given pattern</td>
-            <td class="mdl-data-table__cell--non-numeric">Needs the<code>pattern</code> prop</td>
+            <td class="mdl-data-table__cell--non-numeric">Needs the <code>pattern</code> prop</td>
           </tr>
           <tr>
             <td class="mdl-data-table__cell--non-numeric"><code>expandable</code></td>
