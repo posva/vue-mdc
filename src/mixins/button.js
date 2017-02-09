@@ -1,5 +1,3 @@
-import propFill from './prop-fill'
-
 export default {
   computed: {
     cssClasses () {
@@ -12,36 +10,22 @@ export default {
         'mdl-button--raised': this.raised,
         'mdl-button--colored': this.colored
       }
+    },
+    isIconSpecified () {
+      return this.icon && typeof this.icon === 'string'
     }
   },
   props: {
-    disabled: {
-      fill: true
-    },
-    icon: {
-      required: false
-    },
-    accent: {
-      fill: true
-    },
-    primary: {
-      fill: true
-    },
-    miniFab: {
-      fill: true
-    },
-    fab: {
-      fill: true
-    },
-    raised: {
-      fill: true
-    },
-    colored: {
-      fill: true
-    }
+    disabled: Boolean,
+    icon: [String, Boolean],
+    accent: Boolean,
+    primary: Boolean,
+    miniFab: Boolean,
+    fab: Boolean,
+    raised: Boolean,
+    colored: Boolean
   },
-  mixins: [propFill],
-  ready () {
+  mounted () {
     componentHandler.upgradeElement(this.$el)
   }
 }

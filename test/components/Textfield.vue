@@ -2,7 +2,7 @@
 div
   h1 Textfield
   h3 MDL
-  .mdl(v-mdl)
+  .mdl(mdl)
     .mdl-textfield.mdl-js-textfield
       input#sample1.mdl-textfield__input(type='text')
       label.mdl-textfield__label(for='sample1') Text...
@@ -24,13 +24,13 @@ div
       input#sample6.mdl-textfield__input(type='text')
       label.mdl-textfield__label(for='sample6') Expandable Input
   h3 vue
-  mdl-textfield#testme(@change='test' v-on:keyup.left='test(rows, $event)', :value.sync='testme' floating-label="TEST ME")
+  mdl-textfield#testme(@change='test' v-on:keyup.left='test(rows, $event)', v-model='testme' floating-label="TEST ME")
   mdl-textfield#fly(label='I fly' floating-label)
   mdl-textfield#fly2(floating-label='I fly')
   mdl-textfield#fly-label-dyn(:floating-label='dynFloat')
-  mdl-textfield.added-class#classic(label='Classic', :type='type', :value.sync='text')
+  mdl-textfield.added-class#classic(label='Classic', :type='type', v-model='text')
   mdl-textfield#fly-dyn(label='Dynamic fly' v-bind:floating-label='float' v-bind:label='label')
-  mdl-textfield#textarea(label='textarea', textarea, :rows='rows', :value.sync='multiText')
+  mdl-textfield#textarea(label='textarea', textarea, :rows='rows', v-model='multiText')
   pre#multi-text {{multiText}}
   <mdl-textfield id='html-text' label='textarea' textarea></mdl-textfield>
   mdl-textfield#number(label='Number', :pattern='pattern', floating-label, :error='error')
@@ -43,19 +43,15 @@ div
       span That's not a number
   mdl-textfield#custom-area(floating-label textarea)
     textarea#custom-area(slot='textarea' type='text')
-  mdl-textfield#expandable(floating-label v-bind:value.sync='text' expandable='search' label='Search')
+  mdl-textfield#expandable(floating-label v-model='text' expandable='search' label='Search')
   br
   p {{text}}
-  mdl-checkbox(:checked.sync='float') Float
-  <mdl-textfield :value.sync='requiredValue' id='required' floating-label='Required' required></mdl-textfield>
-  <mdl-textfield :value.sync='requiredValue' id='required-textarea' floating-label='Required' required textarea></mdl-textfield>
-  mdl-textfield#maxlength-input(:value.sync='requiredValue', :maxlength='maxlength', floating-label="Maxlength")
-  mdl-textfield#maxlength-textarea(:value.sync='requiredValue', :maxlength='maxlength', floating-label="Maxlength" textarea)
-  mdl-textfield#disabled-input(:value.sync='text', disabled, floating-label="Disabled")
-  mdl-textfield#disabled-textarea(:value.sync='text', disabled, floating-label="Disabled" textarea)
-  mdl-textfield#readonly-input(:value.sync='text', readonly, floating-label="Disabled")
-  mdl-textfield#readonly-textarea(:value.sync='text', readonly, floating-label="Disabled" textarea)
-
+  p {{testme}}
+  mdl-checkbox(type="checkbox" v-model='float') Float
+  <mdl-textfield v-model='requiredValue' id='required' floating-label='Required' required></mdl-textfield>
+  <mdl-textfield v-model='requiredValue' id='required-textarea' floating-label='Required' required textarea></mdl-textfield>
+  mdl-textfield#maxlength-input(v-model='requiredValue', :maxlength='maxlength', floating-label="Maxlength")
+  mdl-textfield#maxlength-textarea(v-model='requiredValue', :maxlength='maxlength', floating-label="Maxlength" textarea)
 </template>
 
 <script lang="babel">

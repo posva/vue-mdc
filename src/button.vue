@@ -1,7 +1,12 @@
-<template lang="jade">
-button.mdl-button.mdl-js-button(v-bind:disabled='disabled' v-bind:class='cssClasses')
-  slot
-    i.material-icons(v-if='icon') {{icon}}
+<template>
+  <button class="mdl-button mdl-js-button"
+          :class="cssClasses"
+          :disabled="disabled"
+  >
+    <slot>
+      <i class="material-icons" v-if="isIconSpecified" >{{ icon }}</i>
+    </slot>
+  </button>
 </template>
 
 <script>

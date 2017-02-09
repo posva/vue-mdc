@@ -1,104 +1,109 @@
 import Badge from '../../components/Badge'
 import { vueTest } from '../utils'
 
+function testClassToggling ({ vm, selector, variable, cssClass }) {
+  vm[variable] = true
+  return vm.nextTick()
+    .then(() => {
+      const badge = vm.$(selector)
+      badge.should.have.class(cssClass)
+      vm[variable] = false
+      return vm.nextTick()
+    })
+    .then(() => {
+      const badge = vm.$(selector)
+      badge.should.not.have.class(cssClass)
+      vm[variable] = false
+    })
+}
+
 describe('Badge', () => {
   let vm
-  let badge, badge2, hider, badgeOverlap, badgeNoBg
 
-  before(() => {
+  before((done) => {
     vm = vueTest(Badge)
-    badge = vm.$('#badge')
-    badge2 = vm.$('#badge-2')
-    hider = vm.$('#hider')
-    badgeOverlap = vm.$('#badge-overlap')
-    badgeNoBg = vm.$('#badge-overlap')
+    vm.nextTick().then(done)
   })
 
   it('exists', () => {
+    const badge = vm.$('#badge')
     badge.should.exist
     badge.should.be.visible
   })
 
-  it('is upgraded', () => {
-    badge.should.have.class('mdl-badge')
-    badge2.should.have.class('mdl-badge')
-  })
-
-  it('can have no background', () => {
-    badge.should.not.have.class('mdl-badge--no-background')
-    badgeNoBg.should.have.class('mdl-badge--no-background')
-  })
-
-  it('can overlap', () => {
-    badge.should.not.have.class('mdl-badge--overlap')
-    badgeOverlap.should.have.class('mdl-badge--overlap')
-  })
-
-  it('can change the text', (done) => {
-    badge.should.have.attr('data-badge', '♥')
-    vm.badgeText = '8'
+  it('is upgraded', (done) => {
+    vm.badgeText = '3'
     vm.nextTick()
-    .then(() => {
-      badge.should.have.attr('data-badge', '8')
-      return vm.nextTick()
-    })
-    .then(done, done)
+      .then(() => {
+        const badge = vm.$('#badge')
+        badge.should.have.class('mdl-badge')
+        badge.should.have.attr('data-badge', '3')
+      })
+      .then(done, done)
   })
 
-  it('can hide badge with function', (done) => {
-    vm.badgeText = '0'
-    vm.nextTick()
-    .then(() => {
-      hider.should.not.have.attr('data-badge')
-      vm.badgeText = '2'
-      return vm.nextTick()
-    })
-    .then(() => {
-      hider.should.have.attr('data-badge', '2')
-      return vm.nextTick()
-    })
-    .then(done, done)
+  it('can have no background', (done) => {
+    const selector = '#badge'
+    const variable = 'noBackground'
+    const cssClass = 'mdl-badge--no-background'
+    testClassToggling({ vm, selector, variable, cssClass })
+      .then(() => {
+        const badge = vm.$(selector)
+        badge.should.have.class('mdl-badge')
+        return vm.nextTick()
+      })
+      .then(done, done)
   })
 
-  it('can hide badge with number attribute', (done) => {
-    const number = vm.$('#number')
-    vm.badgeText = '0'
-    vm.nextTick()
-    .then(() => {
-      number.should.not.have.attr('data-badge')
-      vm.badgeText = '2'
-      return vm.nextTick()
-    })
-    .then(() => {
-      number.should.have.attr('data-badge', '2')
-      return vm.nextTick()
-    })
-    .then(done, done)
+  it('can overlap', (done) => {
+    const selector = '#badge'
+    const variable = 'overlap'
+    const cssClass = 'mdl-badge--overlap'
+    testClassToggling({ vm, selector, variable, cssClass })
+      .then(() => {
+        const badge = vm.$(selector)
+        badge.should.have.class('mdl-badge')
+        return vm.nextTick()
+      })
+      .then(done, done)
   })
 
-  it('can have hide-badge and .number at the same time', (done) => {
-    hider = vm.$('#hider-multi')
-    vm.badgeText = '0'
+  it('can hide the badge', (done) => {
+    vm.badgeText = ''
     vm.nextTick()
-    .then(() => {
-      hider.should.not.have.attr('data-badge')
-      vm.badgeText = '2'
-      return vm.nextTick()
-    })
-    .then(() => {
-      hider.should.have.attr('data-badge', '2')
-      vm.hide = true
-      return vm.nextTick()
-    })
-    .then(() => {
-      hider.should.not.have.attr('data-badge')
-      vm.hide = false
-      return vm.nextTick()
-    })
-    .then(() => {
-      hider.should.have.attr('data-badge', '2')
-      return vm.nextTick()
-    })
-    .then(done, done)
+      .then(() => {
+        const badge = vm.$('#badge')
+        badge.should.have.class('mdl-badge')
+        badge.should.not.have.attr('data-badge')
+        vm.badgeText = '1'
+        return vm.nextTick()
+      })
+      .then(() => {
+        const badge = vm.$('#badge')
+        badge.should.have.class('mdl-badge')
+        badge.should.have.attr('data-badge', '1')
+        return vm.nextTick()
+      })
+      .then(done, done)
+  })
+
+  it('can hide badge with boolean', (done) => {
+    vm.hide = true
+    vm.badgeText = '1'
+    vm.nextTick()
+      .then(() => {
+        const badge = vm.$('#badge')
+        badge.should.have.class('mdl-badge')
+        badge.should.not.have.attr('data-badge')
+        vm.hide = false
+        return vm.nextTick()
+      })
+      .then(() => {
+        const badge = vm.$('#badge')
+        badge.should.have.class('mdl-badge')
+        badge.should.have.attr('data-badge', '1')
+        return vm.nextTick()
+      })
+      .then(done, done)
   })
 })

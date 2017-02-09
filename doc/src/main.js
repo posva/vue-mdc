@@ -1,51 +1,64 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import VueTransferDom from 'vue-transfer-dom'
-import hljs from 'highlight.js/lib/highlight'
 import path from 'path'
+import VueRouter from 'vue-router'
+import { kebabCase } from 'lodash'
+import hljs from 'highlight.js/lib/highlight'
 import VueMdl from '../../src/vue-mdl'
-import VmdlDoc from './VmdlDoc.vue'
+import App from './App.vue'
+import TitleLink from './utils/TitleLink.vue'
 
-require('./style/mdl.scss')
-require('highlight.js/styles/tomorrow.css')
-require('material-design-lite/material.min.js')
+import 'normalize.css'
+import './style/mdl.scss'
+import 'highlight.js/styles/tomorrow.css'
+import 'material-design-lite/material.min.js'
 
-let context = require.context('./partials', false, /.vue$/)
-
-Vue.use(VueTransferDom)
 Vue.use(VueMdl)
 Vue.use(VueRouter)
 
-Vue.component('title-link', require('./utils/title-link.vue'))
+// Vue.component('title-link', require('./utils/title-link.vue'))
 Vue.directive('hljs', require('./utils/hljs').default)
-Vue.mixin({
-  ready () {
-    hljs.initHighlighting.called = false
-    hljs.initHighlighting()
-    document.querySelector('#app main').scrollTop = 0
+Vue.directive('highlight', {
+  inserted (el) {
+    Vue.nextTick(() => hljs.highlightBlock(el))
+  },
+  update (el, { value }) {
+    if (!value) return
+    el.innerText = value
+    Vue.nextTick(() => hljs.highlightBlock(el))
   }
 })
 
-let routerMap = {}
+Vue.component('TitleLink', TitleLink)
+
+let routes = []
+const context = require.context('./views', false, /.vue$/)
 context.keys().forEach(function (comp) {
-  let name = path.basename(comp, '.vue')
-  Vue.component(name, context(comp))
-  routerMap[`/${name}`] = {
-    component: context(comp)
-  }
+  const componentName = path.basename(comp, '.vue')
+  const name = kebabCase(componentName)
+  const component = context(comp)
+  Vue.component(componentName, component)
+  routes.push({
+    component,
+    name,
+    path: `/${name}`
+  })
 })
 
-let router = new VueRouter({
-})
-router.map(routerMap)
-
-router.redirect({
-  '/': '/installation'
+routes.push({
+  path: '*',
+  redirect: { name: 'installation' }
 })
 
-Vue.config.debug = process.env.NODE_ENV !== 'production'
-router.start(VmdlDoc, '#app')
+const router = new VueRouter({ routes })
 
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  render: h => h(App)
+})
+
+// TODO fix highlighting
 hljs.registerLanguage('css', require('highlight.js/lib/languages/css'))
 hljs.registerLanguage('xml', require('highlight.js/lib/languages/xml'))
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'))

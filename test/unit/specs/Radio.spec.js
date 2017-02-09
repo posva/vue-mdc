@@ -32,7 +32,7 @@ describe('Radio', () => {
   })
 
   it('is checked', () => {
-    check.should.be.checked
+    check.checked.should.be.true
     checkLabel.should.have.class('is-checked')
   })
 
@@ -40,12 +40,12 @@ describe('Radio', () => {
     vm.fruit = 'Kiwi'
     vm.nextTick()
     .then(() => {
-      check.should.not.be.checked
+      check.checked.should.not.be.true
       checkLabel.should.not.have.class('is-checked')
       vm.fruit = 'Banana'
       return vm.nextTick()
     }).then(() => {
-      check.should.be.checked
+      check.checked.should.be.true
       checkLabel.should.have.class('is-checked')
       return vm.nextTick()
     }).then(done, done)
@@ -58,6 +58,8 @@ describe('Radio', () => {
     vm.disabled = true
     vm.nextTick()
     .then(() => {
+      big = vm.$('#big')
+      bigLabel = vm.$('label[for=big]')
       big.disabled.should.be.true
       big.should.have.attr('disabled')
       bigLabel.should.have.class('is-disabled')
@@ -70,7 +72,7 @@ describe('Radio', () => {
     vm.size = 'Big'
     vm.nextTick()
     .then(() => {
-      big.should.be.checked
+      big.checked.should.be.true
       vm.size = 'Little'
       vm.disabled = false
       return vm.nextTick()

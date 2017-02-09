@@ -245,16 +245,4 @@ describe('Textfield', () => {
     vm.$('#maxlength-input').should.have.attr('maxlength', '10')
     vm.$('#maxlength-textarea').should.have.attr('maxlength', '10')
   })
-
-  it('binds a disabled attr', () => {
-    vm.$('#expandable').should.not.have.attr('disabled')
-    vm.$('#disabled-input').should.have.attr('disabled')
-    vm.$('#disabled-textarea').should.have.attr('disabled')
-  })
-
-  it('binds a readonly attr', () => {
-    vm.$('#expandable').should.not.have.attr('readonly')
-    vm.$('#readonly-input').should.have.attr('readonly')
-    vm.$('#readonly-textarea').should.have.attr('readonly')
-  })
 })

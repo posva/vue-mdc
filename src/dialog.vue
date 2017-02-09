@@ -1,55 +1,84 @@
-<template lang="jade">
-.mdl-dialog-container(v-show='show')
-  .mdl-dialog
-    .mdl-dialog__title {{title}}
-    .mdl-dialog__content
-      slot
-    .mdl-dialog__actions(v-bind:class='{ "mdl-dialog__actions--full-width": fullWidth }')
-      slot(name='actions')
-        mdl-button.mdl-js-ripple-effect(v-on:click.stop='close') Close
+<template>
+  <div class="mdl-dialog-container"
+       ref="out"
+       @click="closeIfOutside"
+       v-show="show">
+    <div class="mdl-dialog">
+      <div class="mdl-dialog__title">{{title}}</div>
+      <div class="mdl-dialog__content">
+        <slot></slot>
+      </div>
+      <div class="mdl-dialog__actions" :class="actionsClasses">
+        <slot name="actions">
+          <mdl-button class="mdl-js-ripple-effect" @click.native.stop="close">Close</mdl-button>
+        </slot>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import createFocusTrap from 'focus-trap'
-import propFill from './mixins/prop-fill'
 import mdlButton from './button.vue'
+import createFocusTrap from 'focus-trap'
 
 export default {
   components: {
     mdlButton
   },
+
+  computed: {
+    actionsClasses () {
+      return {
+        'mdl-dialog__actions--full-width': this.fullWidth
+      }
+    }
+  },
+
   data () {
     return {
       show: false
     }
   },
+
   props: {
     title: {
       type: String
     },
-    fullWidth: {
-      fill: true,
+    fullWidth: Boolean,
+    noFocusTrap: {
+      type: Boolean,
       default: false
     }
   },
-  ready () {
-    this._focusTrap = createFocusTrap(this.$el)
+
+  mounted () {
+    if (!this.noFocusTrap) this._focusTrap = createFocusTrap(this.$el)
   },
+
   methods: {
     open () {
       this.show = true
-      this.$nextTick(() => this._focusTrap.activate())
+      if (this._focusTrap) this.$nextTick(() => this._focusTrap.activate())
       this.$emit('open')
     },
     close () {
       this.show = false
-      this._focusTrap.deactivate()
+      if (this._focusTrap) this._focusTrap.deactivate()
       this.$emit('close')
+    },
+    closeIfOutside ({ target }) {
+      if (target === this.$refs.out) this.close()
     }
   },
-  mixins: [propFill]
+
+  watch: {
+    noFocusTrap (noFocusTrap) {
+      this._focusTrap = noFocusTrap ? null : createFocusTrap(this.$el)
+    }
+  }
 }
 </script>
+
 <style>
 .mdl-dialog-container {
   position: fixed;

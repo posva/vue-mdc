@@ -3,10 +3,11 @@ import { vueTest } from '../utils'
 
 describe('Snackbar', () => {
   let vm
-  let snackbar
+  let snackbar, sourceSnackbar
   before(() => {
     vm = vueTest(Snackbar)
     snackbar = vm.$('#snackbar')
+    sourceSnackbar = vm.$('#source')
   })
 
   it('exists', () => {
@@ -24,17 +25,22 @@ describe('Snackbar', () => {
     snackbar.querySelector('.mdl-snackbar__text').should.be.empty
   })
 
-  it('shows with an event', (done) => {
-    vm.$broadcast('mailSent', {
-      message: 'Test event',
-      actionText: 'Undo',
-      actionHandler (event) {},
-      timeout: 10
-    })
+  it('shows the snackbar by emitting events on $root by default', (done) => {
+    vm.$root.$emit('sendMail', { message: 'Test event', actionText: 'Undo', actionHandler: (ev) => { }, timeout: 100 })
     vm.nextTick()
     .then(() => {
       snackbar.querySelector('.mdl-snackbar__text').should.have.text('Test event')
       snackbar.querySelector('.mdl-snackbar__action').should.have.text('Undo')
+      return vm.nextTick()
+    }).then(done, done)
+  })
+
+  it('shows the snackbar by emitting events on specified event source', (done) => {
+    vm.bus.$emit('sendMail', { message: 'Test event', actionText: 'Undo', actionHandler: (ev) => { }, timeout: 100 })
+    vm.nextTick()
+    .then(() => {
+      sourceSnackbar.querySelector('.mdl-snackbar__text').should.have.text('Test event')
+      sourceSnackbar.querySelector('.mdl-snackbar__action').should.have.text('Undo')
       return vm.nextTick()
     }).then(done, done)
   })

@@ -107,7 +107,7 @@ p a
 </template>
 
 <script>
-/* global docsearch */
+/* global docsearch*/
 import menuEntry from './utils/menu-entry.vue'
 
 export default {
@@ -125,6 +125,7 @@ export default {
         name: 'Components',
         icon: 'extension',
         items: [
+          'Badges',
           'Buttons',
           'Cards',
           'Checkboxes',
@@ -152,7 +153,6 @@ export default {
         name: 'Directives',
         icon: 'settings_ethernet',
         items: [
-          'Badges',
           'Ripple Effect'
         ]
       }]

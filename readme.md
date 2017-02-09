@@ -22,9 +22,10 @@
 
 Reusable Vue components using [Material Design Lite](https://github.com/google/material-design-lite)
 
-**For a Vue 2 compatible version** check the `v1` branch. You can install that version with `npm install --save vue-mdl@next`.
+__Warning__: This project has not reached version 1 yet and there may be
+breaking changes until then. Contributions are welcome!
 
-‼️ vue-mdl relies on the **last versions of vue 1 and material design lite** but **does not include them**. Make sure to have your modules up to date 😉 and installed (**[Specially for MDL](https://getmdl.io/started/index.html#download)**). Remember to remove the `defer` attribute in case you copy pasted the lines from MDL Doc 😉. See [#20](https://github.com/posva/vue-mdl/issues/20).
+‼️ vue-mdl relies on the **last versions of vue and material design lite** but **does not include them**. Make sure to have your modules up to date 😉 and installed (**[Specially for MDL](https://getmdl.io/started/index.html#download)**). Remember to remove the `defer` attribute in case you copy pasted the lines from MDL Doc 😉. See [#20](https://github.com/posva/vue-mdl/issues/20).
 
 #Usage
 
@@ -108,8 +109,3 @@ Releasing is done using the git flow model
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2016 Eduardo San Martin Morote
-
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/posva/vue-mdl/badge.svg?style=beer-square)](https://beerpay.io/posva/vue-mdl)  [![Beerpay](https://beerpay.io/posva/vue-mdl/make-wish.svg?style=flat-square)](https://beerpay.io/posva/vue-mdl?focus=wish)

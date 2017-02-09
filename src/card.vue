@@ -15,11 +15,11 @@
     .mdl-card__actions.mdl-card--border
       mdl-anchor-button.mdl-js-ripple-effect(colored v-if='isActionsURL' v-bind:href='actions'
         v-bind:target='actionsTarget') {{actionsText}}
-      mdl-button.mdl-js-ripple-effect(colored v-else v-on:click='triggerActionsEvent') {{actionsText}}
+      mdl-button.mdl-js-ripple-effect(colored v-else @click.native='triggerActionsEvent') {{actionsText}}
   // TODO some way of creating a menu or action
   slot(name='menu' v-if='menu')
     .mdl-card__menu
-      mdl-button.mdl-js-ripple-effect(icon @click='triggerMenuEvent')
+      mdl-button.mdl-js-ripple-effect(icon @click.native='triggerMenuEvent')
         i.material-icons share
 
 </template>
@@ -48,40 +48,23 @@ export default {
     }
   },
   props: {
-    title: {
-      type: String,
-      default: true
-    },
-    menu: {
-      default: true
-    },
-    actions: {
-      type: String,
-      default: true
-    },
+    title: String,
+    menu: String,
+    actions: String,
     actionsTarget: {
       default: '_self',
       type: String
     },
     actionsText: String,
-    media: {
-      default: true,
-      type: String
-    },
-    subtitle: {
-      default: true,
-      type: String
-    },
-    supportingText: {
-      default: true,
-      type: String
-    }
+    media: String,
+    subtitle: String,
+    supportingText: String
   },
-  compiled () {
+  mounted () {
     slots.forEach((slot, pos) => {
       if (this[slot] === true) {
         let el = this.$el.children[pos]
-        if (!el || !el.attributes.getNamedItem('slot')) {
+        if (!el || !this.$el.attributes.getNamedItem('slot')) {
           this[slot] = ''
         }
       }
@@ -90,10 +73,10 @@ export default {
   },
   methods: {
     triggerMenuEvent () {
-      this.$dispatch(this.menu)
+      this.$emit(this.menu)
     },
     triggerActionsEvent () {
-      this.$dispatch(this.actions)
+      this.$emit(this.actions)
     }
   },
   components: {

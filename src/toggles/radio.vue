@@ -1,36 +1,56 @@
-<template lang="jade">
-label.mdl-radio.mdl-js-radio(v-bind:for.once='id' v-bind:class='{ "is-disabled": disabled, "is-checked": isChecked }')
-  input.mdl-radio__button(v-bind:id.once='id' type='radio' v-bind:name.once='name' v-bind:value='value' v-model='checked' v-bind:disabled='disabled')
-  span.mdl-radio__label
-    slot
+<template>
+  <label class="mdl-radio mdl-js-radio is-upgraded"
+         :for="id"
+         :class="cssClasses"
+  >
+    <input class="mdl-radio__button"
+           type="radio"
+           :id="id"
+           :name="name"
+           :value="val"
+           v-model="checked"
+           @change="fireChange"
+           :disabled="disabled"/>
+    <span class="mdl-radio__label">
+      <slot></slot>
+    </span>
+  </label>
 </template>
 
 <script>
-import propFill from '../mixins/prop-fill'
-
 export default {
   props: {
-    id: String,
     name: String,
+    disabled: { required: false },
+    id: String,
     value: {
+      type: [String, Number],
       required: true
     },
-    checked: {
-      required: true,
-      twoWay: true
-    },
-    disabled: {
-      fill: true
-    }
+    val: { required: true }
   },
   computed: {
+    checked: {
+      get () { return this.value },
+      set (val) { this.checkedProxy = val }
+    },
     isChecked () {
-      return this.checked === this.value
+      return this.value === this.val
+    },
+    cssClasses () {
+      return {
+        'is-disabled': this.disabled,
+        'is-checked': this.isChecked
+      }
     }
   },
-  ready () {
+  mounted () {
     componentHandler.upgradeElements(this.$el)
   },
-  mixins: [propFill]
+  methods: {
+    fireChange (event) {
+      this.$emit('input', this.checkedProxy)
+    }
+  }
 }
 </script>

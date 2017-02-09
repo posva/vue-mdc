@@ -2,11 +2,11 @@
 div
   h1 Ripple Effect
   h3 vue
-  mdl-button#button-ripple(v-mdl-ripple-effect) Hello
-  mdl-checkbox#checkbox-ripple(v-mdl-ripple-effect v-bind:checked.sync='check') Checkbox
-  mdl-radio#radio-ripple(v-mdl-ripple-effect value='one' v-bind:checked.sync='check') Radio
-  mdl-switch#switch-ripple(v-mdl-ripple-effect v-bind:checked.sync='check')
-  mdl-icon-toggle#icon-toggle-ripple(v-mdl-ripple-effect v-bind:checked.sync='check' icon='add')
+  mdl-button#button-ripple(mdl-ripple-effect) Hello
+  mdl-checkbox#checkbox-ripple(mdl-ripple-effect type="checkbox" v-model='check') Checkbox
+  mdl-radio#radio-ripple(mdl-ripple-effect val='one' type="radio" v-model='check') Radio
+  mdl-switch#switch-ripple(mdl-ripple-effect type="checkbox" v-model='check')
+  mdl-icon-toggle#icon-toggle-ripple(mdl-ripple-effect type="checkbox" v-model='check' icon='add')
 </template>
 
 <script lang="babel">

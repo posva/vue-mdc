@@ -1,24 +1,51 @@
-<template lang="jade">
-.mdl-textfield.mdl-js-textfield(v-bind:class='{"mdl-textfield--floating-label": floatingLabel, "mdl-textfield--expandable": expandable, "is-dirty": isDirty, "is-disabled": disabled}')
-  slot(v-if='expandable' name='expandable-button')
-    label.mdl-button.mdl-js-button.mdl-button--icon(v-bind:for.once='id')
-      i.material-icons {{expandable}}
-  div(v-bind:class='{"mdl-textfield__expandable-holder": expandable}')
-    slot(v-if='textarea' name='textarea')
-      textarea.mdl-textfield__input(type='text' v-model='value' v-bind:required='required' v-bind:id.once='id' v-bind:rows='rows' v-bind:disabled='disabled' v-bind:readonly='readonly' v-bind:maxlength='maxlength')
-    slot(v-else name='input')
-      input.mdl-textfield__input(v-bind:type='type' v-model='value' v-bind:id.once='id' v-bind:pattern='pattern' v-bind:disabled='disabled' v-bind:required='required' v-bind:readonly='readonly' v-bind:maxlength='maxlength')
-    slot(name='label')
-      label.mdl-textfield__label(v-bind:for.once='id') {{label}}
-    slot(name='error')
-      label.mdl-textfield__error(v-if='error') {{error}}
+<template>
+  <div class="mdl-textfield mdl-js-textfield"
+       :class="{'mdl-textfield--floating-label': floatingLabel, 'mdl-textfield--expandable': expandable, 'is-dirty': isDirty, 'is-disabled': disabled}">
+    <slot v-if="expandable" name="expandable-button">
+      <label class="mdl-button mdl-js-button mdl-button--icon" :for="id">
+        <i class="material-icons">{{expandable}}</i>
+      </label>
+    </slot>
+    <div :class="{'mdl-textfield__expandable-holder': expandable}">
+      <slot v-if="textarea" name="textarea">
+        <textarea class="mdl-textfield__input"
+                  ref="focusTarget"
+                  type="text"
+                  :value="value"
+                  @input="fireInputEvent"
+                  :required="required"
+                  :id="id"
+                  :rows="rows"
+                  :maxlength="maxlength">
+        </textarea>
+      </slot>
+      <slot v-else="v-else" name="input">
+        <input class="mdl-textfield__input"
+               ref="focusTarget"
+               :type="type"
+               :value="value"
+               @input="fireInputEvent"
+               :id="id" :pattern="pattern"
+               :disabled="disabled"
+               :required="required"
+               :readonly="readonly"
+               :autocomplete="autocomplete"
+               :maxlength="maxlength"/>
+      </slot>
+      <slot name="label">
+        <label class="mdl-textfield__label" v-if="displayLabel" :for="id">{{displayLabel}}</label>
+      </slot>
+      <slot name="error">
+        <label class="mdl-textfield__error" v-if="error">{{error}}</label>
+      </slot>
+    </div>
+  </div>
 </template>
 
 <script>
-import propFill from './mixins/prop-fill'
-
 export default {
   props: {
+    autocomplete: String,
     maxlength: {
       required: false
     },
@@ -55,25 +82,36 @@ export default {
     label: String,
     pattern: String,
     error: String,
-    textarea: {
-      fill: true
-    },
-    floatingLabel: {
-      required: false
-    }
+    textarea: Boolean,
+    floatingLabel: [Boolean, String]
   },
   computed: {
+    displayLabel () {
+      return this.label || this.floatingLabel
+    },
     isDirty () {
       return '' + this.value
     }
   },
-  ready () {
-    componentHandler.upgradeElement(this.$el)
-    if (this.floatingLabel && this.label == null) {
-      this.label = this.floatingLabel
-      this.$watch('floatingLabel', (val) => this.label = val)
+  methods: {
+    fireInputEvent: function (event) {
+      this.$emit('input', event.target.value)
+    },
+    focus () {
+      this.$refs.focusTarget.focus()
+      return this
+    },
+    select () {
+      this.$refs.focusTarget.select()
+      return this
+    },
+    blur () {
+      this.$refs.focusTarget.blur()
+      return this
     }
   },
-  mixins: [propFill]
+  mounted () {
+    componentHandler.upgradeElement(this.$el)
+  }
 }
 </script>

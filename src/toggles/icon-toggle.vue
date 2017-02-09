@@ -1,7 +1,16 @@
-<template lang="jade">
-label.mdl-icon-toggle.mdl-js-icon-toggle(v-bind:for.once='id' v-bind:class='{ "is-disabled": disabled, "is-checked": isChecked }')
-  input.mdl-icon-toggle__input(v-bind:value='value' type='checkbox' v-bind:id.once='id' v-model='checked' v-bind:disabled='disabled')
-  i.mdl-icon-toggle__label.material-icons {{icon}}
+<template>
+  <label class="mdl-icon-toggle mdl-js-icon-toggle is-upgraded"
+         :for="id"
+         :class="cssClasses">
+    <input class="mdl-icon-toggle__input"
+           type="checkbox"
+           :value="val"
+           :id="id"
+           v-model="checked"
+           @change="fireChange"
+           :disabled="disabled"/>
+    <i class="mdl-icon-toggle__label material-icons">{{icon}}</i>
+  </label>
 </template>
 
 <script>
@@ -14,9 +23,9 @@ export default {
       type: String
     }
   },
-  mixins: [common],
-  ready () {
+  mounted () {
     componentHandler.upgradeElements(this.$el)
-  }
+  },
+  mixins: [common]
 }
 </script>

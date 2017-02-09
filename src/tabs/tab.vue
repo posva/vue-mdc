@@ -38,7 +38,7 @@ export default {
       this.$parent.updateTab(tabToOject(oldTab), this.tabData)
     }
   },
-  ready () {
+  mounted () {
     this.$parent.addTab(this.tabData)
   },
   beforeDestroy () {

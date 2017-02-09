@@ -2,7 +2,7 @@ import Vue from 'vue'
 import {
   default as VueMdl,
   MdlCheckbox,
-  MdlBadge,
+  Mdl,
   components,
   directives
 } from '../../../src/vue-mdl'
@@ -10,12 +10,12 @@ import {
 describe('Register', () => {
   it('exports single components', () => {
     MdlCheckbox.should.exist.and.be.an.Object
-    MdlCheckbox.should.have.property('template')
+    MdlCheckbox.should.have.property('render')
   })
 
   it('exports single directives', () => {
-    MdlBadge.should.exist.and.be.an.Object
-    MdlBadge.should.have.property('bind')
+    Mdl.should.exist.and.be.an.Object
+    Mdl.should.have.property('bind')
   })
 
   it('exports all components', () => {
@@ -26,8 +26,8 @@ describe('Register', () => {
 
   it('exports all directives', () => {
     directives.should.exist.and.be.an.Object
-    directives.should.have.property('MdlBadge')
-    directives.MdlBadge.should.eql(MdlBadge)
+    directives.should.have.property('Mdl')
+    directives.Mdl.should.eql(Mdl)
   })
 
   it('exports a Vue plugin', () => {
@@ -40,6 +40,6 @@ describe('Register', () => {
   })
 
   it('has registered directives', () => {
-    Vue.directive('MdlBadge').should.exist
+    Vue.directive('Mdl').should.exist
   })
 })
