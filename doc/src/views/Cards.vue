@@ -35,7 +35,7 @@
 }
 .demo-card-welcome .mdl-card__title {
   height: 176px;
-  background: url('http://www.getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+  background: url('https://www.getmdl.io/assets/demos/welcome_card.jpg') center / cover;
 }
       </code>
       <code v-highlight class="html">
@@ -112,14 +112,14 @@ export default {
   .mdl-card__title
     color: white
     height: 176px
-    background: url('http://www.getmdl.io/assets/demos/welcome_card.jpg') center / cover
+    background: url('https://www.getmdl.io/assets/demos/welcome_card.jpg') center / cover
   .mdl-card__menu
     color: white
 
 .demo-card-image.mdl-card
   width: 256px
   height: 256px
-  background: url('http://www.getmdl.io/assets/demos/image_card.jpg') center / cover
+  background: url('https://www.getmdl.io/assets/demos/image_card.jpg') center / cover
   .mdl-card__actions
     height: 52px
     padding: 16px

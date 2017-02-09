@@ -1,8 +1,3 @@
-<style>
-  .mdl-badge--blue[data-badge]:after {
-    background: aquamarine;
-  }
-</style>
 <template>
   <div>
     <h1>Badges</h1>
@@ -53,3 +48,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .mdl-badge--blue[data-badge]:after {
+    background: aquamarine;
+  }
+</style>

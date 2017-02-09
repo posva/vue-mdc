@@ -14,16 +14,20 @@ export default {
     eventSource: {
       type: Object,
       required: false,
-      default: function () {
+      default () {
         return this.$root
       }
     }
   },
   mounted () {
     componentHandler.upgradeElement(this.$el, 'MaterialSnackbar')
-    this.eventSource.$on(this.displayOn, (snackbarConfig) => {
+    this.eventHandler = (snackbarConfig) => {
       this.$el.MaterialSnackbar.showSnackbar(snackbarConfig)
-    })
+    }
+    this.eventSource.$on(this.displayOn, this.eventHandler)
+  },
+  destroyed () {
+    this.eventSource.$off(this.displayOn, this.eventHandler)
   }
 }
 </script>

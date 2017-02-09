@@ -1,17 +1,20 @@
 <template>
-<div class="mdl-dialog-container" v-show="show">
-  <div class="mdl-dialog">
-    <div class="mdl-dialog__title">{{title}}</div>
-    <div class="mdl-dialog__content">
-      <slot></slot>
-    </div>
-    <div class="mdl-dialog__actions" :class="actionsClasses">
-      <slot name="actions">
-        <mdl-button class="mdl-js-ripple-effect" @click.native.stop="close">Close</mdl-button>
-      </slot>
+  <div class="mdl-dialog-container"
+       ref="out"
+       @click="closeIfOutside"
+       v-show="show">
+    <div class="mdl-dialog">
+      <div class="mdl-dialog__title">{{title}}</div>
+      <div class="mdl-dialog__content">
+        <slot></slot>
+      </div>
+      <div class="mdl-dialog__actions" :class="actionsClasses">
+        <slot name="actions">
+          <mdl-button class="mdl-js-ripple-effect" @click.native.stop="close">Close</mdl-button>
+        </slot>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -62,6 +65,9 @@ export default {
       this.show = false
       if (this._focusTrap) this._focusTrap.deactivate()
       this.$emit('close')
+    },
+    closeIfOutside ({ target }) {
+      if (target === this.$refs.out) this.close()
     }
   },
 

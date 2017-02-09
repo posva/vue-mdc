@@ -1,5 +1,6 @@
 <template>
   <a class="mdl-tabs__tab"
+     @click.prevent
      href="#"
   >{{tab.title}}
     <span ref="ripple"
