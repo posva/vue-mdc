@@ -9,7 +9,7 @@
 
       <div class="flex center wrap">
         <p>Selected tab: {{selected}}</p>
-        <mdl-tabs :selected.sync="selected">
+        <mdl-tabs v-model="selected">
           <mdl-tab tab="Tab 1">
             <p>Content of Tab 1</p>
           </mdl-tab>
@@ -23,8 +23,8 @@
       </div>
 
       <pre>
-        <code class="html">
-&lt;mdl-tabs :selected.sync=&quot;selected&quot;&gt;
+        <code v-highlight class="html">
+&lt;mdl-tabs v-model=&quot;selected&quot;&gt;
   &lt;mdl-tab tab=&quot;Tab 1&quot;&gt;
     &lt;p&gt;Content of Tab 1&lt;/p&gt;
   &lt;/mdl-tab&gt;
@@ -44,7 +44,7 @@
 
       <div class="flex center wrap">
         <p>Selected tab: {{selectedCustom}}</p>
-        <mdl-tabs :selected.sync="selectedCustom">
+        <mdl-tabs v-model="selectedCustom">
           <mdl-tab :tab="{ title: 'Title', id: 'tab-1' }">
             <p>Content of first Tab</p>
           </mdl-tab>
@@ -58,8 +58,8 @@
       </div>
 
       <pre>
-        <code class="html">
-&lt;mdl-tabs :selected.sync=&quot;selected&quot;&gt;
+        <code v-highlight class="html">
+&lt;mdl-tabs v-model=&quot;selected&quot;&gt;
   &lt;mdl-tab :tab=&quot;{ title: 'Title', id: 'tab-1' }&quot;&gt;
     &lt;p&gt;Content of first Tab&lt;/p&gt;
   &lt;/mdl-tab&gt;
@@ -85,10 +85,10 @@
 
           <tr>
             <td class="mdl-data-table__cell--non-numeric mdl-data-table__cell--code">
-              <code>selected</code>
+              <code>value</code>
             </td>
             <td class="mdl-data-table__cell--non-numeric">Defines the selected tab</td>
-            <td class="mdl-data-table__cell--non-numeric">This must be passed with the <code>sync</code> modifier. It will contain the identifier of the tab which is, by default, its index</td>
+            <td class="mdl-data-table__cell--non-numeric">You should use the <code>v-model</code> directive instead of binding the <code>value</code> prop. It will contain the identifier of the tab which is, by default, its index</td>
           </tr>
 
           <tr>
