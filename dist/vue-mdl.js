@@ -2630,9 +2630,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var _this = this;
 	
 	    componentHandler.upgradeElement(this.$el, 'MaterialSnackbar');
-	    this.eventSource.$on(this.displayOn, function (snackbarConfig) {
+	    this.eventHandler = function (snackbarConfig) {
 	      _this.$el.MaterialSnackbar.showSnackbar(snackbarConfig);
-	    });
+	    };
+	    this.eventSource.$on(this.displayOn, this.eventHandler);
+	  },
+	  destroyed: function destroyed() {
+	    this.eventSource.$off(this.displayOn, this.eventHandler);
 	  }
 	};
 
@@ -3340,6 +3344,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.show = false;
 	      if (this._focusTrap) this._focusTrap.deactivate();
 	      this.$emit('close');
+	    },
+	    closeIfOutside: function closeIfOutside(_ref) {
+	      var target = _ref.target;
+	
+	      if (target === this.$refs.out) this.close();
 	    }
 	  },
 	
@@ -3708,7 +3717,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      value: (_vm.show),
 	      expression: "show"
 	    }],
-	    staticClass: "mdl-dialog-container"
+	    ref: "out",
+	    staticClass: "mdl-dialog-container",
+	    on: {
+	      "click": _vm.closeIfOutside
+	    }
 	  }, [_c('div', {
 	    staticClass: "mdl-dialog"
 	  }, [_c('div', {
@@ -3926,6 +3939,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    staticClass: "mdl-tabs__tab",
 	    attrs: {
 	      "href": "#"
+	    },
+	    on: {
+	      "click": function($event) {
+	        $event.preventDefault();
+	      }
 	    }
 	  }, [_vm._v(_vm._s(_vm.tab.title) + "\n  "), _c('span', {
 	    directives: [{
