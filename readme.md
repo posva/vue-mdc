@@ -20,6 +20,8 @@
 
 #Intro
 
+[![Join the chat at https://gitter.im/posva/vue-mdl](https://badges.gitter.im/posva/vue-mdl.svg)](https://gitter.im/posva/vue-mdl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Reusable Vue components using [Material Design Lite](https://github.com/google/material-design-lite)
 
 ‼️ vue-mdl relies on the **last versions of vue and material design lite** but **does not include them**. Make sure to have your modules up to date 😉 and installed (**[Specially for MDL](https://getmdl.io/started/index.html#download)**). Remember to remove the `defer` attribute in case you copy pasted the lines from MDL Doc 😉. See [#20](https://github.com/posva/vue-mdl/issues/20).
