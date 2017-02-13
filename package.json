@@ -81,7 +81,7 @@
     "normalize.css": "^5.0.0",
     "ora": "^1.0.0",
     "phantomjs-prebuilt": "^2.1.14",
-    "sass-loader": "^5.0.0",
+    "sass-loader": "^6.0.0",
     "selenium-server": "^3.0.1",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
