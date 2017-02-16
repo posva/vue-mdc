@@ -93,7 +93,7 @@
     "vue-html-loader": "^1.2.3",
     "vue-loader": "latest",
     "vue-router": "^2.1.1",
-    "vue-style-loader": "^1.0.0",
+    "vue-style-loader": "^2.0.0",
     "vue-template-compiler": "^2.1.6",
     "vue-transfer-dom": "^1.1.0",
     "webpack": "^1.14.0",
