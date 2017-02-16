@@ -17,12 +17,9 @@
 </template>
 
 <script>
-import common from '../mixins/toggle'
+import toggle from '../mixins/toggle'
 
 export default {
-  mounted () {
-    componentHandler.upgradeElements(this.$el)
-  },
-  mixins: [common]
+  mixins: [toggle]
 }
 </script>

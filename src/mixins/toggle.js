@@ -34,5 +34,8 @@ export default {
     fireChange (event) {
       this.$emit('input', this.checkedProxy)
     }
+  },
+  mounted () {
+    componentHandler.upgradeElements(this.$el)
   }
 }
