@@ -2,5 +2,44 @@
   "name": "vue-mdc",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "author": "Eduardo San Martin Morote <posva13@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yon run build:common && yon run build:browser && yon run build:browser:min",
+    "build:browser": "cross-env NODE_ENV=browser yon run build:browser:base",
+    "build:browser:base": "webpack --config build/webpack.config.browser.js --progress --hide-modules",
+    "build:browser:min": "cross-env NODE_ENV=production yon build:browser:base -- -p",
+    "build:common": "cross-env NODE_ENV=common webpack --config build/webpack.config.common.js --progress --hide-modules"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.1.8",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "beta",
+    "material-components-web": "^0.4.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.1",
+    "uppercamelcase": "^1.1.0",
+    "vue-loader": "^11.0.0",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.2.1",
+    "webpack-bundle-analyzer": "^2.3.0",
+    "webpack-merge": "^2.6.1",
+    "yarn-or-npm": "^2.0.3"
+  },
+  "babel": {
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": ["last 2 versions", "ie >= 11"]
+        }
+      }]
+    ],
+    "plugins": [
+      "transform-object-assign"
+    ]
+  }
 }
