@@ -5,7 +5,7 @@
   "author": "Eduardo San Martin Morote <posva13@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dashboard -- webpack-dev-server --config build/webpack.config.dev.js",
+    "dev": "webpack-dashboard -- webpack-dev-server --config build/webpack.config.dev.js --open",
     "test:unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "build:dll": "webpack --progress --config build/webpack.config.dll.js",
     "postinstall": "yon run build:dll",

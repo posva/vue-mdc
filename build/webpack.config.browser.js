@@ -14,11 +14,6 @@ module.exports = merge(base, {
     library: moduleName,
     libraryTarget: 'umd',
   },
-  externals: {
-    // Put external libraries like lodash here
-    // With their global name
-    // Example: 'lodash': '_'
-  },
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',

@@ -9,11 +9,6 @@ module.exports = merge(base, {
     libraryTarget: 'commonjs2',
   },
   target: 'node',
-  externals: {
-    // Put external libraries like lodash here
-    // With their package name
-    // Example: 'lodash': 'lodash'
-  },
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
