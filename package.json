@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "webpack-dashboard -- webpack-dev-server --config build/webpack.config.dev.js",
     "test:unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
+    "build:dll": "webpack --progress --config build/webpack.config.dll.js",
+    "postinstall": "yon run build:dll",
     "build": "yon run build:common && yon run build:browser && yon run build:browser:min",
     "build:browser": "cross-env NODE_ENV=browser yon run build:browser:base",
     "build:browser:base": "webpack --config build/webpack.config.browser.js --progress --hide-modules",
@@ -55,6 +57,20 @@
     "webpack-dev-server": "^2.3.0",
     "webpack-merge": "^2.6.1",
     "yarn-or-npm": "^2.0.3"
+  },
+  "dllPlugin": {
+    "name": "visualTestingDeps",
+    "include": [
+      "mocha/mocha.js",
+      "vue/dist/vue.js",
+      "chai",
+      "core-js/library",
+      "url",
+      "sockjs-client",
+      "vue-style-loader/lib/addStylesClient.js",
+      "style-loader/addStyles.js",
+      "css-loader!mocha-css"
+    ]
   },
   "babel": {
     "presets": [
