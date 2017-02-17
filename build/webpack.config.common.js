@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const merge = require('webpack-merge')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const base = require('./webpack.config.base')
@@ -13,7 +12,7 @@ module.exports = merge(base, {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
-      reportFilename: resolve(__dirname, `../reports/${process.env.NODE_ENV}.html`)
+      reportFilename: resolve(__dirname, `../reports/${process.env.NODE_ENV}.html`),
     }),
   ],
 })

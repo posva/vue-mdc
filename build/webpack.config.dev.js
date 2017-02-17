@@ -8,9 +8,9 @@ const base = require('./webpack.config.base')
 const { resolve, join } = require('path')
 const { existsSync } = require('fs')
 const {
-  filename,
   dllName,
-  moduleName
+  logError,
+  red,
 } = require('./utils')
 
 const rootDir = resolve(__dirname, '../test')
@@ -37,7 +37,7 @@ module.exports = merge(base, {
   plugins: [
     new webpack.DllReferencePlugin({
       context: join(__dirname, '..'),
-      manifest: dllManifest
+      manifest: dllManifest,
     }),
     new HtmlWebpackPlugin({
       chunkSortMode: 'dependency',
@@ -45,7 +45,7 @@ module.exports = merge(base, {
     new AddAssetHtmlPlugin({
       filepath: require.resolve(
         join(buildPath, dllName) + '.dll.js'
-      )
+      ),
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -55,18 +55,18 @@ module.exports = merge(base, {
             /\.js$/.test(module.resource) &&
             module.resource.indexOf(join(__dirname, '../node_modules/')) === 0
         )
-      }
+      },
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
-      chunks: ['vendor']
+      chunks: ['vendor'],
     }),
     new DashboardPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
-      reportFilename: resolve(__dirname, `../reports/${process.env.NODE_ENV}.html`)
-    })
+      reportFilename: resolve(__dirname, `../reports/${process.env.NODE_ENV}.html`),
+    }),
   ],
   devtool: '#eval-source-map',
   devServer: {

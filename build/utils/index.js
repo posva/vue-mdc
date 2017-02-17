@@ -1,10 +1,15 @@
+const {
+  red,
+  logError,
+} = require('./log')
+
 const uppercamelcase = require('uppercamelcase')
 
 const {
   author,
   name,
   version,
-  dllPlugin
+  dllPlugin,
 } = require('../../package.json')
 
 const authorName = author.replace(/\s+<.*/, '')
@@ -21,3 +26,7 @@ exports.banner = `/*!
  * Released under the MIT License.
  */
 `
+
+// log.js
+exports.red = red
+exports.logError = logError

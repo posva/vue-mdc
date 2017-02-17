@@ -14,15 +14,15 @@ module.exports = {
   output: {
     path: buildPath,
     filename: '[name].dll.js',
-    library: '[name]'
+    library: '[name]',
   },
   plugins: [
     new webpack.DllPlugin({
       name: '[name]',
-      path: join(buildPath, '[name].json')
-    })
+      path: join(buildPath, '[name].json'),
+    }),
   ],
   performance: {
-    hints: false
-  }
+    hints: false,
+  },
 }

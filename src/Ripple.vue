@@ -20,7 +20,7 @@ export default {
 
   mounted () {
     this._ripple = new MDCRipple(this.$el)
-  }
+  },
 }
 </script>
 

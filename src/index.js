@@ -18,5 +18,5 @@ export default plugin
 const version = 2
 export {
   version,
-  MdcRipple
+  MdcRipple,
 }

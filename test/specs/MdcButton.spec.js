@@ -6,6 +6,7 @@ describe('Button.vue', function () {
     const vm = createVM(this, `
 <MdcButton></MdcButton>
 `, { components: { MdcButton }})
+    vm
     // vm.$el.querySelector('.hello h1').textContent.should.eql('MdcButton World!')
   })
 })

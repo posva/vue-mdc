@@ -5,37 +5,35 @@ const { resolve, join } = require('path')
 const {
   banner,
   filename,
-  version
+  version,
 } = require('./utils')
 
 // It'd be better to add a sass property to the vue-loader options
 // but it simply don't work
 const sassOptions = {
   includePaths: [
-    join(__dirname, '../node_modules')
-  ]
+    join(__dirname, '../node_modules'),
+  ],
 }
 
 // don't extract css in test mode
 const vueLoaders = process.env.BABEL_ENV === 'test'
-      ?
-        {
-          scss: `css-loader!sass-loader?${JSON.stringify(sassOptions)}`,
-        }
-      :
-        {
-          css: ExtractTextPlugin.extract('css-loader'),
-          scss: ExtractTextPlugin.extract(
+      ? {
+        scss: `css-loader!sass-loader?${JSON.stringify(sassOptions)}`,
+      }
+      : {
+        css: ExtractTextPlugin.extract('css-loader'),
+        scss: ExtractTextPlugin.extract(
             `css-loader!sass-loader?${JSON.stringify(sassOptions)}`
           ),
-        }
+      }
 
 const plugins = [
   new webpack.DefinePlugin({
     '__VERSION__': JSON.stringify(version),
     'process.env.NODE_ENV': '"test"',
   }),
-  new webpack.BannerPlugin({banner, raw: true, entryOnly: true}),
+  new webpack.BannerPlugin({ banner, raw: true, entryOnly: true }),
 ]
 
 // Don't extract css in test mode
@@ -54,8 +52,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.jsx', 'css'],
     alias: {
-      'src': resolve(__dirname, '../src')
-    }
+      'src': resolve(__dirname, '../src'),
+    },
   },
   module: {
     rules: [
