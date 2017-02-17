@@ -51,6 +51,12 @@ module.exports = {
     filename: `${filename}.common.js`,
   },
   entry: './src/index.js',
+  resolve: {
+    extensions: ['.js', '.vue', '.jsx', 'css'],
+    alias: {
+      'src': resolve(__dirname, '../src')
+    }
+  },
   module: {
     rules: [
       {

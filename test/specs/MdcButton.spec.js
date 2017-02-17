@@ -1,4 +1,4 @@
-import MdcButton from '../../src/Button.vue'
+import MdcButton from 'src/Button.vue'
 import { createVM } from '../helpers/utils.js'
 
 describe('Button.vue', function () {
