@@ -1,0 +1,19 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+machine:
+  pre:
+  - mkdir ~/.yarn-cache
+  node:
+    version: 6
+dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  cache_directories:
+    - ~/.yarn-cache
+  override:
+    - yarn install
+test:
+  override:
+    - yarn test
