@@ -3,6 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const { resolve, join } = require('path')
 
 const {
+  banner,
   filename,
   version
 } = require('./utils')
@@ -50,5 +51,6 @@ module.exports = {
       '__VERSION__': JSON.stringify(version),
     }),
     new ExtractTextPlugin(`${filename}.css`),
+    new webpack.BannerPlugin({banner, raw: true, entryOnly: true}),
   ],
 }
