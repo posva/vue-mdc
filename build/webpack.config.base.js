@@ -16,9 +16,38 @@ const sassOptions = {
   ]
 }
 
+// don't extract css in test mode
+const vueLoaders = process.env.BABEL_ENV === 'test'
+      ?
+        {
+          scss: `css-loader!sass-loader?${JSON.stringify(sassOptions)}`,
+        }
+      :
+        {
+          css: ExtractTextPlugin.extract('css-loader'),
+          scss: ExtractTextPlugin.extract(
+            `css-loader!sass-loader?${JSON.stringify(sassOptions)}`
+          ),
+        }
+
+const plugins = [
+  new webpack.DefinePlugin({
+    '__VERSION__': JSON.stringify(version),
+    'process.env.NODE_ENV': '"test"',
+  }),
+  new webpack.BannerPlugin({banner, raw: true, entryOnly: true}),
+]
+
+// Don't extract css in test mode
+if (process.env.BABEL_ENV !== 'test') {
+  plugins.push(
+    new ExtractTextPlugin(`${filename}.css`)
+  )
+}
+
 module.exports = {
   output: {
-    path: './dist',
+    path: resolve(__dirname, '../dist'),
     filename: `${filename}.common.js`,
   },
   entry: './src/index.js',
@@ -28,29 +57,19 @@ module.exports = {
         test: /.js$/,
         use: 'babel-loader',
         include: [
-          resolve(__dirname, '../node_modules'),
+          resolve(__dirname, '../node_modules/@material'),
           resolve(__dirname, '../src'),
+          resolve(__dirname, '../test'),
         ],
       },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          loaders: {
-            css: ExtractTextPlugin.extract('css-loader'),
-            scss: ExtractTextPlugin.extract(
-              `css-loader!sass-loader?${JSON.stringify(sassOptions)}`
-            ),
-          },
+          loaders: vueLoaders,
         },
       },
     ],
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      '__VERSION__': JSON.stringify(version),
-    }),
-    new ExtractTextPlugin(`${filename}.css`),
-    new webpack.BannerPlugin({banner, raw: true, entryOnly: true}),
-  ],
+  plugins,
 }
