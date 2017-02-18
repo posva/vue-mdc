@@ -24,9 +24,9 @@ import MdlChip from './chip.vue'
 import MdlLayout from './layout/layout.vue'
 import MdlLayoutHeaderRow from './layout/header-row.vue'
 import MdlLayoutDrawer from './layout/drawer.vue'
-import MdlLayoutContent from './layout/content.vue'
-import MdlLayoutSpacer from './layout/spacer.vue'
-import MdlNav from './nav/nav.vue'
+import MdlLayoutContent from './layout/content.js'
+import MdlLayoutSpacer from './layout/spacer.js'
+import MdlNav from './nav/nav.js'
 import MdlNavLink from './nav/link.js'
 
 export const components = {
@@ -103,5 +103,8 @@ export {
   MdlLayout,
   MdlLayoutHeaderRow,
   MdlLayoutDrawer,
-  MdlLayoutContent
+  MdlLayoutContent,
+  MdlLayoutSpacer,
+  MdlNav,
+  MdlNavLink
 }
