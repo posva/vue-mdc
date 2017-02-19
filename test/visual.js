@@ -1,3 +1,4 @@
+/* global requestAnimationFrame */
 import 'style-loader!css-loader!mocha-css'
 import 'style-loader!css-loader!./helpers/style.css'
 
@@ -10,6 +11,8 @@ import 'mocha/mocha.js'
 import chai from 'chai'
 window.mocha.setup('bdd')
 chai.should()
+
+let vms = []
 
 beforeEach(function () {
   this.DOMElement = document.createElement('DIV')
@@ -24,7 +27,18 @@ afterEach(function () {
   if (!lastReportElement) return
   const el = document.getElementById(this.DOMElement.id)
   lastReportElement.appendChild(el)
-  if (this.DOMElement.vm) this.DOMElement.vm.visible = false
+  // Save the vm to hide it later
+  if (this.DOMElement.vm) vms.push(this.DOMElement.vm)
+})
+
+// Hide all tests at the end to prevent some weird bugs
+before(function () {
+  vms = []
+})
+after(function () {
+  requestAnimationFrame(function () {
+    vms.forEach(vm => { vm.visible = false })
+  })
 })
 
 const specsContext = require.context('./specs', true)

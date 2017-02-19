@@ -11,6 +11,7 @@ const {
   dllName,
   logError,
   red,
+  vueLoaders,
 } = require('./utils')
 
 const rootDir = resolve(__dirname, '../test')
@@ -33,6 +34,18 @@ module.exports = merge(base, {
     path: buildPath,
     filename: '[name].js',
     chunkFilename: '[id].js',
+  },
+  module: {
+    rules: [
+      {
+        test: /.scss$/,
+        loader: vueLoaders.scss,
+        include: [
+          resolve(__dirname, '../node_modules/@material'),
+          resolve(__dirname, '../src'),
+        ],
+      },
+    ],
   },
   plugins: [
     new webpack.DllReferencePlugin({

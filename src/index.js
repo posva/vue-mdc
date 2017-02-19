@@ -1,11 +1,14 @@
-import MdcRipple from './Ripple.vue'
+import ripple from './ripple.js'
 import MdcCard from './Card.vue'
 import MdcButton from './Button.vue'
 
+// import './style.scss'
+
 function plugin (Vue) {
-  Vue.component('mdc-ripple', MdcRipple)
-  Vue.component('mdc-card', MdcCard)
-  Vue.component('mdc-button', MdcButton)
+  // Vue.component('mdc-ripple', MdcRipple)
+  Vue.component('MdcCard', MdcCard)
+  Vue.component('MdcButton', MdcButton)
+  Vue.directive('ripple', ripple)
 }
 
 // Install by default if using the script tag
@@ -18,5 +21,4 @@ export default plugin
 const version = 2
 export {
   version,
-  MdcRipple,
 }

@@ -5,6 +5,7 @@ const { resolve } = require('path')
 const {
   filename,
   moduleName,
+  vueLoaders,
 } = require('./utils')
 
 module.exports = merge(base, {
@@ -12,6 +13,18 @@ module.exports = merge(base, {
     filename: `${filename}.js`,
     library: moduleName,
     libraryTarget: 'umd',
+  },
+  module: {
+    rules: [
+      {
+        test: /.scss$/,
+        use: vueLoaders.scss,
+        include: [
+          resolve(__dirname, '../node_modules/@material'),
+          resolve(__dirname, '../src'),
+        ],
+      },
+    ],
   },
   plugins: [
     new BundleAnalyzerPlugin({
