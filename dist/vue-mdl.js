@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.MdlLayoutContent = exports.MdlLayoutDrawer = exports.MdlLayoutHeaderRow = exports.MdlLayout = exports.MdlChip = exports.MdlTab = exports.MdlTabs = exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlBadge = exports.MdlCheckbox = exports.Mdl = exports.directives = exports.components = undefined;
+	exports.MdlNavLink = exports.MdlNav = exports.MdlLayoutSpacer = exports.MdlLayoutContent = exports.MdlLayoutDrawer = exports.MdlLayoutHeaderRow = exports.MdlLayout = exports.MdlChip = exports.MdlTab = exports.MdlTabs = exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlBadge = exports.MdlCheckbox = exports.Mdl = exports.directives = exports.components = undefined;
 	
 	var _keys = __webpack_require__(1);
 	
@@ -169,6 +169,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _content2 = _interopRequireDefault(_content);
 	
+	var _spacer = __webpack_require__(128);
+	
+	var _spacer2 = _interopRequireDefault(_spacer);
+	
+	var _nav = __webpack_require__(129);
+	
+	var _nav2 = _interopRequireDefault(_nav);
+	
+	var _link = __webpack_require__(130);
+	
+	var _link2 = _interopRequireDefault(_link);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var components = exports.components = {
@@ -196,7 +208,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  MdlLayout: _layout2.default,
 	  MdlLayoutHeaderRow: _headerRow2.default,
 	  MdlLayoutDrawer: _drawer2.default,
-	  MdlLayoutContent: _content2.default
+	  MdlLayoutContent: _content2.default,
+	  MdlLayoutSpacer: _spacer2.default,
+	  MdlNav: _nav2.default,
+	  MdlNavLink: _link2.default
 	};
 	
 	var directives = exports.directives = {
@@ -239,6 +254,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.MdlLayoutHeaderRow = _headerRow2.default;
 	exports.MdlLayoutDrawer = _drawer2.default;
 	exports.MdlLayoutContent = _content2.default;
+	exports.MdlLayoutSpacer = _spacer2.default;
+	exports.MdlNav = _nav2.default;
+	exports.MdlNavLink = _link2.default;
 
 /***/ },
 /* 1 */
@@ -791,10 +809,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  mounted: function mounted() {
-	    componentHandler.upgradeElements(this.$el);
-	  },
-	
 	  mixins: [_toggle2.default]
 	};
 
@@ -846,6 +860,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    fireChange: function fireChange(event) {
 	      this.$emit('input', this.checkedProxy);
 	    }
+	  },
+	  mounted: function mounted() {
+	    componentHandler.upgradeElements(this.$el);
 	  }
 	};
 
@@ -1585,10 +1602,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      type: String
 	    }
 	  },
-	  mounted: function mounted() {
-	    componentHandler.upgradeElements(this.$el);
-	  },
-	
 	  mixins: [_toggle2.default]
 	};
 
@@ -1874,10 +1887,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  mounted: function mounted() {
-	    componentHandler.upgradeElements(this.$el);
-	  },
-	
 	  mixins: [_toggle2.default]
 	};
 
@@ -4623,61 +4632,101 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 127 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
+	'use strict';
 	
-	/* template */
-	var __vue_template__ = __webpack_require__(128)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/layout/content.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  functional: true,
+	  render: function render(createElement, context) {
+	    var data = context.data;
 	
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-62362f08", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-62362f08", __vue_options__)
+	    data['class'] = data['class'] || {};
+	    data['class']['mdl-layout__content'] = true;
+	
+	    return createElement('main', data, context.children);
 	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] content.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-	
-	module.exports = __vue_exports__
-
+	};
 
 /***/ },
 /* 128 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('main', {
-	    staticClass: "mdl-layout__content"
-	  }, [_vm._t("default")], 2)
-	},staticRenderFns: []}
-	module.exports.render._withStripped = true
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-62362f08", module.exports)
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  functional: true,
+	  render: function render(createElement, context) {
+	    var data = context.data;
+	
+	    data['class'] = data['class'] || {};
+	    data['class']['mdl-layout-spacer'] = true;
+	
+	    return createElement('div', data, []);
 	  }
-	}
+	};
+
+/***/ },
+/* 129 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  functional: true,
+	  render: function render(createElement, context) {
+	    var data = context.data;
+	
+	    data['class'] = data['class'] || {};
+	    data['class']['mdl-navigation'] = true;
+	
+	    return createElement('nav', data, context.children);
+	  }
+	};
+
+/***/ },
+/* 130 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  functional: true,
+	  props: {
+	    icon: String
+	  },
+	  render: function render(createElement, context) {
+	    var children = context.children;
+	    var data = context.data;
+	
+	    if (context.props.icon) {
+	      var icon = createElement('i', {
+	        'class': {
+	          'material-icons': true
+	        }
+	      }, context.props.icon);
+	
+	      children.unshift(icon);
+	    }
+	
+	    data['class'] = data['class'] || {};
+	    data['class']['mdl-navigation__link'] = true;
+	
+	    return createElement('a', data, children);
+	  }
+	};
 
 /***/ }
 /******/ ])
