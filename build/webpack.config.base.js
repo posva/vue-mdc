@@ -34,14 +34,12 @@ const plugins = [
     'process.env.NODE_ENV': '"test"',
   }),
   new webpack.BannerPlugin({ banner, raw: true, entryOnly: true }),
+  new ExtractTextPlugin({
+    filename: `${filename}.css`,
+    // Don't extract css in test mode
+    disable: /^(common|test)$/.test(process.env.NODE_ENV),
+  }),
 ]
-
-// Don't extract css in test mode
-if (process.env.BABEL_ENV !== 'test') {
-  plugins.push(
-    new ExtractTextPlugin(`${filename}.css`)
-  )
-}
 
 module.exports = {
   output: {
