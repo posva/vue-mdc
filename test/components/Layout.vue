@@ -12,23 +12,23 @@
                   :fixed-drawer="fixedDrawer"
                   class="demo-layout-transparent">
         <mdl-layout-header-row title="Title here" slot="header">
-          <div class="mdl-layout-spacer"></div>
+          <mdl-layout-spacer/>
           <!-- Navigation -->
-          <nav class="mdl-navigation">
+          <mdl-nav>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+          </mdl-nav>
         </mdl-layout-header-row>
 
         <mdl-layout-drawer title="Title Here">
-          <nav class="mdl-navigation">
+          <mdl-nav>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+          </mdl-nav>
         </mdl-layout-drawer>
 
         <mdl-layout-content>
@@ -45,23 +45,23 @@
                   :fixed-drawer="fixedDrawer"
       >
         <mdl-layout-header-row title="Title here" slot="header">
-          <div class="mdl-layout-spacer"></div>
+          <mdl-layout-spacer/>
           <!-- Navigation -->
-          <nav class="mdl-navigation">
+          <mdl-nav>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+          </mdl-nav>
         </mdl-layout-header-row>
 
         <mdl-layout-drawer title="Title Here">
-          <nav class="mdl-navigation">
+          <mdl-nav>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+          </mdl-nav>
         </mdl-layout-drawer>
 
         <mdl-layout-content>
@@ -83,23 +83,23 @@
         </mdl-layout-header-row>
 
         <mdl-layout-header-row slot="header">
-          <div class="mdl-layout-spacer"></div>
+          <mdl-layout-spacer/>
           <!-- Navigation -->
-          <nav class="mdl-navigation">
+          <mdl-nav>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+          </mdl-nav>
         </mdl-layout-header-row>
 
         <mdl-layout-drawer title="Title Here">
-          <nav class="mdl-navigation">
+          <mdl-nav>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
-          </nav>
+          </mdl-nav>
         </mdl-layout-drawer>
 
         <mdl-layout-content>
