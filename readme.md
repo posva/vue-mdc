@@ -22,9 +22,6 @@
 
 Reusable Vue components using [Material Design Lite](https://github.com/google/material-design-lite)
 
-__Warning__: This project has not reached version 1 yet and there may be
-breaking changes until then. Contributions are welcome!
-
 ‼️ vue-mdl relies on the **last versions of vue and material design lite** but **does not include them**. Make sure to have your modules up to date 😉 and installed (**[Specially for MDL](https://getmdl.io/started/index.html#download)**). Remember to remove the `defer` attribute in case you copy pasted the lines from MDL Doc 😉. See [#20](https://github.com/posva/vue-mdl/issues/20).
 
 #Usage

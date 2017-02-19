@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import common from '../mixins/toggle'
+import toggle from '../mixins/toggle'
 
 export default {
   props: {
@@ -23,9 +23,6 @@ export default {
       type: String
     }
   },
-  mounted () {
-    componentHandler.upgradeElements(this.$el)
-  },
-  mixins: [common]
+  mixins: [toggle]
 }
 </script>

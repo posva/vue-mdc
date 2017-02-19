@@ -211,6 +211,6 @@ p a
 
 .algolia-autocomplete
   direction: rtl !important
-  .aa-dropdown-menu.aa-with-0
+  .aa-dropdown-menu
     right: 0 !important
 </style>
