@@ -24,4 +24,15 @@ describe('Button.vue', function () {
     vm
     // vm.$el.querySelector('.hello h1').textContent.should.eql('MdcButton World!')
   })
+
+  it('lol ripple', function () {
+    const vm = createVM(this, `
+  <div style="min-height: 100px" v-ripple>Click me</div>
+`, {
+  components: { MdcButton },
+  directives: { ripple },
+})
+    vm
+    // vm.$el.querySelector('.hello h1').textContent.should.eql('MdcButton World!')
+  })
 })

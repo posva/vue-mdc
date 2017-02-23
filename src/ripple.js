@@ -11,10 +11,9 @@ export default {
     })
   },
   unbind (el, context) {
-    if (!el.mdcRipple_) {
-      return
+    if (el.mdcRipple_) {
+      el.mdcRipple_.destroy()
+      delete el.mdcRipple_
     }
-    el.mdcRipple_.destroy()
-    delete el.mdcRipple_
   },
 }

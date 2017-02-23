@@ -12,7 +12,7 @@
     "src"
   ],
   "scripts": {
-    "dev": "webpack-dashboard -- webpack-dev-server --config build/webpack.config.dev.js --open",
+    "dev": "cross-env NODE_ENV=dev webpack-dashboard -- webpack-dev-server --config build/webpack.config.dev.js --open",
     "test": "yon run lint && yon run test:unit",
     "test:unit": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "build:dll": "webpack --progress --config build/webpack.config.dll.js",
@@ -88,14 +88,18 @@
     "name": "visualTestingDeps",
     "include": [
       "mocha/mocha.js",
+      "style-loader!css-loader!mocha-css",
+      "style-loader!css-loader!./test/helpers/style.css",
+      "html-entities",
       "vue/dist/vue.js",
       "chai",
       "core-js/library",
       "url",
       "sockjs-client",
       "vue-style-loader/lib/addStylesClient.js",
-      "style-loader/addStyles.js",
-      "css-loader!mocha-css"
+      "events",
+      "ansi-html",
+      "style-loader/addStyles.js"
     ]
   },
   "babel": {
