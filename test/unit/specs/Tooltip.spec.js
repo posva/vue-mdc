@@ -3,11 +3,12 @@ import { vueTest } from '../utils'
 
 describe('Tooltip', () => {
   let vm
-  let tooltip, large
+  let tooltip, large, top
   before(() => {
     vm = vueTest(Tooltip)
     tooltip = vm.$('[for=tooltip]')
     large = vm.$('[for=large]')
+    top = vm.$('[for=top]')
   })
 
   it('exists', () => {
@@ -31,5 +32,9 @@ describe('Tooltip', () => {
 
   it('can have user added classes', () => {
     large.should.have.class('added-class')
+  })
+
+  it('can be top', () => {
+    top.should.have.class('mdl-tooltip--top')
   })
 })
