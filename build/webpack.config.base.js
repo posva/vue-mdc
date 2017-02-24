@@ -37,7 +37,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.js$/,
+        test: /.jsx?$/,
         use: 'babel-loader',
         include: [
           resolve(__dirname, '../node_modules/@material'),
@@ -50,6 +50,7 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: vueLoaders,
+          postcss: [require('postcss-cssnext')()],
         },
       },
     ],

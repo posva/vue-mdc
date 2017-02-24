@@ -43,11 +43,14 @@ const sassOptions = {
 }
 
 // don't extract css in test mode
+const nullLoader = process.env.NODE_ENV === 'common' ? 'null-loader!' : ''
 exports.vueLoaders =
   process.env.BABEL_ENV === 'test' ? {
+    css: 'css-loader',
     scss: `css-loader!sass-loader?${JSON.stringify(sassOptions)}`,
   } : {
+    css: ExtractTextPlugin.extract(`${nullLoader}css-loader`),
     scss: ExtractTextPlugin.extract(
-      `${process.env.NODE_ENV === 'common' ? 'null-loader!' : ''}css-loader!sass-loader?${JSON.stringify(sassOptions)}`
+      `${nullLoader}css-loader!sass-loader?${JSON.stringify(sassOptions)}`
     ),
   }
