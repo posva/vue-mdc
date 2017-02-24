@@ -47,6 +47,26 @@
             <td class="mdl-data-table__cell--non-numeric">Makes the tooltip bigger</td>
             <td class="mdl-data-table__cell--non-numeric"></td>
           </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric"><code>left</code></td>
+            <td class="mdl-data-table__cell--non-numeric">Positions the tooltip to the left</td>
+            <td class="mdl-data-table__cell--non-numeric"></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric"><code>right</code></td>
+            <td class="mdl-data-table__cell--non-numeric">Positions the tooltip to the right</td>
+            <td class="mdl-data-table__cell--non-numeric"></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric"><code>top</code></td>
+            <td class="mdl-data-table__cell--non-numeric">Positions the tooltip to the top</td>
+            <td class="mdl-data-table__cell--non-numeric"></td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric"><code>bottom</code></td>
+            <td class="mdl-data-table__cell--non-numeric">Positions the tooltip to the bottom</td>
+            <td class="mdl-data-table__cell--non-numeric"></td>
+          </tr>
         </tbody>
       </table>
       <br/>

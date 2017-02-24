@@ -14,6 +14,8 @@ div
   mdl-tooltip(v-bind:class='{hoho: active}' target='tooltip') Add something
   i.material-icons#large print
   mdl-tooltip.added-class(target='large' large) Print
+  i.material-icons#top settings
+  mdl-tooltip(target='top' top) Settings
   <mdl-tooltip target='html' large>Print</mdl-tooltip>
   mdl-spinner#spin
   mdl-tooltip(target='spin')

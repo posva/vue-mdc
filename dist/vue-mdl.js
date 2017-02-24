@@ -2206,7 +2206,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	      required: true,
 	      type: String
 	    },
-	    large: Boolean
+	    large: Boolean,
+	    left: Boolean,
+	    right: Boolean,
+	    top: Boolean,
+	    bottom: Boolean
+	  },
+	  computed: {
+	    cssClasses: function cssClasses() {
+	      return {
+	        'mdl-tooltip--large': this.large,
+	        'mdl-tooltip--left': this.left,
+	        'mdl-tooltip--right': this.right,
+	        'mdl-tooltip--top': this.top,
+	        'mdl-tooltip--bottom': this.bottom
+	      };
+	    }
 	  },
 	  mounted: function mounted() {
 	    componentHandler.upgradeElement(this.$el, 'MaterialTooltip');
@@ -2220,9 +2235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-tooltip",
-	    class: {
-	      'mdl-tooltip--large': _vm.large
-	    },
+	    class: _vm.cssClasses,
 	    attrs: {
 	      "for": _vm.target
 	    }
