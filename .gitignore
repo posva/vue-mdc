@@ -5,3 +5,4 @@ test/coverage
 dist
 yarn-error.log
 reports
+.yarnclean
