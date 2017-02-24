@@ -8,6 +8,7 @@
 
 ```bash
 npm install --save vue-mdc
+yarn install -D vue-mdc
 ```
 
 ## Usage
