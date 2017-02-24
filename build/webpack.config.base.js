@@ -50,7 +50,6 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: vueLoaders,
-          postcss: [require('postcss-cssnext')()],
         },
       },
     ],

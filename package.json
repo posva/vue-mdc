@@ -70,7 +70,6 @@
     "mocha-css": "^1.0.1",
     "node-sass": "^4.5.0",
     "null-loader": "^0.1.1",
-    "postcss-cssnext": "^2.9.0",
     "pre-commit": "^1.2.2",
     "sass-loader": "^6.0.1",
     "sinon": "^1.17.7",
