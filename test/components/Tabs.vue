@@ -13,9 +13,9 @@
         Tab 3
       </mdl-tab>
       <mdl-tab
-          v-for="(tab, index) in dynTabs"
+          v-for="(tab, index) in tabs"
           :key="index"
-          :tab="{title: tab, id: index}"
+          :tab="tab"
       >
         {{tab}}
       </mdl-tab>
