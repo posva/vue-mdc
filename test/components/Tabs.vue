@@ -17,6 +17,8 @@
           :key="index"
           :tab="tab"
       >
+        {{tab}}
+      </mdl-tab>
     </mdl-tabs>
 
     <mdl-tabs id="dyn-tabs" ref="tabs" v-model="selected">
