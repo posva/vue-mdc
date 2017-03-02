@@ -12,8 +12,8 @@
     "build:prod": "webpack --bail --progress --hide-modules --config build/webpack.dist.prod.conf.js",
     "build:dev": "webpack --bail --progress --hide-modules --config build/webpack.dist.dev.conf.js",
     "dev": "karma start test/unit/karma.dev.conf.js",
-    "dev:integration": "NODE_ENV=dev node build/dev-server.js",
-    "dev:doc": "NODE_ENV=doc node build/dev-server.js",
+    "dev:integration": "cross-env NODE_ENV=dev node build/dev-server.js",
+    "dev:doc": "cross-env NODE_ENV=doc node build/dev-server.js",
     "doc": "webpack -p --progress --bail --config build/webpack.gh-pages.conf.js"
   },
   "keywords": [
@@ -45,6 +45,7 @@
     "babel-runtime": "^6.20.0",
     "chai": "^3.5.0",
     "connect-history-api-fallback": "^1.3.0",
+    "cross-env": "^3.1.4",
     "css-loader": "^0.26.1",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
