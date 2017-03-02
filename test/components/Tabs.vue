@@ -12,6 +12,13 @@
       <mdl-tab tab="Tab 3">
         Tab 3
       </mdl-tab>
+      <mdl-tab
+          v-for="(tab, index) in dynTabs"
+          :key="index"
+          :tab="{title: tab, id: index}"
+      >
+        {{tab}}
+      </mdl-tab>
     </mdl-tabs>
 
     <mdl-tabs id="dyn-tabs" ref="tabs" v-model="selected">
