@@ -94,7 +94,6 @@
     "include": [
       "mocha/mocha.js",
       "style-loader!css-loader!mocha-css",
-      "style-loader!css-loader!./test/helpers/style.css",
       "html-entities",
       "vue/dist/vue.js",
       "chai",

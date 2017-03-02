@@ -1,4 +1,5 @@
 import Vue from 'vue/dist/vue.js'
+import Test from './Test.vue'
 
 const isKarma = !!window.__karma__
 
@@ -12,78 +13,46 @@ export function createKarmaTest (context, template, opts) {
   const el = document.createElement('div')
   document.getElementById('tests').appendChild(el)
   const render = typeof template === 'string'
-               ? { template }
-               : { render: template }
+          ? { template }
+          : { render: template }
   return new Vue({
     el,
     name: 'Test',
     ...render,
-    ...opts
+    ...opts,
   })
 }
 
 export function createVisualTest (context, template, opts) {
-  const render = typeof template === 'string'
-          ? { template: `
-<div :class="containerClasses" id="${context.DOMElement.id}">
-<div role="button"
-@click="toggle"
-class="test-dom-container__toggle"
-v-text="buttonText"
-></div>
-<div class="test-dom-container__content">
-${template}
-</div>
-</div>
-` }
-        : {
-          render (h) {
-            return (
-              <div class={this.containerClasses}
-                   id={context.DOMElement.id}
-              >
-                <div role='button'
-                     onClick={this.toggle}
-                     class='test-dom-container__toggle'
-                >{this.buttonText}</div>
-                <div class='test-dom-container__content'>
-                  {
-                    h({
-                      render: template,
-                      name: 'JsxTestContainer',
-                      ...opts
-                    })
-                  }
-                </div>
-              </div>
-            )
-          }
-        }
-  const vm = new Vue({
-    el: context.DOMElement,
-    data: {
-      visible: true
-    },
-    computed: {
-      containerClasses () {
-        return {
-          'test-dom-container': true,
-          'test-dom-container--hidden': !this.visible
-        }
+  let vm
+  if (typeof template === 'string') {
+    opts.components = opts.components || {}
+    // Let the user define a test component
+    if (!opts.components.Test) {
+      opts.components.Test = Test
+    }
+    vm = new Vue({
+      name: 'TestContainer',
+      el: context.DOMElement,
+      template: `<Test id="${context.DOMElement.id}">${template}</Test>`,
+      ...opts,
+    })
+  } else {
+    // TODO allow redefinition of Test component
+    vm = new Vue({
+      name: 'TestContainer',
+      el: context.DOMElement,
+      render (h) {
+        return h(Test, {
+          attrs: {
+            id: context.DOMElement.id,
+          },
+          // render the passed component with this scope
+        }, [template.call(this, h)])
       },
-      buttonText () {
-        return this.visible ? '-' : '+'
-      }
-    },
-    methods: {
-      toggle () {
-        this.visible = !this.visible
-      }
-    },
-    name: 'Test',
-    ...render,
-    ...opts
-  })
+      ...opts,
+    })
+  }
 
   context.DOMElement.vm = vm
   return vm

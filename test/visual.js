@@ -9,14 +9,20 @@ document.body.appendChild(mochaDiv)
 
 import 'mocha/mocha.js'
 import chai from 'chai'
-window.mocha.setup('bdd')
+window.mocha.setup({
+  ui: 'bdd',
+  globals: [
+    '__VUE_DEVTOOLS_INSTANCE_MAP__',
+  ],
+})
 chai.should()
 
 let vms = []
+let testId = 0
 
 beforeEach(function () {
   this.DOMElement = document.createElement('DIV')
-  this.DOMElement.id = `test-${Math.floor(Math.random() * 1000000)}`
+  this.DOMElement.id = `test-${++testId}`
   document.body.appendChild(this.DOMElement)
 })
 
@@ -26,7 +32,7 @@ afterEach(function () {
 
   if (!lastReportElement) return
   const el = document.getElementById(this.DOMElement.id)
-  lastReportElement.appendChild(el)
+  if (el) lastReportElement.appendChild(el)
   // Save the vm to hide it later
   if (this.DOMElement.vm) vms.push(this.DOMElement.vm)
 })
@@ -34,10 +40,13 @@ afterEach(function () {
 // Hide all tests at the end to prevent some weird bugs
 before(function () {
   vms = []
+  testId = 0
 })
 after(function () {
   requestAnimationFrame(function () {
-    vms.forEach(vm => { vm.visible = false })
+    setTimeout(function () {
+      vms.forEach(vm => { vm.$children[0].visible = false })
+    }, 100)
   })
 })
 
