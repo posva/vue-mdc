@@ -19,7 +19,7 @@
     <input id="classic" type="checkbox" v-model="check"/><span>Classic checkbox</span>
     <input id="disable" type="checkbox" v-model="disabled"/><span>Disable</span>
     <mdl-checkbox v-if="disabled" id="v-if" type="checkbox" v-model="check" :disabled="disabled">v-if</mdl-checkbox>
-    <mdl-checkbox v-for="(label, n) in 3" :val="indexId(n)" :id="indexId(n)" type="checkbox" v-model="checks">v-for {{indexId(n)}}</mdl-checkbox>
+    <mdl-checkbox v-for="(label, n) in 3" :val="indexId(n)" :id="indexId(n)" :key="indexId(n)" type="checkbox" v-model="checks">v-for {{indexId(n)}}</mdl-checkbox>
     <p id="checks">{{checks}}</p>
   </div>
 </template>

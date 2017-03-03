@@ -19,7 +19,7 @@
     <input id="classic" type="checkbox" v-model="check"/><span>Classic icon-toggle</span>
     <input id="disable" type="checkbox" v-model="disabled"/><span>Disable</span>
     <mdl-icon-toggle v-if="disabled" icon="face" id="v-if" type="checkbox" v-model="check" :disabled="disabled"></mdl-icon-toggle>
-    <mdl-icon-toggle v-for="(label, n) in 3" icon="face" :val="indexId(n)" :id="indexId(n)" type="checkbox" v-model="checks"></mdl-icon-toggle>
+    <mdl-icon-toggle v-for="(label, n) in 3" icon="face" :val="indexId(n)" :id="indexId(n)" :key="indexId(n)" type="checkbox" v-model="checks"></mdl-icon-toggle>
     <p id="its">{{checks}}</p>
   </div>
 </template>
