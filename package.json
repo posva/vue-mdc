@@ -27,7 +27,7 @@
     "test": "cross-env BABEL_ENV=test karma start test/karma.conf.js --single-run",
     "dev": "webpack-dashboard -- webpack-dev-server --config build/webpack.config.dev.js --open",
     "dev:coverage": "cross-env BABEL_ENV=test karma start test/karma.conf.js",
-    "prepublish": "yon run build"
+    "prepublish": "in-publish && yon run build || true"
   },
   "lint-staged": {
     "*.{vue,jsx,js}": [
@@ -57,6 +57,7 @@
     "extract-text-webpack-plugin": "^2.0.0",
     "function-bind": "^1.1.0",
     "html-webpack-plugin": "^2.28.0",
+    "in-publish": "^2.0.0",
     "karma": "^1.5.0",
     "karma-chai-dom": "^1.1.0",
     "karma-chrome-launcher": "^2.0.0",
