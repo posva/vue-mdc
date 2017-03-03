@@ -16,13 +16,13 @@ export default {
   componentUpdated (el, binding, vnode, oldVnode) {
     // Always recreate for functional components
     if (vnode.functionalContext) {
-      console.log('updated', el)
       el.mdcRipple_.destroy()
       binding.def.bind(el, binding)
     }
   },
 
   unbind (el, binding) {
+    // istanbul ignore else
     if (el.mdcRipple_) {
       el.mdcRipple_.destroy()
       el.classList.remove(surfaceClass)
