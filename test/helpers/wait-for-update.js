@@ -1,5 +1,4 @@
 import Vue from 'vue/dist/vue.js'
-const isKarma = !!window.__karma__
 
 // Testing helper
 // nextTick().then(() => {
@@ -37,11 +36,7 @@ function nextTick () {
         shift(result)
       }
     } else if (jobs.length) {
-      if (isKarma) {
-        setTimeout(() => Vue.nextTick(shift), 0)
-      } else {
-        requestAnimationFrame(() => Vue.nextTick(shift))
-      }
+      requestAnimationFrame(() => Vue.nextTick(shift))
     }
   }
 

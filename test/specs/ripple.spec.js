@@ -1,8 +1,12 @@
 import ripple from 'src/ripple.js'
-import { createVM } from '../helpers/utils.js'
+import { isKarma, createVM } from '../helpers/utils.js'
 import { nextTick } from '../helpers/wait-for-update.js'
 
 describe('Ripple', function () {
+  // Skip those because they wont work on outdated browsers
+  // like Chrome 43 ...
+  if (process.env.CI && isKarma) this.skip()
+
   it('upgrades a div', function (done) {
     const vm = createVM(this, function (h) {
       return (
