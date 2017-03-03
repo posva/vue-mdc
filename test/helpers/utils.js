@@ -9,6 +9,24 @@ export function createVM (context, template, opts = {}) {
     : createVisualTest(context, template, opts)
 }
 
+Vue.prototype.$$ = function $$ (selector) {
+  const els = document.querySelectorAll(selector)
+  const vmEls = this.$el.querySelectorAll(selector)
+  const fn = vmEls.length
+          ? el => vmEls.find(el)
+          : el => this.$el === el
+  return Array.from(els).filter(fn)
+}
+
+Vue.prototype.$ = function $ (selector) {
+  const els = document.querySelectorAll(selector)
+  const vmEl = this.$el.querySelector(selector)
+  const fn = vmEl
+          ? el => el === vmEl
+          : el => el === this.$el
+  return Array.from(els).find(fn)
+}
+
 export function createKarmaTest (context, template, opts) {
   const el = document.createElement('div')
   document.getElementById('tests').appendChild(el)
@@ -61,3 +79,5 @@ export function createVisualTest (context, template, opts) {
 export function register (name, component) {
   Vue.component(name, component)
 }
+
+export { isKarma }

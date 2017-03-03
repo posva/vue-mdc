@@ -20,5 +20,7 @@ export default plugin
 // Export all components too
 const version = 2
 export {
+  MdcButton,
   version,
+  ripple,
 }

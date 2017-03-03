@@ -1,12 +1,3 @@
-// Polyfill fn.bind() for PhantomJS
-import bind from 'function-bind'
-/* eslint-disable no-extend-native */
-Function.prototype.bind = bind
-
-// Polyfill Object.assign for PhantomJS
-import objectAssign from 'object-assign'
-Object.assign = objectAssign
-
 // require all src files for coverage.
 // you can also change this to match only the subset of files that
 // you want coverage for.
