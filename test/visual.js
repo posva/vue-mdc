@@ -8,6 +8,7 @@ mochaDiv.id = 'mocha'
 document.body.appendChild(mochaDiv)
 
 import 'mocha/mocha.js'
+import sinon from 'sinon'
 import chai from 'chai'
 window.mocha.setup({
   ui: 'bdd',
@@ -18,7 +19,9 @@ window.mocha.setup({
     'script',
   ],
 })
+window.sinon = sinon
 chai.use(require('chai-dom'))
+chai.use(require('sinon-chai'))
 chai.should()
 
 let vms = []

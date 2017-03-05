@@ -11,14 +11,16 @@ export default {
     accent: Boolean,
   },
 
-  render (h, { data, props, children, parent }) {
+  render (h, { data, props, children }) {
     const staticClass = Object.keys(props).reduce((classes, key) => {
       if (props[key]) classes += ` mdc-button--${key}`
       return classes
     }, 'mdc-button')
+    data.staticClass = data.staticClass
+                     ? `${data.staticClass} ${staticClass}`
+                     : staticClass
     return h('button', {
       ...data,
-      staticClass,
     }, children)
   },
 }
