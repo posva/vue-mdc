@@ -87,7 +87,7 @@
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^2.4.0",
+    "stylus-loader": "^3.0.0",
     "url-loader": "^0.5.7",
     "vue": "latest",
     "vue-hot-reload-api": "^2.0.6",
