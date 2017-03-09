@@ -15,6 +15,7 @@
     "clean": "rimraf dist",
     "build": "yon run build:common && yon run build:browser && yon run build:browser:min",
     "build:common": "cross-env NODE_ENV=common webpack --config build/webpack.config.common.js --progress --hide-modules",
+    "build:esm": "cross-env NODE_ENV=esm webpack --config build/webpack.config.esm.js --progress --hide-modules",
     "build:browser:base": "webpack --config build/webpack.config.browser.js --progress --hide-modules",
     "build:browser": "cross-env NODE_ENV=browser yon run build:browser:base",
     "build:browser:min": "cross-env NODE_ENV=production yon build:browser:base -- -p",
