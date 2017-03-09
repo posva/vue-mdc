@@ -1,10 +1,10 @@
 import MdcCard from 'src/Card/Card.vue'
 import MdcCardTitle from 'src/Card/CardTitle.js'
-import { createVM } from '../helpers/utils.js'
-import { nextTick } from '../helpers/wait-for-update.js'
+import MdcCardSubtitle from 'src/Card/CardSubtitle.js'
+import { createVM, nextTick, dataPropagationTest } from '../helpers'
 
 describe('Card.vue', function () {
-  it('should have a title and subtitle', function () {
+  it('can have a title', function () {
     const vm = createVM(this, `
 <MdcCard class="title">
 <MdcCardTitle slot="primary">Title</MdcCardTitle>
@@ -33,6 +33,19 @@ describe('Card.vue', function () {
     }).then(done)
   })
 
+  it('can have a title and subtitle', function () {
+    const vm = createVM(this, `
+<MdcCard class="multi">
+<MdcCardTitle slot="primary">Title</MdcCardTitle>
+<MdcCardSubtitle slot="primary">subtitle</MdcCardSubtitle>
+</MdcCard>
+`, {
+  components: { MdcCard, MdcCardTitle, MdcCardSubtitle },
+})
+    vm.$('.multi .mdc-card__title').should.have.text('Title')
+    vm.$('.multi .mdc-card__subtitle').should.have.text('subtitle')
+  })
+
   it('can have a subtitle as a prop', function (done) {
     const vm = createVM(this, `
 <MdcCard class="prop" :subtitle="sub"></MdcCard>
@@ -46,4 +59,7 @@ describe('Card.vue', function () {
       vm.$('.prop .mdc-card__sub').should.not.exist
     }).then(done)
   })
+
+  it('keeps original data in Title', dataPropagationTest(MdcCardTitle))
+  it('keeps original data in Subtitle', dataPropagationTest(MdcCardSubtitle))
 })

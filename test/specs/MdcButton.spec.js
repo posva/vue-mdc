@@ -1,6 +1,5 @@
 import MdcButton from 'src/Button.vue'
-import { createVM } from '../helpers/utils.js'
-import { nextTick } from '../helpers/wait-for-update.js'
+import { createVM, nextTick, dataPropagationTest } from '../helpers'
 
 describe('Button.vue', function () {
   it('renders an upgraded button', function () {
@@ -13,18 +12,7 @@ describe('Button.vue', function () {
     vm.$('button').should.have.class('mdc-button')
   })
 
-  it('keeps original tag data', function () {
-    const spy = sinon.spy()
-    const vm = createVM(this, function (h) {
-      return (
-        <MdcButton staticClass='custom' onClick={spy}>Hello</MdcButton>
-      )
-    })
-    spy.should.have.not.been.called
-    vm.$('button').click()
-    spy.should.have.been.calledOnce
-    vm.$('button').should.have.class('custom')
-  })
+  it('keeps original tag data', dataPropagationTest(MdcButton))
 
   describe('attrs', function () {
     const attrs = [
