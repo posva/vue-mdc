@@ -1,5 +1,5 @@
 import ripple from './ripple.js'
-import MdcCard from './Card.vue'
+import MdcCard from './Card/Card.vue'
 import MdcButton from './Button.vue'
 
 // import './style.scss'

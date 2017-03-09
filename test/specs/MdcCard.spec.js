@@ -1,5 +1,5 @@
-import MdcCard from 'src/Card.vue'
-import MdcCardTitle from 'src/CardTitle.js'
+import MdcCard from 'src/Card/Card.vue'
+import MdcCardTitle from 'src/Card/CardTitle.js'
 import { createVM } from '../helpers/utils.js'
 import { nextTick } from '../helpers/wait-for-update.js'
 
