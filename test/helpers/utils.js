@@ -9,13 +9,17 @@ export function createVM (context, template, opts = {}) {
     : createVisualTest(context, template, opts)
 }
 
+const emptyNodes = document.querySelectorAll('nonexistant')
 Vue.prototype.$$ = function $$ (selector) {
   const els = document.querySelectorAll(selector)
   const vmEls = this.$el.querySelectorAll(selector)
   const fn = vmEls.length
           ? el => vmEls.find(el)
           : el => this.$el === el
-  return Array.from(els).filter(fn)
+  const found = Array.from(els).filter(fn)
+  return found.length
+    ? found
+    : emptyNodes
 }
 
 Vue.prototype.$ = function $ (selector) {
@@ -24,7 +28,8 @@ Vue.prototype.$ = function $ (selector) {
   const fn = vmEl
           ? el => el === vmEl
           : el => el === this.$el
-  return Array.from(els).find(fn)
+  // Allow should chaining for tests
+  return Array.from(els).find(fn) || emptyNodes
 }
 
 export function createKarmaTest (context, template, opts) {
