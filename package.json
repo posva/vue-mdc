@@ -19,7 +19,6 @@
     "build:browser": "cross-env NODE_ENV=browser yon run build:browser:base",
     "build:browser:min": "cross-env NODE_ENV=production yon build:browser:base -- -p",
     "build:dll": "webpack --progress --config build/webpack.config.dll.js",
-    "postinstall": "yon run build:dll",
     "lint": "eslint --ext js --ext jsx --ext vue src test/**/*.spec.js test/*.js build",
     "lint:fix": "yon run lint:js -- --fix",
     "lint:staged": "lint-staged",
