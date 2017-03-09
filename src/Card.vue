@@ -3,7 +3,7 @@
     <section class="mdc-card__primary">
       <slot name="primary">
         <CardTitle v-if="title" large>{{ title }}</CardTitle>
-        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+        <CardSubtitle v-if="subtitle">{{ subtitle }}</CardSubtitle>
       </slot>
     </section>
     <section class="mdc-card__supporting-text">
@@ -21,16 +21,19 @@
 
 <script>
 import CardTitle from './CardTitle'
+import CardSubtitle from './CardSubtitle'
 
 export default {
   name: 'MdcCard',
 
   props: {
     title: String,
+    subtitle: String,
   },
 
   components: {
     CardTitle,
+    CardSubtitle,
   },
 }
 </script>
