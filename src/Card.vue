@@ -1,8 +1,10 @@
 <template>
   <div class="mdc-card">
     <section class="mdc-card__primary">
-      <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
-      <h2 class="mdc-card__subtitle">Subtitle here</h2>
+      <slot name="primary">
+        <CardTitle v-if="title" large>{{ title }}</CardTitle>
+        <h2 class="mdc-card__subtitle">Subtitle here</h2>
+      </slot>
     </section>
     <section class="mdc-card__supporting-text">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -18,8 +20,18 @@
 </template>
 
 <script>
+import CardTitle from './CardTitle'
+
 export default {
   name: 'MdcCard',
+
+  props: {
+    title: String,
+  },
+
+  components: {
+    CardTitle,
+  },
 }
 </script>
 

@@ -22,6 +22,7 @@ export default plugin
 const version = 2
 export {
   MdcButton,
+  MdcCard,
   version,
   ripple,
 }
