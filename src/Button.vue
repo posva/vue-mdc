@@ -1,4 +1,6 @@
 <script>
+import { propsToClasses } from 'src/utils'
+
 export default {
   name: 'MdcButton',
   functional: true,
@@ -12,10 +14,7 @@ export default {
   },
 
   render (h, { data, props, children }) {
-    const staticClass = Object.keys(props).reduce((classes, key) => {
-      if (props[key]) classes += ` mdc-button--${key}`
-      return classes
-    }, 'mdc-button')
+    const staticClass = propsToClasses('mdc-button', props)
     data.staticClass = data.staticClass
                      ? `${data.staticClass} ${staticClass}`
                      : staticClass

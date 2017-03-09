@@ -1,3 +1,5 @@
+import { propsToClasses } from 'src/utils'
+
 export default {
   name: 'MdcCardTitle',
   functional: true,
@@ -7,10 +9,7 @@ export default {
   },
 
   render (h, { data, children, props, parent }) {
-    const staticClass = Object.keys(props).reduce((classes, key) => {
-      if (props[key]) classes += ` mdc-card__title--${key}`
-      return classes
-    }, 'mdc-card__title')
+    const staticClass = propsToClasses('mdc-card__title', props)
     data.staticClass = data.staticClass
                      ? `${data.staticClass} ${staticClass}`
                      : staticClass
