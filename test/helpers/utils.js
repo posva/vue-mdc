@@ -80,4 +80,4 @@ export function register (name, component) {
   Vue.component(name, component)
 }
 
-export { isKarma }
+export { isKarma, Vue }

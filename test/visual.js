@@ -17,6 +17,8 @@ window.mocha.setup({
   globals: [
     '__VUE_DEVTOOLS_INSTANCE_MAP__',
     'script',
+    'inject',
+    'originalOpenFunction',
   ],
 })
 window.sinon = sinon

@@ -5,6 +5,7 @@
   "globals": {
     "expect": true,
     "sinon": true,
+    "should": true,
     "requestAnimationFrame": true
   }
 }

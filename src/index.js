@@ -12,6 +12,7 @@ function plugin (Vue) {
 }
 
 // Install by default if using the script tag
+// istanbul ignore if
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(plugin)
 }
