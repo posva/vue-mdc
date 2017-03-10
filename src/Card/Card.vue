@@ -20,15 +20,16 @@
     <CardSupportingText v-if="supportingText || $slots.supportingText">
       <slot name="supporting-text">{{ supportingText }}</slot>
     </CardSupportingText>
-    <section class="mdc-card__actions" v-if="$slots.actions">
+    <CardActions  v-if="$slots.actions">
       <slot name="actions"></slot>
-    </section>
+    </CardActions>
   </div>
 </template>
 
 <script>
 import CardTitle from './CardTitle'
 import CardSubtitle from './CardSubtitle'
+import CardActions from './CardActions'
 import CardMedia from './CardMedia'
 import CardSupportingText from './CardSupportingText'
 
@@ -48,6 +49,7 @@ export default {
   },
 
   components: {
+    CardActions,
     CardTitle,
     CardSubtitle,
     CardMedia,
