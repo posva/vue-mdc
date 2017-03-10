@@ -19,7 +19,6 @@ export default {
     data.staticClass = data.staticClass
                      ? `${data.staticClass} ${staticClass}`
                      : staticClass
-    console.log(staticClass, props)
     return h('button', {
       ...data,
     }, children)

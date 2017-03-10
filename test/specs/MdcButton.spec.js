@@ -32,7 +32,6 @@ describe('Button.vue', function () {
               [camelcase(attr)]: this.active,
             },
           }
-          console.log(opts.props)
           return (
             <MdcButton {...opts}>{attr}</MdcButton>
           )
