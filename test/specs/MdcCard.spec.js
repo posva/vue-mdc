@@ -3,10 +3,12 @@ import MdcButton from 'src/Button.vue'
 import MdcCardTitle from 'src/Card/CardTitle.js'
 import MdcCardSubtitle from 'src/Card/CardSubtitle.js'
 import MdcCardMedia from 'src/Card/CardMedia.js'
+import MdcCardHorizontalBlock from 'src/Card/CardHorizontalBlock.js'
+import MdcCardPrimary from 'src/Card/CardPrimary.js'
 import MdcCardSupportingText from 'src/Card/CardSupportingText.js'
 import { createVM, nextTick, dataPropagationTest } from '../helpers'
 const largeImg = 'http://material-components-web.appspot.com/images/16-9.jpg'
-// const squareImg = 'http://material-components-web.appspot.com/images/1-1.jpg'
+const squareImg = 'http://material-components-web.appspot.com/images/1-1.jpg'
 
 describe('Card.vue', function () {
   it('can have a title', function () {
@@ -159,5 +161,32 @@ describe('Card.vue', function () {
   components: { MdcCard, MdcButton },
 })
     vm.$('.mdc-card').should.have.class('mdc-card--theme-dark')
+  })
+
+  it('horizontal block', function () {
+    const vm = createVM(this, `
+<MdcCard style="max-width: 21.875rem;">
+  <MdcCardHorizontalBlock>
+    <MdcCardPrimary>
+      <MdcCardTitle large>Title Here</MdcCardTitle>
+      <MdcCardSubtitle>Subtitle Here</MdcCardSubtitle>
+    </MdcCardPrimary>
+    <img class="mdc-card__media-item mdc-card__media-item--1dot5x" src="${squareImg}">
+  </MdcCardHorizontalBlock>
+  <MdcButton slot="actions" compact>Action 1</MdcButton>
+  <MdcButton slot="actions" compact>Action 2</MdcButton>
+</MdcCard>
+`, {
+  components: {
+    MdcCard,
+    MdcButton,
+    MdcCardTitle,
+    MdcCardSubtitle,
+    MdcCardPrimary,
+    MdcCardHorizontalBlock,
+  },
+})
+    vm.$('.mdc-card__horizontal-block .mdc-card__primary .mdc-card__title').should.exist
+    vm.$('.mdc-card__horizontal-block .mdc-card__primary .mdc-card__subtitle').should.exist
   })
 })
