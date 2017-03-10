@@ -1,5 +1,7 @@
 <template>
-  <div class="mdc-card">
+  <div class="mdc-card"
+       :class="cardClasses"
+  >
     <CardMedia v-if="media"
                class="mdc-card__media--default"
                :media="media"
@@ -42,6 +44,7 @@ export default {
       type: String,
       default: '12.313rem',
     },
+    themeDark: Boolean,
   },
 
   components: {
@@ -55,6 +58,11 @@ export default {
     mediaStyle () {
       return {
         height: this.mediaHeight,
+      }
+    },
+    cardClasses () {
+      return {
+        'mdc-card--theme-dark': this.themeDark,
       }
     },
   },

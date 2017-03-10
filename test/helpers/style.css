@@ -65,3 +65,7 @@
   visibility: hidden;
 }
 
+.mdc-card--theme-dark .mdc-card__primary,
+.mdc-card--theme-dark .mdc-card__actions {
+  background: rgba(0, 0, 0, .4);
+}

@@ -1,4 +1,5 @@
 import MdcCard from 'src/Card/Card.vue'
+import MdcButton from 'src/Button.vue'
 import MdcCardTitle from 'src/Card/CardTitle.js'
 import MdcCardSubtitle from 'src/Card/CardSubtitle.js'
 import MdcCardMedia from 'src/Card/CardMedia.js'
@@ -147,5 +148,16 @@ describe('Card.vue', function () {
     nextTick().then(() => {
       vm.$('.mdc-card__actions').should.not.exist
     }).then(done)
+  })
+
+  it('can apply a dark theme', function () {
+    const vm = createVM(this, `
+<MdcCard theme-dark title="Hello there">
+<MdcButton slot="actions" compact>Action</MdcButton>
+</MdcCard>
+`, {
+  components: { MdcCard, MdcButton },
+})
+    vm.$('.mdc-card').should.have.class('mdc-card--theme-dark')
   })
 })
