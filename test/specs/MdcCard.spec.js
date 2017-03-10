@@ -131,4 +131,21 @@ describe('Card.vue', function () {
       vm.$('.mdc-card__supporting-text').should.not.exist
     }).then(done)
   })
+
+  it('has an actions slot', function (done) {
+    const vm = createVM(this, `
+<MdcCard>
+<p v-if="show" slot="actions">Actions</p>
+</MdcCard>
+`, {
+  data: { show: true },
+  components: { MdcCard },
+})
+    vm.$('.mdc-card__actions').should.exist
+    vm.$('.mdc-card__actions').should.have.text('Actions')
+    vm.show = false
+    nextTick().then(() => {
+      vm.$('.mdc-card__actions').should.not.exist
+    }).then(done)
+  })
 })

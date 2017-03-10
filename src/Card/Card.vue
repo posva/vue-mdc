@@ -18,9 +18,8 @@
     <CardSupportingText v-if="supportingText || $slots.supportingText">
       <slot name="supporting-text">{{ supportingText }}</slot>
     </CardSupportingText>
-    <section class="mdc-card__actions">
-      <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-      <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
+    <section class="mdc-card__actions" v-if="$slots.actions">
+      <slot name="actions"></slot>
     </section>
   </div>
 </template>
