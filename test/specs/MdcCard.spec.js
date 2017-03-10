@@ -2,6 +2,7 @@ import MdcCard from 'src/Card/Card.vue'
 import MdcCardTitle from 'src/Card/CardTitle.js'
 import MdcCardSubtitle from 'src/Card/CardSubtitle.js'
 import MdcCardMedia from 'src/Card/CardMedia.js'
+import MdcCardSupportingText from 'src/Card/CardSupportingText.js'
 import { createVM, nextTick, dataPropagationTest } from '../helpers'
 const largeImg = 'http://material-components-web.appspot.com/images/16-9.jpg'
 // const squareImg = 'http://material-components-web.appspot.com/images/1-1.jpg'
@@ -96,5 +97,38 @@ describe('Card.vue', function () {
 })
     vm.$('.mdc-card__media + .mdc-card__primary').should.not.exist
     vm.$('.mdc-card__primary + .mdc-card__media').should.exist
+  })
+
+  it('has a supporting text', function (done) {
+    const vm = createVM(this, `
+<MdcCard :supporting-text="text">
+</MdcCard>
+`, {
+  data: { text: 'Hello there' },
+  components: { MdcCard, MdcCardMedia },
+})
+    vm.$('.mdc-card__supporting-text').should.exist
+    vm.$('.mdc-card__supporting-text').should.have.text('Hello there')
+    vm.text = ''
+    nextTick().then(() => {
+      vm.$('.mdc-card__supporting-text').should.not.exist
+    }).then(done)
+  })
+
+  it('has a slot in supporting text', function (done) {
+    const vm = createVM(this, `
+<MdcCard>
+<MdcCardSupportingText v-if="show">A slot</MdcCardSupportingText>
+</MdcCard>
+`, {
+  data: { show: true },
+  components: { MdcCard, MdcCardSupportingText },
+})
+    vm.$('.mdc-card__supporting-text').should.exist
+    vm.$('.mdc-card__supporting-text').should.have.text('A slot')
+    vm.show = false
+    nextTick().then(() => {
+      vm.$('.mdc-card__supporting-text').should.not.exist
+    }).then(done)
   })
 })
