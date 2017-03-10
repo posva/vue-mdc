@@ -11,6 +11,7 @@ export default {
     compact: Boolean,
     primary: Boolean,
     accent: Boolean,
+    themeDark: Boolean,
   },
 
   render (h, { data, props, children }) {
@@ -18,6 +19,7 @@ export default {
     data.staticClass = data.staticClass
                      ? `${data.staticClass} ${staticClass}`
                      : staticClass
+    console.log(staticClass, props)
     return h('button', {
       ...data,
     }, children)

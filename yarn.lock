@@ -1193,6 +1193,10 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
+camelcase@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.0.0.tgz#8b0f90d44be5e281b903b9887349b92595ef07f2"
+
 caniuse-api@^1.5.2:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/caniuse-api/-/caniuse-api-1.5.3.tgz#5018e674b51c393e4d50614275dc017e27c4a2a2"
@@ -1777,7 +1781,7 @@ debug@2.6.1, debug@^2.1.1, debug@^2.2.0:
   dependencies:
     ms "0.7.2"
 
-decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
+decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2, decamelize@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 

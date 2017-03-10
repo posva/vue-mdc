@@ -153,7 +153,7 @@ describe('Card.vue', function () {
   it('can apply a dark theme', function () {
     const vm = createVM(this, `
 <MdcCard theme-dark title="Hello there">
-<MdcButton slot="actions" compact>Action</MdcButton>
+<MdcButton theme-dark slot="actions" compact>Action</MdcButton>
 </MdcCard>
 `, {
   components: { MdcCard, MdcButton },

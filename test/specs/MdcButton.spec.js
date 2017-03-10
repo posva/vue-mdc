@@ -1,4 +1,5 @@
 import MdcButton from 'src/Button.vue'
+import camelcase from 'camelcase'
 import { createVM, nextTick, dataPropagationTest } from '../helpers'
 
 describe('Button.vue', function () {
@@ -21,15 +22,17 @@ describe('Button.vue', function () {
       'compact',
       'primary',
       'accent',
+      'theme-dark',
     ]
     attrs.forEach(attr => {
       it(attr, function (done) {
         const vm = createVM(this, function (h) {
           const opts = {
             props: {
-              [attr]: this.active,
+              [camelcase(attr)]: this.active,
             },
           }
+          console.log(opts.props)
           return (
             <MdcButton {...opts}>{attr}</MdcButton>
           )
