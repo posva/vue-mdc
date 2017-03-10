@@ -78,6 +78,7 @@ describe('Card.vue', function () {
   it('keeps original data in Primary', dataPropagationTest(MdcCardPrimary))
   it('keeps original data in HorizontalBlock', dataPropagationTest(MdcCardHorizontalBlock))
   it('keeps original data in SupportingText', dataPropagationTest(MdcCardSupportingText))
+  it('keeps original data in Actions', dataPropagationTest(MdcCardActions))
 
   it('has a media section before the title', function (done) {
     const vm = createVM(this, `
