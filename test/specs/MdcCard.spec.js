@@ -1,7 +1,10 @@
 import MdcCard from 'src/Card/Card.vue'
 import MdcCardTitle from 'src/Card/CardTitle.js'
 import MdcCardSubtitle from 'src/Card/CardSubtitle.js'
+import MdcCardMedia from 'src/Card/CardMedia.js'
 import { createVM, nextTick, dataPropagationTest } from '../helpers'
+const largeImg = 'http://material-components-web.appspot.com/images/16-9.jpg'
+// const squareImg = 'http://material-components-web.appspot.com/images/1-1.jpg'
 
 describe('Card.vue', function () {
   it('can have a title', function () {
@@ -62,4 +65,36 @@ describe('Card.vue', function () {
 
   it('keeps original data in Title', dataPropagationTest(MdcCardTitle))
   it('keeps original data in Subtitle', dataPropagationTest(MdcCardSubtitle))
+
+  it('has a media section before the title', function (done) {
+    const vm = createVM(this, `
+<MdcCard :media="media" title="Title"
+>
+</MdcCard>
+`, {
+  data: { media: largeImg },
+  components: { MdcCard },
+})
+    vm.$('.mdc-card__media + .mdc-card__primary').should.exist
+    vm.$('.mdc-card__primary + .mdc-card__media').should.not.exist
+    const style = vm.$('.mdc-card__media').style
+    style.height.should.equal('12.313rem')
+    style.backgroundImage.should.equal(`url("${largeImg}")`)
+    vm.media = ''
+    nextTick().then(() => {
+      vm.$('.mdc-card__media').should.not.exist
+    }).then(done)
+  })
+
+  it('can reorder elements', function () {
+    const vm = createVM(this, `
+<MdcCard class="reorder" title="Title">
+<MdcCardMedia media="${largeImg}" style="height: 12rem"></MdcCardMedia>
+</MdcCard>
+`, {
+  components: { MdcCard, MdcCardMedia },
+})
+    vm.$('.mdc-card__media + .mdc-card__primary').should.not.exist
+    vm.$('.mdc-card__primary + .mdc-card__media').should.exist
+  })
 })
