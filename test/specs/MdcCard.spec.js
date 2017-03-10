@@ -1,12 +1,18 @@
 import MdcCard from 'src/Card/Card.vue'
 import MdcButton from 'src/Button.vue'
+import MdcCardActions from 'src/Card/CardActions.js'
+import MdcCardHorizontalBlock from 'src/Card/CardHorizontalBlock.js'
+import MdcCardMedia from 'src/Card/CardMedia.js'
+import MdcCardPrimary from 'src/Card/CardPrimary.js'
 import MdcCardTitle from 'src/Card/CardTitle.js'
 import MdcCardSubtitle from 'src/Card/CardSubtitle.js'
-import MdcCardMedia from 'src/Card/CardMedia.js'
-import MdcCardHorizontalBlock from 'src/Card/CardHorizontalBlock.js'
-import MdcCardPrimary from 'src/Card/CardPrimary.js'
 import MdcCardSupportingText from 'src/Card/CardSupportingText.js'
-import { createVM, nextTick, dataPropagationTest } from '../helpers'
+import {
+  createVM,
+  nextTick,
+  dataPropagationTest,
+  attrTest,
+} from '../helpers'
 const largeImg = 'http://material-components-web.appspot.com/images/16-9.jpg'
 const squareImg = 'http://material-components-web.appspot.com/images/1-1.jpg'
 
@@ -142,16 +148,20 @@ describe('Card.vue', function () {
     const vm = createVM(this, `
 <MdcCard>
 <p v-if="show" slot="actions">Actions</p>
+<MdcButton v-if="show" slot="actions">Actions</MdcButton>
 </MdcCard>
 `, {
   data: { show: true },
-  components: { MdcCard },
+  components: { MdcCard, MdcButton },
 })
     vm.$('.mdc-card__actions').should.exist
-    vm.$('.mdc-card__actions').should.have.text('Actions')
+    vm.$('.mdc-card__actions p').should.have.text('Actions')
+    vm.$('.mdc-card__actions button').should.have.class('mdc-card__action')
+    vm.$('.mdc-card__actions p').should.not.have.class('mdc-card__action')
     vm.show = false
     nextTick().then(() => {
       vm.$('.mdc-card__actions').should.not.exist
+      vm.show = true
     }).then(done)
   })
 
@@ -192,4 +202,6 @@ describe('Card.vue', function () {
     vm.$('.mdc-card__horizontal-block .mdc-card__primary .mdc-card__title').should.exist
     vm.$('.mdc-card__horizontal-block .mdc-card__primary .mdc-card__subtitle').should.exist
   })
+
+  attrTest(it, 'mdc-card__actions', MdcCardActions, 'vertical')
 })

@@ -1,6 +1,9 @@
 import MdcButton from 'src/Button.vue'
-import camelcase from 'camelcase'
-import { createVM, nextTick, dataPropagationTest } from '../helpers'
+import {
+  createVM,
+  dataPropagationTest,
+  attrTest,
+} from '../helpers'
 
 describe('Button.vue', function () {
   it('renders an upgraded button', function () {
@@ -16,35 +19,13 @@ describe('Button.vue', function () {
   it('keeps original tag data', dataPropagationTest(MdcButton))
 
   describe('attrs', function () {
-    const attrs = [
+    attrTest(it, 'mdc-button', MdcButton, [
       'dense',
       'raised',
       'compact',
       'primary',
       'accent',
       'theme-dark',
-    ]
-    attrs.forEach(attr => {
-      it(attr, function (done) {
-        const vm = createVM(this, function (h) {
-          const opts = {
-            props: {
-              [camelcase(attr)]: this.active,
-            },
-          }
-          return (
-            <MdcButton {...opts}>{attr}</MdcButton>
-          )
-        }, {
-          data: { active: true },
-        })
-        vm.$('button').should.have.class(`mdc-button--${attr}`)
-        vm.active = false
-        nextTick().then(() => {
-          vm.$('button').should.not.have.class(`mdc-button--${attr}`)
-          vm.active = true
-        }).then(done)
-      })
-    })
+    ])
   })
 })
