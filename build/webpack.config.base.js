@@ -18,7 +18,7 @@ const plugins = [
   new ExtractTextPlugin({
     filename: `${filename}.css`,
     // Don't extract css in test mode
-    disable: /^(common|test)$/.test(process.env.NODE_ENV),
+    disable: /^(common|test|esm)$/.test(process.env.NODE_ENV),
   }),
 ]
 
