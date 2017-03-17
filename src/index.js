@@ -1,6 +1,6 @@
-import ripple from './ripple.js'
 import MdcCard from './Card/Card.vue'
 import MdcButton from './Button.vue'
+const ripple = typeof window === 'undefined' ? null : require('./ripple.js')
 
 // import './style.scss'
 
@@ -8,7 +8,7 @@ function plugin (Vue) {
   // Vue.component('mdc-ripple', MdcRipple)
   Vue.component('MdcCard', MdcCard)
   Vue.component('MdcButton', MdcButton)
-  Vue.directive('ripple', ripple)
+  if (ripple) Vue.directive('ripple', ripple)
 }
 
 // Install by default if using the script tag
