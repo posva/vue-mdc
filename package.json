@@ -84,7 +84,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "sass-loader": "^6.0.0",
     "selenium-server": "^3.0.1",
-    "sinon": "^1.17.6",
+    "sinon": "^2.1.0",
     "sinon-chai": "^2.8.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
