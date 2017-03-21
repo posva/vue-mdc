@@ -97,7 +97,7 @@
     "vue-style-loader": "^2.0.1",
     "vue-template-compiler": "^2.1.6",
     "vue-transfer-dom": "^1.1.0",
-    "webpack": "^1.14.0",
+    "webpack": "^2.3.0",
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.14.0",
     "webpack-merge": "^3.0.0"
