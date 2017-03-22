@@ -18,13 +18,14 @@
   <a href="https://github.com/posva/vue-mdl/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="MIT License"></a>
 </p>
 
-#Intro
+# Intro
 
-Reusable Vue components using [Material Design Lite](https://github.com/google/material-design-lite)
+Reusable Vue components using [Material Design Lite](https://github.com/google/material-design-lite) for Vue 2.
+If you're using Vue 1, make sure to install the version 0.x. From version 1.x onwards, vue-mdl is compatible with Vue 2.
 
 ‼️ vue-mdl relies on the **last versions of vue and material design lite** but **does not include them**. Make sure to have your modules up to date 😉 and installed (**[Specially for MDL](https://getmdl.io/started/index.html#download)**). Remember to remove the `defer` attribute in case you copy pasted the lines from MDL Doc 😉. See [#20](https://github.com/posva/vue-mdl/issues/20).
 
-#Usage
+# Usage
 
 ```js
 import VueMdl from 'vue-mdl'
@@ -47,33 +48,33 @@ new Vue({
 For more detailed usage about non es6 environments, check the
 [documentation](http://posva.net/vue-mdl/#usage).
 
-#Documentation
+# Documentation
 
 The `test/components` directory has a lot of examples used for tests.
 
 The documentation is available [here](http://posva.net/vue-mdl)
 Pull Requests and issues are welcome.
 
-#Build
+# Build
 
 This will build a distributable version in the `dist` directory.
 ```bash
 npm run build
 ```
 
-#Test
+# Test
 
 You can run all the tests
 ```bash
 npm test
 ```
 
-##Unit tests
+## Unit tests
 ```bash
 npm run test:unit
 ```
 
-#Development
+# Development
 
 Run `npm run dev` and visit [http://localhost:8080](http://localhost:8080).
 
@@ -84,12 +85,12 @@ You can also serve the tests pages without running the unit tests by running
 `npm run dev:integration`. This makes easy to actually see and manually test
 components.
 
-#Contributing
+# Contributing
 
 When contributing, make sure all tests pass.
 If you wrote a new feature or fixed a bug make sure to add the corresponding test.
 
-#Releasing
+# Releasing
 
 Releasing is done using the git flow model
 
@@ -102,7 +103,7 @@ Releasing is done using the git flow model
 - Push master and develop branches `git push --all --follow-tags`
 - Publish it to npm: `npm publish`
 
-#License
+# License
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (c) 2016 Eduardo San Martin Morote
