@@ -1,5 +1,5 @@
 <p align="center">
-  <img style="max-width: 320px" src="https://posva.net/vue-mdl/logo.svg"/>
+  <img width="320px" src="https://posva.net/vue-mdl/logo.svg"/>
   <br/>
   <a href="https://www.npmjs.com/package/vue-mdc">
     <img alt="last version" src="https://img.shields.io/npm/v/vue-mdc.svg" />
