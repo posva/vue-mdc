@@ -1,3 +1,7 @@
+You're looking at the docs of an old project. I think you're looking for
+[vue-mdc](https://github.com/posva/vue-mdc)
+---
+
 <p align="center">
   <img src="logo.png"/>
   <br/>
