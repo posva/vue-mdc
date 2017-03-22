@@ -1,6 +1,22 @@
-# VueMdc
-
+<p align="center">
+  <img src="logo.svg"/>
+  <br/>
+  <a href="https://circleci.com/gh/posva/vue-mdl">
+    <img alt="Circle CI" src="https://img.shields.io/circleci/project/posva/vue-mdl/develop.svg" />
+  </a>
+  <a href="https://codecov.io/gh/posva/vue-mdl">
+    <img alt="Codecov Coverage" src="https://img.shields.io/codecov/c/github/posva/vue-mdl/develop.svg?maxAge=2592000" />
+  </a>
+  <br>
+  <a href="https://david-dm.org/posva/vue-mdl#info=devDependencies" title="devDependency status"><img src="https://david-dm.org/posva/vue-mdl/dev-status.svg"/></a>
+  <a href="https://david-dm.org/posva/vue-mdl#info=peerDependencies" title="peerDependency status"><img src="https://david-dm.org/posva/vue-mdl/peer-status.svg"/></a>
+  <br>
+  <a href="https://www.npmjs.com/package/vue-mdl"><img src="https://img.shields.io/npm/v/vue-mdl.svg" alt="Latest npm release"></a>
+  <a href="https://gitter.im/posva/vue-mdl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badgel"><img src="https://badges.gitter.im/posva/vue-mdl.svg" alt="Gitter"></a>
+</p>
 [![npm](https://img.shields.io/npm/v/vue-mdc.svg)](https://www.npmjs.com/package/vue-mdc) [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+
+# VueMdc
 
 > Material Components Web for Vue.js
 
@@ -36,6 +52,10 @@ Vue.use(VueMdc)
 <link rel="stylesheet" href="https://unpkg.com/vue-mdc/dist/vue-mdc.css"></link>
 <script src="https://unpkg.com/vue-mdc"></script>
 ```
+
+### Docs
+
+WIP 😁
 
 ## Development
 
