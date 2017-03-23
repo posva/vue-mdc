@@ -8,6 +8,8 @@ const {
 
 const uppercamelcase = require('uppercamelcase')
 
+exports.write = require('./write')
+
 const {
   author,
   name,
@@ -21,6 +23,7 @@ const minExt = process.env.NODE_ENV === 'production' ? '.min' : ''
 exports.author = authorName
 exports.version = version
 exports.dllName = dllPlugin.name
+exports.name = name
 exports.moduleName = uppercamelcase(name)
 exports.filename = name + minExt
 exports.banner = `/*!
@@ -43,7 +46,7 @@ const sassOptions = {
 }
 
 // don't extract css in test mode
-const nullLoader = process.env.NODE_ENV === 'common' ? 'null-loader!' : ''
+const nullLoader = /(common|esm)/.test(process.env.NODE_ENV) ? 'null-loader!' : ''
 exports.vueLoaders =
   process.env.BABEL_ENV === 'test' ? {
     scss: `css-loader!sass-loader?${JSON.stringify(sassOptions)}`,

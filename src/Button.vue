@@ -1,5 +1,5 @@
 <script>
-import { propsToClasses } from 'src/utils'
+import { propsToClasses } from './utils'
 
 export default {
   name: 'MdcButton',

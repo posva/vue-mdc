@@ -1,6 +1,6 @@
 import MdcCard from './Card/Card.vue'
 import MdcButton from './Button.vue'
-const ripple = typeof window === 'undefined' ? null : require('./ripple.js')
+import ripple from './ripple.js'
 
 // import './style.scss'
 
