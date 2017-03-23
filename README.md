@@ -27,15 +27,19 @@
 
 ---
 
-# VueMdc
+# Vue Material Components web
 
 > Material Components Web for Vue.js
+
+This is the adaptation of [Material Components web](https://raw.githubusercontent.com/material-components/) for Vue.js. Keeping them fast, easy to use and, SSR ready.
+
+The docs will be the demo, until then you can [check the test folder](test/specs) and the [Material Components web demo](http://material-components-web.appspot.com/)
 
 ## Installation
 
 ```bash
 npm install --save vue-mdc
-yarn install -D vue-mdc
+yarn add -D vue-mdc
 ```
 
 ## Usage
