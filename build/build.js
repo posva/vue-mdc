@@ -20,9 +20,9 @@ const {
   version,
 } = require('./utils')
 
-function rollupBundle ({ env }) {
+function rollupBundle ({ env, entry }) {
   return rollup({
-    entry: 'src/index.js',
+    entry: entry || 'src/index.js',
     plugins: [
       scss({ output: false }),
       node(),
@@ -45,9 +45,10 @@ const bundleOptions = {
   moduleName,
 }
 
-function createBundle ({ name, env }) {
+function createBundle ({ name, env, entry }) {
   return rollupBundle({
     env,
+    entry,
   }).then(function (bundle) {
     const code = bundle.generate(bundleOptions).code
     if (/min$/.test(name)) {
