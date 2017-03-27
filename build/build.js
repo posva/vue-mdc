@@ -25,7 +25,9 @@ function rollupBundle ({ env, entry }) {
     entry: entry || 'src/index.js',
     plugins: [
       scss({ output: false }),
-      node(),
+      node({
+        extensions: ['.js', '.jsx', '.vue'],
+      }),
       cjs(),
       vue({ compileTemplate: true, css: false }),
       replace(Object.assign({
