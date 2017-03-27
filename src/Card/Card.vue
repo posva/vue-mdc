@@ -9,13 +9,14 @@
     >
       <slot name="media"></slot>
     </CardMedia>
-    <section v-if="title || subtitle || $slots.primary"
-             class="mdc-card__primary">
+    <CardPrimary v-if="title || subtitle || $slots.primary"
+                 class="mdc-card__primary"
+    >
       <slot name="primary">
         <CardTitle v-if="title" large>{{ title }}</CardTitle>
         <CardSubtitle v-if="subtitle">{{ subtitle }}</CardSubtitle>
       </slot>
-    </section>
+    </CardPrimary>
     <slot></slot>
     <CardSupportingText v-if="supportingText || $slots.supportingText">
       <slot name="supporting-text">{{ supportingText }}</slot>
@@ -27,6 +28,7 @@
 </template>
 
 <script>
+import CardPrimary from './CardPrimary'
 import CardTitle from './CardTitle'
 import CardSubtitle from './CardSubtitle'
 import CardActions from './CardActions'
@@ -34,8 +36,6 @@ import CardMedia from './CardMedia'
 import CardSupportingText from './CardSupportingText'
 
 export default {
-  name: 'MdcCard',
-
   props: {
     title: String,
     subtitle: String,
@@ -54,6 +54,7 @@ export default {
     CardSubtitle,
     CardMedia,
     CardSupportingText,
+    CardPrimary,
   },
 
   computed: {
