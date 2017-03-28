@@ -1,7 +1,6 @@
 import { propsToClasses } from '../utils'
 
 export default {
-  name: 'MdcCardTitle',
   functional: true,
 
   props: {

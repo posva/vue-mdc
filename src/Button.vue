@@ -2,7 +2,6 @@
 import { propsToClasses } from './utils'
 
 export default {
-  name: 'MdcButton',
   functional: true,
 
   props: {
