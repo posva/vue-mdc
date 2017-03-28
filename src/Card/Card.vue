@@ -2,28 +2,28 @@
   <div class="mdc-card"
        :class="cardClasses"
   >
-    <CardMedia v-if="media"
+    <card-media v-if="media"
                class="mdc-card__media--default"
                :media="media"
                :style="mediaStyle"
     >
       <slot name="media"></slot>
-    </CardMedia>
-    <CardPrimary v-if="title || subtitle || $slots.primary"
+    </card-media>
+    <card-primary v-if="title || subtitle || $slots.primary"
                  class="mdc-card__primary"
     >
       <slot name="primary">
-        <CardTitle v-if="title" large>{{ title }}</CardTitle>
-        <CardSubtitle v-if="subtitle">{{ subtitle }}</CardSubtitle>
+        <card-title v-if="title" large>{{ title }}</card-title>
+        <card-subtitle v-if="subtitle">{{ subtitle }}</card-subtitle>
       </slot>
-    </CardPrimary>
+    </card-primary>
     <slot></slot>
-    <CardSupportingText v-if="supportingText || $slots.supportingText">
+    <card-supporting-text v-if="supportingText || $slots.supportingText">
       <slot name="supporting-text">{{ supportingText }}</slot>
-    </CardSupportingText>
-    <CardActions  v-if="$slots.actions">
+    </card-supporting-text>
+    <card-actions  v-if="$slots.actions">
       <slot name="actions"></slot>
-    </CardActions>
+    </card-actions>
   </div>
 </template>
 
