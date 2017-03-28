@@ -3,8 +3,8 @@
   slot(name='title' v-if='title')
     .mdl-card__title
       h2.mdl-card__title-text {{title}}
-  slot(name='subtitle' v-if='subtitle')
-    .mdl-card__subtitle-text {{subtitle}}
+    slot(name='subtitle' v-if='subtitle')
+      .mdl-card__subtitle-text {{subtitle}}
   slot(name='supporting-text' v-if='supportingText')
     .mdl-card__supporting-text {{supportingText}}
   slot(name='media' v-if='media')
