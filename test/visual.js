@@ -19,6 +19,10 @@ window.mocha.setup({
     'script',
     'inject',
     'originalOpenFunction',
+    // some chrome plugins things
+    'pb_blacklist',
+    'pb_whitelist',
+    'pb_isRunning',
   ],
 })
 window.sinon = sinon
