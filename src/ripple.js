@@ -1,16 +1,39 @@
-import { MDCRipple } from '@material/ripple'
+import MDCRippleFoundation from '@material/ripple/foundation'
+import { supportsCssVariables, getMatchesProperty } from '@material/ripple/util'
 import '@material/ripple/mdc-ripple.scss'
 
 const surfaceClass = 'mdc-ripple-surface'
+
+let MATCHES
+function createAdapter (el) {
+  MATCHES = MATCHES || getMatchesProperty(HTMLElement.prototype)
+  return {
+    browserSupportsCssVars: () => supportsCssVariables(window),
+    isSurfaceActive: () => el[MATCHES](':active'),
+    addClass: (className) => el.classList.add(className),
+    removeClass: (className) => el.classList.remove(className),
+    registerInteractionHandler: (evtType, handler) => el.addEventListener(evtType, handler),
+    deregisterInteractionHandler: (evtType, handler) => el.removeEventListener(evtType, handler),
+    registerResizeHandler: (handler) => window.addEventListener('resize', handler),
+    deregisterResizeHandler: (handler) => window.removeEventListener('resize', handler),
+    updateCssVariable: (varName, value) => el.style.setProperty(varName, value),
+    computeBoundingRect: () => el.getBoundingClientRect(),
+    getWindowPageOffset: () => ({ x: window.pageXOffset, y: window.pageYOffset }),
+  }
+}
 
 export default {
   bind (el, binding) {
     if (!binding.modifiers.custom) {
       el.classList.add(surfaceClass)
     }
-    el.mdcRipple_ = MDCRipple.attachTo(el, {
-      isUnbounded: binding.modifiers.unbounded,
-    })
+    const unbounded = binding.modifiers.unbounded
+    el.mdcRipple_ = new MDCRippleFoundation(
+      Object.assign(createAdapter(el), {
+        isUnbounded: () => unbounded,
+      })
+    )
+    el.mdcRipple_.init()
   },
 
   componentUpdated (el, binding, vnode, oldVnode) {
