@@ -11,7 +11,7 @@ export default {
                      ? `${data.staticClass} ${staticClass}`
                      : staticClass
     data.style = data.style || {}
-    data.style['background-image'] = data.style['background-image'] || `url("${props.media}")`
+    data.style['background-image'] = data.style['background-image'] || `url(${props.media})`
 
     return h('section', {
       ...data,
