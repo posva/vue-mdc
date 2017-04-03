@@ -12,9 +12,8 @@
     "src"
   ],
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "yon run build:common && yon run build:browser && yon run build:browser:min && yon run build:esm",
-    "build:common": "cross-env NODE_ENV=common webpack --config build/webpack.config.common.js --progress --hide-modules",
+    "prebuild": "rimraf dist",
+    "build": "yon run build:browser && yon run build:browser:min && yon run build:esm",
     "build:esm": "cross-env NODE_ENV=esm node build/build.js",
     "build:browser:base": "webpack --config build/webpack.config.browser.js --progress --hide-modules",
     "build:browser": "cross-env NODE_ENV=browser yon run build:browser:base",
@@ -64,7 +63,6 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",
     "karma-mocha": "^1.3.0",
-    "karma-phantomjs-launcher": "^1.0.2",
     "karma-sinon-chai": "^1.2.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "^0.0.30",
@@ -76,6 +74,7 @@
     "node-sass": "^4.5.0",
     "null-loader": "^0.1.1",
     "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-commonjs": "^8.0.2",

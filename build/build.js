@@ -47,12 +47,14 @@ const bundleOptions = {
   moduleName,
 }
 
-function createBundle ({ name, env, entry }) {
+function createBundle ({ name, env, entry, format }) {
   return rollupBundle({
     env,
     entry,
   }).then(function (bundle) {
-    const code = bundle.generate(bundleOptions).code
+    const options = Object.assign({}, bundleOptions)
+    if (format) options.format = format
+    const code = bundle.generate(options).code
     if (/min$/.test(name)) {
       const minified = uglify.minify(code, {
         fromString: true,
@@ -81,6 +83,13 @@ createBundle({
 createBundle({
   name: `${name}.esm`,
   env: {},
+  format: 'es',
+})
+
+createBundle({
+  name: `${name}.common`,
+  env: {},
+  format: 'cjs',
 })
 
 // Minified version for browser
