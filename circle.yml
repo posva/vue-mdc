@@ -19,6 +19,8 @@ dependencies:
   override:
     - yarn install
 test:
+  pre:
+    - yarn build:dll
   override:
     - yarn test
   post:
