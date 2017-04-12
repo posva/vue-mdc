@@ -11,7 +11,7 @@
     .demo-card.mdl-card.mdl-shadow--2dp
       .mdl-card__title
         h2.mdl-card__title-text Welcome
-      .mdl-card__subtitle-text Some subtitle
+        .mdl-card__subtitle-text Some subtitle
       .mdl-card__supporting-text
         | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         | Mauris sagittis pellentesque lacus eleifend lacinia...
