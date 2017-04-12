@@ -1,31 +1,31 @@
-**If you're looking for vue-mdl, check the [mdl branch](https://github.com/posva/vue-mdl/tree/mdl). To learn about what's happening, check [#139](https://github.com/posva/vue-mdl/issues/139)**
+**If you're looking for vue-mdl, check the [mdl branch](https://github.com/posva/vue-mdc/tree/mdl). To learn about what's happening, check [#139](https://github.com/posva/vue-mdc/issues/139)**
 
 ---
 
 <p align="center">
-  <img width="320px" src="https://posva.net/vue-mdl/logo.svg"/>
+  <img width="320px" src="https://posva.net/vue-mdl-docs/logo.svg"/>
   <br/>
   <a href="https://www.npmjs.com/package/vue-mdc">
     <img alt="last version" src="https://img.shields.io/npm/v/vue-mdc.svg" />
   </a>
-  <a href="https://circleci.com/gh/posva/vue-mdl">
-    <img alt="Circle CI" src="https://img.shields.io/circleci/project/posva/vue-mdl/develop.svg" />
+  <a href="https://circleci.com/gh/posva/vue-mdc">
+    <img alt="Circle CI" src="https://img.shields.io/circleci/project/posva/vue-mdc/develop.svg" />
   </a>
-  <a href="https://codecov.io/gh/posva/vue-mdl">
-    <img alt="Codecov Coverage" src="https://img.shields.io/codecov/c/github/posva/vue-mdl/develop.svg?maxAge=2592000" />
+  <a href="https://codecov.io/gh/posva/vue-mdc">
+    <img alt="Codecov Coverage" src="https://img.shields.io/codecov/c/github/posva/vue-mdc/master.svg?maxAge=2592000" />
   </a>
   <a href="https://gitter.im/posva/vue-mdl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badgel">
-    <img src="https://badges.gitter.im/posva/vue-mdl.svg" alt="Gitter">
+    <img src="https://badges.gitter.im/posva/vue-mdc.svg" alt="Gitter">
   </a>
   <br>
   <a href="https://vuejs.org" title="Compatible with Vue 2">
     <img src="https://img.shields.io/badge/vue-2.x-brightgreen.svg"/>
   </a>
-  <a href="https://david-dm.org/posva/vue-mdl#info=devDependencies" title="devDependency status">
-    <img src="https://david-dm.org/posva/vue-mdl/dev-status.svg"/>
+  <a href="https://david-dm.org/posva/vue-mdc#info=devDependencies" title="devDependency status">
+    <img src="https://david-dm.org/posva/vue-mdc/dev-status.svg"/>
   </a>
-  <a href="https://david-dm.org/posva/vue-mdl#info=peerDependencies" title="peerDependency status">
-    <img src="https://david-dm.org/posva/vue-mdl/peer-status.svg"/>
+  <a href="https://david-dm.org/posva/vue-mdc#info=peerDependencies" title="peerDependency status">
+    <img src="https://david-dm.org/posva/vue-mdc/peer-status.svg"/>
   </a>
 </p>
 
