@@ -14,8 +14,8 @@
   <a href="https://codecov.io/gh/posva/vue-mdc">
     <img alt="Codecov Coverage" src="https://img.shields.io/codecov/c/github/posva/vue-mdc/master.svg?maxAge=2592000" />
   </a>
-  <a href="https://gitter.im/posva/vue-mdl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badgel">
-    <img src="https://badges.gitter.im/posva/vue-mdc.svg" alt="Gitter">
+  <a href="https://discordapp.com/invite/dAF4F28">
+    <img src="https://img.shields.io/badge/discord-vue%40SpeakJS-738bd7.svg?style=flat" alt="Discord">
   </a>
   <br>
   <a href="https://vuejs.org" title="Compatible with Vue 2">
