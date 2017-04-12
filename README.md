@@ -1,4 +1,4 @@
-**If you're looking for vue-mdl, check the [mdl branch](https://github.com/posva/vue-mdl/tree/mdl). To learn about what's happening, check #139**
+**If you're looking for vue-mdl, check the [mdl branch](https://github.com/posva/vue-mdl/tree/mdl). To learn about what's happening, check [#139](https://github.com/posva/vue-mdl/issues/139)**
 
 ---
 
