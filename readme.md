@@ -1,5 +1,6 @@
-You're looking at the docs of an old project. I think you're looking for
-[vue-mdc](https://github.com/posva/vue-mdc)
+**You're looking at the docs of an old project. The future version of vue mdl is
+[vue-mdc](https://github.com/posva/vue-mdc) 🚀. More information at [#139](https://github.com/posva/vue-mdl/issues/139)**
+
 ---
 
 <p align="center">
