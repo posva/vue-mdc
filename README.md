@@ -21,11 +21,11 @@
   <a href="https://vuejs.org" title="Compatible with Vue 2">
     <img src="https://img.shields.io/badge/vue-2.x-brightgreen.svg"/>
   </a>
-  <a href="https://david-dm.org/posva/vue-mdc#info=devDependencies" title="devDependency status">
+  <a href="https://david-dm.org/posva/vue-mdc?type=dev" title="devDependency status">
     <img src="https://david-dm.org/posva/vue-mdc/dev-status.svg"/>
   </a>
-  <a href="https://david-dm.org/posva/vue-mdc#info=peerDependencies" title="peerDependency status">
-    <img src="https://david-dm.org/posva/vue-mdc/peer-status.svg"/>
+  <a href="https://david-dm.org/posva/vue-mdc" title="Dependency status">
+    <img src="https://david-dm.org/posva/vue-mdc/status.svg"/>
   </a>
 </p>
 
