@@ -69,3 +69,5 @@
 .mdc-card--theme-dark .mdc-card__actions {
   background: rgba(0, 0, 0, .4);
 }
+
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
