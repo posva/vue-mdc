@@ -12,7 +12,7 @@
     <img alt="Circle CI" src="https://img.shields.io/circleci/project/posva/vue-mdc/develop.svg" />
   </a>
   <a href="https://codecov.io/gh/posva/vue-mdc">
-    <img alt="Codecov Coverage" src="https://img.shields.io/codecov/c/github/posva/vue-mdc/master.svg?maxAge=2592000" />
+    <img alt="Codecov Coverage" src="https://img.shields.io/codecov/c/github/posva/vue-mdc/master.svg?maxAge=2592000&nocache=true" />
   </a>
   <a href="https://discordapp.com/invite/dAF4F28">
     <img src="https://img.shields.io/badge/discord-vue%40SpeakJS-738bd7.svg?style=flat" alt="Discord">
