@@ -9,7 +9,7 @@ function createAdapter (el) {
   MATCHES = MATCHES || getMatchesProperty(HTMLElement.prototype)
   return {
     browserSupportsCssVars: () => supportsCssVariables(window),
-    isSurfaceActive: () => el[MATCHES](':active'),
+    isSurfaceActive: /* istanbul ignore next */ () => el[MATCHES](':active'),
     addClass: (className) => el.classList.add(className),
     removeClass: (className) => el.classList.remove(className),
     registerInteractionHandler: (evtType, handler) => el.addEventListener(evtType, handler),
@@ -18,7 +18,7 @@ function createAdapter (el) {
     deregisterResizeHandler: (handler) => window.removeEventListener('resize', handler),
     updateCssVariable: (varName, value) => el.style.setProperty(varName, value),
     computeBoundingRect: () => el.getBoundingClientRect(),
-    getWindowPageOffset: () => ({ x: window.pageXOffset, y: window.pageYOffset }),
+    getWindowPageOffset: /* istanbul ignore next */ () => ({ x: window.pageXOffset, y: window.pageYOffset }),
   }
 }
 
