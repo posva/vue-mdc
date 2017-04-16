@@ -10,15 +10,6 @@ import {
 } from '../helpers'
 
 describe('Drawer', function () {
-  it('renders an upgraded drawer', function () {
-    const vm = createVM(this, `
-<Drawer></Drawer>
-`, {
-  components: { Drawer },
-})
-    vm
-  })
-
   it('keeps original tag data', dataPropagationTest(Drawer))
 
   it('is temporary by default', function () {
@@ -43,11 +34,7 @@ describe('Drawer', function () {
         })
       })
 
-      it('can be set as temporary', function () {
-        this.vm.$refs.drawer.$el.should.have.class('mdc-temporary-drawer')
-      })
-
-      it('can toggled', function (done) {
+      it('can be toggled', function (done) {
         this.vm.$refs.drawer.$el.should.not.have.class('mdc-temporary-drawer--open')
         this.vm.$refs.drawer.toggle()
         nextTick().then(() => {
