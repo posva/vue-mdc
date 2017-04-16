@@ -60,7 +60,8 @@ after(function () {
     setTimeout(function () {
       vms.forEach(vm => {
         // Hide if test passed
-        if (!vm.$el.parentElement.classList.contains('fail')) {
+        if (vm.$el.parentElement &&
+            !vm.$el.parentElement.classList.contains('fail')) {
           vm.$children[0].visible = false
         }
       })

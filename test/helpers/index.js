@@ -7,13 +7,13 @@ export function dataPropagationTest (Component) {
     const spy = sinon.spy()
     const vm = createVM(this, function (h) {
       return (
-          <Component staticClass='custom' onClick={spy}>Hello</Component>
+        <Component staticClass='custom' onClick={spy}>Hello</Component>
       )
     })
     spy.should.have.not.been.called
     vm.$('.custom').should.exist
     vm.$('.custom').click()
-    spy.should.have.been.calledOnce
+    if (Component.functional) spy.should.have.been.calledOnce
   }
 }
 
