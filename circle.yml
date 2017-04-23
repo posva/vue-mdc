@@ -20,6 +20,7 @@ dependencies:
     - yarn install
 test:
   pre:
+    - npm rebuild node-sass
     - yarn build:dll
   override:
     - yarn test
