@@ -88,7 +88,7 @@
     "sinon-chai": "^2.9.0",
     "style-loader": "^0.16.1",
     "uglify-js": "^2.8.22",
-    "uppercamelcase": "^1.1.0",
+    "uppercamelcase": "^2.0.0",
     "vue": "^2.2.6",
     "vue-loader": "^11.3.4",
     "vue-template-compiler": "^2.2.6",
