@@ -1,4 +1,5 @@
 import VueMdc from 'src'
+import * as all from 'src'
 import { Vue } from '../helpers/utils.js'
 
 function comp (name) {
@@ -16,9 +17,6 @@ function dir (name) {
 const components = [
   'Button',
 
-  'Checkbox',
-
-  'Card',
   'Card',
   'CardActions',
   'CardHorizontalBlock',
@@ -28,6 +26,8 @@ const components = [
   'CardSupportingText',
   'CardTitle',
 
+  'Checkbox',
+
   'Drawer',
   'DrawerHeader',
   'DrawerNav',
@@ -35,9 +35,16 @@ const components = [
 
   'List',
   'ListDivider',
+  'ListItem',
 ]
 
 describe('VueMdc', function () {
+  it('exporting all components', function () {
+    Object.keys(all).should.eql(
+      ['version', ...components, 'ripple', 'default']
+    )
+  })
+
   describe('Register components', function () {
     before(function () {
       Vue.use(VueMdc)
@@ -57,6 +64,5 @@ describe('VueMdc', function () {
       })
     })
     it('registers UiButton', comp('UiButton'))
-    console.log(Vue.compile('<ui-button>Hey</ui-button>'))
   })
 })
