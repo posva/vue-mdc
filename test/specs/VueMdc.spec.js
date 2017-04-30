@@ -5,13 +5,13 @@ Vue.use(VueMdc)
 
 function comp (name) {
   return function () {
-    Vue.component(name).should.exist
+    should.exist(Vue.component(name))
   }
 }
 
 function dir (name) {
   return function () {
-    Vue.directive(name).should.exist
+    should.exist(Vue.directive(name))
   }
 }
 

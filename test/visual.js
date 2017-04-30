@@ -28,7 +28,7 @@ window.mocha.setup({
 window.sinon = sinon
 chai.use(require('chai-dom'))
 chai.use(require('sinon-chai'))
-chai.should()
+window.should = chai.should()
 
 let vms = []
 let testId = 0
