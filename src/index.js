@@ -1,24 +1,49 @@
-import Card from './Card/Card'
-import CardPrimary from './Card/CardPrimary'
-import CardTitle from './Card/CardTitle'
-import CardSubtitle from './Card/CardSubtitle'
-import CardActions from './Card/CardActions'
-import CardMedia from './Card/CardMedia'
-import CardSupportingText from './Card/CardSupportingText'
 import Button from './Button'
+
+import Card from './Card/Card'
+import CardActions from './Card/CardActions'
+import CardHorizontalBlock from './Card/CardHorizontalBlock'
+import CardMedia from './Card/CardMedia'
+import CardPrimary from './Card/CardPrimary'
+import CardSubtitle from './Card/CardSubtitle'
+import CardSupportingText from './Card/CardSupportingText'
+import CardTitle from './Card/CardTitle'
+
+import Checkbox from './Checkbox'
+
+import Drawer from './Drawer/Drawer'
+import DrawerHeader from './Drawer/DrawerHeader'
+import DrawerNav from './Drawer/DrawerNav'
+import DrawerNavItem from './Drawer/DrawerNavItem'
+
+import List from './List/List'
+import ListDivider from './List/ListDivider'
+import ListItem from './List/ListItem'
+
 import ripple from './ripple'
 
-// import './style.scss'
-
 const components = {
-  Card,
-  CardPrimary,
-  CardTitle,
-  CardSubtitle,
-  CardActions,
-  CardMedia,
-  CardSupportingText,
   Button,
+
+  Card,
+  CardActions,
+  CardHorizontalBlock,
+  CardMedia,
+  CardPrimary,
+  CardSubtitle,
+  CardSupportingText,
+  CardTitle,
+
+  Checkbox,
+
+  Drawer,
+  DrawerHeader,
+  DrawerNav,
+  DrawerNavItem,
+
+  List,
+  ListDivider,
+  ListItem,
 }
 
 function plugin (Vue, opts = { prefix: 'Mdc' }) {
@@ -38,14 +63,27 @@ export {
   version,
 
   // components
-  Card,
-  CardPrimary,
-  CardTitle,
-  CardSubtitle,
-  CardActions,
-  CardMedia,
-  CardSupportingText,
   Button,
+
+  Card,
+  CardActions,
+  CardHorizontalBlock,
+  CardMedia,
+  CardPrimary,
+  CardSubtitle,
+  CardSupportingText,
+  CardTitle,
+
+  Checkbox,
+
+  Drawer,
+  DrawerHeader,
+  DrawerNav,
+  DrawerNavItem,
+
+  List,
+  ListDivider,
+  ListItem,
 
   // directives
   ripple,
