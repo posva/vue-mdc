@@ -1,6 +1,6 @@
 {
   "name": "vue-mdc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Material Components Web for Vue.js",
   "author": "Eduardo San Martin Morote <posva13@gmail.com>",
   "main": "dist/vue-mdc.common.js",
