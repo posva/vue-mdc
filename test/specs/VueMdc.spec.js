@@ -29,6 +29,7 @@ const components = [
   'Checkbox',
 
   'Dialog',
+  'DialogHeaderTitle',
 
   'Drawer',
   'DrawerHeader',
