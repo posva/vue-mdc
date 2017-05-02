@@ -11,7 +11,9 @@
           Choose a Ringtone
         </h2>
       </header>
-      <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
+      <section id="mdc-dialog-with-list-description"
+               :class="bodyClasses"
+               class="mdc-dialog__body">
         <slot></slot>
       </section>
       <footer class="mdc-dialog__footer">
@@ -28,6 +30,18 @@ import MDCDialogFoundation from '@material/dialog/foundation'
 import * as util from '@material/dialog/util'
 
 export default {
+  props: {
+    scrollable: [Boolean, String],
+  },
+
+  computed: {
+    bodyClasses () {
+      return {
+        'mdc-dialog__body--scrollable': this.scrollable,
+      }
+    },
+  },
+
   mounted () {
     this.focusTrap_ = util.createFocusTrapInstance(this.$refs.surface, this.$refs.accept)
     this.mdcDialog = new MDCDialogFoundation({

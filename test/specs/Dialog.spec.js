@@ -8,6 +8,27 @@ import {
 describe('Dialog', function () {
   it('keeps original tag data', dataPropagationTest(Dialog))
 
+  it('can be scrollable', function (done) {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog scrollable={this.scrollable} ref='dialog'></Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    }, {
+      data: {
+        scrollable: true,
+      },
+    })
+
+    vm.$('.mdc-dialog__body').should.have.class('mdc-dialog__body--scrollable')
+    vm.scrollable = false
+    nextTick().then(() => {
+      vm.$('.mdc-dialog__body').should.not.have.class('mdc-dialog__body--scrollable')
+    }).then(done)
+  })
+
   it('can be toggled', function (done) {
     const vm = createVM(this, function (h) {
       return (
