@@ -176,4 +176,58 @@ describe('Dialog', function () {
     })
     vm.$('.mdc-dialog__footer__button--accept').should.exist.and.have.class('mdc-ripple-surface')
   })
+
+  describe('Events', function () {
+    it('accepted', function (done) {
+      const spy = sinon.spy()
+      const vm = createVM(this, function (h) {
+        return (
+          <div>
+            <Dialog ref='dialog' onAccepted={spy} acceptText={this.text}>
+              Dialog content
+            </Dialog>
+            <button onClick={() => this.$refs.dialog.open()}>Open</button>
+          </div>
+        )
+      }, {
+        data: {
+          text: 'Yes',
+        },
+      })
+      vm.$refs.dialog.open()
+      vm.text = 'ok'
+      nextTick().then(() => {
+        spy.should.have.not.been.called
+        vm.$('.mdc-dialog__footer__button--accept').click()
+      }).then(() => {
+        spy.should.have.been.called
+      }).then(done)
+    })
+
+    it('canceled', function (done) {
+      const spy = sinon.spy()
+      const vm = createVM(this, function (h) {
+        return (
+          <div>
+            <Dialog ref='dialog' onCanceled={spy} cancelText={this.text}>
+              Dialog content
+            </Dialog>
+            <button onClick={() => this.$refs.dialog.open()}>Open</button>
+          </div>
+        )
+      }, {
+        data: {
+          text: 'No',
+        },
+      })
+      vm.$refs.dialog.open()
+      vm.text = 'nope'
+      nextTick().then(() => {
+        spy.should.have.not.been.called
+        vm.$('.mdc-dialog__footer__button--cancel').click()
+      }).then(() => {
+        spy.should.have.been.called
+      }).then(done)
+    })
+  })
 })

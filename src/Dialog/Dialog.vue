@@ -67,8 +67,8 @@ export default {
       deregisterSurfaceInteractionHandler: (evt, handler) => this.$refs.surface.removeEventListener(evt, handler),
       registerDocumentKeydownHandler: (handler) => document.addEventListener('keydown', handler),
       deregisterDocumentKeydownHandler: (handler) => document.removeEventListener('keydown', handler),
-      notifyAccept: () => this.$emit('accept'),
-      notifyCancel: () => this.$emit('cancel'),
+      notifyAccept: () => this.$emit('accepted'),
+      notifyCancel: () => this.$emit('canceled'),
       trapFocusOnSurface: () => this.focusTrap_.activate(),
       untrapFocusOnSurface: () => this.focusTrap_.deactivate(),
     })
