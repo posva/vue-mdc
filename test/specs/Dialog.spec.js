@@ -7,6 +7,10 @@ import {
 } from '../helpers'
 
 describe('Dialog', function () {
+  describe('DialogHeaderTitle', function () {
+    it('keeps original tag data', dataPropagationTest(DialogHeaderTitle))
+  })
+
   it('keeps original tag data', dataPropagationTest(Dialog))
 
   it('can be scrollable', function (done) {
