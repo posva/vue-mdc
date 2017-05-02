@@ -16,8 +16,14 @@
         <slot></slot>
       </section>
       <footer class="mdc-dialog__footer">
-        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Decline</button>
-        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept" ref="accept">Accept</button>
+        <button type="button"
+                v-if="cancelText"
+                class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
+        >{{ cancelText }}</button>
+        <button type="button"
+                class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept"
+                ref="accept"
+        >{{ acceptText || 'OK' }}</button>
       </footer>
     </div>
     <div class="mdc-dialog__backdrop"></div>
@@ -26,12 +32,14 @@
 
 <script>
 import MDCDialogFoundation from '@material/dialog/foundation'
-import * as util from '@material/dialog/util'
+import { createFocusTrapInstance } from '@material/dialog/util'
 
 export default {
   props: {
     scrollable: [Boolean, String],
     title: String,
+    acceptText: String,
+    cancelText: String,
   },
 
   computed: {
@@ -43,7 +51,7 @@ export default {
   },
 
   mounted () {
-    this.focusTrap_ = util.createFocusTrapInstance(this.$refs.surface, this.$refs.accept)
+    this.focusTrap_ = createFocusTrapInstance(this.$refs.surface, this.$refs.accept)
     this.mdcDialog = new MDCDialogFoundation({
       addClass: (className) => this.$el.classList.add(className),
       removeClass: (className) => this.$el.classList.remove(className),
