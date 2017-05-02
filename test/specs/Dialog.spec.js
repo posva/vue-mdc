@@ -250,4 +250,48 @@ describe('Dialog', function () {
     })
     vm.$('.mdc-dialog__header__title').should.exist.and.have.text('Custom')
   })
+
+  it('should not have an id by default', function () {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog ref='dialog'>
+            Dialog content
+          </Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    })
+    vm.$('.mdc-dialog__header__title').should.not.have.attr('id')
+    vm.$('.mdc-dialog__body').should.not.have.attr('id')
+    vm.$refs.dialog.$el.should.not.have.attr('id')
+  })
+
+  it('should propagate id to aria labels', function (done) {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog ref='dialog' id={this.id}>
+            Dialog content
+          </Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    }, {
+      data: {
+        id: 'my-dialog',
+      },
+    })
+    vm.$('.mdc-dialog__header__title').should.have.id('my-dialog__label')
+    vm.$('.mdc-dialog__body').should.have.id('my-dialog__description')
+    vm.$refs.dialog.$el.should.have.id('my-dialog')
+    vm.$refs.dialog.$el.should.have.attr('aria-labelledby', 'my-dialog__label')
+    vm.$refs.dialog.$el.should.have.attr('aria-describedby', 'my-dialog__description')
+    vm.id = false
+    nextTick().then(() => {
+      vm.$('.mdc-dialog__header__title').should.not.have.attr('id')
+      vm.$('.mdc-dialog__body').should.not.have.attr('id')
+      vm.$refs.dialog.$el.should.not.have.attr('id')
+    }).then(done)
+  })
 })

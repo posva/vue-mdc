@@ -1,18 +1,18 @@
 <template>
-  <aside id="mdc-dialog-with-list"
+  <aside :id="id"
          style="visibility:hidden"
          class="mdc-dialog"
          role="alertdialog"
-         aria-labelledby="mdc-dialog-with-list-label"
-         aria-describedby="mdc-dialog-with-list-description">
+         :aria-labelledby="labelId"
+         :aria-describedby="descriptionId">
     <div class="mdc-dialog__surface" ref="surface">
       <header class="mdc-dialog__header">
         <slot name="header">
-          <h2 id="mdc-dialog-with-list-label"
+          <h2 :id="labelId"
               class="mdc-dialog__header__title">{{ title }}</h2>
         </slot>
       </header>
-      <section id="mdc-dialog-with-list-description"
+      <section :id="descriptionId"
                :class="bodyClasses"
                class="mdc-dialog__body">
         <slot></slot>
@@ -46,6 +46,7 @@ export default {
     title: String,
     acceptText: String,
     cancelText: String,
+    id: [String, Boolean],
   },
 
   computed: {
@@ -53,6 +54,12 @@ export default {
       return {
         'mdc-dialog__body--scrollable': this.scrollable,
       }
+    },
+    labelId () {
+      return this.id ? `${this.id}__label` : false
+    },
+    descriptionId () {
+      return this.id ? `${this.id}__description` : false
     },
   },
 
