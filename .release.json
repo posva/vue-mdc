@@ -1,6 +1,8 @@
 {
-  "tagName": "v%s",
-  "commitMessage": "🔖 %s",
+  "src": {
+    "tagName": "v%s",
+    "commitMessage": "🔖 %s"
+  },
   "github": {
     "release": true,
     "releaseName": "Release %s",
