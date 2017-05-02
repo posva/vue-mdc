@@ -140,4 +140,34 @@ describe('Drawer', function () {
       })
     })
   })
+
+  describe('DrawerNav', function () {
+    it('is a nav by default', function () {
+      const vm = createVM(this, h => (
+        <DrawerNav ref='list'></DrawerNav>
+      ))
+      vm.$('.mdc-list').should.exist.and.match('nav')
+    })
+    it('can render a custom tag', function () {
+      const vm = createVM(this, h => (
+        <DrawerNav ref='list' tag='div'></DrawerNav>
+      ))
+      vm.$('.mdc-list').should.exist.and.match('div')
+    })
+  })
+
+  describe('DrawerNavItem', function () {
+    it('is an a by default', function () {
+      const vm = createVM(this, h => (
+        <DrawerNavItem ref='list'>Hello</DrawerNavItem>
+      ))
+      vm.$('.mdc-list-item').should.exist.and.match('a')
+    })
+    it('can render a custom tag', function () {
+      const vm = createVM(this, h => (
+        <DrawerNavItem ref='list' tag='div'>Hello</DrawerNavItem>
+      ))
+      vm.$('.mdc-list-item').should.exist.and.match('div')
+    })
+  })
 })

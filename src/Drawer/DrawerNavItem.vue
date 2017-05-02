@@ -4,6 +4,10 @@ import ListItem from '../List/ListItem'
 export default {
   props: {
     selected: Boolean,
+    tag: {
+      type: String,
+      default: 'a',
+    },
   },
 
   inject: ['mode'],
@@ -15,7 +19,7 @@ export default {
         [`mdc-${this.mode}-drawer--selected`]: this.selected,
       },
       props: {
-        tag: 'a',
+        tag: this.tag,
       },
     }
     return h(ListItem, {
