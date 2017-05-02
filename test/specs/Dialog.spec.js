@@ -160,4 +160,20 @@ describe('Dialog', function () {
       }).then(done)
     })
   })
+
+  it('has a ripple in buttons', function () {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog ref='dialog'></Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    }, {
+      data: {
+        n: 0,
+      },
+    })
+    vm.$('.mdc-dialog__footer__button--accept').should.exist.and.have.class('mdc-ripple-surface')
+  })
 })

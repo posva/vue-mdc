@@ -16,14 +16,14 @@
         <slot></slot>
       </section>
       <footer class="mdc-dialog__footer">
-        <button type="button"
-                v-if="cancelText"
-                class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
-        >{{ cancelText }}</button>
-        <button type="button"
-                class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept"
-                ref="accept"
-        >{{ acceptText || 'OK' }}</button>
+        <MdcButton class="mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
+                   v-ripple
+                   v-if="cancelText"
+        >{{ cancelText }}</MdcButton>
+        <MdcButton class="mdc-dialog__footer__button mdc-dialog__footer__button--accept"
+                   v-ripple
+                   ref="accept"
+        >{{ acceptText || 'OK' }}</MdcButton>
       </footer>
     </div>
     <div class="mdc-dialog__backdrop"></div>
@@ -33,6 +33,8 @@
 <script>
 import MDCDialogFoundation from '@material/dialog/foundation'
 import { createFocusTrapInstance } from '@material/dialog/util'
+import MdcButton from '../Button'
+import ripple from '../ripple'
 
 export default {
   props: {
@@ -80,6 +82,9 @@ export default {
       this.mdcDialog.close()
     },
   },
+
+  components: { MdcButton },
+  directives: { ripple },
 }
 </script>
 
