@@ -29,6 +29,19 @@ describe('Dialog', function () {
     }).then(done)
   })
 
+  it('has a title', function () {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog title='Title' ref='dialog'></Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    })
+
+    vm.$('.mdc-dialog__header').should.have.text('Title')
+  })
+
   it('can be toggled', function (done) {
     const vm = createVM(this, function (h) {
       return (

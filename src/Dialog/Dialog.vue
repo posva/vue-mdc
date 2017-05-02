@@ -7,9 +7,8 @@
          aria-describedby="mdc-dialog-with-list-description">
     <div class="mdc-dialog__surface" ref="surface">
       <header class="mdc-dialog__header">
-        <h2 id="mdc-dialog-with-list-label" class="mdc-dialog__header__title">
-          Choose a Ringtone
-        </h2>
+        <h2 id="mdc-dialog-with-list-label"
+            class="mdc-dialog__header__title">{{ title }}</h2>
       </header>
       <section id="mdc-dialog-with-list-description"
                :class="bodyClasses"
@@ -32,6 +31,7 @@ import * as util from '@material/dialog/util'
 export default {
   props: {
     scrollable: [Boolean, String],
+    title: String,
   },
 
   computed: {
