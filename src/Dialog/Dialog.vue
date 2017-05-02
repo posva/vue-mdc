@@ -7,8 +7,10 @@
          aria-describedby="mdc-dialog-with-list-description">
     <div class="mdc-dialog__surface" ref="surface">
       <header class="mdc-dialog__header">
-        <h2 id="mdc-dialog-with-list-label"
-            class="mdc-dialog__header__title">{{ title }}</h2>
+        <slot name="header">
+          <h2 id="mdc-dialog-with-list-label"
+              class="mdc-dialog__header__title">{{ title }}</h2>
+        </slot>
       </header>
       <section id="mdc-dialog-with-list-description"
                :class="bodyClasses"
@@ -16,14 +18,16 @@
         <slot></slot>
       </section>
       <footer class="mdc-dialog__footer">
-        <MdcButton class="mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
-                   v-ripple
-                   v-if="cancelText"
-        >{{ cancelText }}</MdcButton>
-        <MdcButton class="mdc-dialog__footer__button mdc-dialog__footer__button--accept"
-                   v-ripple
-                   ref="accept"
-        >{{ acceptText || 'OK' }}</MdcButton>
+        <slot name="footer">
+          <MdcButton class="mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
+                     v-ripple
+                     v-if="cancelText"
+          >{{ cancelText }}</MdcButton>
+          <MdcButton class="mdc-dialog__footer__button mdc-dialog__footer__button--accept"
+                     v-ripple
+                     ref="accept"
+          >{{ acceptText || 'OK' }}</MdcButton>
+        </slot>
       </footer>
     </div>
     <div class="mdc-dialog__backdrop"></div>

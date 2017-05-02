@@ -1,4 +1,5 @@
 import Dialog from 'src/Dialog/Dialog'
+import DialogHeaderTitle from 'src/Dialog/DialogHeaderTitle'
 import {
   createVM,
   dataPropagationTest,
@@ -229,5 +230,20 @@ describe('Dialog', function () {
         spy.should.have.been.called
       }).then(done)
     })
+  })
+
+  it('can override the header', function () {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog ref='dialog'>
+            <DialogHeaderTitle slot='header'>Custom</DialogHeaderTitle>
+            Dialog content
+          </Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    })
+    vm.$('.mdc-dialog__header__title').should.exist.and.have.text('Custom')
   })
 })
