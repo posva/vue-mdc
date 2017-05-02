@@ -11,6 +11,8 @@ import CardTitle from './Card/CardTitle'
 
 import Checkbox from './Checkbox'
 
+import Dialog from './Dialog/Dialog'
+
 import Drawer from './Drawer/Drawer'
 import DrawerHeader from './Drawer/DrawerHeader'
 import DrawerNav from './Drawer/DrawerNav'
@@ -35,6 +37,8 @@ const components = {
   CardTitle,
 
   Checkbox,
+
+  Dialog,
 
   Drawer,
   DrawerHeader,
@@ -75,6 +79,8 @@ export {
   CardTitle,
 
   Checkbox,
+
+  Dialog,
 
   Drawer,
   DrawerHeader,

@@ -28,6 +28,8 @@ const components = [
 
   'Checkbox',
 
+  'Dialog',
+
   'Drawer',
   'DrawerHeader',
   'DrawerNav',
@@ -56,6 +58,7 @@ describe('VueMdc', function () {
 
     it('registers v-ripple', dir('ripple'))
   })
+
   describe('Prefixes', function () {
     before(function () {
       VueMdc.installed = false
