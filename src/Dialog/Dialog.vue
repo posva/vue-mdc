@@ -12,19 +12,7 @@
         </h2>
       </header>
       <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
-        <ul class="mdc-list">
-          <li class="mdc-list-item">None</li>
-          <li class="mdc-list-item">Callisto</li>
-          <li class="mdc-list-item">Ganymede</li>
-          <li class="mdc-list-item">Luna</li>
-          <li class="mdc-list-item">Marimba</li>
-          <li class="mdc-list-item">Schwifty</li>
-          <li class="mdc-list-item">Callisto</li>
-          <li class="mdc-list-item">Ganymede</li>
-          <li class="mdc-list-item">Luna</li>
-          <li class="mdc-list-item">Marimba</li>
-          <li class="mdc-list-item">Schwifty</li>
-        </ul>
+        <slot></slot>
       </section>
       <footer class="mdc-dialog__footer">
         <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Decline</button>

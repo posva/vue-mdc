@@ -12,9 +12,7 @@ describe('Dialog', function () {
     const vm = createVM(this, function (h) {
       return (
         <div>
-          <Dialog ref='dialog'>
-            Here is my content lol
-          </Dialog>
+          <Dialog ref='dialog'></Dialog>
           <button onClick={() => this.$refs.dialog.open()}>Open</button>
         </div>
       )
@@ -27,6 +25,51 @@ describe('Dialog', function () {
       vm.$refs.dialog.close()
     }).then(() => {
       vm.$refs.dialog.$el.should.be.hidden
+    }).then(done)
+  })
+
+  it('displays its content', function () {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog ref='dialog'>
+            Dialog content
+          </Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    })
+    vm.$('.mdc-dialog__body').should.have.text('Dialog content')
+  })
+
+  it('is visible if content changes', function (done) {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>
+          <Dialog ref='dialog'>
+            <div class='content'>
+              n: {this.n}
+            </div>
+            <button onClick={() => this.n++}>+</button>
+            <button onClick={() => this.n--}>-</button>
+          </Dialog>
+          <button onClick={() => this.$refs.dialog.open()}>Open</button>
+        </div>
+      )
+    }, {
+      data: {
+        n: 0,
+      },
+    })
+    vm.$('.content').should.have.text('n: 0')
+    vm.$refs.dialog.$el.should.be.hidden
+    vm.$refs.dialog.open()
+    nextTick().then(() => {
+      vm.$refs.dialog.$el.should.not.be.hidden
+      vm.n = 20
+    }).then(() => {
+      vm.$refs.dialog.$el.should.not.be.hidden
+      vm.$('.content').should.have.text('n: 20')
     }).then(done)
   })
 })
