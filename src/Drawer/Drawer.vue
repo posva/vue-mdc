@@ -17,9 +17,6 @@
 </template>
 
 <script>
-import List from '../List/List'
-import ListItem from '../List/ListItem'
-
 import { MDCTemporaryDrawer } from '@material/drawer'
 
 export default {
@@ -59,8 +56,6 @@ export default {
       this.drawer.open = !this.drawer.open
     },
   },
-
-  components: { List, ListItem },
 }
 </script>
 
