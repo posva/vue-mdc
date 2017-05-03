@@ -23,6 +23,10 @@ import List from './List/List'
 import ListDivider from './List/ListDivider'
 import ListItem from './List/ListItem'
 
+import Toolbar from './Toolbar/Toolbar'
+import ToolbarRow from './Toolbar/ToolbarRow'
+import ToolbarSection from './Toolbar/ToolbarSection'
+
 import ripple from './ripple'
 
 const components = {
@@ -50,6 +54,10 @@ const components = {
   List,
   ListDivider,
   ListItem,
+
+  Toolbar,
+  ToolbarRow,
+  ToolbarSection,
 }
 
 function plugin (Vue, opts = { prefix: 'Mdc' }) {
@@ -93,6 +101,10 @@ export {
   List,
   ListDivider,
   ListItem,
+
+  Toolbar,
+  ToolbarRow,
+  ToolbarSection,
 
   // directives
   ripple,

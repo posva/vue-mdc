@@ -39,6 +39,10 @@ const components = [
   'List',
   'ListDivider',
   'ListItem',
+
+  'Toolbar',
+  'ToolbarRow',
+  'ToolbarSection',
 ]
 
 describe('VueMdc', function () {
