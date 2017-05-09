@@ -47,7 +47,7 @@ export default {
 
   mounted () {
     if (this.mode === 'temporary') {
-      this.mdcDrawer = new MDCTemporaryDrawerFoundation({
+      this.foundation = new MDCTemporaryDrawerFoundation({
         addClass: (className) => this.$el.classList.add(className),
         removeClass: (className) => this.$el.classList.remove(className),
         hasClass: (className) => this.$el.classList.contains(className),
@@ -89,21 +89,21 @@ export default {
           window.getComputedStyle(this.$el).getPropertyValue('direction') === 'rtl',
         isDrawer: /* istanbul ignore next */ (el) => el === this.$refs.drawer,
       })
-      this.mdcDrawer.init()
+      this.foundation.init()
     }
   },
 
   beforeDestroy () {
-    this.mdcDrawer.destroy()
+    this.foundation.destroy()
   },
 
   methods: {
     open () {
-      this.mdcDrawer.open()
+      this.foundation.open()
       window.document.body.classList.add(scrollBlock)
     },
     close () {
-      this.mdcDrawer.close()
+      this.foundation.close()
       window.document.body.classList.remove(scrollBlock)
     },
   },

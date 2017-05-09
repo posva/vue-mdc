@@ -6,6 +6,7 @@ import ListDivider from 'src/List/ListDivider'
 import {
   createVM,
   dataPropagationTest,
+  foundationDetroyTest,
   nextTick,
 } from '../helpers'
 
@@ -20,23 +21,7 @@ describe('Drawer', function () {
     vm.$refs.drawer.$el.should.have.class('mdc-temporary-drawer')
   })
 
-  it('calls foundation destroy', function (done) {
-    const vm = createVM(this, function (h) {
-      return (
-        <div>{ this.show && <Drawer ref='drawer'/> }</div>
-      )
-    }, {
-      data: { show: true },
-    })
-    const foundation = vm.$refs.drawer.mdcDrawer
-    sinon.spy(foundation, 'destroy')
-    foundation.destroy.should.have.not.been.called
-    vm.show = false
-    nextTick().then(() => {
-      foundation.destroy.should.have.been.called.once
-      foundation.destroy.restore()
-    }).then(done)
-  })
+  it('calls foundation destroy', foundationDetroyTest(Drawer))
 
   describe('temporary', function () {
     describe('no content', function () {

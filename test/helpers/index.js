@@ -43,6 +43,25 @@ export function attrTest (it, base, Component, attr) {
     })
   })
 }
+export function foundationDetroyTest (Component) {
+  return function (done) {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>{ this.show && <Component ref='comp'/> }</div>
+      )
+    }, {
+      data: { show: true },
+    })
+    const foundation = vm.$refs.comp.foundation
+    sinon.spy(foundation, 'destroy')
+    foundation.destroy.should.have.not.been.called
+    vm.show = false
+    nextTick().then(() => {
+      foundation.destroy.should.have.been.called.once
+      foundation.destroy.restore()
+    }).then(done)
+  }
+}
 
 export {
   createVM,
