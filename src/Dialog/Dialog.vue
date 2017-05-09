@@ -65,7 +65,7 @@ export default {
 
   mounted () {
     this.focusTrap_ = createFocusTrapInstance(this.$refs.surface, this.$refs.accept)
-    this.mdcDialog = new MDCDialogFoundation({
+    this.foundation = new MDCDialogFoundation({
       addClass: (className) => this.$el.classList.add(className),
       removeClass: (className) => this.$el.classList.remove(className),
       setStyle: (prop, val) => this.$el.style.setProperty(prop, val),
@@ -83,14 +83,20 @@ export default {
       trapFocusOnSurface: () => this.focusTrap_.activate(),
       untrapFocusOnSurface: () => this.focusTrap_.deactivate(),
     })
+
+    this.foundation.init()
+  },
+
+  beforeDestroy () {
+    this.foundation.destroy()
   },
 
   methods: {
     open () {
-      this.mdcDialog.open()
+      this.foundation.open()
     },
     close () {
-      this.mdcDialog.close()
+      this.foundation.close()
     },
   },
 

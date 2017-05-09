@@ -3,6 +3,7 @@ import DialogHeaderTitle from 'src/Dialog/DialogHeaderTitle'
 import {
   createVM,
   dataPropagationTest,
+  foundationDetroyTest,
   nextTick,
 } from '../helpers'
 
@@ -12,6 +13,7 @@ describe('Dialog', function () {
   })
 
   it('keeps original tag data', dataPropagationTest(Dialog))
+  it('calls foundation destroy', foundationDetroyTest(Dialog))
 
   it('can be scrollable', function (done) {
     const vm = createVM(this, function (h) {
