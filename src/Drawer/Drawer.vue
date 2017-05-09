@@ -88,11 +88,11 @@ export default {
   methods: {
     open () {
       this.mdcDrawer.open()
-      /* window.document.body.classList.add(scrollBlock)*/
+      window.document.body.classList.add(scrollBlock)
     },
     close () {
       this.mdcDrawer.close()
-      /* window.document.body.classList.remove(scrollBlock)*/
+      window.document.body.classList.remove(scrollBlock)
     },
   },
 }
