@@ -26,7 +26,9 @@ export default {
 
     if (icon) {
       data.staticClass += ' material-icons'
-      children.unshift(h('span', [icon]))
+      children.unshift(h('span', {
+        staticClass: 'mdc-fab__icon',
+      }, [icon]))
     }
 
     return h('button', {
