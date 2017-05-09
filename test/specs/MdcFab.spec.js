@@ -25,6 +25,16 @@ describe('Fab', function () {
     vm.$('.mdc-fab__icon').should.have.match('span')
   })
 
+  it('contains custom content', function () {
+    const vm = createVM(this, function (h) {
+      return (
+        <Fab style={{ fontSize: '1.5rem' }}>💃🏻</Fab>
+      )
+    })
+    vm.$('.mdc-fab').should.not.have.class('material-icons')
+    vm.$('.mdc-fab__icon').should.not.exist
+  })
+
   describe('attrs', function () {
     attrTest(it, 'mdc-fab', Fab, [
       'mini',
