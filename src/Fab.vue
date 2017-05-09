@@ -7,13 +7,28 @@ export default {
   props: {
     mini: Boolean,
     plain: Boolean,
+    icon: String,
   },
 
-  render (h, { data, props, children }) {
-    const staticClass = propsToClasses('mdc-fab', props)
+  render (h, {
+    data,
+    props: {
+      mini,
+      plain,
+      icon,
+    },
+    children,
+  }) {
+    const staticClass = propsToClasses('mdc-fab', { mini, plain })
     data.staticClass = data.staticClass
                      ? `${data.staticClass} ${staticClass}`
                      : staticClass
+
+    if (icon) {
+      data.staticClass += ' material-icons'
+      children.unshift(h('span', [icon]))
+    }
+
     return h('button', {
       ...data,
     }, children)
