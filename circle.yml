@@ -26,3 +26,4 @@ test:
     - yarn test
   post:
     - bash <(curl -s https://codecov.io/bash)
+    - cat test/coverage/lcov.info | ./node_modules/.bin/codacy-coverage

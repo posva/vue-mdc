@@ -49,6 +49,7 @@
     "camelcase": "^4.1.0",
     "chai": "^3.5.0",
     "chai-dom": "^1.4.3",
+    "codacy-coverage": "^2.0.2",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.1",
     "eslint": "^3.19.0",
