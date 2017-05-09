@@ -35,7 +35,6 @@ describe('Drawer', function () {
     nextTick().then(() => {
       foundation.destroy.should.have.been.called.once
       foundation.destroy.restore()
-      foundation.destroy()
     }).then(done)
   })
 
