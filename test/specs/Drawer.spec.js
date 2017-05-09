@@ -28,21 +28,23 @@ describe('Drawer', function () {
             <div>
               <Drawer ref='drawer'>
               </Drawer>
-              <button onClick={() => this.$refs.drawer.toggle()}>Toggle</button>
+              <button onClick={() => this.$refs.drawer.open()}>Open</button>
             </div>
           )
         })
       })
 
-      it('can be toggled', function (done) {
-        this.vm.$refs.drawer.$el.should.not.have.class('mdc-temporary-drawer--open')
-        this.vm.$refs.drawer.toggle()
-        nextTick().then(() => {
-          this.vm.$refs.drawer.$el.should.have.class('mdc-temporary-drawer--open')
-          this.vm.$refs.drawer.toggle()
-        }).then(() => {
-          this.vm.$refs.drawer.$el.should.not.have.class('mdc-temporary-drawer--open')
-        }).then(done)
+      afterEach(function () {
+        this.vm.$refs.drawer.close()
+      })
+
+      it('makes the body unscrollable while open', function () {
+        const scrollBlock = 'mdc-dialog-scroll-lock'
+        document.body.should.not.have.class(scrollBlock)
+        this.vm.$refs.drawer.open()
+        document.body.should.have.class(scrollBlock)
+        this.vm.$refs.drawer.close()
+        document.body.should.not.have.class(scrollBlock)
       })
 
       it('can be closed', function (done) {
@@ -121,7 +123,7 @@ describe('Drawer', function () {
                    ))}
                 </DrawerNav>
               </Drawer>
-              <button onClick={() => this.$refs.drawer.toggle()}>Toggle</button>
+              <button onClick={() => this.$refs.drawer.open()}>Open</button>
             </div>
           )
         }, {
