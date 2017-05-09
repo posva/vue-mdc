@@ -47,7 +47,6 @@ export default {
 
   mounted () {
     if (this.mode === 'temporary') {
-      console.log(this.$refs.drawer)
       this.mdcDrawer = new MDCTemporaryDrawerFoundation({
         addClass: (className) => this.$el.classList.add(className),
         removeClass: (className) => this.$el.classList.remove(className),
@@ -62,27 +61,40 @@ export default {
         deregisterDrawerInteractionHandler: (evt, handler) =>
           this.$refs.drawer.removeEventListener(util.remapEvent(evt), handler),
         registerTransitionEndHandler: (handler) => this.$refs.drawer.addEventListener('transitionend', handler),
-        deregisterTransitionEndHandler: (handler) => this.$refs.drawer.removeEventListener('transitionend', handler),
+        deregisterTransitionEndHandler: /* istanbul ignore next */ (handler) =>
+          this.$refs.drawer.removeEventListener('transitionend', handler),
         registerDocumentKeydownHandler: (handler) => document.addEventListener('keydown', handler),
         deregisterDocumentKeydownHandler: (handler) => document.removeEventListener('keydown', handler),
-        getDrawerWidth: () => this.$refs.drawer.offsetWidth,
-        setTranslateX: (value) => this.$refs.drawer.style.setProperty(
-          util.getTransformPropertyName(), value === null ? null : `translateX(${value}px)`),
+        getDrawerWidth: /* istanbul ignore next */ () =>
+          this.$refs.drawer.offsetWidth,
+        setTranslateX: /* istanbul ignore next */ (value) =>
+          this.$refs.drawer.style.setProperty(
+            util.getTransformPropertyName(),
+            value === null ? null : `translateX(${value}px)`
+          ),
         updateCssVariable: (value) => {
+          // istanbul ignore else
           if (util.supportsCssCustomProperties()) {
             this.$el.style.setProperty(OPACITY_VAR_NAME, value)
           }
         },
         getFocusableElements: () => this.$refs.drawer.querySelectorAll(FOCUSABLE_ELEMENTS),
         saveElementTabState: (el) => util.saveElementTabState(el),
-        restoreElementTabState: (el) => util.restoreElementTabState(el),
+        restoreElementTabState: /* istanbul ignore next */ (el) =>
+          util.restoreElementTabState(el),
         makeElementUntabbable: (el) => el.setAttribute('tabindex', -1),
         notifyOpen: () => this.$emit('opened'),
         notifyClose: () => this.$emit('closed'),
-        isRtl: () => window.getComputedStyle(this.$el).getPropertyValue('direction') === 'rtl',
-        isDrawer: (el) => el === this.$refs.drawer,
+        isRtl: /* istanbul ignore next */ () =>
+          window.getComputedStyle(this.$el).getPropertyValue('direction') === 'rtl',
+        isDrawer: /* istanbul ignore next */ (el) => el === this.$refs.drawer,
       })
+      this.mdcDrawer.init()
     }
+  },
+
+  beforeDestroy () {
+    this.mdcDrawer.destroy()
   },
 
   methods: {

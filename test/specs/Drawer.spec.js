@@ -20,6 +20,25 @@ describe('Drawer', function () {
     vm.$refs.drawer.$el.should.have.class('mdc-temporary-drawer')
   })
 
+  it('calls foundation destroy', function (done) {
+    const vm = createVM(this, function (h) {
+      return (
+        <div>{ this.show && <Drawer ref='drawer'/> }</div>
+      )
+    }, {
+      data: { show: true },
+    })
+    const foundation = vm.$refs.drawer.mdcDrawer
+    sinon.spy(foundation, 'destroy')
+    foundation.destroy.should.have.not.been.called
+    vm.show = false
+    nextTick().then(() => {
+      foundation.destroy.should.have.been.called.once
+      foundation.destroy.restore()
+      foundation.destroy()
+    }).then(done)
+  })
+
   describe('temporary', function () {
     describe('no content', function () {
       beforeEach(function () {
@@ -53,6 +72,13 @@ describe('Drawer', function () {
         nextTick().then(() => {
           this.vm.$refs.drawer.$el.should.not.have.class('mdc-temporary-drawer--open')
         }).then(done)
+      })
+
+      it('closes when clicking outside, function ()', function () {
+        this.vm.$refs.drawer.open()
+        this.vm.$refs.drawer.$el.should.have.class('mdc-temporary-drawer--open')
+        this.vm.$('.mdc-temporary-drawer').click()
+        this.vm.$refs.drawer.$el.should.not.have.class('mdc-temporary-drawer--open')
       })
 
       it('can be opened', function (done) {
