@@ -1,10 +1,13 @@
 import Fab from 'src/Fab'
 import {
   createVM,
+  dataPropagationTest,
   attrTest,
 } from '../helpers'
 
 describe('Fab', function () {
+  it('keeps original tag data', dataPropagationTest(Fab))
+
   it('renders a button by default', function () {
     const vm = createVM(this, function (h) {
       return (
