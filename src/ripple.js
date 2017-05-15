@@ -36,6 +36,18 @@ export default {
     el.mdcRipple_.init()
   },
 
+  inserted (el, binding, { componentInstance }) {
+    // TODO add test case
+    // I have been unable to reproduce the bug outside
+    // of vue-mdc docs, so it may have to deal with SSR
+    if (componentInstance) {
+      componentInstance.$on('hook:updated', () => {
+        el.mdcRipple_.destroy()
+        binding.def.bind(el, binding)
+      })
+    }
+  },
+
   componentUpdated (el, binding, vnode, oldVnode) {
     // Always recreate for functional components
     if (vnode.functionalContext) {
