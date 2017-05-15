@@ -19,6 +19,8 @@ import DrawerHeader from './Drawer/DrawerHeader'
 import DrawerNav from './Drawer/DrawerNav'
 import DrawerNavItem from './Drawer/DrawerNavItem'
 
+import Fab from './Fab'
+
 import List from './List/List'
 import ListDivider from './List/ListDivider'
 import ListItem from './List/ListItem'
@@ -50,6 +52,8 @@ const components = {
   DrawerHeader,
   DrawerNav,
   DrawerNavItem,
+
+  Fab,
 
   List,
   ListDivider,
@@ -97,6 +101,8 @@ export {
   DrawerHeader,
   DrawerNav,
   DrawerNavItem,
+
+  Fab,
 
   List,
   ListDivider,

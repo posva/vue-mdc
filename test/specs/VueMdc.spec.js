@@ -36,6 +36,8 @@ const components = [
   'DrawerNav',
   'DrawerNavItem',
 
+  'Fab',
+
   'List',
   'ListDivider',
   'ListItem',
