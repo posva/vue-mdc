@@ -86,7 +86,7 @@
     "sass-loader": "^6.0.3",
     "sinon": "^2.2.0",
     "sinon-chai": "^2.10.0",
-    "style-loader": "^0.17.0",
+    "style-loader": "^0.18.0",
     "uglify-js": "^3.0.1",
     "uppercamelcase": "^3.0.0",
     "vue": "^2.3.2",
