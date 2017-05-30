@@ -107,13 +107,17 @@
       "html-entities",
       "vue/dist/vue.js",
       "chai",
+      "chai-dom",
+      "sinon",
+      "sinon-chai",
+      "diff",
       "core-js/library",
       "url",
       "sockjs-client",
       "vue-style-loader/lib/addStylesClient.js",
       "events",
       "ansi-html",
-      "style-loader/addStyles.js"
+      "text-encoding"
     ]
   },
   "babel": {
