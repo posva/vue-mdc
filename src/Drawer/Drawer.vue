@@ -95,6 +95,7 @@ export default {
 
   beforeDestroy () {
     this.foundation.destroy()
+    window.document.body.classList.remove(scrollBlock)
   },
 
   methods: {
