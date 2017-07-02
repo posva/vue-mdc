@@ -81,7 +81,7 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-scss": "^0.2.0",
+    "rollup-plugin-scss": "^0.3.0",
     "rollup-plugin-vue": "^2.4.0",
     "sass-loader": "^6.0.5",
     "sinon": "^2.3.2",
