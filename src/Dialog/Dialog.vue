@@ -1,6 +1,5 @@
 <template>
   <aside :id="id"
-         style="visibility:hidden"
          class="mdc-dialog"
          role="alertdialog"
          :aria-labelledby="labelId"
@@ -37,6 +36,7 @@
 <script>
 import MDCDialogFoundation from '@material/dialog/foundation'
 import { createFocusTrapInstance } from '@material/dialog/util'
+import { getCorrectEventName } from '@material/animation';
 import MdcButton from '../Button'
 import ripple from '../ripple'
 
@@ -68,7 +68,6 @@ export default {
     this.foundation = new MDCDialogFoundation({
       addClass: (className) => this.$el.classList.add(className),
       removeClass: (className) => this.$el.classList.remove(className),
-      setStyle: (prop, val) => this.$el.style.setProperty(prop, val),
       addBodyClass: (className) => document.body.classList.add(className),
       removeBodyClass: (className) => document.body.classList.remove(className),
       eventTargetHasClass: (target, className) => target.classList.contains(className),
@@ -78,8 +77,11 @@ export default {
       deregisterSurfaceInteractionHandler: (evt, handler) => this.$refs.surface.removeEventListener(evt, handler),
       registerDocumentKeydownHandler: (handler) => document.addEventListener('keydown', handler),
       deregisterDocumentKeydownHandler: (handler) => document.removeEventListener('keydown', handler),
+      registerTransitionEndHandler: (handler) => this.$el.addEventListener(getCorrectEventName(window, 'transitionend'), handler),
+      deregisterTransitionEndHandler: (handler) => this.$el.removeEventListener(getCorrectEventName(window, 'transitionend'), handler),
       notifyAccept: () => this.$emit('accepted'),
       notifyCancel: () => this.$emit('canceled'),
+      isDialog: (el) => el === this.$refs.surface,
       trapFocusOnSurface: () => this.focusTrap_.activate(),
       untrapFocusOnSurface: () => this.focusTrap_.deactivate(),
     })
