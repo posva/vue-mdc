@@ -52,7 +52,7 @@
     "codacy-coverage": "^2.0.2",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
-    "eslint": "^3.19.0",
+    "eslint": "^4.1.1",
     "eslint-config-vue": "^2.0.2",
     "eslint-plugin-vue": "^2.0.1",
     "extract-text-webpack-plugin": "^2.1.2",
