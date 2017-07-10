@@ -102,35 +102,35 @@ describe('Drawer', function () {
             <div>
               <Drawer ref='drawer'>
                 <DrawerHeader
-                    slot='header'
+                  slot='header'
                 >
                   Header Here
                 </DrawerHeader>
 
                 <DrawerNav>
                   {menu1.map(({ icon, text }) => (
-                     <DrawerNavItem href='#'
-                                    nativeOnClick={select}
-                                    selected={isSelected(icon + text)}
-                     >
-                       <i class='material-icons mdc-list-item__start-detail'
-                          aria-hidden='true'>{icon}</i>{text}
-                     </DrawerNavItem>
-                   ))}
+                    <DrawerNavItem href='#'
+                      nativeOnClick={select}
+                      selected={isSelected(icon + text)}
+                    >
+                      <i class='material-icons mdc-list-item__start-detail'
+                        aria-hidden='true'>{icon}</i>{text}
+                    </DrawerNavItem>
+                  ))}
                 </DrawerNav>
 
                 <ListDivider/>
 
                 <DrawerNav>
                   {menu2.map(({ icon, text }) => (
-                     <DrawerNavItem href='#'
-                                    nativeOnClick={select}
-                                    selected={isSelected(icon + text)}
-                     >
-                       <i class='material-icons mdc-list-item__start-detail'
-                          aria-hidden='true'>{icon}</i>{text}
-                     </DrawerNavItem>
-                   ))}
+                    <DrawerNavItem href='#'
+                      nativeOnClick={select}
+                      selected={isSelected(icon + text)}
+                    >
+                      <i class='material-icons mdc-list-item__start-detail'
+                        aria-hidden='true'>{icon}</i>{text}
+                    </DrawerNavItem>
+                  ))}
                 </DrawerNav>
               </Drawer>
               <button onClick={() => this.$refs.drawer.open()}>Open</button>

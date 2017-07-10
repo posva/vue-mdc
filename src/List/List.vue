@@ -18,8 +18,8 @@ export default {
     delete props.tag
     const staticClass = propsToClasses('mdc-list', props)
     data.staticClass = data.staticClass
-                     ? `${data.staticClass} ${staticClass}`
-                     : staticClass
+      ? `${data.staticClass} ${staticClass}`
+      : staticClass
     return h(tag, {
       ...data,
     }, children)

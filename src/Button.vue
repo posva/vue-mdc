@@ -16,8 +16,8 @@ export default {
   render (h, { data, props, children }) {
     const staticClass = propsToClasses('mdc-button', props)
     data.staticClass = data.staticClass
-                     ? `${data.staticClass} ${staticClass}`
-                     : staticClass
+      ? `${data.staticClass} ${staticClass}`
+      : staticClass
     return h('button', {
       ...data,
     }, children)

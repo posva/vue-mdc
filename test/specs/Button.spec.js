@@ -10,8 +10,8 @@ describe('Button.vue', function () {
     const vm = createVM(this, `
 <Button class="my-button">Click me</Button>
 `, {
-  components: { Button },
-})
+        components: { Button },
+      })
     vm.$('button').should.have.text('Click me')
     vm.$('button').should.have.class('mdc-button')
   })

@@ -21,8 +21,8 @@ export default {
   }) {
     const staticClass = propsToClasses('mdc-fab', { mini, plain })
     data.staticClass = data.staticClass
-                     ? `${data.staticClass} ${staticClass}`
-                     : staticClass
+      ? `${data.staticClass} ${staticClass}`
+      : staticClass
 
     if (icon) {
       data.staticClass += ' material-icons'

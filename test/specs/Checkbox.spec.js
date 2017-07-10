@@ -35,11 +35,11 @@ describe('Checkbox.vue', function () {
 <MdcCheckbox class="one" v-model="opts" value="one"/>
 <MdcCheckbox class="two" v-model="opts" value="two"/>
     `, {
-      data: {
-        opts: ['one'],
-      },
-      components: { MdcCheckbox },
-    })
+        data: {
+          opts: ['one'],
+        },
+        components: { MdcCheckbox },
+      })
     vm.opts.should.eql(['one'])
     vm.$('.one').should.be.checked
     vm.$('.two').should.not.be.checked
@@ -61,8 +61,8 @@ describe('Checkbox.vue', function () {
     const vm = createVM(this, `
 <MdcCheckbox id="foo" disabled />
     `, {
-      components: { MdcCheckbox },
-    })
+        components: { MdcCheckbox },
+      })
     vm.$('input').should.have.attr('disabled')
     vm.$('input').should.have.id('foo')
   })

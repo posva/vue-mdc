@@ -46,7 +46,7 @@ describe('List', function () {
             <ListItem ref='item'>Item 1</ListItem>
             <ListItem v-ripple>
               <i class='mdc-list-item__start-detail material-icons'
-                 aria-hidden='true'>network_wifi</i>
+                aria-hidden='true'>network_wifi</i>
               <span class='mdc-list-item__text'>
                 Two-line item
                 <span class='mdc-list-item__text__secondary'>Secondary text</span>
@@ -61,7 +61,7 @@ describe('List', function () {
 
     it('can render a custom tag', function () {
       const vm = createVM(this, h => (
-          <ListItem ref='item' tag='a'>Hello</ListItem>
+        <ListItem ref='item' tag='a'>Hello</ListItem>
       ))
       vm.$refs.item.should.have.class('mdc-list-item')
       vm.$refs.item.should.match('a')

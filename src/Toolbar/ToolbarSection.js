@@ -23,7 +23,7 @@ export default {
     if (shrink) staticClass += ' mdc-toolbar__section--shrink-to-fit'
     data.staticClass = data.staticClass
       ? `${data.staticClass} ${staticClass}`
-                     : staticClass
+      : staticClass
     return h('section', {
       ...data,
     }, children)

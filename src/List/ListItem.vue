@@ -12,8 +12,8 @@ export default {
   render (h, { data, children, props: { tag }}) {
     const staticClass = 'mdc-list-item'
     data.staticClass = data.staticClass
-                     ? `${data.staticClass} ${staticClass}`
-                     : staticClass
+      ? `${data.staticClass} ${staticClass}`
+      : staticClass
     return h(tag, {
       ...data,
     }, children)

@@ -5,7 +5,7 @@ export default {
     const staticClass = 'mdc-toolbar__row'
     data.staticClass = data.staticClass
       ? `${data.staticClass} ${staticClass}`
-                     : staticClass
+      : staticClass
     return h('div', {
       ...data,
     }, children)

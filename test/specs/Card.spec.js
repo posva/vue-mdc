@@ -24,8 +24,8 @@ describe('Card.vue', function () {
 </MdcCard>
 <MdcCard class="no-title"></MdcCard>
 `, {
-  components: { MdcCard, MdcCardTitle },
-})
+        components: { MdcCard, MdcCardTitle },
+      })
     vm.$('.title .mdc-card__title').should.have.text('Title')
     vm.$('.no-title .mdc-card__title').should.not.exist
   })
@@ -34,9 +34,9 @@ describe('Card.vue', function () {
     const vm = createVM(this, `
 <MdcCard class="prop" :title="title"></MdcCard>
 `, {
-  data: { title: 'Title' },
-  components: { MdcCard },
-})
+        data: { title: 'Title' },
+        components: { MdcCard },
+      })
     vm.$('.prop .mdc-card__title').should.have.text('Title')
     // It's large by default
     vm.$('.prop .mdc-card__title').should.have.class('mdc-card__title--large')
@@ -53,8 +53,8 @@ describe('Card.vue', function () {
 <MdcCardSubtitle slot="primary">subtitle</MdcCardSubtitle>
 </MdcCard>
 `, {
-  components: { MdcCard, MdcCardTitle, MdcCardSubtitle },
-})
+        components: { MdcCard, MdcCardTitle, MdcCardSubtitle },
+      })
     vm.$('.multi .mdc-card__title').should.have.text('Title')
     vm.$('.multi .mdc-card__subtitle').should.have.text('subtitle')
   })
@@ -63,9 +63,9 @@ describe('Card.vue', function () {
     const vm = createVM(this, `
 <MdcCard class="prop" :subtitle="sub"></MdcCard>
 `, {
-  data: { sub: 'sub' },
-  components: { MdcCard },
-})
+        data: { sub: 'sub' },
+        components: { MdcCard },
+      })
     vm.$('.prop .mdc-card__subtitle').should.have.text('sub')
     vm.sub = ''
     nextTick().then(() => {
@@ -86,9 +86,9 @@ describe('Card.vue', function () {
 >
 </MdcCard>
 `, {
-  data: { media: largeImg },
-  components: { MdcCard },
-})
+        data: { media: largeImg },
+        components: { MdcCard },
+      })
     vm.$('.mdc-card__media + .mdc-card__primary').should.exist
     vm.$('.mdc-card__primary + .mdc-card__media').should.not.exist
     const style = vm.$('.mdc-card__media').style
@@ -106,8 +106,8 @@ describe('Card.vue', function () {
 <MdcCardMedia media="${largeImg}" style="height: 12rem"></MdcCardMedia>
 </MdcCard>
 `, {
-  components: { MdcCard, MdcCardMedia },
-})
+      components: { MdcCard, MdcCardMedia },
+    })
     vm.$('.mdc-card__media + .mdc-card__primary').should.not.exist
     vm.$('.mdc-card__primary + .mdc-card__media').should.exist
   })
@@ -117,9 +117,9 @@ describe('Card.vue', function () {
 <MdcCard :supporting-text="text">
 </MdcCard>
 `, {
-  data: { text: 'Hello there' },
-  components: { MdcCard, MdcCardMedia },
-})
+        data: { text: 'Hello there' },
+        components: { MdcCard, MdcCardMedia },
+      })
     vm.$('.mdc-card__supporting-text').should.exist
     vm.$('.mdc-card__supporting-text').should.have.text('Hello there')
     vm.text = ''
@@ -134,9 +134,9 @@ describe('Card.vue', function () {
 <MdcCardSupportingText v-if="show">A slot</MdcCardSupportingText>
 </MdcCard>
 `, {
-  data: { show: true },
-  components: { MdcCard, MdcCardSupportingText },
-})
+        data: { show: true },
+        components: { MdcCard, MdcCardSupportingText },
+      })
     vm.$('.mdc-card__supporting-text').should.exist
     vm.$('.mdc-card__supporting-text').should.have.text('A slot')
     vm.show = false
@@ -152,9 +152,9 @@ describe('Card.vue', function () {
 <MdcButton v-if="show" slot="actions">Actions</MdcButton>
 </MdcCard>
 `, {
-  data: { show: true },
-  components: { MdcCard, MdcButton },
-})
+        data: { show: true },
+        components: { MdcCard, MdcButton },
+      })
     vm.$('.mdc-card__actions').should.exist
     vm.$('.mdc-card__actions p').should.have.text('Actions')
     vm.$('.mdc-card__actions button').should.have.class('mdc-card__action')
@@ -172,8 +172,8 @@ describe('Card.vue', function () {
 <MdcButton theme-dark slot="actions" compact>Action</MdcButton>
 </MdcCard>
 `, {
-  components: { MdcCard, MdcButton },
-})
+        components: { MdcCard, MdcButton },
+      })
     vm.$('.mdc-card').should.have.class('mdc-card--theme-dark')
   })
 
@@ -191,15 +191,15 @@ describe('Card.vue', function () {
   <MdcButton slot="actions" compact>Action 2</MdcButton>
 </MdcCard>
 `, {
-  components: {
-    MdcCard,
-    MdcButton,
-    MdcCardTitle,
-    MdcCardSubtitle,
-    MdcCardPrimary,
-    MdcCardHorizontalBlock,
-  },
-})
+      components: {
+        MdcCard,
+        MdcButton,
+        MdcCardTitle,
+        MdcCardSubtitle,
+        MdcCardPrimary,
+        MdcCardHorizontalBlock,
+      },
+    })
     vm.$('.mdc-card__horizontal-block .mdc-card__primary .mdc-card__title').should.exist
     vm.$('.mdc-card__horizontal-block .mdc-card__primary .mdc-card__subtitle').should.exist
   })
