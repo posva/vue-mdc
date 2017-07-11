@@ -36,7 +36,6 @@
 <script>
 import MDCDialogFoundation from '@material/dialog/foundation'
 import { createFocusTrapInstance } from '@material/dialog/util'
-import { getCorrectEventName } from '@material/animation';
 import MdcButton from '../Button'
 import ripple from '../ripple'
 
@@ -77,8 +76,8 @@ export default {
       deregisterSurfaceInteractionHandler: (evt, handler) => this.$refs.surface.removeEventListener(evt, handler),
       registerDocumentKeydownHandler: (handler) => document.addEventListener('keydown', handler),
       deregisterDocumentKeydownHandler: (handler) => document.removeEventListener('keydown', handler),
-      registerTransitionEndHandler: (handler) => this.$el.addEventListener(getCorrectEventName(window, 'transitionend'), handler),
-      deregisterTransitionEndHandler: (handler) => this.$el.removeEventListener(getCorrectEventName(window, 'transitionend'), handler),
+      registerTransitionEndHandler: (handler) => this.$refs.surface.addEventListener('transitionend', handler),
+      deregisterTransitionEndHandler: (handler) => this.$refs.surface.removeEventListener('transitionend', handler),
       notifyAccept: () => this.$emit('accepted'),
       notifyCancel: () => this.$emit('canceled'),
       isDialog: (el) => el === this.$refs.surface,
