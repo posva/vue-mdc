@@ -3,7 +3,7 @@
     <ToolbarRow>
       <ToolbarSection align="start">
         <a href="#"
-           class="material-icons mdc-toolbar__menu"
+           class="material-icons mdc-toolbar__icon--menu"
            @click.prevent="$emit('menu')"
         >{{ icon }}</a>
         <span class="mdc-toolbar__title">{{ title }}</span>
@@ -30,13 +30,4 @@ export default {
 </script>
 
 <style lang="scss" src="@material/toolbar/mdc-toolbar.scss">
-</style>
-
-<style>
-.mdc-toolbar__menu {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  padding-right: 8px;
-}
 </style>

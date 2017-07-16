@@ -18,7 +18,7 @@ describe('Toolbar', function () {
       )
     })
     vm.$refs.toolbar.$el.should.have.class('mdc-toolbar')
-    vm.$('.mdc-toolbar__menu').should.have.text('menu')
+    vm.$('.mdc-toolbar__icon--menu').should.have.text('menu')
   })
 
   it('can set the title', function () {
@@ -38,7 +38,7 @@ describe('Toolbar', function () {
         </Toolbar>
       )
     })
-    vm.$('.mdc-toolbar__menu').should.have.text('star')
+    vm.$('.mdc-toolbar__icon--menu').should.have.text('star')
   })
 
   it('emits when clicking the menu', function (done) {
@@ -50,7 +50,7 @@ describe('Toolbar', function () {
       )
     })
     spy.should.have.not.been.called
-    vm.$('.mdc-toolbar__menu').click()
+    vm.$('.mdc-toolbar__icon--menu').click()
     nextTick().then(() => {
       spy.should.have.been.called
     }).then(done)
