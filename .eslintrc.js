@@ -1,13 +1,9 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
-  parserOptions: {
-    sourceType: 'module',
-  },
   globals: {
     HTMLElement: true,
   },
-  extends: 'vue',
+  extends: 'posva',
   // add your custom rules here
   'rules': {
     // allow async-await
