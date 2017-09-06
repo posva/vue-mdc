@@ -10,6 +10,7 @@ const {
 
 module.exports = merge(base, {
   output: {
+    pathinfo: false,
     filename: `${filename}.js`,
     library: moduleName,
     libraryTarget: 'umd',

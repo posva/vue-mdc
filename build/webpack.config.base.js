@@ -24,6 +24,7 @@ const plugins = [
 
 module.exports = {
   output: {
+    pathinfo: true,
     path: resolve(__dirname, '../dist'),
     filename: `${filename}.common.js`,
   },
