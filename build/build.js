@@ -22,7 +22,7 @@ const {
 
 function rollupBundle ({ env, entry }) {
   return rollup({
-    entry: entry || 'src/index.js',
+    input: entry || 'src/index.js',
     plugins: [
       scss({ output: false }),
       node({
@@ -44,7 +44,7 @@ const bundleOptions = {
   banner,
   exports: 'named',
   format: 'umd',
-  moduleName,
+  name: moduleName,
 }
 
 function createBundle ({ name, env, entry, format }) {
