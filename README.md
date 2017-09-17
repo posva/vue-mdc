@@ -42,8 +42,9 @@ The docs will be the demo, until then you can [check the test folder](test/specs
 ## Installation
 
 ```bash
-npm install --save vue-mdc
-yarn add -D vue-mdc
+$ npm install --save vue-mdc
+# or
+$ yarn add vue-mdc
 ```
 
 ## Usage
