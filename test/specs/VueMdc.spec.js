@@ -1,14 +1,14 @@
 import VueMdc from 'src'
 import * as all from 'src'
-import { Vue } from '../helpers/utils.js'
+import { Vue } from '../helpers/utils'
 
-function comp (name) {
+function comp (Vue, name) {
   return function () {
     should.exist(Vue.component(name))
   }
 }
 
-function dir (name) {
+function dir (Vue, name) {
   return function () {
     should.exist(Vue.directive(name))
   }
@@ -55,26 +55,25 @@ describe('VueMdc', function () {
   })
 
   describe('Register components', function () {
-    before(function () {
-      Vue.use(VueMdc)
-    })
-
+    const Vue1 = Vue.extend()
     components.forEach(name => {
-      it(`registers Mdc${name}`, comp(`Mdc${name}`))
+      Vue1.use(VueMdc)
+      it(`registers Mdc${name}`, comp(Vue1, `Mdc${name}`))
     })
 
-    it('registers v-ripple', dir('ripple'))
+    it('registers v-ripple', dir(Vue1, 'ripple'))
   })
 
-  describe.skip('Prefixes', function () {
+  describe('Prefixes', function () {
+    const Vue2 = Vue.extend()
     before(function () {
       VueMdc.installed = false
-      Vue.use(VueMdc, {
+      Vue2.use(VueMdc, {
         prefix: 'Ui',
       })
     })
     components.forEach(name => {
-      it(`registers Ui${name}`, comp(`Ui${name}`))
+      it(`registers Ui${name}`, comp(Vue2, `Ui${name}`))
     })
   })
 })
