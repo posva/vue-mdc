@@ -83,7 +83,7 @@
     "rollup-plugin-scss": "^0.3.0",
     "rollup-plugin-vue": "^2.4.2",
     "sass-loader": "^6.0.6",
-    "sinon": "^3.3.0",
+    "sinon": "^4.0.0",
     "sinon-chai": "^2.13.0",
     "style-loader": "^0.18.2",
     "uglify-js": "^3.1.1",
