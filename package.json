@@ -158,6 +158,6 @@
     "url": "http://www.opensource.org/licenses/mit-license.php"
   },
   "dependencies": {
-    "decamelize": "^1.2.0"
+    "decamelize": "^2.0.0"
   }
 }
