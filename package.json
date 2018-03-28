@@ -46,7 +46,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
     "babel-preset-env": "^1.6.0",
-    "camelcase": "^4.1.0",
+    "camelcase": "^5.0.0",
     "chai": ">= 3.5.0 && < 4.0.0",
     "chai-dom": "^1.5.0",
     "codacy-coverage": "^2.0.3",
