@@ -58,7 +58,7 @@
     "function-bind": "^1.1.1",
     "html-webpack-plugin": "^2.30.1",
     "in-publish": "^2.0.0",
-    "karma": "^1.7.1",
+    "karma": "^2.0.2",
     "karma-chai-dom": "^1.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
